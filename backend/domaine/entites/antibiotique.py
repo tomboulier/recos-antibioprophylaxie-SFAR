@@ -4,8 +4,9 @@ Entité représentant un antibiotique.
 Ce module définit la classe Antibiotique qui modélise les antibiotiques
 utilisés dans les recommandations d'antibioprophylaxie de la SFAR.
 """
-from dataclasses import dataclass
+from dataclasses import dataclass, field
 from typing import Optional
+from datetime import datetime
 
 from domaine.entites.entite_base import EntiteBase
 
@@ -32,11 +33,17 @@ class Antibiotique(EntiteBase):
         Contre-indications notables
     """
     
+    # Champs obligatoires en premier
     nom: str
+    # Champs optionnels ensuite
     nom_generique: Optional[str] = None
     description: Optional[str] = None
     posologie_standard: Optional[str] = None
     contre_indications: Optional[str] = None
+    # Redéfinition des champs hérités avec leurs valeurs par défaut
+    id: Optional[int] = None
+    date_creation: datetime = field(default_factory=datetime.utcnow)
+    date_modification: datetime = field(default_factory=datetime.utcnow)
     
     def __post_init__(self):
         """Validation après initialisation."""

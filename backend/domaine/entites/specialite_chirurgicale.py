@@ -6,6 +6,7 @@ les différentes spécialités chirurgicales selon les recommandations SFAR.
 """
 from dataclasses import dataclass, field
 from typing import List, Optional
+from datetime import datetime
 
 from domaine.entites.entite_base import EntiteBase
 
@@ -26,8 +27,14 @@ class SpecialiteChirurgicale(EntiteBase):
         Description détaillée de la spécialité chirurgicale
     """
     
+    # Champs obligatoires en premier
     nom: str
+    # Champs optionnels ensuite
     description: Optional[str] = None
+    # Redéfinition des champs hérités avec leurs valeurs par défaut
+    id: Optional[int] = None
+    date_creation: datetime = field(default_factory=datetime.utcnow)
+    date_modification: datetime = field(default_factory=datetime.utcnow)
     
     def __post_init__(self):
         """Validation après initialisation."""

@@ -5,8 +5,9 @@ Ce module définit la classe RecommandationAntibioprophylaxie qui modélise
 les recommandations d'antibioprophylaxie de la SFAR pour chaque
 intervention chirurgicale.
 """
-from dataclasses import dataclass
+from dataclasses import dataclass, field
 from typing import Optional
+from datetime import datetime
 
 from domaine.entites.antibiotique import Antibiotique
 from domaine.entites.entite_base import EntiteBase
@@ -43,15 +44,21 @@ class RecommandationAntibioprophylaxie(EntiteBase):
         Remarques ou avertissements supplémentaires
     """
     
+    # Champs obligatoires en premier
     intervention: InterventionChirurgicale
     antibiotique: Antibiotique
     posologie: str
     moment_administration: str
     duree: str
+    # Champs optionnels ensuite
     est_alternative: bool = False
     populations_specifiques: Optional[str] = None
     niveau_preuve: Optional[str] = None
     remarques: Optional[str] = None
+    # Redéfinition des champs hérités avec leurs valeurs par défaut
+    id: Optional[int] = None
+    date_creation: datetime = field(default_factory=datetime.utcnow)
+    date_modification: datetime = field(default_factory=datetime.utcnow)
     
     def __post_init__(self):
         """Validation après initialisation."""
