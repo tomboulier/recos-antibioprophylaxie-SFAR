@@ -1,0 +1,58 @@
+name: Déploiement sur GitHub Pages
+
+on:
+  push:
+    branches: [ main ]
+  workflow_dispatch:  # Permet le déclenchement manuel
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout du code
+        uses: actions/checkout@v3
+      
+      - name: Configuration de Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18'
+          cache: 'npm'
+          cache-dependency-path: 'frontend/package-lock.json'
+      
+      - name: Installation des dépendances frontend
+        run: |
+          cd frontend
+          npm ci
+      
+      - name: Construction du frontend
+        run: |
+          cd frontend
+          npm run build
+        env:
+          VITE_API_BASE_URL: https://api.antibioprophylaxie-sfar.fr
+          # Pour GitHub Pages, ajuster l'URL de base si nécessaire
+          # BASE_URL: /recos-antibioprophylaxie-sfar/
+      
+      - name: Configuration pour GitHub Pages
+        uses: actions/configure-pages@v3
+      
+      - name: Upload des artefacts
+        uses: actions/upload-pages-artifact@v1
+        with:
+          path: 'frontend/dist'
+  
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    needs: build
+    steps:
+      - name: Déploiement sur GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v2
