@@ -1,5 +1,7 @@
 <script setup>
 import { ref } from 'vue'
+import HeaderApp from './components/HeaderApp.vue'
+import FooterApp from './components/FooterApp.vue'
 import SearchBar from './components/SearchBar.vue'
 import InterventionList from './components/InterventionList.vue'
 
@@ -31,14 +33,10 @@ const handleSearch = (query) => {
 </script>
 
 <template>
-  <div class="min-h-screen bg-gray-50 p-4 md:p-6">
-    <div class="max-w-3xl mx-auto">
-      <!-- Header avec le titre principal -->
-      <header class="text-center mb-12 mt-8">
-        <h1 class="text-4xl font-bold text-gray-900 mb-2">Antibioprophylaxie</h1>
-        <h2 class="text-3xl font-semibold text-gray-800 mb-2">en chirurgie</h2>
-        <h3 class="text-2xl font-medium text-gray-700">et médecine interventionnelle</h3>
-      </header>
+  <div class="min-h-screen bg-white p-4 md:p-6">
+    <div class="max-w-xl mx-auto">
+      <!-- En-tête de l'application -->
+      <HeaderApp />
 
       <!-- Barre de recherche -->
       <SearchBar @search="handleSearch" />
@@ -49,22 +47,11 @@ const handleSearch = (query) => {
         :query="searchQuery"
       />
 
-      <!-- Footer avec logos et mentions -->
-      <footer class="mt-20 flex flex-col md:flex-row items-center justify-center space-y-6 md:space-y-0 md:space-x-8">
-        <div class="flex items-center justify-center">
-          <img src="/logo_sfar.png" alt="SFAR" class="h-16" />
-        </div>
-        <div class="text-sm text-gray-600 max-w-sm text-center md:text-left">
-          <p class="font-medium mb-2">Recommandations formalisées d'experts de :</p>
-          <ul class="list-disc pl-5 mt-1 space-y-1">
-            <li>la Société Française d'Anesthésie-Réanimation (SFAR)</li>
-            <li>la Société de Pathologie Infectieuse de Langue Française (SPILF)</li>
-          </ul>
-        </div>
-        <div class="flex items-center justify-center">
-          <img src="/logo-SPILF.jpeg" alt="SPILF" class="h-16" />
-        </div>
-      </footer>
+      <!-- Espace pour les résultats de recherche -->
+      <div class="mb-20"></div>
+      
+      <!-- Pied de page de l'application -->
+      <FooterApp />
     </div>
   </div>
 </template>
