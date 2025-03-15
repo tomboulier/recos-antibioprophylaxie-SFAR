@@ -8,7 +8,7 @@ Cette application a pour objectif de faciliter l'accès et la consultation des r
 
 ## Architecture
 
-Le projet suit les principes de la Clean Architecture (Architecture Hexagonale) :
+Le projet suit les principes de la Clean Architecture (Architecture Hexagonale) et du Domain-Driven Design :
 
 - **Domaine** : Le cœur métier de l'application, contenant les entités et règles métier sans dépendances extérieures
 - **Application** : Les cas d'utilisation orchestrant les opérations métier
@@ -21,6 +21,7 @@ Le projet suit les principes de la Clean Architecture (Architecture Hexagonale) 
 - **Frontend** : React Native Web avec TypeScript
 - **Base de données** : SQLite (développement) / PostgreSQL (production)
 - **Documentation** : MkDocs Material
+- **Gestion des dépendances** : uv + pyproject.toml
 
 ## Structure du projet
 
@@ -39,13 +40,97 @@ antibioprophylaxie-sfar/
 └── docs/                    # Documentation
 ```
 
+## Prérequis
+
+- Python 3.10 ou supérieur
+- [uv](https://github.com/astral-sh/uv) (gestionnaire de paquets Python ultra-rapide)
+- Node.js 18 ou supérieur (pour le frontend)
+
 ## Installation
 
-Instructions pour l'installation à venir...
+### Backend
 
-## Développement
+1. Cloner le dépôt et se placer dans le répertoire du projet :
 
-Instructions pour le développement à venir...
+```bash
+git clone <url-du-depot>
+cd antibioprophylaxie-sfar
+```
+
+2. Créer et activer un environnement virtuel avec uv :
+
+```bash
+uv venv
+source .venv/bin/activate  # sous Linux/macOS
+# ou
+.venv\Scripts\activate  # sous Windows
+```
+
+3. Installer les dépendances du backend :
+
+```bash
+cd backend
+uv pip install -e ".[dev,test]"
+```
+
+4. Configurer la base de données :
+
+```bash
+# Instructions à venir
+```
+
+5. Lancer le serveur de développement :
+
+```bash
+uvicorn infrastructure.api.main:app --reload
+```
+
+### Frontend
+
+Instructions pour l'installation du frontend à venir...
+
+## Tests
+
+Le projet utilise pytest pour les tests unitaires et d'intégration :
+
+```bash
+# Exécuter tous les tests
+cd backend
+pytest
+
+# Exécuter les tests avec rapport de couverture
+pytest --cov=domaine,application,infrastructure
+
+# Exécuter un fichier de test spécifique
+pytest tests/domaine/test_entites.py
+```
+
+## Conventions de code
+
+Le projet suit plusieurs conventions de qualité de code :
+
+- **Formatage** : Black
+- **Linting** : Flake8
+- **Type hints** : vérification avec MyPy
+- **Documentation** : Docstrings au format numpydoc
+- **Tests** : Pytest
+- **Commits** : Convention Conventional Commits
+
+Vous pouvez exécuter les outils de qualité de code avec les commandes suivantes :
+
+```bash
+# Formatage automatique
+black .
+
+# Vérification du formatage
+black --check .
+
+# Linting
+flake8
+
+# Vérification des types
+mypy .
+```
 
 ## Licence
 
