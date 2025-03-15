@@ -50,10 +50,9 @@ watch(searchInput, (newValue) => {
       v-model="searchInput"
       type="text"
       placeholder="Rechercher une intervention"
-      class="w-full px-8 py-5 bg-white border border-gray-200 rounded-3xl text-gray-800 shadow-sm text-xl
-            focus:outline-none focus:border-gray-300 placeholder-gray-500"
+      class="w-full px-6 py-3 bg-white border border-gray-300 text-gray-800 text-lg placeholder-gray-500"
       @input="handleSearch"
-      style="height: 64px; min-width: 100%;"
+      style="height: 56px; min-width: 100%; border-radius: 28px; box-shadow: 0 1px 3px rgba(0,0,0,0.1);"
     />
     
     <!-- Bouton de réinitialisation (X) visible uniquement quand il y a du texte -->
