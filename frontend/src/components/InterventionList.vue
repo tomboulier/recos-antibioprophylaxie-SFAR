@@ -58,9 +58,9 @@ function handleInterventionClick(intervention) {
 
 <template>
   <!-- Container principal avec animation -->
-  <div class="mt-4 transition-all duration-300">
+  <div class="mt-6 transition-all duration-300 max-w-2xl mx-auto">
     <!-- Message de statut de la recherche -->
-    <div class="text-gray-600 text-sm mb-3" v-if="query || !hasResults">
+    <div class="text-gray-600 text-sm mb-3 px-2" v-if="query || !hasResults">
       {{ resultMessage }}
     </div>
     
@@ -68,17 +68,17 @@ function handleInterventionClick(intervention) {
     <transition-group 
       name="intervention-list" 
       tag="ul" 
-      class="bg-white rounded-lg shadow-sm overflow-hidden"
+      class="bg-white rounded-xl shadow-md overflow-hidden divide-y divide-gray-100"
       v-if="hasResults"
     >
       <li 
         v-for="intervention in interventions" 
         :key="intervention.id"
-        class="border-b border-gray-100 last:border-b-0 transition-colors hover:bg-gray-50 cursor-pointer"
+        class="transition-colors hover:bg-gray-50 cursor-pointer"
         @click="handleInterventionClick(intervention)"
       >
-        <div class="p-4">
-          <h3 class="text-lg text-gray-800">{{ intervention.nom }}</h3>
+        <div class="p-5">
+          <h3 class="text-lg font-medium text-gray-800">{{ intervention.nom }}</h3>
         </div>
       </li>
     </transition-group>
@@ -86,19 +86,19 @@ function handleInterventionClick(intervention) {
     <!-- État vide (pas de résultats) -->
     <div 
       v-if="!hasResults && query" 
-      class="bg-white rounded-lg shadow-sm p-8 text-center text-gray-500"
+      class="bg-white rounded-xl shadow-md p-8 text-center text-gray-500"
     >
-      <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 mx-auto mb-4 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-14 w-14 mx-auto mb-4 text-gray-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9.172 16.172a4 4 0 015.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
       </svg>
-      <p>Nous n'avons pas trouvé d'intervention correspondant à "{{ query }}"</p>
-      <p class="text-sm mt-2">Essayez avec un autre terme ou vérifiez l'orthographe</p>
+      <p class="text-lg font-medium">Nous n'avons pas trouvé d'intervention correspondant à "{{ query }}"</p>
+      <p class="text-sm mt-3 text-gray-400">Essayez avec un autre terme ou vérifiez l'orthographe</p>
     </div>
   </div>
 </template>
 
 <style scoped>
-/* Animations pour la liste d'interventions */
+/* Animations pour la liste d'interventions avec une transition douce */
 .intervention-list-enter-active,
 .intervention-list-leave-active {
   transition: all 0.3s ease;
