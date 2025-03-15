@@ -65,3 +65,4 @@ android/app/build/
 # Fichiers spécifiques au système d'exploitation
 .DS_Store
 Thumbs.db
+backend/uv.lock
