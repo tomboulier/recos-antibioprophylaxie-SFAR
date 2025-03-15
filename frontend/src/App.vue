@@ -31,18 +31,22 @@ const handleSearch = (query) => {
 </script>
 
 <template>
-  <div style="width: 100%; height: 100vh; display: flex; flex-direction: column;">
-    <!-- Zone principale centrée verticalement et horizontalement -->
-    <div style="flex: 1; display: flex; flex-direction: column; justify-content: center; align-items: center; padding: 0 20px;">
-      <!-- Titre et sous-titres absolument centrés -->
-      <div style="text-align: center; margin-bottom: 50px;">
-        <h1 style="font-size: 48px; font-weight: bold; margin-bottom: 16px;">Antibioprophylaxie</h1>
-        <h2 style="font-size: 28px; margin-bottom: 8px;">en chirurgie</h2>
-        <h2 style="font-size: 28px; margin-bottom: 40px;">et médecine interventionnelle</h2>
+  <div style="width: 100%; min-height: 100vh; display: flex; flex-direction: column;">
+    <!-- Header fixe en haut de page -->
+    <div style="position: fixed; top: 0; left: 0; right: 0; background-color: white; z-index: 10; padding: 20px 0; border-bottom: 1px solid #f5f5f5;">
+      <div style="text-align: center; max-width: 800px; margin: 0 auto;">
+        <h1 style="font-size: 32px; font-weight: bold; margin-bottom: 8px;">Antibioprophylaxie</h1>
+        <h2 style="font-size: 20px; margin-bottom: 0px; color: #555;">en chirurgie et médecine interventionnelle</h2>
       </div>
-
+    </div>
+    
+    <!-- Espace pour compenser le header fixe -->
+    <div style="height: 120px;"></div>
+    
+    <!-- Zone principale pour la recherche et les résultats -->
+    <div style="flex: 1; display: flex; flex-direction: column; align-items: center; padding: 20px;">
       <!-- Barre de recherche -->
-      <div style="width: 100%; max-width: 500px; margin: 0 auto;">
+      <div style="width: 100%; max-width: 500px; margin: 40px auto;">
         <SearchBar @search="handleSearch" />
       </div>
 
