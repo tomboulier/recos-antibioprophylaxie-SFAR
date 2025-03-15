@@ -42,6 +42,7 @@ class CategoryInDB(CategoryBase):
         """Pydantic config."""
         
         from_attributes = True
+        populate_by_name = True
 
 
 class Category(CategoryInDB):
@@ -76,13 +77,15 @@ class ProcedureInDB(ProcedureBase):
     """Schema for Procedure stored in database."""
     
     id: int
-    created_at: datetime
-    updated_at: datetime
+    created_at: datetime = Field(default_factory=datetime.now)
+    updated_at: datetime = Field(default_factory=datetime.now)
     
     class Config:
         """Pydantic config."""
         
         from_attributes = True
+        populate_by_name = True
+        populate_by_name = True
 
 
 class ProcedureWithCategories(ProcedureInDB):
@@ -125,6 +128,7 @@ class AntibioticInDB(AntibioticBase):
         """Pydantic config."""
         
         from_attributes = True
+        populate_by_name = True
 
 
 class Antibiotic(AntibioticInDB):
@@ -176,6 +180,7 @@ class RecommendationInDB(RecommendationBase):
         """Pydantic config."""
         
         from_attributes = True
+        populate_by_name = True
 
 
 class RecommendationFull(RecommendationInDB):
@@ -188,6 +193,7 @@ class RecommendationFull(RecommendationInDB):
         """Pydantic config."""
         
         from_attributes = True
+        populate_by_name = True
 
 
 # Search and filter schemas

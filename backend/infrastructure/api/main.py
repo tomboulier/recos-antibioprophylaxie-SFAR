@@ -11,7 +11,8 @@ from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 
 # Import des routes
-from infrastructure.api.routes import specialites, procedures
+from infrastructure.api.routes import specialites
+from infrastructure.api.routes import procedures_direct
 
 # Configuration du logger
 logging.basicConfig(
@@ -38,7 +39,7 @@ app.add_middleware(
 
 # Inclusion des routes dans l'application
 app.include_router(specialites.router, prefix="/specialites", tags=["Spécialités"])
-app.include_router(procedures.router, prefix="/procedures", tags=["Procédures"])
+app.include_router(procedures_direct.router, prefix="/procedures", tags=["Procédures"])
 
 
 @app.get("/")
