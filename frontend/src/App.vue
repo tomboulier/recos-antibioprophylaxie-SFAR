@@ -1,8 +1,9 @@
 <script setup>
-import { ref } from 'vue'
+import { ref, onMounted } from 'vue'
 import SearchBar from './components/SearchBar.vue'
 import InterventionList from './components/InterventionList.vue'
 import { useLogger } from './services/logging.js'
+import { apiService } from './services/api.js'
 
 // Initialisation du logger pour suivre les événements utilisateur
 const logger = useLogger('App')
@@ -12,37 +13,15 @@ const logger = useLogger('App')
  */
 const searchQuery = ref('')
 const searchResults = ref([])
-
-/**
- * Base de données d'interventions chirurgicales (simulation)
- * Dans une version réelle, ces données proviendraient d'un service métier
- */
-const interventionsDb = [
-  // Dérivations
-  { id: 1, nom: 'Dérivation ventriculaire externe (DVE)' },
-  { id: 2, nom: 'Dérivation lombaire externe (DLE)' },
-  { id: 3, nom: 'Dérivation ventriculo-péritonéale (DVP)' },
-  { id: 4, nom: 'Dérivation ventriculo-atriale (DVA)' },
-  { id: 5, nom: 'Cystectomie sustrigonale partielle ou totale, quel que soit le mode de dérivation' },
-  
-  // Chirurgies digestives
-  { id: 6, nom: 'Chirurgie gastro-duodénale' },
-  { id: 7, nom: 'Chirurgie colo-rectale' },
-  { id: 8, nom: 'Chirurgie hépato-biliaire' },
-  { id: 9, nom: 'Chirurgie pancréatique' },
-  
-  // Chirurgies orthopédiques
-  { id: 10, nom: 'Prothèse de hanche' },
-  { id: 11, nom: 'Prothèse de genou' },
-  { id: 12, nom: 'Chirurgie rachidienne' },
-  { id: 13, nom: 'Arthroscopie' }
-]
+const isLoading = ref(false)
+const hasError = ref(false)
+const errorMessage = ref('')
 
 /**
  * Fonction pour gérer la recherche et mettre à jour les résultats
- * Implémente une recherche "fuzzy" simple basée sur des sous-chaînes
+ * Effectue une requête API vers le backend pour obtenir les résultats
  */
-const handleSearch = (query) => {
+const handleSearch = async (query) => {
   searchQuery.value = query
   
   // Logge l'action utilisateur de recherche
@@ -54,19 +33,33 @@ const handleSearch = (query) => {
     return
   }
   
-  // Recherche insensible à la casse et aux accents
-  const normalizedQuery = query.toLowerCase()
-    .normalize("NFD")
-    .replace(/[\u0300-\u036f]/g, "")
+  // Si la recherche est trop courte (moins de 3 caractères)
+  if (query.trim().length < 3) {
+    searchResults.value = []
+    return
+  }
   
-  // Filtrage des interventions qui correspondent à la recherche
-  searchResults.value = interventionsDb.filter(intervention => {
-    const normalizedNom = intervention.nom.toLowerCase()
-      .normalize("NFD")
-      .replace(/[\u0300-\u036f]/g, "")
+  try {
+    // Indique que la recherche est en cours
+    isLoading.value = true
+    hasError.value = false
+    errorMessage.value = ''
     
-    return normalizedNom.includes(normalizedQuery)
-  })
+    // Appel au service API pour obtenir les résultats
+    const results = await apiService.searchProcedures(query)
+    searchResults.value = results
+    
+    logger.info(`${results.length} interventions trouvées pour "${query}"`)
+  } catch (error) {
+    // Gestion des erreurs
+    logger.error(`Erreur lors de la recherche: ${error.message}`)
+    hasError.value = true
+    errorMessage.value = `Une erreur est survenue lors de la recherche: ${error.message}`
+    searchResults.value = []
+  } finally {
+    // Fin du chargement
+    isLoading.value = false
+  }
 }
 </script>
 
@@ -91,6 +84,16 @@ const handleSearch = (query) => {
         <SearchBar @search="handleSearch" />
       </div>
 
+      <!-- Indicateur de chargement -->
+      <div v-if="isLoading" style="width: 100%; max-width: 600px; margin: 20px auto; text-align: center;">
+        <p>Chargement des résultats...</p>
+      </div>
+      
+      <!-- Message d'erreur -->
+      <div v-if="hasError" style="width: 100%; max-width: 600px; margin: 20px auto; color: red; text-align: center;">
+        <p>{{ errorMessage }}</p>
+      </div>
+      
       <!-- Liste des interventions trouvées -->
       <div style="width: 100%; max-width: 600px; margin: 20px auto;">
         <InterventionList 
