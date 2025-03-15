@@ -17,12 +17,12 @@ export const apiService = {
   /**
    * Recherche des interventions chirurgicales par nom
    * 
-   * @param {string} query - Terme de recherche (min 3 caractères)
+   * @param {string} query - Terme de recherche
    * @returns {Promise<Array>} Liste des interventions correspondantes
    */
   async searchProcedures(query) {
-    if (!query || query.trim().length < 3) {
-      logger.warn('La recherche nécessite au moins 3 caractères')
+    if (!query || query.trim() === "") {
+      logger.info('Recherche avec une chaîne vide, aucun résultat retourné')
       return []
     }
     
