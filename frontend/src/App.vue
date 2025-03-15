@@ -47,11 +47,26 @@ const handleSearch = (query) => {
         :query="searchQuery"
       />
 
-      <!-- Espace pour les résultats de recherche -->
-      <div class="mb-20"></div>
+      <!-- Footer simplifié au maximum pour correspond à l'image -->
+      <div class="mt-20"></div>
       
-      <!-- Pied de page de l'application -->
-      <FooterApp />
+      <div class="absolute bottom-0 w-full py-4 bg-white">
+        <div class="max-w-4xl mx-auto flex items-center px-6">
+          <div style="width: 60px">
+            <img src="/logo_sfar.png" alt="SFAR" width="60" />
+          </div>
+          
+          <div class="flex-1 ml-4 mr-4 text-left text-sm">
+            <p>Recommandations formalisées d'experts de :</p>
+            <p>• la Société Française d'Anesthésie-Réanimation (SFAR)</p>
+            <p>• la Société de Pathologie Infectieuse de Langue Française (SPILF)</p>
+          </div>
+          
+          <div style="width: 60px">
+            <img src="/logo-SPILF.jpeg" alt="SPILF" width="60" />
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </template>
