@@ -33,12 +33,6 @@ const handleSearch = async (query) => {
     return
   }
   
-  // Si la recherche est trop courte (moins de 3 caractères)
-  if (query.trim().length < 3) {
-    searchResults.value = []
-    return
-  }
-  
   try {
     // Indique que la recherche est en cours
     isLoading.value = true
