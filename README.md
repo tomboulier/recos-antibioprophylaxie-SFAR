@@ -18,7 +18,7 @@ Le projet suit les principes de la Clean Architecture (Architecture Hexagonale) 
 ### Technologies utilisées
 
 - **Backend** : Python avec FastAPI
-- **Frontend** : React Native Web avec TypeScript
+- **Frontend** : Vue.js avec Tailwind CSS
 - **Base de données** : SQLite (développement) / PostgreSQL (production)
 - **Documentation** : MkDocs Material
 - **Gestion des dépendances** : uv + pyproject.toml
@@ -32,11 +32,14 @@ antibioprophylaxie-sfar/
 │   ├── application/         # Cas d'utilisation
 │   ├── infrastructure/      # Adaptateurs techniques
 │   └── presentation/        # Interface API
-├── frontend/                # Frontend React Native Web
-│   ├── src/
-│   ├── ios/
-│   ├── android/
-│   └── web/
+├── frontend/                # Frontend Vue.js avec Tailwind CSS
+│   ├── public/              # Assets statiques (logos, favicon)
+│   ├── src/                 # Sources de l'application
+│   │   ├── assets/          # Ressources (CSS, images)
+│   │   ├── components/      # Composants Vue.js 
+│   │   └── App.vue          # Composant racine
+│   ├── index.html           # Point d'entrée HTML
+│   └── vite.config.js       # Configuration de Vite
 └── docs/                    # Documentation
 ```
 
@@ -87,7 +90,25 @@ uvicorn infrastructure.api.main:app --reload
 
 ### Frontend
 
-Instructions pour l'installation du frontend à venir...
+1. Se placer dans le répertoire du frontend :
+
+```bash
+cd frontend
+```
+
+2. Installer les dépendances :
+
+```bash
+npm install
+```
+
+3. Lancer le serveur de développement :
+
+```bash
+npm run dev
+```
+
+L'application sera disponible à l'adresse http://localhost:5173/
 
 ## Tests
 
