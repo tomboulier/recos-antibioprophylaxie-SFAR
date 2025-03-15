@@ -47,24 +47,24 @@ const handleSearch = (query) => {
         :query="searchQuery"
       />
 
-      <!-- Footer simplifié au maximum pour correspond à l'image -->
-      <div class="mt-20"></div>
+      <!-- Espacement pour que le contenu ne soit pas caché par le footer -->
+      <div class="mb-24"></div>
       
-      <div class="absolute bottom-0 w-full py-4 bg-white">
-        <div class="max-w-4xl mx-auto flex items-center px-6">
-          <div style="width: 60px">
-            <img src="/logo_sfar.png" alt="SFAR" width="60" />
+      <!-- Footer STRICTEMENT horizontal avec display: flex et space-between -->      
+      <div style="position: fixed; bottom: 0; left: 0; right: 0; background-color: white; padding: 10px 0; border-top: 1px solid #eee;">
+        <div style="display: flex; justify-content: space-between; align-items: center; max-width: 900px; margin: 0 auto; padding: 0 20px;">
+          <!-- Logo gauche -->
+          <img src="/logo_sfar.png" alt="SFAR" style="height: 40px; width: auto;" />
+          
+          <!-- Texte au milieu -->
+          <div style="text-align: center; color: #333; font-size: 0.8rem; margin: 0 15px;">
+            <p style="margin: 2px 0;">Recommandations formalisées d'experts de :</p>
+            <p style="margin: 2px 0;">• la Société Française d'Anesthésie-Réanimation (SFAR)</p>
+            <p style="margin: 2px 0;">• la Société de Pathologie Infectieuse de Langue Française (SPILF)</p>
           </div>
           
-          <div class="flex-1 ml-4 mr-4 text-left text-sm">
-            <p>Recommandations formalisées d'experts de :</p>
-            <p>• la Société Française d'Anesthésie-Réanimation (SFAR)</p>
-            <p>• la Société de Pathologie Infectieuse de Langue Française (SPILF)</p>
-          </div>
-          
-          <div style="width: 60px">
-            <img src="/logo-SPILF.jpeg" alt="SPILF" width="60" />
-          </div>
+          <!-- Logo droite -->
+          <img src="/logo-SPILF.jpeg" alt="SPILF" style="height: 40px; width: auto;" />
         </div>
       </div>
     </div>
