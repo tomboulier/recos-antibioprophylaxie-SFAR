@@ -104,9 +104,7 @@ def create_procedure(
         La procédure créée
     """
     procedure = Procedure(
-        name=procedure_data.get("name"),
-        description=procedure_data.get("description"),
-        risk_factors=procedure_data.get("risk_factors"),
+        name=procedure_data.get("name")
     )
     db.add(procedure)
     db.commit()
@@ -150,10 +148,6 @@ def update_procedure(
     # Mettre à jour les attributs
     if "name" in procedure_data:
         procedure.name = procedure_data["name"]
-    if "description" in procedure_data:
-        procedure.description = procedure_data["description"]
-    if "risk_factors" in procedure_data:
-        procedure.risk_factors = procedure_data["risk_factors"]
     
     db.add(procedure)
     db.commit()
@@ -203,7 +197,7 @@ def delete_procedure(
 def search_procedures_by_name(
     *,
     db: Session = Depends(get_db),
-    name: str = Query(..., min_length=3, description="Terme de recherche (min 3 caractères)"),
+    name: str = Query(..., description="Terme de recherche"),
 ) -> JSONResponse:
     """
     Recherche des procédures chirurgicales par nom.
@@ -213,7 +207,7 @@ def search_procedures_by_name(
     db : Session
         Session de base de données SQLAlchemy
     name : str
-        Terme de recherche (minimum 3 caractères)
+        Terme de recherche
     
     Retourne
     --------

@@ -9,7 +9,7 @@ import logging
 from datetime import datetime
 from typing import Any, Dict, List, Optional
 
-from app.models.models import Antibiotic, Category, Procedure, Recommendation
+from app.models.models import Category, Procedure
 
 # Configuration du logger
 logger = logging.getLogger(__name__)
@@ -74,8 +74,6 @@ def serialize_procedure(procedure: Procedure) -> Dict[str, Any]:
     result = {
         "id": procedure.id,
         "name": procedure.name,
-        "description": procedure.description,
-        "risk_factors": procedure.risk_factors,
         "created_at": serialize_datetime(procedure.created_at),
         "updated_at": serialize_datetime(procedure.updated_at),
     }
