@@ -75,8 +75,9 @@ const handleSearch = (query) => {
     <!-- Header fixe en haut de page -->
     <div style="position: fixed; top: 0; left: 0; right: 0; background-color: white; z-index: 10; padding: 20px 0; border-bottom: 1px solid #f5f5f5;">
       <div style="text-align: center; max-width: 800px; margin: 0 auto;">
-        <h1 style="font-size: 32px; font-weight: bold; margin-bottom: 8px;">Antibioprophylaxie</h1>
-        <h2 style="font-size: 20px; margin-bottom: 0px; color: #555;">en chirurgie et médecine interventionnelle</h2>
+        <h1 style="font-size: 36px; font-weight: bold; margin-bottom: 2px;">Antibioprophylaxie</h1>
+        <h2 style="font-size: 24px; margin-bottom: 0px; color: #333;">en chirurgie</h2>
+        <h2 style="font-size: 24px; margin-bottom: 0px; color: #333;">et médecine interventionnelle</h2>
       </div>
     </div>
     

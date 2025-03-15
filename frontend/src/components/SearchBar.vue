@@ -45,14 +45,15 @@ watch(searchInput, (newValue) => {
 
 <template>
   <div class="relative w-full mx-auto mb-4">
-    <!-- Input de recherche avec bordures très arrondies et taille augmentée -->
+    <!-- Input de recherche large avec bordures très arrondies, style épuré -->
     <input
       v-model="searchInput"
       type="text"
       placeholder="Rechercher une intervention"
-      class="w-full px-8 py-5 bg-white border border-gray-300 rounded-full text-gray-800 shadow-lg text-xl
-            focus:outline-none focus:ring-2 focus:ring-blue-400 focus:border-blue-400 placeholder-gray-400"
+      class="w-full px-8 py-5 bg-white border border-gray-200 rounded-3xl text-gray-800 shadow-sm text-xl
+            focus:outline-none focus:border-gray-300 placeholder-gray-500"
       @input="handleSearch"
+      style="height: 64px; min-width: 100%;"
     />
     
     <!-- Bouton de réinitialisation (X) visible uniquement quand il y a du texte -->
