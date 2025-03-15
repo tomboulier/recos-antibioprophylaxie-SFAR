@@ -46,6 +46,9 @@ docs = [
 requires = ["hatchling>=1.18.0"]
 build-backend = "hatchling.build"
 
+[tool.hatch.build.targets.wheel]
+packages = ["domaine", "application", "infrastructure", "presentation"]
+
 [tool.black]
 line-length = 88
 target-version = ["py310"]
