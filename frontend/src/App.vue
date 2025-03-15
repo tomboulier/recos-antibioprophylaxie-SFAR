@@ -1,7 +1,5 @@
 <script setup>
 import { ref } from 'vue'
-import HeaderApp from './components/HeaderApp.vue'
-import FooterApp from './components/FooterApp.vue'
 import SearchBar from './components/SearchBar.vue'
 import InterventionList from './components/InterventionList.vue'
 
@@ -33,45 +31,45 @@ const handleSearch = (query) => {
 </script>
 
 <template>
-  <div class="min-h-screen bg-white p-4 md:p-6 flex flex-col">
-    <div class="flex-grow flex flex-col items-center justify-center max-w-xl mx-auto">
-      <!-- En-tête centré style Google -->
-      <div class="text-center mb-12">
-        <h1 class="text-5xl font-bold mb-4">Antibioprophylaxie</h1>
-        <h2 class="text-2xl mb-2">en chirurgie</h2>
-        <h2 class="text-2xl mb-16">et médecine interventionnelle</h2>
+  <div style="width: 100%; height: 100vh; display: flex; flex-direction: column;">
+    <!-- Zone principale centrée verticalement et horizontalement -->
+    <div style="flex: 1; display: flex; flex-direction: column; justify-content: center; align-items: center; padding: 0 20px;">
+      <!-- Titre et sous-titres absolument centrés -->
+      <div style="text-align: center; margin-bottom: 50px;">
+        <h1 style="font-size: 48px; font-weight: bold; margin-bottom: 16px;">Antibioprophylaxie</h1>
+        <h2 style="font-size: 28px; margin-bottom: 8px;">en chirurgie</h2>
+        <h2 style="font-size: 28px; margin-bottom: 40px;">et médecine interventionnelle</h2>
       </div>
 
       <!-- Barre de recherche -->
-      <div class="w-full max-w-md mx-auto">
+      <div style="width: 100%; max-width: 500px; margin: 0 auto;">
         <SearchBar @search="handleSearch" />
       </div>
 
       <!-- Liste des interventions trouvées -->
-      <InterventionList 
-        :interventions="searchResults" 
-        :query="searchQuery"
-      />
-
-      <!-- Espacement pour que le contenu ne soit pas caché par le footer -->
-      <div class="mb-24"></div>
-      
-      <!-- Footer STRICTEMENT horizontal avec display: flex et space-between -->      
-      <div style="position: fixed; bottom: 0; left: 0; right: 0; background-color: white; padding: 10px 0; border-top: 1px solid #eee;">
-        <div style="display: flex; justify-content: space-between; align-items: center; max-width: 900px; margin: 0 auto; padding: 0 20px;">
-          <!-- Logo gauche -->
-          <img src="/logo_sfar.png" alt="SFAR" style="height: 40px; width: auto;" />
-          
-          <!-- Texte au milieu -->
-          <div style="text-align: center; color: #333; font-size: 0.8rem; margin: 0 15px;">
-            <p style="margin: 2px 0;">Recommandations formalisées d'experts de :</p>
-            <p style="margin: 2px 0;">• la Société Française d'Anesthésie-Réanimation (SFAR)</p>
-            <p style="margin: 2px 0;">• la Société de Pathologie Infectieuse de Langue Française (SPILF)</p>
-          </div>
-          
-          <!-- Logo droite -->
-          <img src="/logo-SPILF.jpeg" alt="SPILF" style="height: 40px; width: auto;" />
+      <div style="width: 100%; max-width: 600px; margin: 20px auto;">
+        <InterventionList 
+          :interventions="searchResults" 
+          :query="searchQuery"
+        />
+      </div>
+    </div>
+    
+    <!-- Footer horizontal avec flexbox -->
+    <div style="position: fixed; bottom: 0; left: 0; right: 0; background-color: white; padding: 10px 0; border-top: 1px solid #eee;">
+      <div style="display: flex; justify-content: space-between; align-items: center; max-width: 900px; margin: 0 auto; padding: 0 20px;">
+        <!-- Logo gauche -->
+        <img src="/logo_sfar.png" alt="SFAR" style="height: 40px; width: auto;" />
+        
+        <!-- Texte au milieu -->
+        <div style="text-align: center; color: #333; font-size: 0.8rem; margin: 0 15px;">
+          <p style="margin: 2px 0;">Recommandations formalisées d'experts de :</p>
+          <p style="margin: 2px 0;">• la Société Française d'Anesthésie-Réanimation (SFAR)</p>
+          <p style="margin: 2px 0;">• la Société de Pathologie Infectieuse de Langue Française (SPILF)</p>
         </div>
+        
+        <!-- Logo droite -->
+        <img src="/logo-SPILF.jpeg" alt="SPILF" style="height: 40px; width: auto;" />
       </div>
     </div>
   </div>
