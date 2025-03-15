@@ -5,7 +5,7 @@
   à la recherche de l'utilisateur, avec une mise en valeur des termes recherchés.
  -->
 <script setup>
-import { computed } from 'vue'
+import { computed, ref } from 'vue'
 
 /**
  * Props du composant
@@ -26,9 +26,15 @@ const props = defineProps({
 })
 
 /**
- * Calcule s'il y a des résultats à afficher
+ * État d'ouverture du panneau de résultats
+ */
+const isOpen = ref(true)
+
+/**
+ * Calcule s'il y a des résultats à afficher et si la recherche est active
  */
 const hasResults = computed(() => props.interventions.length > 0)
+const isSearchActive = computed(() => props.query && props.query.trim().length > 0)
 
 /**
  * Calcule le message à afficher en fonction des résultats et de la recherche
@@ -48,51 +54,73 @@ const resultMessage = computed(() => {
 })
 
 /**
+ * Ferme la fenêtre des résultats
+ */
+function closeResults() {
+  isOpen.value = false
+}
+
+/**
  * Handler pour la sélection d'une intervention
  */
 function handleInterventionClick(intervention) {
   // Cette fonction sera implémentée pour afficher les détails de l'intervention
   console.log('Intervention sélectionnée:', intervention)
 }
+
+/**
+ * Met en évidence les termes de recherche dans le texte
+ */
+function highlightMatch(text, query) {
+  if (!query || !text) return text
+  const regex = new RegExp(`(${query})`, 'gi')
+  return text.replace(regex, '<span class="highlight">$1</span>')
+}
 </script>
 
 <template>
   <!-- Container principal avec animation -->
-  <div class="mt-6 transition-all duration-300 max-w-2xl mx-auto">
-    <!-- Message de statut de la recherche -->
-    <div class="text-gray-600 text-sm mb-3 px-2" v-if="query || !hasResults">
-      {{ resultMessage }}
-    </div>
-    
-    <!-- Liste des interventions trouvées avec animation -->
-    <transition-group 
-      name="intervention-list" 
-      tag="ul" 
-      class="bg-white rounded-xl shadow-md overflow-hidden divide-y divide-gray-100"
-      v-if="hasResults"
-    >
-      <li 
-        v-for="intervention in interventions" 
-        :key="intervention.id"
-        class="transition-colors hover:bg-gray-50 cursor-pointer"
-        @click="handleInterventionClick(intervention)"
-      >
-        <div class="p-5">
-          <h3 class="text-lg font-medium text-gray-800">{{ intervention.nom }}</h3>
-        </div>
-      </li>
-    </transition-group>
-    
-    <!-- État vide (pas de résultats) -->
+  <div class="relative w-full transition-all duration-300 max-w-md mx-auto">
+    <!-- Boîte de résultats avec bordure et ombre similaire à l'image partagée -->
     <div 
-      v-if="!hasResults && query" 
-      class="bg-white rounded-xl shadow-md p-8 text-center text-gray-500"
+      v-if="isSearchActive && isOpen"
+      class="absolute left-0 right-0 top-0 bg-white rounded-xl border border-gray-200 shadow-lg overflow-hidden z-10"
     >
-      <svg xmlns="http://www.w3.org/2000/svg" class="h-14 w-14 mx-auto mb-4 text-gray-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9.172 16.172a4 4 0 015.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-      </svg>
-      <p class="text-lg font-medium">Nous n'avons pas trouvé d'intervention correspondant à "{{ query }}"</p>
-      <p class="text-sm mt-3 text-gray-400">Essayez avec un autre terme ou vérifiez l'orthographe</p>
+      <!-- Barre supérieure avec la requête et bouton fermer -->
+      <div class="flex justify-between items-center px-4 py-3 bg-gray-50 border-b border-gray-200">
+        <span class="font-medium text-gray-700">{{ query }}</span>
+        <button @click="closeResults" class="text-gray-500 hover:text-gray-700">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+            <path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd" />
+          </svg>
+        </button>
+      </div>
+
+      <!-- Liste des interventions trouvées avec animation -->
+      <transition-group 
+        name="intervention-list" 
+        tag="ul" 
+        class="divide-y divide-gray-100 max-h-80 overflow-y-auto"
+        v-if="hasResults"
+      >
+        <li 
+          v-for="intervention in interventions" 
+          :key="intervention.id"
+          class="py-3 px-4 transition-colors hover:bg-gray-50 cursor-pointer"
+          @click="handleInterventionClick(intervention)"
+        >
+          <div v-html="highlightMatch(intervention.nom, query)" class="text-base text-gray-800"></div>
+        </li>
+      </transition-group>
+      
+      <!-- État vide (pas de résultats) -->
+      <div 
+        v-if="!hasResults && isSearchActive" 
+        class="p-6 text-center text-gray-500"
+      >
+        <p class="text-gray-500">Aucun résultat pour "{{ query }}"</p>
+        <p class="text-sm mt-1 text-gray-400">Essayez avec un autre terme</p>
+      </div>
     </div>
   </div>
 </template>
@@ -101,11 +129,17 @@ function handleInterventionClick(intervention) {
 /* Animations pour la liste d'interventions avec une transition douce */
 .intervention-list-enter-active,
 .intervention-list-leave-active {
-  transition: all 0.3s ease;
+  transition: all 0.2s ease;
 }
 .intervention-list-enter-from,
 .intervention-list-leave-to {
   opacity: 0;
-  transform: translateY(10px);
+  transform: translateY(4px);
+}
+
+/* Style pour la mise en évidence des termes recherchés */
+:deep(.highlight) {
+  font-weight: bold;
+  color: #000;
 }
 </style>

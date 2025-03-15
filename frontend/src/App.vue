@@ -2,31 +2,71 @@
 import { ref } from 'vue'
 import SearchBar from './components/SearchBar.vue'
 import InterventionList from './components/InterventionList.vue'
+import { useLogger } from './services/logging'
 
+// Initialisation du logger pour suivre les événements utilisateur
+const logger = useLogger('App')
+
+/**
+ * État local de l'application
+ */
 const searchQuery = ref('')
 const searchResults = ref([])
 
-// Fonction pour gérer la recherche et mettre à jour les résultats
+/**
+ * Base de données d'interventions chirurgicales (simulation)
+ * Dans une version réelle, ces données proviendraient d'un service métier
+ */
+const interventionsDb = [
+  // Dérivations
+  { id: 1, nom: 'Dérivation ventriculaire externe (DVE)' },
+  { id: 2, nom: 'Dérivation lombaire externe (DLE)' },
+  { id: 3, nom: 'Dérivation ventriculo-péritonéale (DVP)' },
+  { id: 4, nom: 'Dérivation ventriculo-atriale (DVA)' },
+  { id: 5, nom: 'Cystectomie sustrigonale partielle ou totale, quel que soit le mode de dérivation' },
+  
+  // Chirurgies digestives
+  { id: 6, nom: 'Chirurgie gastro-duodénale' },
+  { id: 7, nom: 'Chirurgie colo-rectale' },
+  { id: 8, nom: 'Chirurgie hépato-biliaire' },
+  { id: 9, nom: 'Chirurgie pancréatique' },
+  
+  // Chirurgies orthopédiques
+  { id: 10, nom: 'Prothèse de hanche' },
+  { id: 11, nom: 'Prothèse de genou' },
+  { id: 12, nom: 'Chirurgie rachidienne' },
+  { id: 13, nom: 'Arthroscopie' }
+]
+
+/**
+ * Fonction pour gérer la recherche et mettre à jour les résultats
+ * Implémente une recherche "fuzzy" simple basée sur des sous-chaînes
+ */
 const handleSearch = (query) => {
   searchQuery.value = query
   
-  // Dans un premier temps, nous simulons les résultats
-  // Plus tard, cela sera remplacé par un appel à l'API backend
-  if (query.toLowerCase().includes('dérivation') || query.toLowerCase().includes('derivation')) {
-    searchResults.value = [
-      { id: 1, nom: 'Dérivation ventriculaire externe (DVE)' },
-      { id: 2, nom: 'Dérivation lombaire externe (DLE)' },
-      { id: 3, nom: 'Dérivation ventriculo-péritonéale (DVP)' },
-      { id: 4, nom: 'Dérivation ventriculo-atriale (DVA)' },
-    ]
-  } else if (query.trim() === '') {
+  // Logge l'action utilisateur de recherche
+  logger.info(`Recherche effectuée: "${query}"`)
+  
+  // Si la recherche est vide, réinitialiser les résultats
+  if (query.trim() === '') {
     searchResults.value = []
-  } else {
-    // Simulons quelques résultats pour toute autre recherche
-    searchResults.value = [
-      { id: 5, nom: 'Cystectomie sustrigonale partielle ou totale' },
-    ]
+    return
   }
+  
+  // Recherche insensible à la casse et aux accents
+  const normalizedQuery = query.toLowerCase()
+    .normalize("NFD")
+    .replace(/[\u0300-\u036f]/g, "")
+  
+  // Filtrage des interventions qui correspondent à la recherche
+  searchResults.value = interventionsDb.filter(intervention => {
+    const normalizedNom = intervention.nom.toLowerCase()
+      .normalize("NFD")
+      .replace(/[\u0300-\u036f]/g, "")
+    
+    return normalizedNom.includes(normalizedQuery)
+  })
 }
 </script>
 
