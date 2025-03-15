@@ -4,8 +4,8 @@ Entité représentant une spécialité chirurgicale.
 Ce module définit la classe SpecialiteChirurgicale qui modélise
 les différentes spécialités chirurgicales selon les recommandations SFAR.
 """
-from dataclasses import dataclass, field
-from typing import List, Optional
+from dataclasses import dataclass
+from typing import Optional
 from datetime import datetime
 
 from domaine.entites.entite_base import EntiteBase
@@ -27,16 +27,39 @@ class SpecialiteChirurgicale(EntiteBase):
         Description détaillée de la spécialité chirurgicale
     """
     
-    # Champs obligatoires en premier
     nom: str
-    # Champs optionnels ensuite
     description: Optional[str] = None
-    # Redéfinition des champs hérités avec leurs valeurs par défaut
-    id: Optional[int] = None
-    date_creation: datetime = field(default_factory=datetime.utcnow)
-    date_modification: datetime = field(default_factory=datetime.utcnow)
     
-    def __post_init__(self):
-        """Validation après initialisation."""
+    def __init__(
+        self,
+        nom: str,
+        description: Optional[str] = None,
+        id: Optional[int] = None,
+        date_creation: Optional[datetime] = None,
+        date_modification: Optional[datetime] = None,
+    ):
+        """
+        Initialise une nouvelle instance de SpecialiteChirurgicale.
+        
+        Paramètres
+        ----------
+        nom : str
+            Nom de la spécialité chirurgicale
+        description : Optional[str], optional
+            Description détaillée de la spécialité, par défaut None
+        id : Optional[int], optional
+            Identifiant unique, par défaut None
+        date_creation : Optional[datetime], optional
+            Date et heure de création, par défaut None (sera définit par EntiteBase)
+        date_modification : Optional[datetime], optional
+            Date et heure de dernière modification, par défaut None
+        """
+        super().__init__(id, date_creation, date_modification)
+        self.nom = nom
+        self.description = description
+        self._valider()
+        
+    def _valider(self):
+        """Valide les invariants de l'entité."""
         if not self.nom:
             raise ValueError("Le nom de la spécialité chirurgicale ne peut pas être vide")

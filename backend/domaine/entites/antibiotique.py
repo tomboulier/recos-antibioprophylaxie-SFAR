@@ -4,7 +4,7 @@ Entité représentant un antibiotique.
 Ce module définit la classe Antibiotique qui modélise les antibiotiques
 utilisés dans les recommandations d'antibioprophylaxie de la SFAR.
 """
-from dataclasses import dataclass, field
+from dataclasses import dataclass
 from typing import Optional
 from datetime import datetime
 
@@ -33,19 +33,54 @@ class Antibiotique(EntiteBase):
         Contre-indications notables
     """
     
-    # Champs obligatoires en premier
     nom: str
-    # Champs optionnels ensuite
     nom_generique: Optional[str] = None
     description: Optional[str] = None
     posologie_standard: Optional[str] = None
     contre_indications: Optional[str] = None
-    # Redéfinition des champs hérités avec leurs valeurs par défaut
-    id: Optional[int] = None
-    date_creation: datetime = field(default_factory=datetime.utcnow)
-    date_modification: datetime = field(default_factory=datetime.utcnow)
     
-    def __post_init__(self):
-        """Validation après initialisation."""
+    def __init__(
+        self,
+        nom: str,
+        nom_generique: Optional[str] = None,
+        description: Optional[str] = None,
+        posologie_standard: Optional[str] = None,
+        contre_indications: Optional[str] = None,
+        id: Optional[int] = None,
+        date_creation: Optional[datetime] = None,
+        date_modification: Optional[datetime] = None,
+    ):
+        """
+        Initialise une nouvelle instance d'Antibiotique.
+        
+        Paramètres
+        ----------
+        nom : str
+            Nom commercial de l'antibiotique
+        nom_generique : Optional[str], optional
+            Nom générique ou DCI, par défaut None
+        description : Optional[str], optional
+            Description de l'antibiotique, par défaut None
+        posologie_standard : Optional[str], optional
+            Informations sur la posologie standard, par défaut None
+        contre_indications : Optional[str], optional
+            Contre-indications notables, par défaut None
+        id : Optional[int], optional
+            Identifiant unique, par défaut None
+        date_creation : Optional[datetime], optional
+            Date et heure de création, par défaut None
+        date_modification : Optional[datetime], optional
+            Date et heure de dernière modification, par défaut None
+        """
+        super().__init__(id, date_creation, date_modification)
+        self.nom = nom
+        self.nom_generique = nom_generique
+        self.description = description
+        self.posologie_standard = posologie_standard
+        self.contre_indications = contre_indications
+        self._valider()
+        
+    def _valider(self):
+        """Valide les invariants de l'entité."""
         if not self.nom:
             raise ValueError("Le nom de l'antibiotique ne peut pas être vide")

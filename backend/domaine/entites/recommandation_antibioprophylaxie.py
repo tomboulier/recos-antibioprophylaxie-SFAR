@@ -5,7 +5,7 @@ Ce module définit la classe RecommandationAntibioprophylaxie qui modélise
 les recommandations d'antibioprophylaxie de la SFAR pour chaque
 intervention chirurgicale.
 """
-from dataclasses import dataclass, field
+from dataclasses import dataclass
 from typing import Optional
 from datetime import datetime
 
@@ -44,24 +44,75 @@ class RecommandationAntibioprophylaxie(EntiteBase):
         Remarques ou avertissements supplémentaires
     """
     
-    # Champs obligatoires en premier
     intervention: InterventionChirurgicale
     antibiotique: Antibiotique
     posologie: str
     moment_administration: str
     duree: str
-    # Champs optionnels ensuite
     est_alternative: bool = False
     populations_specifiques: Optional[str] = None
     niveau_preuve: Optional[str] = None
     remarques: Optional[str] = None
-    # Redéfinition des champs hérités avec leurs valeurs par défaut
-    id: Optional[int] = None
-    date_creation: datetime = field(default_factory=datetime.utcnow)
-    date_modification: datetime = field(default_factory=datetime.utcnow)
     
-    def __post_init__(self):
-        """Validation après initialisation."""
+    def __init__(
+        self,
+        intervention: InterventionChirurgicale,
+        antibiotique: Antibiotique,
+        posologie: str,
+        moment_administration: str,
+        duree: str,
+        est_alternative: bool = False,
+        populations_specifiques: Optional[str] = None,
+        niveau_preuve: Optional[str] = None,
+        remarques: Optional[str] = None,
+        id: Optional[int] = None,
+        date_creation: Optional[datetime] = None,
+        date_modification: Optional[datetime] = None,
+    ):
+        """
+        Initialise une nouvelle instance de RecommandationAntibioprophylaxie.
+        
+        Paramètres
+        ----------
+        intervention : InterventionChirurgicale
+            L'intervention chirurgicale concernée
+        antibiotique : Antibiotique
+            L'antibiotique recommandé
+        posologie : str
+            Posologie recommandée (ex: "2g IV")
+        moment_administration : str
+            Moment d'administration (ex: "30-60 minutes avant incision")
+        duree : str
+            Durée de la prophylaxie (ex: "Dose unique" ou "24h maximum")
+        est_alternative : bool, optional
+            Indique s'il s'agit d'une recommandation alternative, par défaut False
+        populations_specifiques : Optional[str], optional
+            Considérations pour certaines populations, par défaut None
+        niveau_preuve : Optional[str], optional
+            Niveau de preuve de la recommandation, par défaut None
+        remarques : Optional[str], optional
+            Remarques supplémentaires, par défaut None
+        id : Optional[int], optional
+            Identifiant unique, par défaut None
+        date_creation : Optional[datetime], optional
+            Date et heure de création, par défaut None
+        date_modification : Optional[datetime], optional
+            Date et heure de dernière modification, par défaut None
+        """
+        super().__init__(id, date_creation, date_modification)
+        self.intervention = intervention
+        self.antibiotique = antibiotique
+        self.posologie = posologie
+        self.moment_administration = moment_administration
+        self.duree = duree
+        self.est_alternative = est_alternative
+        self.populations_specifiques = populations_specifiques
+        self.niveau_preuve = niveau_preuve
+        self.remarques = remarques
+        self._valider()
+        
+    def _valider(self):
+        """Valide les invariants de l'entité."""
         if not self.intervention:
             raise ValueError("L'intervention chirurgicale est obligatoire")
         if not self.antibiotique:
