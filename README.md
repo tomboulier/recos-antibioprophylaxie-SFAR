@@ -76,17 +76,15 @@ cd backend
 uv pip install -e ".[dev,test]"
 ```
 
-4. Configurer la base de données :
+4. Lancer le serveur de développement :
 
 ```bash
-# Instructions à venir
+# Depuis le répertoire backend
+python -m uvicorn infrastructure.api.main:app --reload --host 0.0.0.0 --port 8000
 ```
 
-5. Lancer le serveur de développement :
-
-```bash
-uvicorn infrastructure.api.main:app --reload
-```
+Le serveur API sera accessible à l'adresse http://localhost:8000/
+La documentation interactive de l'API sera disponible à http://localhost:8000/docs
 
 ### Frontend
 
@@ -152,6 +150,48 @@ flake8
 # Vérification des types
 mypy .
 ```
+
+## Communication Frontend-Backend
+
+Le frontend et le backend communiquent via une API REST :
+
+### Configuration
+
+Le frontend est configuré pour communiquer avec le backend à l'adresse `http://localhost:8000` par défaut. Cette configuration peut être modifiée dans le fichier `.env.local` en ajoutant :
+
+```
+VITE_API_BASE_URL=http://votre-url-api
+```
+
+### Endpoints API utilisés
+
+Le frontend interagit principalement avec les endpoints suivants :
+
+- `GET /procedures/search/by-name?name={terme}` - Recherche d'interventions par nom
+- `GET /procedures/{id}` - Récupération des détails d'une intervention spécifique
+
+### Cycle de développement
+
+Pour travailler sur l'application :
+
+1. Démarrer le backend (terminal 1) :
+   ```bash
+   cd backend
+   source .venv/bin/activate
+   python -m uvicorn infrastructure.api.main:app --reload --host 0.0.0.0 --port 8000
+   ```
+
+2. Démarrer le frontend (terminal 2) :
+   ```bash
+   cd frontend
+   npm run dev
+   ```
+
+3. Ouvrir votre navigateur à http://localhost:5173/
+
+### CORS et sécurité
+
+En développement, le backend est configuré pour accepter les requêtes de n'importe quelle origine (CORS). En production, cette configuration devra être restreinte aux domaines spécifiques hébergeant le frontend.
 
 ## Licence
 
