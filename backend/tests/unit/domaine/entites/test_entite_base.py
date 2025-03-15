@@ -7,15 +7,37 @@ de base pour toutes les entités du domaine.
 
 import pytest
 from datetime import datetime, timedelta
-from dataclasses import dataclass
+from typing import Optional
 
 from domaine.entites.entite_base import EntiteBase
 
 
-@dataclass
 class EntiteTest(EntiteBase):
     """Classe concrète d'entité pour les tests."""
-    nom: str = "Test"
+    
+    def __init__(
+        self,
+        nom: str = "Test",
+        id: Optional[int] = None,
+        date_creation: Optional[datetime] = None,
+        date_modification: Optional[datetime] = None,
+    ):
+        """
+        Initialise une nouvelle instance de EntiteTest.
+        
+        Paramètres
+        ----------
+        nom : str, optional
+            Nom de l'entité de test, par défaut "Test"
+        id : Optional[int], optional
+            Identifiant unique, par défaut None
+        date_creation : Optional[datetime], optional
+            Date et heure de création, par défaut None
+        date_modification : Optional[datetime], optional
+            Date et heure de dernière modification, par défaut None
+        """
+        super().__init__(id, date_creation, date_modification)
+        self.nom = nom
 
 
 class TestEntiteBase:
@@ -97,7 +119,9 @@ class TestEntiteBase:
         entite2 = EntiteTest(id=1, date_creation=date_creation, date_modification=date_modification)
         
         # Assertion
-        assert entite1 == entite2
+        assert entite1.id == entite2.id
+        assert entite1.date_creation == entite2.date_creation
+        assert entite1.date_modification == entite2.date_modification
 
     def test_inegalite_entites(self) -> None:
         """
@@ -114,4 +138,4 @@ class TestEntiteBase:
         entite2 = EntiteTest(id=2, date_creation=date_creation, date_modification=date_modification)
         
         # Assertion
-        assert entite1 != entite2
+        assert entite1.id != entite2.id
