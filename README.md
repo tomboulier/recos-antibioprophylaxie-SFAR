@@ -45,9 +45,16 @@ antibioprophylaxie-sfar/
 
 ## Prérequis
 
+### Option 1 : Installation locale
+
 - Python 3.10 ou supérieur
 - [uv](https://github.com/astral-sh/uv) (gestionnaire de paquets Python ultra-rapide)
 - Node.js 18 ou supérieur (pour le frontend)
+
+### Option 2 : Utilisation de Docker (recommandé)
+
+- Docker
+- Docker Compose
 
 ## Installation
 
@@ -107,6 +114,57 @@ npm run dev
 ```
 
 L'application sera disponible à l'adresse http://localhost:5173/
+
+## Utilisation avec Docker (recommandé)
+
+Le projet est configuré pour fonctionner avec Docker et Docker Compose, ce qui simplifie considérablement le déploiement et le développement.
+
+1. S'assurer que Docker et Docker Compose sont installés sur votre machine
+
+2. Construire et démarrer les conteneurs :
+
+```bash
+# À la racine du projet
+docker-compose up -d --build
+```
+
+Cette commande va :
+- Construire les images Docker pour le backend et le frontend
+- Démarrer les conteneurs en mode détaché (background)
+- Configurer le réseau entre les services
+
+3. Accéder aux applications :
+
+- Frontend : http://localhost:5173/
+- Backend API : http://localhost:8000/
+- Documentation API : http://localhost:8000/docs
+
+4. Suivre les logs :
+
+```bash
+# Logs du backend
+docker-compose logs -f backend
+
+# Logs du frontend
+docker-compose logs -f frontend
+
+# Tous les logs
+docker-compose logs -f
+```
+
+5. Arrêter les conteneurs :
+
+```bash
+docker-compose down
+```
+
+### Avantages de l'approche Docker
+
+- Environnement de développement cohérent et reproductible
+- Pas besoin d'installer Python, Node.js ou d'autres dépendances localement
+- Démarrage en une seule commande des deux services (backend et frontend)
+- Volume bind mounts pour permettre la modification des fichiers en temps réel sans reconstruire les images
+- Facilité de déploiement sur d'autres environnements
 
 ## Tests
 
