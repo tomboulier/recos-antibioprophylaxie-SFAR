@@ -2,7 +2,7 @@
 import { ref } from 'vue'
 import SearchBar from './components/SearchBar.vue'
 import InterventionList from './components/InterventionList.vue'
-import { useLogger } from './services/logging'
+import { useLogger } from './services/logging.js'
 
 // Initialisation du logger pour suivre les événements utilisateur
 const logger = useLogger('App')
