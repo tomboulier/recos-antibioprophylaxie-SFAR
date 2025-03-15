@@ -30,6 +30,8 @@ class Category(Base):
     
     Attributes
     ----------
+    id : int
+        Primary key
     name : str
         Name of the surgical category
     description : str
@@ -38,6 +40,9 @@ class Category(Base):
         List of procedures in this category
     """
     
+    __allow_unmapped__ = True
+    
+    id: Mapped[int] = mapped_column(Integer, primary_key=True)
     name: Mapped[str] = mapped_column(String(100), index=True, nullable=False, unique=True)
     description: Mapped[Optional[str]] = mapped_column(Text, nullable=True)
     
@@ -59,6 +64,8 @@ class Procedure(Base):
     
     Attributes
     ----------
+    id : int
+        Primary key
     name : str
         Name of the surgical procedure
     description : str
@@ -71,6 +78,9 @@ class Procedure(Base):
         Antibioprophylaxis recommendations for this procedure
     """
     
+    __allow_unmapped__ = True
+    
+    id: Mapped[int] = mapped_column(Integer, primary_key=True)
     name: Mapped[str] = mapped_column(String(200), index=True, nullable=False, unique=True)
     description: Mapped[Optional[str]] = mapped_column(Text, nullable=True)
     risk_factors: Mapped[Optional[str]] = mapped_column(Text, nullable=True)
@@ -96,6 +106,8 @@ class Antibiotic(Base):
     
     Attributes
     ----------
+    id : int
+        Primary key
     name : str
         Name of the antibiotic
     generic_name : str
@@ -110,6 +122,9 @@ class Antibiotic(Base):
         Recommendations that include this antibiotic
     """
     
+    __allow_unmapped__ = True
+    
+    id: Mapped[int] = mapped_column(Integer, primary_key=True)
     name: Mapped[str] = mapped_column(String(100), index=True, nullable=False, unique=True)
     generic_name: Mapped[Optional[str]] = mapped_column(String(100), nullable=True)
     description: Mapped[Optional[str]] = mapped_column(Text, nullable=True)
@@ -132,6 +147,8 @@ class Recommendation(Base):
     
     Attributes
     ----------
+    id : int
+        Primary key
     procedure_id : int
         ID of the procedure this recommendation applies to
     antibiotic_id : int
@@ -152,6 +169,9 @@ class Recommendation(Base):
         Additional notes or warnings
     """
     
+    __allow_unmapped__ = True
+    
+    id: Mapped[int] = mapped_column(Integer, primary_key=True)
     procedure_id: Mapped[int] = mapped_column(Integer, ForeignKey("procedure.id"), nullable=False)
     antibiotic_id: Mapped[int] = mapped_column(Integer, ForeignKey("antibiotic.id"), nullable=False)
     dosage: Mapped[str] = mapped_column(String(200), nullable=False)
