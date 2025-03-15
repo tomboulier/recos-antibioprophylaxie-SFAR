@@ -83,10 +83,10 @@ const handleSearch = (query) => {
     <!-- Espace pour compenser le header fixe -->
     <div style="height: 120px;"></div>
     
-    <!-- Zone principale pour la recherche et les résultats -->
-    <div style="flex: 1; display: flex; flex-direction: column; align-items: center; padding: 20px;">
-      <!-- Barre de recherche centrée avec plus d'espace -->
-      <div style="width: 100%; max-width: 650px; margin: 60px auto; display: flex; justify-content: center; align-items: center;">
+    <!-- Zone principale pour la recherche et les résultats avec centrage vertical -->
+    <div style="flex: 1; display: flex; flex-direction: column; justify-content: center; align-items: center; padding: 20px;">
+      <!-- Barre de recherche centrée avec plus d'espace (2/3 de l'écran) -->
+      <div style="width: 100%; max-width: 66%; margin: 0 auto; display: flex; justify-content: center; align-items: center;">
         <SearchBar @search="handleSearch" />
       </div>
 
