@@ -86,8 +86,8 @@ const handleSearch = (query) => {
     
     <!-- Zone principale pour la recherche et les résultats avec centrage vertical -->
     <div style="flex: 1; display: flex; flex-direction: column; justify-content: center; align-items: center; padding: 20px;">
-      <!-- Barre de recherche beaucoup plus large avec espacement optimal -->
-      <div style="width: 100%; max-width: 520px; margin: 0 auto; display: flex; justify-content: center; align-items: center;">
+      <!-- Barre de recherche beaucoup plus large (maquette) -->
+      <div style="width: 100%; max-width: 600px; margin: 0 auto; display: flex; justify-content: center; align-items: center;">
         <SearchBar @search="handleSearch" />
       </div>
 
