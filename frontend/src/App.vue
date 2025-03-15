@@ -85,8 +85,8 @@ const handleSearch = (query) => {
     
     <!-- Zone principale pour la recherche et les résultats -->
     <div style="flex: 1; display: flex; flex-direction: column; align-items: center; padding: 20px;">
-      <!-- Barre de recherche -->
-      <div style="width: 100%; max-width: 500px; margin: 40px auto;">
+      <!-- Barre de recherche centrée avec plus d'espace -->
+      <div style="width: 100%; max-width: 650px; margin: 60px auto; display: flex; justify-content: center; align-items: center;">
         <SearchBar @search="handleSearch" />
       </div>
 

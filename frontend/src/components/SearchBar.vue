@@ -44,14 +44,14 @@ watch(searchInput, (newValue) => {
 </script>
 
 <template>
-  <div class="relative w-full max-w-md mx-auto mb-4">
-    <!-- Input de recherche avec bordures arrondies -->
+  <div class="relative w-full max-w-lg mx-auto mb-4">
+    <!-- Input de recherche avec bordures plus arrondies -->
     <input
       v-model="searchInput"
       type="text"
       placeholder="Rechercher une intervention"
-      class="w-full px-4 py-3 bg-white border border-gray-200 rounded-full text-gray-800 shadow-sm text-base
-            focus:outline-none focus:ring-1 focus:ring-blue-400 focus:border-blue-400"
+      class="w-full px-6 py-4 bg-white border border-gray-300 rounded-full text-gray-800 shadow-sm text-lg
+            focus:outline-none focus:ring-2 focus:ring-blue-400 focus:border-blue-400 placeholder-gray-400"
       @input="handleSearch"
     />
     
