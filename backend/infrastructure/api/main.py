@@ -10,6 +10,9 @@ from typing import Dict
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 
+# Import des routes
+from infrastructure.api.routes import specialites, procedures
+
 # Configuration du logger
 logging.basicConfig(
     level=logging.INFO,
@@ -33,9 +36,9 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-# Import des routes
-# Note: Ces imports seront décommentés lorsque les modules correspondants seront créés
-# from infrastructure.api.routes import specialites, interventions, antibiotiques, recommandations
+# Inclusion des routes dans l'application
+app.include_router(specialites.router, prefix="/specialites", tags=["Spécialités"])
+app.include_router(procedures.router, prefix="/procedures", tags=["Procédures"])
 
 
 @app.get("/")
