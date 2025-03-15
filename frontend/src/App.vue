@@ -33,13 +33,19 @@ const handleSearch = (query) => {
 </script>
 
 <template>
-  <div class="min-h-screen bg-white p-4 md:p-6">
-    <div class="max-w-xl mx-auto">
-      <!-- En-tête de l'application -->
-      <HeaderApp />
+  <div class="min-h-screen bg-white p-4 md:p-6 flex flex-col">
+    <div class="flex-grow flex flex-col items-center justify-center max-w-xl mx-auto">
+      <!-- En-tête centré style Google -->
+      <div class="text-center mb-12">
+        <h1 class="text-5xl font-bold mb-4">Antibioprophylaxie</h1>
+        <h2 class="text-2xl mb-2">en chirurgie</h2>
+        <h2 class="text-2xl mb-16">et médecine interventionnelle</h2>
+      </div>
 
       <!-- Barre de recherche -->
-      <SearchBar @search="handleSearch" />
+      <div class="w-full max-w-md mx-auto">
+        <SearchBar @search="handleSearch" />
+      </div>
 
       <!-- Liste des interventions trouvées -->
       <InterventionList 
