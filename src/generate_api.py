@@ -9,20 +9,20 @@ import json
 import os
 import unicodedata
 from pathlib import Path
-from typing import Any, Dict, List
+from typing import Any
 
 
 def slugify(text: str) -> str:
     """
     Convertit un texte en slug URL-friendly.
     Gère les accents français et autres caractères spéciaux.
-    
+
     Args:
         text: Le texte à convertir en slug
-        
+
     Returns:
         Le slug URL-friendly
-        
+
     Examples:
         >>> slugify("Chirurgie orthopédique")
         'chirurgie-orthopedique'
@@ -30,15 +30,15 @@ def slugify(text: str) -> str:
         'oesophage-et-estomac'
     """
     # Normaliser les caractères Unicode (NFD = décomposition)
-    text = unicodedata.normalize('NFD', text)
+    text = unicodedata.normalize("NFD", text)
     # Supprimer les accents
-    text = ''.join(char for char in text if unicodedata.category(char) != 'Mn')
+    text = "".join(char for char in text if unicodedata.category(char) != "Mn")
     # Convertir en minuscules
     text = text.lower()
     # Remplacer les espaces et caractères spéciaux par des tirets
-    text = ''.join(char if char.isalnum() else '-' for char in text)
+    text = "".join(char if char.isalnum() else "-" for char in text)
     # Supprimer les tirets multiples et les tirets en début/fin
-    text = '-'.join(filter(None, text.split('-')))
+    text = "-".join(filter(None, text.split("-")))
     return text
 
 
@@ -48,19 +48,20 @@ def get_base_url() -> str:
     Utilise une variable d'environnement ou une valeur par défaut pour GitHub Pages.
     """
     return os.getenv(
-        'API_BASE_URL',
-        'https://tomboulier.github.io/sfar-rfe-antibioprophylaxie-mcp'
+        "API_BASE_URL", "https://tomboulier.github.io/sfar-rfe-antibioprophylaxie-mcp"
     )
 
 
-def generate_hateoas_links(endpoint: str, additional_links: Dict[str, str] = None) -> Dict[str, Any]:
+def generate_hateoas_links(
+    endpoint: str, additional_links: dict[str, str] = None
+) -> dict[str, Any]:
     """
     Génère les liens HATEOAS pour un endpoint donné.
-    
+
     Args:
         endpoint: Le chemin de l'endpoint actuel (ex: "specialites.json")
         additional_links: Liens additionnels spécifiques à l'endpoint
-        
+
     Returns:
         Dictionnaire de liens HATEOAS
     """
@@ -71,16 +72,16 @@ def generate_hateoas_links(endpoint: str, additional_links: Dict[str, str] = Non
         "recommandations": f"{base_url}/api/v1/recommandations.json",
         "specialites": f"{base_url}/api/v1/specialites.json",
         "generales": f"{base_url}/api/v1/generales.json",
-        "search": f"{base_url}/api/v1/search-index.json"
+        "search": f"{base_url}/api/v1/search-index.json",
     }
-    
+
     if additional_links:
         links.update(additional_links)
-    
+
     return links
 
 
-def generate_recommandations_endpoint(data: Dict[str, Any], output_dir: Path) -> None:
+def generate_recommandations_endpoint(data: dict[str, Any], output_dir: Path) -> None:
     """
     Génère l'endpoint recommandations.json avec toutes les données et métadonnées.
     """
@@ -88,87 +89,84 @@ def generate_recommandations_endpoint(data: Dict[str, Any], output_dir: Path) ->
         "metadata": data["metadata"],
         "recommandations": data["data"],
         "recommandations_generales": data["recommandations_generales"],
-        "_links": generate_hateoas_links("recommandations.json")
+        "_links": generate_hateoas_links("recommandations.json"),
     }
-    
+
     output_file = output_dir / "recommandations.json"
-    with open(output_file, 'w', encoding='utf-8') as f:
+    with open(output_file, "w", encoding="utf-8") as f:
         json.dump(endpoint_data, f, ensure_ascii=False, indent=2)
-    
+
     print(f"✓ Généré: {output_file}")
 
 
-def generate_specialites_endpoint(data: Dict[str, Any], output_dir: Path) -> None:
+def generate_specialites_endpoint(data: dict[str, Any], output_dir: Path) -> None:
     """
     Génère l'endpoint specialites.json avec la liste des spécialités.
     """
     specialites_list = []
-    
+
     for specialite_name in data["metadata"]["specialites"]:
         slug = slugify(specialite_name)
         # Compter le nombre de recommandations pour cette spécialité
-        count = len([
-            rec for rec in data["data"]
-            if rec["specialite"] == specialite_name
-        ])
-        
-        specialites_list.append({
-            "nom": specialite_name,
-            "slug": slug,
-            "count": count,
-            "url": f"{get_base_url()}/api/v1/specialite/{slug}.json"
-        })
-    
+        count = len(
+            [rec for rec in data["data"] if rec["specialite"] == specialite_name]
+        )
+
+        specialites_list.append(
+            {
+                "nom": specialite_name,
+                "slug": slug,
+                "count": count,
+                "url": f"{get_base_url()}/api/v1/specialite/{slug}.json",
+            }
+        )
+
     endpoint_data = {
         "specialites": specialites_list,
         "total": len(specialites_list),
-        "_links": generate_hateoas_links("specialites.json")
+        "_links": generate_hateoas_links("specialites.json"),
     }
-    
+
     output_file = output_dir / "specialites.json"
-    with open(output_file, 'w', encoding='utf-8') as f:
+    with open(output_file, "w", encoding="utf-8") as f:
         json.dump(endpoint_data, f, ensure_ascii=False, indent=2)
-    
+
     print(f"✓ Généré: {output_file}")
 
 
-def generate_specialite_endpoints(data: Dict[str, Any], output_dir: Path) -> None:
+def generate_specialite_endpoints(data: dict[str, Any], output_dir: Path) -> None:
     """
     Génère les endpoints par spécialité (specialite/{slug}.json).
     """
     specialite_dir = output_dir / "specialite"
     specialite_dir.mkdir(parents=True, exist_ok=True)
-    
+
     for specialite_name in data["metadata"]["specialites"]:
         slug = slugify(specialite_name)
-        
+
         # Filtrer les recommandations pour cette spécialité
         recommandations = [
-            rec for rec in data["data"]
-            if rec["specialite"] == specialite_name
+            rec for rec in data["data"] if rec["specialite"] == specialite_name
         ]
-        
+
         endpoint_data = {
-            "specialite": {
-                "nom": specialite_name,
-                "slug": slug
-            },
+            "specialite": {"nom": specialite_name, "slug": slug},
             "recommandations": recommandations,
             "total": len(recommandations),
             "_links": generate_hateoas_links(
                 f"specialite/{slug}.json",
-                {"specialites_list": f"{get_base_url()}/api/v1/specialites.json"}
-            )
+                {"specialites_list": f"{get_base_url()}/api/v1/specialites.json"},
+            ),
         }
-        
+
         output_file = specialite_dir / f"{slug}.json"
-        with open(output_file, 'w', encoding='utf-8') as f:
+        with open(output_file, "w", encoding="utf-8") as f:
             json.dump(endpoint_data, f, ensure_ascii=False, indent=2)
-        
+
         print(f"✓ Généré: {output_file}")
 
 
-def generate_generales_endpoint(data: Dict[str, Any], output_dir: Path) -> None:
+def generate_generales_endpoint(data: dict[str, Any], output_dir: Path) -> None:
     """
     Génère l'endpoint generales.json avec les recommandations générales.
     """
@@ -176,24 +174,24 @@ def generate_generales_endpoint(data: Dict[str, Any], output_dir: Path) -> None:
         "recommandations_generales": data["recommandations_generales"],
         "metadata": {
             "source": data["metadata"]["source"],
-            "version": data["metadata"]["version"]
+            "version": data["metadata"]["version"],
         },
-        "_links": generate_hateoas_links("generales.json")
+        "_links": generate_hateoas_links("generales.json"),
     }
-    
+
     output_file = output_dir / "generales.json"
-    with open(output_file, 'w', encoding='utf-8') as f:
+    with open(output_file, "w", encoding="utf-8") as f:
         json.dump(endpoint_data, f, ensure_ascii=False, indent=2)
-    
+
     print(f"✓ Généré: {output_file}")
 
 
-def generate_search_index(data: Dict[str, Any], output_dir: Path) -> None:
+def generate_search_index(data: dict[str, Any], output_dir: Path) -> None:
     """
     Génère l'index de recherche pour faciliter les recherches côté client.
     """
     search_entries = []
-    
+
     for idx, rec in enumerate(data["data"]):
         entry = {
             "id": idx,
@@ -203,75 +201,79 @@ def generate_search_index(data: Dict[str, Any], output_dir: Path) -> None:
             "antibiotique": rec["antibiotique"],
             "posologie": rec["posologie"],
             "grade": rec["grade"],
-            "searchable_text": f"{rec['specialite']} {rec['acte']} {rec['antibiotique']}".lower()
+            "searchable_text": f"{rec['specialite']} {rec['acte']} {rec['antibiotique']}".lower(),
         }
         search_entries.append(entry)
-    
+
     endpoint_data = {
         "index": search_entries,
         "total": len(search_entries),
         "fields": ["specialite", "acte", "antibiotique", "posologie", "grade"],
-        "_links": generate_hateoas_links("search-index.json")
+        "_links": generate_hateoas_links("search-index.json"),
     }
-    
+
     output_file = output_dir / "search-index.json"
-    with open(output_file, 'w', encoding='utf-8') as f:
+    with open(output_file, "w", encoding="utf-8") as f:
         json.dump(endpoint_data, f, ensure_ascii=False, indent=2)
-    
+
     print(f"✓ Généré: {output_file}")
 
 
-def generate_index_html(data: Dict[str, Any], output_dir: Path) -> None:
+def generate_index_html(data: dict[str, Any], output_dir: Path) -> None:
     """
     Génère la page index.html avec la documentation de l'API.
     """
     base_url = get_base_url()
     metadata = data["metadata"]
-    
+
     # Liste des endpoints
     endpoints = [
         {
             "path": "/api/v1/recommandations.json",
             "description": "Toutes les recommandations avec métadonnées",
-            "example_field": "recommandations"
+            "example_field": "recommandations",
         },
         {
             "path": "/api/v1/specialites.json",
             "description": "Liste des spécialités avec leur slug et count",
-            "example_field": "specialites"
+            "example_field": "specialites",
         },
         {
             "path": "/api/v1/generales.json",
             "description": "Recommandations générales (timing, réinjection, durée)",
-            "example_field": "recommandations_generales"
+            "example_field": "recommandations_generales",
         },
         {
             "path": "/api/v1/search-index.json",
             "description": "Index de recherche pour faciliter les recherches",
-            "example_field": "index"
-        }
+            "example_field": "index",
+        },
     ]
-    
+
     # Ajouter les endpoints par spécialité
     for specialite_name in metadata["specialites"]:
         slug = slugify(specialite_name)
-        endpoints.append({
-            "path": f"/api/v1/specialite/{slug}.json",
-            "description": f"Recommandations pour {specialite_name}",
-            "example_field": "recommandations"
-        })
-    
-    endpoints_html = "\n".join([
-        f"""
+        endpoints.append(
+            {
+                "path": f"/api/v1/specialite/{slug}.json",
+                "description": f"Recommandations pour {specialite_name}",
+                "example_field": "recommandations",
+            }
+        )
+
+    endpoints_html = "\n".join(
+        [
+            f"""
         <tr>
           <td><code>{ep['path']}</code></td>
           <td>{ep['description']}</td>
           <td><a href="{base_url}{ep['path']}" target="_blank">Voir JSON</a></td>
         </tr>
         """
-        for ep in endpoints
-    ])
-    
+            for ep in endpoints
+        ]
+    )
+
     html_content = f"""<!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -609,11 +611,11 @@ curl {base_url}/api/v1/specialite/chirurgie-orthopedique.json
 </body>
 </html>
 """
-    
+
     output_file = output_dir.parent.parent / "index.html"
-    with open(output_file, 'w', encoding='utf-8') as f:
+    with open(output_file, "w", encoding="utf-8") as f:
         f.write(html_content)
-    
+
     print(f"✓ Généré: {output_file}")
 
 
@@ -623,24 +625,24 @@ def main():
     """
     print("🚀 Génération de l'API statique...")
     print()
-    
+
     # Chemins
     base_dir = Path(__file__).parent.parent
     data_file = base_dir / "data" / "exemple_structure.json"
     output_dir = base_dir / "public" / "api" / "v1"
-    
+
     # Créer le dossier de sortie
     output_dir.mkdir(parents=True, exist_ok=True)
-    
+
     # Lire les données source
     print(f"📖 Lecture de {data_file}")
-    with open(data_file, 'r', encoding='utf-8') as f:
+    with open(data_file, encoding="utf-8") as f:
         data = json.load(f)
-    
+
     print(f"   - {data['metadata']['total_records']} recommandations")
     print(f"   - {len(data['metadata']['specialites'])} spécialités")
     print()
-    
+
     # Générer les endpoints
     print("📝 Génération des endpoints JSON...")
     generate_recommandations_endpoint(data, output_dir)
@@ -649,12 +651,12 @@ def main():
     generate_generales_endpoint(data, output_dir)
     generate_search_index(data, output_dir)
     print()
-    
+
     # Générer la page HTML
     print("🌐 Génération de la documentation HTML...")
     generate_index_html(data, output_dir)
     print()
-    
+
     print("✅ Génération terminée avec succès!")
     print(f"📁 Fichiers générés dans: {output_dir.parent.parent}")
 
