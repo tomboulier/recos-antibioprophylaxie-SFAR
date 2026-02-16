@@ -6,17 +6,20 @@ project_name: "Antibioprophylaxie SFAR"
 project_level: 2
 sprint_plan_path: "docs/sprint-plan-antibioprophylaxie-sfar-2026-02-16.md"
 last_updated: "2026-02-16"
+github_repo: "tomboulier/recos-antibioprophylaxie-SFAR"
 
 milestones:
   - id: 1
     name: "Structuration des données"
     epic: "EPIC-001"
-    status: "not_started"
+    status: "in_progress"
     stories:
       - story_id: "S-001"
         title: "Init projet : repo GitHub, structure, CI, CONTRIBUTING.md"
         points: 3
-        status: "not_started"
+        status: "completed"
+        github_issue: 1
+        completed_date: "2026-02-16"
       - story_id: "S-002"
         title: "Extraire le 1er tableau (pilote) en JSON"
         points: 5
@@ -105,5 +108,5 @@ milestones:
 totals:
   stories: 19
   points: 78
-  completed_stories: 0
-  completed_points: 0
+  completed_stories: 1
+  completed_points: 3
