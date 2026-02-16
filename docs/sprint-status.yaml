@@ -1,0 +1,109 @@
+# Sprint Status - Antibioprophylaxie SFAR
+# Pas de sprints chronométrés : avancement story par story
+# Tracking via GitHub Issues + Milestones
+
+project_name: "Antibioprophylaxie SFAR"
+project_level: 2
+sprint_plan_path: "docs/sprint-plan-antibioprophylaxie-sfar-2026-02-16.md"
+last_updated: "2026-02-16"
+
+milestones:
+  - id: 1
+    name: "Structuration des données"
+    epic: "EPIC-001"
+    status: "not_started"
+    stories:
+      - story_id: "S-001"
+        title: "Init projet : repo GitHub, structure, CI, CONTRIBUTING.md"
+        points: 3
+        status: "not_started"
+      - story_id: "S-002"
+        title: "Extraire le 1er tableau (pilote) en JSON"
+        points: 5
+        status: "not_started"
+      - story_id: "S-003"
+        title: "Créer l'export Excel du 1er tableau"
+        points: 2
+        status: "not_started"
+      - story_id: "S-004"
+        title: "Extraire les tableaux restants en JSON"
+        points: 5
+        status: "not_started"
+      - story_id: "S-005"
+        title: "Compléter l'export Excel pour toutes les spécialités"
+        points: 2
+        status: "not_started"
+      - story_id: "S-006"
+        title: "Structurer les recommandations générales"
+        points: 3
+        status: "not_started"
+
+  - id: 2
+    name: "Webapp + API REST"
+    epic: "EPIC-002"
+    status: "not_started"
+    stories:
+      - story_id: "S-007"
+        title: "Backend FastAPI : modèles Pydantic, chargement JSON, config"
+        points: 3
+        status: "not_started"
+      - story_id: "S-008"
+        title: "API REST : endpoints interventions, spécialités"
+        points: 5
+        status: "not_started"
+      - story_id: "S-009"
+        title: "Recherche fuzzy type-ahead"
+        points: 5
+        status: "not_started"
+      - story_id: "S-010"
+        title: "Layout : templates Jinja2, header, footer, CSS tokens"
+        points: 3
+        status: "not_started"
+      - story_id: "S-011"
+        title: "Écran d'accueil : recherche + grille spécialités"
+        points: 5
+        status: "not_started"
+      - story_id: "S-012"
+        title: "Écran protocole : détail intervention"
+        points: 3
+        status: "not_started"
+      - story_id: "S-013"
+        title: "Écran spécialité : liste + toggle tout déplier"
+        points: 3
+        status: "not_started"
+      - story_id: "S-014"
+        title: "Dockerfile + déploiement NAS"
+        points: 3
+        status: "not_started"
+
+  - id: 3
+    name: "Module IA + MCP"
+    epic: "EPIC-003"
+    status: "not_started"
+    stories:
+      - story_id: "S-015"
+        title: "Interface chatbot : écran chat, bulles, HTMX"
+        points: 5
+        status: "not_started"
+      - story_id: "S-016"
+        title: "Intégration LLM niveau 3 (tool use) : réponses sourcées"
+        points: 8
+        status: "not_started"
+      - story_id: "S-017"
+        title: "Serveur MCP"
+        points: 5
+        status: "not_started"
+      - story_id: "S-018"
+        title: "RAG niveau 1 (PDF) + niveau 2 (Excel)"
+        points: 5
+        status: "not_started"
+      - story_id: "S-019"
+        title: "Jeu de questions + évaluation comparative"
+        points: 5
+        status: "not_started"
+
+totals:
+  stories: 19
+  points: 78
+  completed_stories: 0
+  completed_points: 0
