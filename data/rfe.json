@@ -1,0 +1,922 @@
+{
+  "version": "RFE SFAR 2024 (V2.0 du 22/05/2024)",
+  "date_extraction": "2026-02-16",
+  "specialites": [
+    {
+      "id": "chirurgie-orthopedique-programmee",
+      "nom": "Chirurgie orthopédique programmée",
+      "interventions": [
+        {
+          "id": "ortho-prog-mi-prothese-hanche-genou",
+          "nom": "Prothèse de hanche ou de genou (dont reprise précoce non septique)",
+          "specialite": "Chirurgie orthopédique programmée",
+          "protocole": {
+            "molecule": "Céfazoline",
+            "posologie": "2g IVL",
+            "reinjection": "1g si durée > 4h, puis toutes les 4h jusqu'à fin de chirurgie",
+            "duree": "Durée de l'intervention"
+          },
+          "alternative_allergie": [
+            {
+              "molecule": "Clindamycine",
+              "posologie": "900mg IVL",
+              "reinjection": null
+            },
+            {
+              "molecule": "Vancomycine ou Teicoplanine",
+              "posologie": "20 mg/kg IVL ou 12 mg/kg IVL",
+              "reinjection": null
+            }
+          ],
+          "pas_d_abp": false,
+          "force_recommandation": "Avis d'experts",
+          "source_page": 73,
+          "source_tableau": "Tableau Chirurgie orthopédique programmée — Membre inférieur",
+          "notes": "En cas de chirurgie prothétique de hanche par voie antérieure et d'allergie aux bêtalactamines : préférer la vancomycine ou la teicoplanine à la clindamycine"
+        },
+        {
+          "id": "ortho-prog-mi-gestes-osseux-materiel",
+          "nom": "Gestes osseux avec mise en place de matériel (clou, vis, plaque, etc.), ostéotomie, arthrodèse",
+          "specialite": "Chirurgie orthopédique programmée",
+          "protocole": {
+            "molecule": "Céfazoline",
+            "posologie": "2g IVL",
+            "reinjection": "1g si durée > 4h, puis toutes les 4h jusqu'à fin de chirurgie",
+            "duree": "Durée de l'intervention"
+          },
+          "alternative_allergie": [
+            {
+              "molecule": "Clindamycine",
+              "posologie": "900mg IVL",
+              "reinjection": null
+            },
+            {
+              "molecule": "Vancomycine ou Teicoplanine",
+              "posologie": "20 mg/kg IVL ou 12 mg/kg IVL",
+              "reinjection": null
+            }
+          ],
+          "pas_d_abp": false,
+          "force_recommandation": "Avis d'experts",
+          "source_page": 73,
+          "source_tableau": "Tableau Chirurgie orthopédique programmée — Membre inférieur",
+          "notes": null
+        },
+        {
+          "id": "ortho-prog-mi-reconstruction-ligamentaire-materiel",
+          "nom": "Reconstruction ligamentaire avec utilisation de matériel (vis d'interférence, etc.)",
+          "specialite": "Chirurgie orthopédique programmée",
+          "protocole": {
+            "molecule": "Céfazoline",
+            "posologie": "2g IVL",
+            "reinjection": "1g si durée > 4h, puis toutes les 4h jusqu'à fin de chirurgie",
+            "duree": "Durée de l'intervention"
+          },
+          "alternative_allergie": [
+            {
+              "molecule": "Clindamycine",
+              "posologie": "900mg IVL",
+              "reinjection": null
+            },
+            {
+              "molecule": "Vancomycine ou Teicoplanine",
+              "posologie": "20 mg/kg IVL ou 12 mg/kg IVL",
+              "reinjection": null
+            }
+          ],
+          "pas_d_abp": false,
+          "force_recommandation": "Avis d'experts",
+          "source_page": 73,
+          "source_tableau": "Tableau Chirurgie orthopédique programmée — Membre inférieur",
+          "notes": null
+        },
+        {
+          "id": "ortho-prog-mi-arthroscopie-materiel",
+          "nom": "Arthroscopie avec mise en place de matériel",
+          "specialite": "Chirurgie orthopédique programmée",
+          "protocole": {
+            "molecule": "Céfazoline",
+            "posologie": "2g IVL",
+            "reinjection": "1g si durée > 4h, puis toutes les 4h jusqu'à fin de chirurgie",
+            "duree": "Durée de l'intervention"
+          },
+          "alternative_allergie": [
+            {
+              "molecule": "Clindamycine",
+              "posologie": "900mg IVL",
+              "reinjection": null
+            },
+            {
+              "molecule": "Vancomycine ou Teicoplanine",
+              "posologie": "20 mg/kg IVL ou 12 mg/kg IVL",
+              "reinjection": null
+            }
+          ],
+          "pas_d_abp": false,
+          "force_recommandation": "Avis d'experts",
+          "source_page": 73,
+          "source_tableau": "Tableau Chirurgie orthopédique programmée — Membre inférieur",
+          "notes": null
+        },
+        {
+          "id": "ortho-prog-mi-plastie-ligamentaire-sans-materiel",
+          "nom": "Plastie ligamentaire (retente, suture, etc.) sans utilisation de matériel",
+          "specialite": "Chirurgie orthopédique programmée",
+          "protocole": null,
+          "alternative_allergie": null,
+          "pas_d_abp": true,
+          "force_recommandation": "Avis d'experts",
+          "source_page": 73,
+          "source_tableau": "Tableau Chirurgie orthopédique programmée — Membre inférieur",
+          "notes": null
+        },
+        {
+          "id": "ortho-prog-mi-arthroscopie-sans-materiel",
+          "nom": "Arthroscopie diagnostique ou thérapeutique sans mise en place de matériel",
+          "specialite": "Chirurgie orthopédique programmée",
+          "protocole": null,
+          "alternative_allergie": null,
+          "pas_d_abp": true,
+          "force_recommandation": "Avis d'experts",
+          "source_page": 73,
+          "source_tableau": "Tableau Chirurgie orthopédique programmée — Membre inférieur",
+          "notes": null
+        },
+        {
+          "id": "ortho-prog-mi-ablation-osteosynthese",
+          "nom": "Ablation de matériel d'ostéosynthèse (membre inférieur)",
+          "specialite": "Chirurgie orthopédique programmée",
+          "protocole": null,
+          "alternative_allergie": null,
+          "pas_d_abp": true,
+          "force_recommandation": "Avis d'experts",
+          "source_page": 73,
+          "source_tableau": "Tableau Chirurgie orthopédique programmée — Membre inférieur",
+          "notes": "L'échec d'ablation de matériel d'ostéosynthèse ne constitue pas une indication d'antibioprophylaxie. En cas d'ablation nécessitant une ouverture articulaire ou de geste prévu comme difficile/avec temps opératoire long, une antibioprophylaxie par céfazoline peut être discutée au cas par cas."
+        },
+        {
+          "id": "ortho-prog-mi-chirurgie-parties-molles",
+          "nom": "Chirurgie des parties molles (membre inférieur)",
+          "specialite": "Chirurgie orthopédique programmée",
+          "protocole": null,
+          "alternative_allergie": null,
+          "pas_d_abp": true,
+          "force_recommandation": "Avis d'experts",
+          "source_page": 73,
+          "source_tableau": "Tableau Chirurgie orthopédique programmée — Membre inférieur",
+          "notes": null
+        },
+        {
+          "id": "ortho-prog-mi-resection-osseuse",
+          "nom": "Résection osseuse (sans ostéosynthèse ni remplacement prothétique)",
+          "specialite": "Chirurgie orthopédique programmée",
+          "protocole": null,
+          "alternative_allergie": null,
+          "pas_d_abp": true,
+          "force_recommandation": "Avis d'experts",
+          "source_page": 73,
+          "source_tableau": "Tableau Chirurgie orthopédique programmée — Membre inférieur",
+          "notes": null
+        },
+        {
+          "id": "ortho-prog-epaule-prothese",
+          "nom": "Chirurgie prothétique quelle que soit l'articulation (épaule/coude)",
+          "specialite": "Chirurgie orthopédique programmée",
+          "protocole": {
+            "molecule": "Céfazoline",
+            "posologie": "2g IVL",
+            "reinjection": "1g si durée > 4h, puis toutes les 4h jusqu'à fin de chirurgie",
+            "duree": "Durée de l'intervention"
+          },
+          "alternative_allergie": [
+            {
+              "molecule": "Clindamycine",
+              "posologie": "900mg IVL",
+              "reinjection": null
+            },
+            {
+              "molecule": "Vancomycine ou Teicoplanine",
+              "posologie": "20 mg/kg IVL ou 12 mg/kg IVL",
+              "reinjection": null
+            }
+          ],
+          "pas_d_abp": false,
+          "force_recommandation": "Avis d'experts",
+          "source_page": 73,
+          "source_tableau": "Tableau Chirurgie orthopédique programmée — Épaule et coude",
+          "notes": "En cas de chirurgie prothétique d'épaule et d'allergie aux bêtalactamines : préférer la vancomycine ou la teicoplanine à la clindamycine"
+        },
+        {
+          "id": "ortho-prog-epaule-reprise-prothese",
+          "nom": "Reprise non septique prothétique précoce ou tardive (épaule/coude)",
+          "specialite": "Chirurgie orthopédique programmée",
+          "protocole": {
+            "molecule": "Céfazoline",
+            "posologie": "2g IVL",
+            "reinjection": "1g si durée > 4h, puis toutes les 4h jusqu'à fin de chirurgie",
+            "duree": "Durée de l'intervention"
+          },
+          "alternative_allergie": [
+            {
+              "molecule": "Clindamycine",
+              "posologie": "900mg IVL",
+              "reinjection": null
+            },
+            {
+              "molecule": "Vancomycine ou Teicoplanine",
+              "posologie": "20 mg/kg IVL ou 12 mg/kg IVL",
+              "reinjection": null
+            }
+          ],
+          "pas_d_abp": false,
+          "force_recommandation": "Avis d'experts",
+          "source_page": 73,
+          "source_tableau": "Tableau Chirurgie orthopédique programmée — Épaule et coude",
+          "notes": null
+        },
+        {
+          "id": "ortho-prog-epaule-luxation-recidivante",
+          "nom": "Chirurgie de luxation récidivante avec ou sans greffe osseuse",
+          "specialite": "Chirurgie orthopédique programmée",
+          "protocole": {
+            "molecule": "Céfazoline",
+            "posologie": "2g IVL",
+            "reinjection": "1g si durée > 4h, puis toutes les 4h jusqu'à fin de chirurgie",
+            "duree": "Durée de l'intervention"
+          },
+          "alternative_allergie": [
+            {
+              "molecule": "Clindamycine",
+              "posologie": "900mg IVL",
+              "reinjection": null
+            },
+            {
+              "molecule": "Vancomycine ou Teicoplanine",
+              "posologie": "20 mg/kg IVL ou 12 mg/kg IVL",
+              "reinjection": null
+            }
+          ],
+          "pas_d_abp": false,
+          "force_recommandation": "Avis d'experts",
+          "source_page": 73,
+          "source_tableau": "Tableau Chirurgie orthopédique programmée — Épaule et coude",
+          "notes": null
+        },
+        {
+          "id": "ortho-prog-epaule-gestes-osseux-materiel",
+          "nom": "Gestes osseux avec mise en place de matériel, ostéotomie, arthrodèse (épaule/coude)",
+          "specialite": "Chirurgie orthopédique programmée",
+          "protocole": {
+            "molecule": "Céfazoline",
+            "posologie": "2g IVL",
+            "reinjection": "1g si durée > 4h, puis toutes les 4h jusqu'à fin de chirurgie",
+            "duree": "Durée de l'intervention"
+          },
+          "alternative_allergie": [
+            {
+              "molecule": "Clindamycine",
+              "posologie": "900mg IVL",
+              "reinjection": null
+            },
+            {
+              "molecule": "Vancomycine ou Teicoplanine",
+              "posologie": "20 mg/kg IVL ou 12 mg/kg IVL",
+              "reinjection": null
+            }
+          ],
+          "pas_d_abp": false,
+          "force_recommandation": "Avis d'experts",
+          "source_page": 73,
+          "source_tableau": "Tableau Chirurgie orthopédique programmée — Épaule et coude",
+          "notes": null
+        },
+        {
+          "id": "ortho-prog-epaule-arthrolyse",
+          "nom": "Arthrolyse par arthrotomie",
+          "specialite": "Chirurgie orthopédique programmée",
+          "protocole": {
+            "molecule": "Céfazoline",
+            "posologie": "2g IVL",
+            "reinjection": "1g si durée > 4h, puis toutes les 4h jusqu'à fin de chirurgie",
+            "duree": "Durée de l'intervention"
+          },
+          "alternative_allergie": [
+            {
+              "molecule": "Clindamycine",
+              "posologie": "900mg IVL",
+              "reinjection": null
+            },
+            {
+              "molecule": "Vancomycine ou Teicoplanine",
+              "posologie": "20 mg/kg IVL ou 12 mg/kg IVL",
+              "reinjection": null
+            }
+          ],
+          "pas_d_abp": false,
+          "force_recommandation": "Avis d'experts",
+          "source_page": 73,
+          "source_tableau": "Tableau Chirurgie orthopédique programmée — Épaule et coude",
+          "notes": null
+        },
+        {
+          "id": "ortho-prog-epaule-arthroscopie-materiel",
+          "nom": "Arthroscopie avec mise en place de matériel (épaule/coude)",
+          "specialite": "Chirurgie orthopédique programmée",
+          "protocole": {
+            "molecule": "Céfazoline",
+            "posologie": "2g IVL",
+            "reinjection": "1g si durée > 4h, puis toutes les 4h jusqu'à fin de chirurgie",
+            "duree": "Durée de l'intervention"
+          },
+          "alternative_allergie": [
+            {
+              "molecule": "Clindamycine",
+              "posologie": "900mg IVL",
+              "reinjection": null
+            },
+            {
+              "molecule": "Vancomycine ou Teicoplanine",
+              "posologie": "20 mg/kg IVL ou 12 mg/kg IVL",
+              "reinjection": null
+            }
+          ],
+          "pas_d_abp": false,
+          "force_recommandation": "Avis d'experts",
+          "source_page": 73,
+          "source_tableau": "Tableau Chirurgie orthopédique programmée — Épaule et coude",
+          "notes": null
+        },
+        {
+          "id": "ortho-prog-epaule-arthroscopie-sans-materiel",
+          "nom": "Arthroscopie diagnostique ou thérapeutique sans mise en place de matériel (épaule/coude)",
+          "specialite": "Chirurgie orthopédique programmée",
+          "protocole": null,
+          "alternative_allergie": null,
+          "pas_d_abp": true,
+          "force_recommandation": "Avis d'experts",
+          "source_page": 73,
+          "source_tableau": "Tableau Chirurgie orthopédique programmée — Épaule et coude",
+          "notes": null
+        },
+        {
+          "id": "ortho-prog-epaule-ablation-osteosynthese",
+          "nom": "Ablation de matériel d'ostéosynthèse (épaule/coude)",
+          "specialite": "Chirurgie orthopédique programmée",
+          "protocole": null,
+          "alternative_allergie": null,
+          "pas_d_abp": true,
+          "force_recommandation": "Avis d'experts",
+          "source_page": 73,
+          "source_tableau": "Tableau Chirurgie orthopédique programmée — Épaule et coude",
+          "notes": "L'échec d'ablation de matériel d'ostéosynthèse ne constitue pas une indication d'antibioprophylaxie."
+        },
+        {
+          "id": "ortho-prog-epaule-gestes-osseux-sans-materiel",
+          "nom": "Gestes osseux sans mise en place de matériel — résection (épaule/coude)",
+          "specialite": "Chirurgie orthopédique programmée",
+          "protocole": null,
+          "alternative_allergie": null,
+          "pas_d_abp": true,
+          "force_recommandation": "Avis d'experts",
+          "source_page": 73,
+          "source_tableau": "Tableau Chirurgie orthopédique programmée — Épaule et coude",
+          "notes": null
+        },
+        {
+          "id": "ortho-prog-epaule-parties-molles",
+          "nom": "Chirurgie des parties molles (épaule/coude)",
+          "specialite": "Chirurgie orthopédique programmée",
+          "protocole": null,
+          "alternative_allergie": null,
+          "pas_d_abp": true,
+          "force_recommandation": "Avis d'experts",
+          "source_page": 73,
+          "source_tableau": "Tableau Chirurgie orthopédique programmée — Épaule et coude",
+          "notes": null
+        },
+        {
+          "id": "ortho-prog-main-prothese-osseuse-materiel",
+          "nom": "Chirurgie prothétique ou osseuse avec mise en place de matériel (main)",
+          "specialite": "Chirurgie orthopédique programmée",
+          "protocole": {
+            "molecule": "Céfazoline",
+            "posologie": "2g IVL",
+            "reinjection": "1g si durée > 4h, puis toutes les 4h jusqu'à fin de chirurgie",
+            "duree": "Durée de l'intervention"
+          },
+          "alternative_allergie": [
+            {
+              "molecule": "Clindamycine",
+              "posologie": "900mg IVL",
+              "reinjection": null
+            },
+            {
+              "molecule": "Vancomycine ou Teicoplanine",
+              "posologie": "20 mg/kg IVL ou 12 mg/kg IVL",
+              "reinjection": null
+            }
+          ],
+          "pas_d_abp": false,
+          "force_recommandation": "Avis d'experts",
+          "source_page": 74,
+          "source_tableau": "Tableau Chirurgie orthopédique programmée — Main",
+          "notes": null
+        },
+        {
+          "id": "ortho-prog-main-parties-molles",
+          "nom": "Chirurgie des parties molles (main)",
+          "specialite": "Chirurgie orthopédique programmée",
+          "protocole": null,
+          "alternative_allergie": null,
+          "pas_d_abp": true,
+          "force_recommandation": "GRADE 2",
+          "source_page": 74,
+          "source_tableau": "Tableau Chirurgie orthopédique programmée — Main",
+          "notes": null
+        },
+        {
+          "id": "ortho-prog-main-ablation-osteosynthese",
+          "nom": "Ablation de matériel d'ostéosynthèse (main)",
+          "specialite": "Chirurgie orthopédique programmée",
+          "protocole": null,
+          "alternative_allergie": null,
+          "pas_d_abp": true,
+          "force_recommandation": "GRADE 2",
+          "source_page": 74,
+          "source_tableau": "Tableau Chirurgie orthopédique programmée — Main",
+          "notes": null
+        },
+        {
+          "id": "ortho-prog-main-articulaire-non-prothetique",
+          "nom": "Chirurgie articulaire non prothétique (main)",
+          "specialite": "Chirurgie orthopédique programmée",
+          "protocole": null,
+          "alternative_allergie": null,
+          "pas_d_abp": true,
+          "force_recommandation": "Avis d'experts",
+          "source_page": 74,
+          "source_tableau": "Tableau Chirurgie orthopédique programmée — Main",
+          "notes": null
+        },
+        {
+          "id": "ortho-prog-main-ablation-kyste",
+          "nom": "Ablation de kyste (main)",
+          "specialite": "Chirurgie orthopédique programmée",
+          "protocole": null,
+          "alternative_allergie": null,
+          "pas_d_abp": true,
+          "force_recommandation": "Avis d'experts",
+          "source_page": 74,
+          "source_tableau": "Tableau Chirurgie orthopédique programmée — Main",
+          "notes": null
+        },
+        {
+          "id": "ortho-prog-rachis-instrumentee-1-temps",
+          "nom": "Chirurgie instrumentée du rachis avec pose de matériel en 1 temps",
+          "specialite": "Chirurgie orthopédique programmée",
+          "protocole": {
+            "molecule": "Céfazoline",
+            "posologie": "2g IVL",
+            "reinjection": "1g si durée > 4h, puis toutes les 4h jusqu'à fin de chirurgie",
+            "duree": "Durée de l'intervention"
+          },
+          "alternative_allergie": [
+            {
+              "molecule": "Clindamycine",
+              "posologie": "900mg IVL",
+              "reinjection": null
+            },
+            {
+              "molecule": "Vancomycine ou Teicoplanine",
+              "posologie": "20 mg/kg IVL ou 12 mg/kg IVL",
+              "reinjection": null
+            }
+          ],
+          "pas_d_abp": false,
+          "force_recommandation": "GRADE 2",
+          "source_page": 74,
+          "source_tableau": "Tableau Chirurgie orthopédique programmée — Rachis",
+          "notes": null
+        },
+        {
+          "id": "ortho-prog-rachis-instrumentee-2-temps",
+          "nom": "Chirurgie instrumentée du rachis avec pose de matériel en 2 temps (au cours de la même hospitalisation ou non)",
+          "specialite": "Chirurgie orthopédique programmée",
+          "protocole": {
+            "molecule": "Céfazoline",
+            "posologie": "2g IVL",
+            "reinjection": "1g si durée > 4h, puis toutes les 4h jusqu'à fin de chirurgie",
+            "duree": "Durée de l'intervention"
+          },
+          "alternative_allergie": [
+            {
+              "molecule": "Clindamycine",
+              "posologie": "900mg IVL",
+              "reinjection": null
+            },
+            {
+              "molecule": "Vancomycine ou Teicoplanine",
+              "posologie": "20 mg/kg IVL ou 12 mg/kg IVL",
+              "reinjection": null
+            }
+          ],
+          "pas_d_abp": false,
+          "force_recommandation": "Avis d'experts",
+          "source_page": 74,
+          "source_tableau": "Tableau Chirurgie orthopédique programmée — Rachis",
+          "notes": "Une épidémiologie locale particulière peut justifier le recours à une molécule alternative, dans le cadre d'un protocole d'antibioprophylaxie validé localement."
+        },
+        {
+          "id": "ortho-prog-rachis-reprise-materiel",
+          "nom": "Reprise du matériel quel que soit le délai (rachis)",
+          "specialite": "Chirurgie orthopédique programmée",
+          "protocole": {
+            "molecule": "Céfazoline",
+            "posologie": "2g IVL",
+            "reinjection": "1g si durée > 4h, puis toutes les 4h jusqu'à fin de chirurgie",
+            "duree": "Durée de l'intervention"
+          },
+          "alternative_allergie": [
+            {
+              "molecule": "Clindamycine",
+              "posologie": "900mg IVL",
+              "reinjection": null
+            },
+            {
+              "molecule": "Vancomycine ou Teicoplanine",
+              "posologie": "20 mg/kg IVL ou 12 mg/kg IVL",
+              "reinjection": null
+            }
+          ],
+          "pas_d_abp": false,
+          "force_recommandation": "Avis d'experts",
+          "source_page": 74,
+          "source_tableau": "Tableau Chirurgie orthopédique programmée — Rachis",
+          "notes": "Une épidémiologie locale particulière peut justifier le recours à une molécule alternative."
+        },
+        {
+          "id": "ortho-prog-rachis-percutanee-materiel",
+          "nom": "Chirurgie du rachis percutanée avec pose de matériel (expansion avec implant, cimentoplastie)",
+          "specialite": "Chirurgie orthopédique programmée",
+          "protocole": {
+            "molecule": "Céfazoline",
+            "posologie": "2g IVL",
+            "reinjection": "1g si durée > 4h, puis toutes les 4h jusqu'à fin de chirurgie",
+            "duree": "Durée de l'intervention"
+          },
+          "alternative_allergie": [
+            {
+              "molecule": "Clindamycine",
+              "posologie": "900mg IVL",
+              "reinjection": null
+            },
+            {
+              "molecule": "Vancomycine ou Teicoplanine",
+              "posologie": "20 mg/kg IVL ou 12 mg/kg IVL",
+              "reinjection": null
+            }
+          ],
+          "pas_d_abp": false,
+          "force_recommandation": "Avis d'experts",
+          "source_page": 74,
+          "source_tableau": "Tableau Chirurgie orthopédique programmée — Rachis",
+          "notes": null
+        },
+        {
+          "id": "ortho-prog-rachis-sans-materiel",
+          "nom": "Chirurgie du rachis sans pose de matériel",
+          "specialite": "Chirurgie orthopédique programmée",
+          "protocole": null,
+          "alternative_allergie": null,
+          "pas_d_abp": true,
+          "force_recommandation": "Avis d'experts",
+          "source_page": 74,
+          "source_tableau": "Tableau Chirurgie orthopédique programmée — Rachis",
+          "notes": "En cas de chirurgie exposant à une ouverture de la dure-mère, ou de geste prévu comme difficile/avec temps opératoire long, une antibioprophylaxie par céfazoline peut être discutée au cas par cas."
+        },
+        {
+          "id": "ortho-prog-rachis-ablation-materiel",
+          "nom": "Ablation de matériel (rachis)",
+          "specialite": "Chirurgie orthopédique programmée",
+          "protocole": null,
+          "alternative_allergie": null,
+          "pas_d_abp": true,
+          "force_recommandation": "Avis d'experts",
+          "source_page": 74,
+          "source_tableau": "Tableau Chirurgie orthopédique programmée — Rachis",
+          "notes": "En cas d'ablation exposant à une ouverture de la dure-mère, ou de geste prévu comme difficile/avec temps opératoire long, une antibioprophylaxie par céfazoline peut être discutée au cas par cas."
+        }
+      ]
+    },
+    {
+      "id": "traumatologie",
+      "nom": "Traumatologie",
+      "interventions": [
+        {
+          "id": "trauma-fracture-fermee-fixateur-externe",
+          "nom": "Ostéosynthèse de fracture fermée par fixateur externe",
+          "specialite": "Traumatologie",
+          "protocole": null,
+          "alternative_allergie": null,
+          "pas_d_abp": true,
+          "force_recommandation": "Avis d'experts",
+          "source_page": 75,
+          "source_tableau": "Tableau Traumatologie — Fractures fermées",
+          "notes": null
+        },
+        {
+          "id": "trauma-fracture-fermee-brochage-percutane",
+          "nom": "Ostéosynthèse de fracture fermée par brochage percutané",
+          "specialite": "Traumatologie",
+          "protocole": null,
+          "alternative_allergie": null,
+          "pas_d_abp": true,
+          "force_recommandation": "Avis d'experts",
+          "source_page": 75,
+          "source_tableau": "Tableau Traumatologie — Fractures fermées",
+          "notes": null
+        },
+        {
+          "id": "trauma-fracture-fermee-foyer-ouvert",
+          "nom": "Ostéosynthèse à foyer ouvert (tout type de matériel) ou enclouage",
+          "specialite": "Traumatologie",
+          "protocole": {
+            "molecule": "Céfazoline",
+            "posologie": "2g IVL",
+            "reinjection": "1g si durée > 4h, puis toutes les 4h jusqu'à fin de chirurgie",
+            "duree": "Durée de l'intervention"
+          },
+          "alternative_allergie": [
+            {
+              "molecule": "Clindamycine",
+              "posologie": "900mg IV",
+              "reinjection": null
+            }
+          ],
+          "pas_d_abp": false,
+          "force_recommandation": "Avis d'experts",
+          "source_page": 75,
+          "source_tableau": "Tableau Traumatologie — Fractures fermées",
+          "notes": null
+        },
+        {
+          "id": "trauma-fracture-ouverte-gustilo-1",
+          "nom": "Fracture ouverte Gustilo 1, quel que soit le matériel mis en place",
+          "specialite": "Traumatologie",
+          "protocole": {
+            "molecule": "Céfazoline",
+            "posologie": "2g IVL",
+            "reinjection": "1g si durée > 4h, puis toutes les 4h jusqu'à fin de chirurgie",
+            "duree": "Durée de l'intervention"
+          },
+          "alternative_allergie": [
+            {
+              "molecule": "Clindamycine",
+              "posologie": "900mg IV",
+              "reinjection": null
+            }
+          ],
+          "pas_d_abp": false,
+          "force_recommandation": "Avis d'experts",
+          "source_page": 75,
+          "source_tableau": "Tableau Traumatologie — Fractures ouvertes (hors main)",
+          "notes": null
+        },
+        {
+          "id": "trauma-fracture-ouverte-gustilo-2-3",
+          "nom": "Fracture ouverte Gustilo 2 ou 3, quel que soit le matériel mis en place",
+          "specialite": "Traumatologie",
+          "protocole": {
+            "molecule": "Amoxicilline/Clavulanate",
+            "posologie": "2g IVL",
+            "reinjection": "1g si durée > 2h, puis toutes les 2h jusqu'à fin de chirurgie",
+            "duree": "Durée de l'intervention"
+          },
+          "alternative_allergie": [
+            {
+              "molecule": "Clindamycine + Gentamicine",
+              "posologie": "900mg IV + 6-7 mg/kg",
+              "reinjection": null
+            }
+          ],
+          "pas_d_abp": false,
+          "force_recommandation": "Avis d'experts",
+          "source_page": 75,
+          "source_tableau": "Tableau Traumatologie — Fractures ouvertes (hors main)",
+          "notes": "Alternative : Céfazoline 2g IVL (réinjection 1g/4h) + Gentamicine 6-7 mg/kg dose unique. En cas de fracture ouverte considérée comme Altemeier 3 ou 4, considérer une antibiothérapie curative poursuivie au-delà du bloc opératoire."
+        },
+        {
+          "id": "trauma-plaie-molles-contaminee",
+          "nom": "Plaie des parties molles susceptible d'être contaminée par des germes d'origine tellurique et/ou fécale (hors main)",
+          "specialite": "Traumatologie",
+          "protocole": {
+            "molecule": "Amoxicilline/Clavulanate",
+            "posologie": "2g IVL",
+            "reinjection": "1g si durée > 2h, puis toutes les 2h jusqu'à fin de chirurgie",
+            "duree": "Durée de l'intervention"
+          },
+          "alternative_allergie": [
+            {
+              "molecule": "Clindamycine + Gentamicine",
+              "posologie": "900mg IV + 6-7 mg/kg",
+              "reinjection": null
+            }
+          ],
+          "pas_d_abp": false,
+          "force_recommandation": "GRADE 1",
+          "source_page": 76,
+          "source_tableau": "Tableau Traumatologie — Plaie des parties molles (hors main)",
+          "notes": null
+        },
+        {
+          "id": "trauma-plaie-molles-autre",
+          "nom": "Autre plaie des parties molles (hors main)",
+          "specialite": "Traumatologie",
+          "protocole": null,
+          "alternative_allergie": null,
+          "pas_d_abp": true,
+          "force_recommandation": "Avis d'experts",
+          "source_page": 76,
+          "source_tableau": "Tableau Traumatologie — Plaie des parties molles (hors main)",
+          "notes": null
+        },
+        {
+          "id": "trauma-plaie-articulaire",
+          "nom": "Plaie articulaire (quel que soit le degré de contamination, hors main)",
+          "specialite": "Traumatologie",
+          "protocole": {
+            "molecule": "Céfazoline",
+            "posologie": "2g IVL",
+            "reinjection": "1g si durée > 4h, puis toutes les 4h jusqu'à fin de chirurgie",
+            "duree": "Durée de l'intervention"
+          },
+          "alternative_allergie": [
+            {
+              "molecule": "Clindamycine",
+              "posologie": "900mg IV",
+              "reinjection": null
+            }
+          ],
+          "pas_d_abp": false,
+          "force_recommandation": "GRADE 1",
+          "source_page": 76,
+          "source_tableau": "Tableau Traumatologie — Plaie des parties molles (hors main)",
+          "notes": null
+        },
+        {
+          "id": "trauma-morsure",
+          "nom": "Morsure",
+          "specialite": "Traumatologie",
+          "protocole": {
+            "molecule": "Amoxicilline/Clavulanate",
+            "posologie": "2g IVL",
+            "reinjection": "1g si durée > 2h, puis toutes les 2h jusqu'à fin de chirurgie",
+            "duree": "Durée de l'intervention"
+          },
+          "alternative_allergie": [
+            {
+              "molecule": "Clindamycine + Gentamicine",
+              "posologie": "900mg IV + 6-7 mg/kg",
+              "reinjection": null
+            }
+          ],
+          "pas_d_abp": false,
+          "force_recommandation": "Avis d'experts",
+          "source_page": 76,
+          "source_tableau": "Tableau Traumatologie — Plaie des parties molles (hors main)",
+          "notes": "Les morsures sont des plaies avec contamination polymicrobienne qui relèvent d'une antibiothérapie curative. La dose ici recommandée correspond à la dose du traitement curatif à administrer lors du passage au bloc avec un traitement à poursuivre 5 jours en postopératoire."
+        },
+        {
+          "id": "trauma-main-fracture-fermee-fixateur",
+          "nom": "Ostéosynthèse de fracture(s) fermée(s) de la main par fixateur externe",
+          "specialite": "Traumatologie",
+          "protocole": null,
+          "alternative_allergie": null,
+          "pas_d_abp": true,
+          "force_recommandation": "Avis d'experts",
+          "source_page": 76,
+          "source_tableau": "Tableau Traumatologie — Traumatisme de la main",
+          "notes": null
+        },
+        {
+          "id": "trauma-main-fracture-fermee-brochage",
+          "nom": "Ostéosynthèse de fracture(s) fermée(s) de la main par brochage percutané",
+          "specialite": "Traumatologie",
+          "protocole": null,
+          "alternative_allergie": null,
+          "pas_d_abp": true,
+          "force_recommandation": "Avis d'experts",
+          "source_page": 76,
+          "source_tableau": "Tableau Traumatologie — Traumatisme de la main",
+          "notes": null
+        },
+        {
+          "id": "trauma-main-fracture-fermee-foyer-ouvert",
+          "nom": "Ostéosynthèse de fracture(s) fermée(s) de la main à foyer ouvert (tout type de matériel)",
+          "specialite": "Traumatologie",
+          "protocole": {
+            "molecule": "Céfazoline",
+            "posologie": "2g IVL",
+            "reinjection": "1g si durée > 4h, puis toutes les 4h jusqu'à fin de chirurgie",
+            "duree": "Durée de l'intervention"
+          },
+          "alternative_allergie": [
+            {
+              "molecule": "Clindamycine",
+              "posologie": "900mg IV",
+              "reinjection": null
+            }
+          ],
+          "pas_d_abp": false,
+          "force_recommandation": "Avis d'experts",
+          "source_page": 76,
+          "source_tableau": "Tableau Traumatologie — Traumatisme de la main",
+          "notes": null
+        },
+        {
+          "id": "trauma-main-fracture-ouverte",
+          "nom": "Fracture ouverte de la main (quelle que soit la technique d'ostéosynthèse)",
+          "specialite": "Traumatologie",
+          "protocole": {
+            "molecule": "Céfazoline",
+            "posologie": "2g IVL",
+            "reinjection": "1g si durée > 4h, puis toutes les 4h jusqu'à fin de chirurgie",
+            "duree": "Durée de l'intervention"
+          },
+          "alternative_allergie": [
+            {
+              "molecule": "Clindamycine",
+              "posologie": "900mg IV",
+              "reinjection": null
+            }
+          ],
+          "pas_d_abp": false,
+          "force_recommandation": "Avis d'experts",
+          "source_page": 76,
+          "source_tableau": "Tableau Traumatologie — Traumatisme de la main",
+          "notes": null
+        },
+        {
+          "id": "trauma-main-plaie-non-contaminee",
+          "nom": "Plaie de la main (dont plaie articulaire) non susceptible d'être contaminée par des germes d'origine tellurique et/ou fécale",
+          "specialite": "Traumatologie",
+          "protocole": null,
+          "alternative_allergie": null,
+          "pas_d_abp": true,
+          "force_recommandation": "GRADE 1",
+          "source_page": 76,
+          "source_tableau": "Tableau Traumatologie — Traumatisme de la main",
+          "notes": null
+        },
+        {
+          "id": "trauma-main-plaie-contaminee",
+          "nom": "Plaie de la main (dont plaie articulaire) susceptible d'être contaminée par des germes d'origine tellurique et/ou fécale",
+          "specialite": "Traumatologie",
+          "protocole": null,
+          "alternative_allergie": null,
+          "pas_d_abp": true,
+          "force_recommandation": "Avis d'experts",
+          "source_page": 76,
+          "source_tableau": "Tableau Traumatologie — Traumatisme de la main",
+          "notes": null
+        },
+        {
+          "id": "trauma-main-derniere-phalange",
+          "nom": "Traumatisme de la dernière phalange",
+          "specialite": "Traumatologie",
+          "protocole": null,
+          "alternative_allergie": null,
+          "pas_d_abp": true,
+          "force_recommandation": "GRADE 2",
+          "source_page": 76,
+          "source_tableau": "Tableau Traumatologie — Traumatisme de la main",
+          "notes": null
+        },
+        {
+          "id": "trauma-main-complexe",
+          "nom": "Traumatisme complexe de la main (replantation, mains de portière, écrasement, avulsion, blast, plaies par balles, injection sous pression, ou durée de chirurgie prévue > 2h)",
+          "specialite": "Traumatologie",
+          "protocole": {
+            "molecule": "Amoxicilline/Clavulanate",
+            "posologie": "2g IVL",
+            "reinjection": "1g si durée > 2h, puis toutes les 2h jusqu'à fin de chirurgie",
+            "duree": "Durée de l'intervention"
+          },
+          "alternative_allergie": [
+            {
+              "molecule": "Céfazoline + Gentamicine",
+              "posologie": "2g IVL + 6-7 mg/kg",
+              "reinjection": "Céfazoline 1g si durée > 4h, puis toutes les 4h ; Gentamicine dose unique"
+            }
+          ],
+          "pas_d_abp": false,
+          "force_recommandation": "Avis d'experts",
+          "source_page": 77,
+          "source_tableau": "Tableau Traumatologie — Traumatisme de la main",
+          "notes": null
+        }
+      ]
+    }
+  ],
+  "recommandations_generales": []
+}
