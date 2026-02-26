@@ -64,10 +64,29 @@ body {
   font-weight: 700;
   font-size: var(--font-lg);
   white-space: nowrap;
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
 }
 
 .site-header__brand:hover {
   opacity: 0.9;
+}
+
+.site-header__logo {
+  height: 32px;
+  width: auto;
+}
+
+/* Mobile : masquer le titre texte, garder le logo */
+.site-header__title {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .site-header__title {
+    display: inline;
+  }
 }
 
 /* --- Navigation --- */
