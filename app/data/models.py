@@ -14,6 +14,19 @@ from enum import StrEnum
 from pydantic import BaseModel
 
 
+class Molecule(StrEnum):
+    """Molécule ou association utilisée en antibioprophylaxie."""
+
+    CEFAZOLINE = "Céfazoline"
+    CLINDAMYCINE = "Clindamycine"
+    VANCOMYCINE = "Vancomycine"
+    TEICOPLANINE = "Teicoplanine"
+    AMOXICILLINE_CLAVULANATE = "Amoxicilline/Clavulanate"
+    GENTAMICINE = "Gentamicine"
+    CLINDAMYCINE_GENTAMICINE = "Clindamycine + Gentamicine"
+    CEFAZOLINE_GENTAMICINE = "Céfazoline + Gentamicine"
+
+
 class ForceRecommandation(StrEnum):
     """Force de la recommandation selon la méthodologie GRADE."""
 
@@ -25,7 +38,7 @@ class ForceRecommandation(StrEnum):
 class Protocole(BaseModel):
     """Protocole d'antibioprophylaxie (standard ou alternative allergie)."""
 
-    molecule: str
+    molecule: Molecule
     posologie: str
     reinjection: str | None = None
     duree: str | None = None
