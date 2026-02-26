@@ -5,7 +5,7 @@
 project_name: "Antibioprophylaxie SFAR"
 project_level: 2
 sprint_plan_path: "docs/sprint-plan-antibioprophylaxie-sfar-2026-02-16.md"
-last_updated: "2026-02-16"
+last_updated: "2026-02-17"
 github_repo: "tomboulier/recos-antibioprophylaxie-SFAR"
 
 milestones:
@@ -23,7 +23,9 @@ milestones:
       - story_id: "S-002"
         title: "Extraire le 1er tableau (pilote) en JSON"
         points: 5
-        status: "not_started"
+        status: "completed"
+        github_issue: 2
+        completed_date: "2026-02-16"
       - story_id: "S-003"
         title: "Créer l'export Excel du 1er tableau"
         points: 2
@@ -108,5 +110,5 @@ milestones:
 totals:
   stories: 19
   points: 78
-  completed_stories: 1
-  completed_points: 3
+  completed_stories: 2
+  completed_points: 8

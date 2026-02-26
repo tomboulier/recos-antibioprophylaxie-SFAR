@@ -24,11 +24,13 @@ uv run uvicorn app.main:app --reload  # Serveur dev
 
 ## Conventions de code
 
-- Conventional commits obligatoires : `type(scope): description`
+- Conventional commits obligatoires : `type(scope): description en français`
+- **Petits commits** : un commit = une seule chose, pour pouvoir les défaire
 - Branches : `feat/xxx`, `fix/xxx`, `docs/xxx` depuis `main`
 - PRs via `gh pr create`, merge via `gh pr merge --squash`
 - KISS, YAGNI, SOLID pragmatique
-- Docstrings Google-style sur les fonctions publiques
+- Docstrings **numpydoc** sur les fonctions publiques
+- **TDD** : écrire les tests avant le code (red → green → refactor)
 - Tests pytest obligatoires pour toute logique métier (coverage >= 80%)
 
 ## Structure

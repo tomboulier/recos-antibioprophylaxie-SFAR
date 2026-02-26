@@ -55,7 +55,10 @@ gh pr merge --squash
 
 ## Conventional commits
 
-Chaque commit suit le format : `type(scope): description`
+**Petits commits** : chaque commit ne fait qu'une seule chose. On préfère 5 petits commits
+qu'on peut défaire individuellement plutôt qu'un gros commit monolithique.
+
+Chaque commit suit le format : `type(scope): description en français`
 
 ### Types autorisés
 
@@ -77,11 +80,11 @@ Chaque commit suit le format : `type(scope): description`
 ### Exemples
 
 ```
-feat(search): add fuzzy matching for interventions
-fix(chat): handle timeout on LLM API call
-docs(readme): add deployment instructions
-test(api): add integration tests for /api/v1/interventions
-chore(ci): update GitHub Actions workflow
+feat(search): ajouter la recherche fuzzy des interventions
+fix(chat): gérer le timeout de l'appel API LLM
+docs(readme): ajouter les instructions de déploiement
+test(api): ajouter les tests d'intégration pour /api/v1/interventions
+chore(ci): mettre à jour le workflow GitHub Actions
 ```
 
 ## Style de code
@@ -110,7 +113,7 @@ Le pre-commit hook lance automatiquement `ruff check --fix` et `ruff format` ava
 
 ### Docstrings
 
-- Docstrings Google-style sur les fonctions et classes publiques
+- Docstrings **numpydoc** sur les fonctions et classes publiques
 - Pas de docstrings sur les fonctions internes évidentes
 - Les modèles Pydantic sont auto-documentés par leurs types
 
@@ -118,11 +121,16 @@ Le pre-commit hook lance automatiquement `ruff check --fix` et `ruff format` ava
 def search_interventions(query: str, limit: int = 10) -> list[Intervention]:
     """Recherche des interventions par mot-clé avec fuzzy matching.
 
-    Args:
-        query: Texte de recherche (nom d'intervention, spécialité, molécule).
-        limit: Nombre maximum de résultats.
+    Parameters
+    ----------
+    query : str
+        Texte de recherche (nom d'intervention, spécialité, molécule).
+    limit : int, optional
+        Nombre maximum de résultats (défaut : 10).
 
-    Returns:
+    Returns
+    -------
+    list[Intervention]
         Liste d'interventions triées par pertinence.
     """
 ```
@@ -142,6 +150,7 @@ uv run pytest tests/test_search.py -v
 
 ### Règles
 
+- **TDD** : écrire les tests avant le code de production (red → green → refactor)
 - Tests unitaires avec `pytest` sur la couche données et la logique métier
 - Tests d'intégration avec `httpx` sur les endpoints FastAPI
 - Couverture cible : **80%** sur `app/` (hors templates HTML)
