@@ -122,3 +122,24 @@ def test_meta_viewport_present(client):
 def test_html_lang_fr(client):
     html = client.get("/").text
     assert 'lang="fr"' in html
+
+
+# ---------- Page 404 personnalisée ----------
+
+
+def test_404_renvoie_html(client):
+    response = client.get("/page-inexistante")
+    assert response.status_code == 404
+    assert "text/html" in response.headers["content-type"]
+
+
+def test_404_contient_layout(client):
+    html = client.get("/page-inexistante").text
+    assert "<header" in html
+    assert "<footer" in html
+    assert "Antibioprophylaxie" in html
+
+
+def test_404_contient_message(client):
+    html = client.get("/page-inexistante").text
+    assert "introuvable" in html.lower() or "404" in html

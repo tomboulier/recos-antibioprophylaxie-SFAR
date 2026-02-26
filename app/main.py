@@ -5,8 +5,10 @@ from __future__ import annotations
 from contextlib import asynccontextmanager
 from typing import TYPE_CHECKING
 
-from fastapi import FastAPI
+from fastapi import FastAPI, Request
+from fastapi.responses import HTMLResponse
 from fastapi.staticfiles import StaticFiles
+from fastapi.templating import Jinja2Templates
 
 from app.config import _PROJECT_ROOT, Settings
 from app.data.loader import load_rfe_data
@@ -38,8 +40,19 @@ app = FastAPI(
     lifespan=lifespan,
 )
 
+_templates = Jinja2Templates(directory=str(_PROJECT_ROOT / "app" / "templates"))
+
 app.mount("/static", StaticFiles(directory=str(_PROJECT_ROOT / "app" / "static")), name="static")
 app.include_router(web_router)
+
+
+@app.exception_handler(404)
+async def not_found_handler(request: Request, _exc: Exception) -> HTMLResponse:
+    """Page 404 personnalisée avec le layout du site."""
+    return HTMLResponse(
+        content=_templates.get_template("404.html").render({"request": request}),
+        status_code=404,
+    )
 
 
 def get_rfe_data() -> RFEData:
