@@ -39,7 +39,7 @@ class Protocole(BaseModel):
     """Protocole d'antibioprophylaxie (standard ou alternative allergie)."""
 
     molecule: Molecule
-    posologie: str
+    dose_initiale: str
     reinjection: str | None = None
     duree: str | None = None
 
