@@ -6,7 +6,7 @@ from pathlib import Path
 import pytest
 
 from app.data.models import (
-    AlternativeAllergie,
+    ForceRecommandation,
     Intervention,
     Protocole,
     RFEData,
@@ -39,27 +39,27 @@ class TestProtocole:
         assert p.molecule == "Céfazoline"
         assert p.reinjection == "1g toutes les 4h"
 
-    def test_reinjection_optionnelle(self):
+    def test_reinjection_et_duree_optionnelles(self):
         p = Protocole(
             molecule="Gentamicine",
             posologie="6-7 mg/kg",
-            duree="Dose unique",
         )
         assert p.reinjection is None
+        assert p.duree is None
 
 
-class TestAlternativeAllergie:
-    def test_creation(self):
-        alt = AlternativeAllergie(
-            molecule="Clindamycine",
-            posologie="900mg IVL",
-        )
-        assert alt.molecule == "Clindamycine"
-        assert alt.reinjection is None
+class TestForceRecommandation:
+    def test_valeurs_enum(self):
+        assert ForceRecommandation.AVIS_EXPERTS == "Avis d'experts"
+        assert ForceRecommandation.GRADE_1 == "GRADE 1"
+        assert ForceRecommandation.GRADE_2 == "GRADE 2"
+
+    def test_enum_depuis_string(self):
+        assert ForceRecommandation("GRADE 1") == ForceRecommandation.GRADE_1
 
 
 class TestIntervention:
-    def test_intervention_avec_abp(self):
+    def test_intervention_avec_protocole(self):
         interv = Intervention(
             id="test-abp",
             nom="Test avec ABP",
@@ -69,24 +69,21 @@ class TestIntervention:
                 posologie="2g IVL",
                 duree="Durée de l'intervention",
             ),
-            force_recommandation="Avis d'experts",
+            force_recommandation=ForceRecommandation.AVIS_EXPERTS,
             source_page=73,
             source_tableau="Tableau test",
         )
-        assert not interv.pas_d_abp
         assert interv.protocole is not None
 
-    def test_intervention_sans_abp(self):
+    def test_intervention_sans_protocole(self):
         interv = Intervention(
-            id="test-pas-abp",
+            id="test-sans-abp",
             nom="Test sans ABP",
             specialite="Test",
-            pas_d_abp=True,
-            force_recommandation="GRADE 2",
+            force_recommandation=ForceRecommandation.GRADE_2,
             source_page=74,
             source_tableau="Tableau test",
         )
-        assert interv.pas_d_abp
         assert interv.protocole is None
         assert interv.alternative_allergie is None
 
@@ -125,24 +122,20 @@ class TestRFEDataCoherence:
                     f"{interv.id}: specialite='{interv.specialite}' != '{spec.nom}'"
                 )
 
-    def test_coherence_pas_d_abp_protocole(self, rfe_data: RFEData):
-        """Si pas_d_abp=True → protocole=None ; sinon protocole renseigné."""
+    def test_coherence_protocole_alternative(self, rfe_data: RFEData):
+        """Si protocole est None → alternative_allergie est aussi None."""
         for spec in rfe_data.specialites:
             for interv in spec.interventions:
-                if interv.pas_d_abp:
-                    assert interv.protocole is None, (
-                        f"{interv.id}: pas_d_abp mais protocole renseigné"
-                    )
-                else:
-                    assert interv.protocole is not None, (
-                        f"{interv.id}: ABP indiquée mais protocole manquant"
+                if interv.protocole is None:
+                    assert interv.alternative_allergie is None, (
+                        f"{interv.id}: pas de protocole mais alternative_allergie renseignée"
                     )
 
     def test_force_recommandation_valeurs(self, rfe_data: RFEData):
-        valeurs_valides = {"Avis d'experts", "GRADE 1", "GRADE 2"}
+        """Toutes les valeurs sont des ForceRecommandation valides (garanti par l'Enum)."""
         for spec in rfe_data.specialites:
             for interv in spec.interventions:
-                assert interv.force_recommandation in valeurs_valides, (
+                assert isinstance(interv.force_recommandation, ForceRecommandation), (
                     f"{interv.id}: force_recommandation '{interv.force_recommandation}' inattendue"
                 )
 
@@ -175,14 +168,13 @@ class TestRFEDataContenu:
             for i in ortho.interventions
             if "hanche" in i.nom.lower() and "prothèse" in i.nom.lower()
         )
-        assert not pth.pas_d_abp
         assert pth.protocole is not None
         assert pth.protocole.molecule == "Céfazoline"
         assert pth.alternative_allergie is not None
         assert len(pth.alternative_allergie) >= 1
 
-    def test_arthroscopie_sans_materiel_pas_abp(self, rfe_data: RFEData):
-        """L'arthroscopie diagnostique sans matériel n'a pas d'ABP."""
+    def test_arthroscopie_sans_materiel_pas_de_protocole(self, rfe_data: RFEData):
+        """L'arthroscopie diagnostique sans matériel n'a pas de protocole."""
         ortho = next(
             s for s in rfe_data.specialites if s.id == "chirurgie-orthopedique-programmee"
         )
@@ -193,7 +185,7 @@ class TestRFEDataContenu:
             and "sans" in i.nom.lower()
             and "membre inférieur" not in i.nom.lower()
         )
-        assert arthro.pas_d_abp
+        assert arthro.protocole is None
 
     def test_gustilo_2_3_amoxicilline(self, rfe_data: RFEData):
         """Les fractures ouvertes Gustilo 2-3 utilisent Amoxicilline/Clavulanate."""

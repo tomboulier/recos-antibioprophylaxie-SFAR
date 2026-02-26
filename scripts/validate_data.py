@@ -15,10 +15,18 @@ DATA_PATH = Path(__file__).resolve().parent.parent / "data" / "rfe.json"
 
 
 def validate() -> RFEData:
-    """Charge et valide data/rfe.json avec les modèles Pydantic."""
+    """Charge et valide data/rfe.json avec les modèles Pydantic.
+
+    Raises
+    ------
+    FileNotFoundError
+        Si le fichier data/rfe.json est introuvable.
+    ValueError
+        Si des erreurs de cohérence sont détectées.
+    """
     if not DATA_PATH.exists():
-        print(f"ERREUR : {DATA_PATH} introuvable.")
-        sys.exit(1)
+        msg = f"{DATA_PATH} introuvable."
+        raise FileNotFoundError(msg)
 
     raw = json.loads(DATA_PATH.read_text(encoding="utf-8"))
     data = RFEData.model_validate(raw)
@@ -26,14 +34,16 @@ def validate() -> RFEData:
     # Statistiques
     nb_specialites = len(data.specialites)
     nb_interventions = sum(len(s.interventions) for s in data.specialites)
-    nb_avec_abp = sum(1 for s in data.specialites for i in s.interventions if not i.pas_d_abp)
-    nb_sans_abp = nb_interventions - nb_avec_abp
+    nb_avec_protocole = sum(
+        1 for s in data.specialites for i in s.interventions if i.protocole is not None
+    )
+    nb_sans_protocole = nb_interventions - nb_avec_protocole
 
     print(f"Validation OK — {data.version}")
     print(f"  Spécialités   : {nb_specialites}")
     print(f"  Interventions : {nb_interventions}")
-    print(f"    avec ABP    : {nb_avec_abp}")
-    print(f"    sans ABP    : {nb_sans_abp}")
+    print(f"    avec ATB    : {nb_avec_protocole}")
+    print(f"    sans ATB    : {nb_sans_protocole}")
 
     # Vérifications de cohérence
     errors: list[str] = []
@@ -45,11 +55,11 @@ def validate() -> RFEData:
                 errors.append(f"ID dupliqué : {interv.id}")
             ids_seen.add(interv.id)
 
-            # Cohérence pas_d_abp / protocole
-            if interv.pas_d_abp and interv.protocole is not None:
-                errors.append(f"{interv.id} : pas_d_abp=True mais protocole renseigné")
-            if not interv.pas_d_abp and interv.protocole is None:
-                errors.append(f"{interv.id} : pas_d_abp=False mais protocole manquant")
+            # Cohérence protocole / alternative_allergie
+            if interv.protocole is None and interv.alternative_allergie is not None:
+                errors.append(
+                    f"{interv.id} : pas de protocole mais alternative_allergie renseignée"
+                )
 
             # Cohérence specialite
             if interv.specialite != spec.nom:
@@ -62,11 +72,16 @@ def validate() -> RFEData:
         print(f"\n  {len(errors)} erreur(s) de cohérence :")
         for e in errors:
             print(f"    - {e}")
-        sys.exit(1)
+        msg = f"{len(errors)} erreur(s) de cohérence détectée(s)"
+        raise ValueError(msg)
 
     print("  Cohérence     : OK")
     return data
 
 
 if __name__ == "__main__":
-    validate()
+    try:
+        validate()
+    except (FileNotFoundError, ValueError) as e:
+        print(f"ERREUR : {e}")
+        sys.exit(1)
