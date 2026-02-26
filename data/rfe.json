@@ -20,15 +20,16 @@
             {
               "molecule": "Clindamycine",
               "posologie": "900mg IVL",
-              "reinjection": null
+              "reinjection": null,
+              "duree": null
             },
             {
               "molecule": "Vancomycine ou Teicoplanine",
               "posologie": "20 mg/kg IVL ou 12 mg/kg IVL",
-              "reinjection": null
+              "reinjection": null,
+              "duree": null
             }
           ],
-          "pas_d_abp": false,
           "force_recommandation": "Avis d'experts",
           "source_page": 73,
           "source_tableau": "Tableau Chirurgie orthopédique programmée — Membre inférieur",
@@ -48,15 +49,16 @@
             {
               "molecule": "Clindamycine",
               "posologie": "900mg IVL",
-              "reinjection": null
+              "reinjection": null,
+              "duree": null
             },
             {
               "molecule": "Vancomycine ou Teicoplanine",
               "posologie": "20 mg/kg IVL ou 12 mg/kg IVL",
-              "reinjection": null
+              "reinjection": null,
+              "duree": null
             }
           ],
-          "pas_d_abp": false,
           "force_recommandation": "Avis d'experts",
           "source_page": 73,
           "source_tableau": "Tableau Chirurgie orthopédique programmée — Membre inférieur",
@@ -76,15 +78,16 @@
             {
               "molecule": "Clindamycine",
               "posologie": "900mg IVL",
-              "reinjection": null
+              "reinjection": null,
+              "duree": null
             },
             {
               "molecule": "Vancomycine ou Teicoplanine",
               "posologie": "20 mg/kg IVL ou 12 mg/kg IVL",
-              "reinjection": null
+              "reinjection": null,
+              "duree": null
             }
           ],
-          "pas_d_abp": false,
           "force_recommandation": "Avis d'experts",
           "source_page": 73,
           "source_tableau": "Tableau Chirurgie orthopédique programmée — Membre inférieur",
@@ -104,15 +107,16 @@
             {
               "molecule": "Clindamycine",
               "posologie": "900mg IVL",
-              "reinjection": null
+              "reinjection": null,
+              "duree": null
             },
             {
               "molecule": "Vancomycine ou Teicoplanine",
               "posologie": "20 mg/kg IVL ou 12 mg/kg IVL",
-              "reinjection": null
+              "reinjection": null,
+              "duree": null
             }
           ],
-          "pas_d_abp": false,
           "force_recommandation": "Avis d'experts",
           "source_page": 73,
           "source_tableau": "Tableau Chirurgie orthopédique programmée — Membre inférieur",
@@ -124,7 +128,6 @@
           "specialite": "Chirurgie orthopédique programmée",
           "protocole": null,
           "alternative_allergie": null,
-          "pas_d_abp": true,
           "force_recommandation": "Avis d'experts",
           "source_page": 73,
           "source_tableau": "Tableau Chirurgie orthopédique programmée — Membre inférieur",
@@ -136,7 +139,6 @@
           "specialite": "Chirurgie orthopédique programmée",
           "protocole": null,
           "alternative_allergie": null,
-          "pas_d_abp": true,
           "force_recommandation": "Avis d'experts",
           "source_page": 73,
           "source_tableau": "Tableau Chirurgie orthopédique programmée — Membre inférieur",
@@ -148,7 +150,6 @@
           "specialite": "Chirurgie orthopédique programmée",
           "protocole": null,
           "alternative_allergie": null,
-          "pas_d_abp": true,
           "force_recommandation": "Avis d'experts",
           "source_page": 73,
           "source_tableau": "Tableau Chirurgie orthopédique programmée — Membre inférieur",
@@ -160,7 +161,6 @@
           "specialite": "Chirurgie orthopédique programmée",
           "protocole": null,
           "alternative_allergie": null,
-          "pas_d_abp": true,
           "force_recommandation": "Avis d'experts",
           "source_page": 73,
           "source_tableau": "Tableau Chirurgie orthopédique programmée — Membre inférieur",
@@ -172,7 +172,6 @@
           "specialite": "Chirurgie orthopédique programmée",
           "protocole": null,
           "alternative_allergie": null,
-          "pas_d_abp": true,
           "force_recommandation": "Avis d'experts",
           "source_page": 73,
           "source_tableau": "Tableau Chirurgie orthopédique programmée — Membre inférieur",
@@ -192,15 +191,16 @@
             {
               "molecule": "Clindamycine",
               "posologie": "900mg IVL",
-              "reinjection": null
+              "reinjection": null,
+              "duree": null
             },
             {
               "molecule": "Vancomycine ou Teicoplanine",
               "posologie": "20 mg/kg IVL ou 12 mg/kg IVL",
-              "reinjection": null
+              "reinjection": null,
+              "duree": null
             }
           ],
-          "pas_d_abp": false,
           "force_recommandation": "Avis d'experts",
           "source_page": 73,
           "source_tableau": "Tableau Chirurgie orthopédique programmée — Épaule et coude",
@@ -220,15 +220,16 @@
             {
               "molecule": "Clindamycine",
               "posologie": "900mg IVL",
-              "reinjection": null
+              "reinjection": null,
+              "duree": null
             },
             {
               "molecule": "Vancomycine ou Teicoplanine",
               "posologie": "20 mg/kg IVL ou 12 mg/kg IVL",
-              "reinjection": null
+              "reinjection": null,
+              "duree": null
             }
           ],
-          "pas_d_abp": false,
           "force_recommandation": "Avis d'experts",
           "source_page": 73,
           "source_tableau": "Tableau Chirurgie orthopédique programmée — Épaule et coude",
@@ -248,15 +249,16 @@
             {
               "molecule": "Clindamycine",
               "posologie": "900mg IVL",
-              "reinjection": null
+              "reinjection": null,
+              "duree": null
             },
             {
               "molecule": "Vancomycine ou Teicoplanine",
               "posologie": "20 mg/kg IVL ou 12 mg/kg IVL",
-              "reinjection": null
+              "reinjection": null,
+              "duree": null
             }
           ],
-          "pas_d_abp": false,
           "force_recommandation": "Avis d'experts",
           "source_page": 73,
           "source_tableau": "Tableau Chirurgie orthopédique programmée — Épaule et coude",
@@ -276,15 +278,16 @@
             {
               "molecule": "Clindamycine",
               "posologie": "900mg IVL",
-              "reinjection": null
+              "reinjection": null,
+              "duree": null
             },
             {
               "molecule": "Vancomycine ou Teicoplanine",
               "posologie": "20 mg/kg IVL ou 12 mg/kg IVL",
-              "reinjection": null
+              "reinjection": null,
+              "duree": null
             }
           ],
-          "pas_d_abp": false,
           "force_recommandation": "Avis d'experts",
           "source_page": 73,
           "source_tableau": "Tableau Chirurgie orthopédique programmée — Épaule et coude",
@@ -304,15 +307,16 @@
             {
               "molecule": "Clindamycine",
               "posologie": "900mg IVL",
-              "reinjection": null
+              "reinjection": null,
+              "duree": null
             },
             {
               "molecule": "Vancomycine ou Teicoplanine",
               "posologie": "20 mg/kg IVL ou 12 mg/kg IVL",
-              "reinjection": null
+              "reinjection": null,
+              "duree": null
             }
           ],
-          "pas_d_abp": false,
           "force_recommandation": "Avis d'experts",
           "source_page": 73,
           "source_tableau": "Tableau Chirurgie orthopédique programmée — Épaule et coude",
@@ -332,15 +336,16 @@
             {
               "molecule": "Clindamycine",
               "posologie": "900mg IVL",
-              "reinjection": null
+              "reinjection": null,
+              "duree": null
             },
             {
               "molecule": "Vancomycine ou Teicoplanine",
               "posologie": "20 mg/kg IVL ou 12 mg/kg IVL",
-              "reinjection": null
+              "reinjection": null,
+              "duree": null
             }
           ],
-          "pas_d_abp": false,
           "force_recommandation": "Avis d'experts",
           "source_page": 73,
           "source_tableau": "Tableau Chirurgie orthopédique programmée — Épaule et coude",
@@ -352,7 +357,6 @@
           "specialite": "Chirurgie orthopédique programmée",
           "protocole": null,
           "alternative_allergie": null,
-          "pas_d_abp": true,
           "force_recommandation": "Avis d'experts",
           "source_page": 73,
           "source_tableau": "Tableau Chirurgie orthopédique programmée — Épaule et coude",
@@ -364,7 +368,6 @@
           "specialite": "Chirurgie orthopédique programmée",
           "protocole": null,
           "alternative_allergie": null,
-          "pas_d_abp": true,
           "force_recommandation": "Avis d'experts",
           "source_page": 73,
           "source_tableau": "Tableau Chirurgie orthopédique programmée — Épaule et coude",
@@ -376,7 +379,6 @@
           "specialite": "Chirurgie orthopédique programmée",
           "protocole": null,
           "alternative_allergie": null,
-          "pas_d_abp": true,
           "force_recommandation": "Avis d'experts",
           "source_page": 73,
           "source_tableau": "Tableau Chirurgie orthopédique programmée — Épaule et coude",
@@ -388,7 +390,6 @@
           "specialite": "Chirurgie orthopédique programmée",
           "protocole": null,
           "alternative_allergie": null,
-          "pas_d_abp": true,
           "force_recommandation": "Avis d'experts",
           "source_page": 73,
           "source_tableau": "Tableau Chirurgie orthopédique programmée — Épaule et coude",
@@ -408,15 +409,16 @@
             {
               "molecule": "Clindamycine",
               "posologie": "900mg IVL",
-              "reinjection": null
+              "reinjection": null,
+              "duree": null
             },
             {
               "molecule": "Vancomycine ou Teicoplanine",
               "posologie": "20 mg/kg IVL ou 12 mg/kg IVL",
-              "reinjection": null
+              "reinjection": null,
+              "duree": null
             }
           ],
-          "pas_d_abp": false,
           "force_recommandation": "Avis d'experts",
           "source_page": 74,
           "source_tableau": "Tableau Chirurgie orthopédique programmée — Main",
@@ -428,7 +430,6 @@
           "specialite": "Chirurgie orthopédique programmée",
           "protocole": null,
           "alternative_allergie": null,
-          "pas_d_abp": true,
           "force_recommandation": "GRADE 2",
           "source_page": 74,
           "source_tableau": "Tableau Chirurgie orthopédique programmée — Main",
@@ -440,7 +441,6 @@
           "specialite": "Chirurgie orthopédique programmée",
           "protocole": null,
           "alternative_allergie": null,
-          "pas_d_abp": true,
           "force_recommandation": "GRADE 2",
           "source_page": 74,
           "source_tableau": "Tableau Chirurgie orthopédique programmée — Main",
@@ -452,7 +452,6 @@
           "specialite": "Chirurgie orthopédique programmée",
           "protocole": null,
           "alternative_allergie": null,
-          "pas_d_abp": true,
           "force_recommandation": "Avis d'experts",
           "source_page": 74,
           "source_tableau": "Tableau Chirurgie orthopédique programmée — Main",
@@ -464,7 +463,6 @@
           "specialite": "Chirurgie orthopédique programmée",
           "protocole": null,
           "alternative_allergie": null,
-          "pas_d_abp": true,
           "force_recommandation": "Avis d'experts",
           "source_page": 74,
           "source_tableau": "Tableau Chirurgie orthopédique programmée — Main",
@@ -484,15 +482,16 @@
             {
               "molecule": "Clindamycine",
               "posologie": "900mg IVL",
-              "reinjection": null
+              "reinjection": null,
+              "duree": null
             },
             {
               "molecule": "Vancomycine ou Teicoplanine",
               "posologie": "20 mg/kg IVL ou 12 mg/kg IVL",
-              "reinjection": null
+              "reinjection": null,
+              "duree": null
             }
           ],
-          "pas_d_abp": false,
           "force_recommandation": "GRADE 2",
           "source_page": 74,
           "source_tableau": "Tableau Chirurgie orthopédique programmée — Rachis",
@@ -512,15 +511,16 @@
             {
               "molecule": "Clindamycine",
               "posologie": "900mg IVL",
-              "reinjection": null
+              "reinjection": null,
+              "duree": null
             },
             {
               "molecule": "Vancomycine ou Teicoplanine",
               "posologie": "20 mg/kg IVL ou 12 mg/kg IVL",
-              "reinjection": null
+              "reinjection": null,
+              "duree": null
             }
           ],
-          "pas_d_abp": false,
           "force_recommandation": "Avis d'experts",
           "source_page": 74,
           "source_tableau": "Tableau Chirurgie orthopédique programmée — Rachis",
@@ -540,15 +540,16 @@
             {
               "molecule": "Clindamycine",
               "posologie": "900mg IVL",
-              "reinjection": null
+              "reinjection": null,
+              "duree": null
             },
             {
               "molecule": "Vancomycine ou Teicoplanine",
               "posologie": "20 mg/kg IVL ou 12 mg/kg IVL",
-              "reinjection": null
+              "reinjection": null,
+              "duree": null
             }
           ],
-          "pas_d_abp": false,
           "force_recommandation": "Avis d'experts",
           "source_page": 74,
           "source_tableau": "Tableau Chirurgie orthopédique programmée — Rachis",
@@ -568,15 +569,16 @@
             {
               "molecule": "Clindamycine",
               "posologie": "900mg IVL",
-              "reinjection": null
+              "reinjection": null,
+              "duree": null
             },
             {
               "molecule": "Vancomycine ou Teicoplanine",
               "posologie": "20 mg/kg IVL ou 12 mg/kg IVL",
-              "reinjection": null
+              "reinjection": null,
+              "duree": null
             }
           ],
-          "pas_d_abp": false,
           "force_recommandation": "Avis d'experts",
           "source_page": 74,
           "source_tableau": "Tableau Chirurgie orthopédique programmée — Rachis",
@@ -588,7 +590,6 @@
           "specialite": "Chirurgie orthopédique programmée",
           "protocole": null,
           "alternative_allergie": null,
-          "pas_d_abp": true,
           "force_recommandation": "Avis d'experts",
           "source_page": 74,
           "source_tableau": "Tableau Chirurgie orthopédique programmée — Rachis",
@@ -600,7 +601,6 @@
           "specialite": "Chirurgie orthopédique programmée",
           "protocole": null,
           "alternative_allergie": null,
-          "pas_d_abp": true,
           "force_recommandation": "Avis d'experts",
           "source_page": 74,
           "source_tableau": "Tableau Chirurgie orthopédique programmée — Rachis",
@@ -618,7 +618,6 @@
           "specialite": "Traumatologie",
           "protocole": null,
           "alternative_allergie": null,
-          "pas_d_abp": true,
           "force_recommandation": "Avis d'experts",
           "source_page": 75,
           "source_tableau": "Tableau Traumatologie — Fractures fermées",
@@ -630,7 +629,6 @@
           "specialite": "Traumatologie",
           "protocole": null,
           "alternative_allergie": null,
-          "pas_d_abp": true,
           "force_recommandation": "Avis d'experts",
           "source_page": 75,
           "source_tableau": "Tableau Traumatologie — Fractures fermées",
@@ -650,10 +648,10 @@
             {
               "molecule": "Clindamycine",
               "posologie": "900mg IV",
-              "reinjection": null
+              "reinjection": null,
+              "duree": null
             }
           ],
-          "pas_d_abp": false,
           "force_recommandation": "Avis d'experts",
           "source_page": 75,
           "source_tableau": "Tableau Traumatologie — Fractures fermées",
@@ -673,10 +671,10 @@
             {
               "molecule": "Clindamycine",
               "posologie": "900mg IV",
-              "reinjection": null
+              "reinjection": null,
+              "duree": null
             }
           ],
-          "pas_d_abp": false,
           "force_recommandation": "Avis d'experts",
           "source_page": 75,
           "source_tableau": "Tableau Traumatologie — Fractures ouvertes (hors main)",
@@ -696,10 +694,10 @@
             {
               "molecule": "Clindamycine + Gentamicine",
               "posologie": "900mg IV + 6-7 mg/kg",
-              "reinjection": null
+              "reinjection": null,
+              "duree": null
             }
           ],
-          "pas_d_abp": false,
           "force_recommandation": "Avis d'experts",
           "source_page": 75,
           "source_tableau": "Tableau Traumatologie — Fractures ouvertes (hors main)",
@@ -719,10 +717,10 @@
             {
               "molecule": "Clindamycine + Gentamicine",
               "posologie": "900mg IV + 6-7 mg/kg",
-              "reinjection": null
+              "reinjection": null,
+              "duree": null
             }
           ],
-          "pas_d_abp": false,
           "force_recommandation": "GRADE 1",
           "source_page": 76,
           "source_tableau": "Tableau Traumatologie — Plaie des parties molles (hors main)",
@@ -734,7 +732,6 @@
           "specialite": "Traumatologie",
           "protocole": null,
           "alternative_allergie": null,
-          "pas_d_abp": true,
           "force_recommandation": "Avis d'experts",
           "source_page": 76,
           "source_tableau": "Tableau Traumatologie — Plaie des parties molles (hors main)",
@@ -754,10 +751,10 @@
             {
               "molecule": "Clindamycine",
               "posologie": "900mg IV",
-              "reinjection": null
+              "reinjection": null,
+              "duree": null
             }
           ],
-          "pas_d_abp": false,
           "force_recommandation": "GRADE 1",
           "source_page": 76,
           "source_tableau": "Tableau Traumatologie — Plaie des parties molles (hors main)",
@@ -777,10 +774,10 @@
             {
               "molecule": "Clindamycine + Gentamicine",
               "posologie": "900mg IV + 6-7 mg/kg",
-              "reinjection": null
+              "reinjection": null,
+              "duree": null
             }
           ],
-          "pas_d_abp": false,
           "force_recommandation": "Avis d'experts",
           "source_page": 76,
           "source_tableau": "Tableau Traumatologie — Plaie des parties molles (hors main)",
@@ -792,7 +789,6 @@
           "specialite": "Traumatologie",
           "protocole": null,
           "alternative_allergie": null,
-          "pas_d_abp": true,
           "force_recommandation": "Avis d'experts",
           "source_page": 76,
           "source_tableau": "Tableau Traumatologie — Traumatisme de la main",
@@ -804,7 +800,6 @@
           "specialite": "Traumatologie",
           "protocole": null,
           "alternative_allergie": null,
-          "pas_d_abp": true,
           "force_recommandation": "Avis d'experts",
           "source_page": 76,
           "source_tableau": "Tableau Traumatologie — Traumatisme de la main",
@@ -824,10 +819,10 @@
             {
               "molecule": "Clindamycine",
               "posologie": "900mg IV",
-              "reinjection": null
+              "reinjection": null,
+              "duree": null
             }
           ],
-          "pas_d_abp": false,
           "force_recommandation": "Avis d'experts",
           "source_page": 76,
           "source_tableau": "Tableau Traumatologie — Traumatisme de la main",
@@ -847,10 +842,10 @@
             {
               "molecule": "Clindamycine",
               "posologie": "900mg IV",
-              "reinjection": null
+              "reinjection": null,
+              "duree": null
             }
           ],
-          "pas_d_abp": false,
           "force_recommandation": "Avis d'experts",
           "source_page": 76,
           "source_tableau": "Tableau Traumatologie — Traumatisme de la main",
@@ -862,7 +857,6 @@
           "specialite": "Traumatologie",
           "protocole": null,
           "alternative_allergie": null,
-          "pas_d_abp": true,
           "force_recommandation": "GRADE 1",
           "source_page": 76,
           "source_tableau": "Tableau Traumatologie — Traumatisme de la main",
@@ -874,7 +868,6 @@
           "specialite": "Traumatologie",
           "protocole": null,
           "alternative_allergie": null,
-          "pas_d_abp": true,
           "force_recommandation": "Avis d'experts",
           "source_page": 76,
           "source_tableau": "Tableau Traumatologie — Traumatisme de la main",
@@ -886,7 +879,6 @@
           "specialite": "Traumatologie",
           "protocole": null,
           "alternative_allergie": null,
-          "pas_d_abp": true,
           "force_recommandation": "GRADE 2",
           "source_page": 76,
           "source_tableau": "Tableau Traumatologie — Traumatisme de la main",
@@ -906,10 +898,10 @@
             {
               "molecule": "Céfazoline + Gentamicine",
               "posologie": "2g IVL + 6-7 mg/kg",
-              "reinjection": "Céfazoline 1g si durée > 4h, puis toutes les 4h ; Gentamicine dose unique"
+              "reinjection": "Céfazoline 1g si durée > 4h, puis toutes les 4h ; Gentamicine dose unique",
+              "duree": null
             }
           ],
-          "pas_d_abp": false,
           "force_recommandation": "Avis d'experts",
           "source_page": 77,
           "source_tableau": "Tableau Traumatologie — Traumatisme de la main",
