@@ -52,9 +52,15 @@ logo-SPILF.jpeg
 Vite App.pdf
 RFE-antibioprophylaxie-2023_V2.0_*.pdf
 
+# MCP servers config (contains auth tokens)
+.mcp.json
+
 # BMAD config (local workflow tooling, not part of the app)
 bmad/
 .claude/
 
 # ChromaDB (RAG vector store, generated)
 chroma_db/
+
+# Mockups HTML (archivés dans branche archive/mockups-figma)
+mockups/
