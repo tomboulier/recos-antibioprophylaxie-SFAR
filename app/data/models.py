@@ -11,7 +11,13 @@ from __future__ import annotations
 import datetime  # noqa: TC003 — nécessaire au runtime pour Pydantic
 from enum import StrEnum
 
-from pydantic import BaseModel
+from pydantic import BaseModel, ConfigDict
+
+
+class StrictBaseModel(BaseModel):
+    """BaseModel avec extra='forbid' pour détecter les champs inconnus."""
+
+    model_config = ConfigDict(extra="forbid")
 
 
 class Molecule(StrEnum):
@@ -35,7 +41,7 @@ class ForceRecommandation(StrEnum):
     GRADE_2 = "GRADE 2"
 
 
-class Protocole(BaseModel):
+class Protocole(StrictBaseModel):
     """Protocole d'antibioprophylaxie (standard ou alternative allergie)."""
 
     molecule: Molecule
@@ -45,7 +51,7 @@ class Protocole(BaseModel):
     duree: str | None = None
 
 
-class Intervention(BaseModel):
+class Intervention(StrictBaseModel):
     """Une intervention chirurgicale avec son protocole d'antibioprophylaxie."""
 
     id: str
@@ -59,7 +65,7 @@ class Intervention(BaseModel):
     notes: str | None = None
 
 
-class Specialite(BaseModel):
+class Specialite(StrictBaseModel):
     """Une spécialité chirurgicale."""
 
     id: str
@@ -67,7 +73,7 @@ class Specialite(BaseModel):
     interventions: list[Intervention]
 
 
-class RecommandationGenerale(BaseModel):
+class RecommandationGenerale(StrictBaseModel):
     """Recommandation narrative transverse (FR-002)."""
 
     id: str
@@ -76,7 +82,7 @@ class RecommandationGenerale(BaseModel):
     source_page: int
 
 
-class RFEData(BaseModel):
+class RFEData(StrictBaseModel):
     """Racine du fichier data/rfe.json."""
 
     version: str
