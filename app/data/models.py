@@ -40,6 +40,7 @@ class Protocole(BaseModel):
 
     molecule: Molecule
     dose_initiale: str
+    intention: int | None = None
     reinjection: str | None = None
     duree: str | None = None
 
