@@ -64,6 +64,6 @@ workflow_status:
 
   # Phase 4: Implementation (Required)
   # Tracked in sprint-status.yaml
-  # Completed: S-001 (init), S-002 (JSON pilote), S-007 (backend FastAPI)
-  # Progress: 3/19 stories, 11/78 points
-  # Next: Maquettes Figma → S-010 (Layout), puis S-008 (API REST)
+  # Completed: S-001 (init), S-002 (JSON pilote), S-007 (backend FastAPI), S-010 (layout base)
+  # Progress: 4/19 stories, 14/78 points
+  # Next: S-008 (API REST endpoints), puis S-011 (Accueil)
