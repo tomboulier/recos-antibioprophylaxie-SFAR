@@ -5,7 +5,7 @@
 project_name: "Antibioprophylaxie SFAR"
 project_level: 2
 sprint_plan_path: "docs/sprint-plan-antibioprophylaxie-sfar-2026-02-16.md"
-last_updated: "2026-02-17"
+last_updated: "2026-02-26"
 github_repo: "tomboulier/recos-antibioprophylaxie-SFAR"
 
 milestones:
@@ -46,12 +46,14 @@ milestones:
   - id: 2
     name: "Webapp + API REST"
     epic: "EPIC-002"
-    status: "not_started"
+    status: "in_progress"
     stories:
       - story_id: "S-007"
         title: "Backend FastAPI : modèles Pydantic, chargement JSON, config"
         points: 3
-        status: "not_started"
+        status: "completed"
+        github_issue: 7
+        completed_date: "2026-02-26"
       - story_id: "S-008"
         title: "API REST : endpoints interventions, spécialités"
         points: 5
@@ -110,5 +112,5 @@ milestones:
 totals:
   stories: 19
   points: 78
-  completed_stories: 2
-  completed_points: 8
+  completed_stories: 3
+  completed_points: 11
