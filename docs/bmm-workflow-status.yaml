@@ -7,7 +7,7 @@ project_type: "web-app"
 project_level: 2
 communication_language: "French"
 output_language: "French"
-last_updated: "2026-02-16T01:00:00Z"
+last_updated: "2026-02-26T00:00:00Z"
 
 # Workflow Status Tracking
 # Status values:
@@ -63,4 +63,7 @@ workflow_status:
     description: "Validate architecture against requirements"
 
   # Phase 4: Implementation (Required)
-  # Note: Implementation tracked in sprint-status.yaml
+  # Tracked in sprint-status.yaml
+  # Completed: S-001 (init), S-002 (JSON pilote), S-007 (backend FastAPI)
+  # Progress: 3/19 stories, 11/78 points
+  # Next: Maquettes Figma → S-010 (Layout), puis S-008 (API REST)
