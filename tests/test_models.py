@@ -8,6 +8,7 @@ import pytest
 from app.data.models import (
     ForceRecommandation,
     Intervention,
+    Molecule,
     Protocole,
     RFEData,
 )
@@ -28,24 +29,55 @@ def rfe_data() -> RFEData:
 # ── Tests unitaires modèles ───────────────────────────────────────────
 
 
+class TestMolecule:
+    def test_valeurs_enum(self):
+        assert Molecule.CEFAZOLINE == "Céfazoline"
+        assert Molecule.CLINDAMYCINE == "Clindamycine"
+        assert Molecule.VANCOMYCINE == "Vancomycine"
+        assert Molecule.TEICOPLANINE == "Teicoplanine"
+        assert Molecule.AMOXICILLINE_CLAVULANATE == "Amoxicilline/Clavulanate"
+
+    def test_enum_depuis_string(self):
+        assert Molecule("Céfazoline") == Molecule.CEFAZOLINE
+
+    def test_associations(self):
+        assert Molecule.CLINDAMYCINE_GENTAMICINE == "Clindamycine + Gentamicine"
+        assert Molecule.CEFAZOLINE_GENTAMICINE == "Céfazoline + Gentamicine"
+
+
 class TestProtocole:
     def test_creation_complete(self):
         p = Protocole(
             molecule="Céfazoline",
-            posologie="2g IVL",
+            dose_initiale="2g IVL",
             reinjection="1g toutes les 4h",
             duree="Durée de l'intervention",
         )
-        assert p.molecule == "Céfazoline"
+        assert p.molecule == Molecule.CEFAZOLINE
         assert p.reinjection == "1g toutes les 4h"
 
     def test_reinjection_et_duree_optionnelles(self):
         p = Protocole(
             molecule="Gentamicine",
-            posologie="6-7 mg/kg",
+            dose_initiale="6-7 mg/kg",
         )
         assert p.reinjection is None
         assert p.duree is None
+
+    def test_intention_optionnelle(self):
+        p = Protocole(
+            molecule="Clindamycine",
+            dose_initiale="900mg IVL",
+            intention=1,
+        )
+        assert p.intention == 1
+
+    def test_intention_none_par_defaut(self):
+        p = Protocole(
+            molecule="Céfazoline",
+            dose_initiale="2g IVL",
+        )
+        assert p.intention is None
 
 
 class TestForceRecommandation:
@@ -66,7 +98,7 @@ class TestIntervention:
             specialite="Test",
             protocole=Protocole(
                 molecule="Céfazoline",
-                posologie="2g IVL",
+                dose_initiale="2g IVL",
                 duree="Durée de l'intervention",
             ),
             force_recommandation=ForceRecommandation.AVIS_EXPERTS,
@@ -144,6 +176,25 @@ class TestRFEDataCoherence:
             for interv in spec.interventions:
                 assert interv.source_page > 0, f"{interv.id}: source_page={interv.source_page}"
 
+    def test_molecule_sont_des_enum(self, rfe_data: RFEData):
+        """Toutes les molécules sont des Molecule valides (garanti par le StrEnum)."""
+        for spec in rfe_data.specialites:
+            for interv in spec.interventions:
+                if interv.protocole:
+                    assert isinstance(interv.protocole.molecule, Molecule), (
+                        f"{interv.id}: molecule '{interv.protocole.molecule}' inattendue"
+                    )
+
+    def test_intentions_alternatives_ordonnees(self, rfe_data: RFEData):
+        """Les alternatives allergie ont des intentions séquentielles (1, 2, 3, ...)."""
+        for spec in rfe_data.specialites:
+            for interv in spec.interventions:
+                if interv.alternative_allergie:
+                    intentions = [alt.intention for alt in interv.alternative_allergie]
+                    assert intentions == list(range(1, len(intentions) + 1)), (
+                        f"{interv.id}: intentions {intentions} non séquentielles"
+                    )
+
 
 class TestRFEDataContenu:
     def test_nombre_interventions_ortho(self, rfe_data: RFEData):
@@ -169,9 +220,16 @@ class TestRFEDataContenu:
             if "hanche" in i.nom.lower() and "prothèse" in i.nom.lower()
         )
         assert pth.protocole is not None
-        assert pth.protocole.molecule == "Céfazoline"
+        assert pth.protocole.molecule == Molecule.CEFAZOLINE
         assert pth.alternative_allergie is not None
-        assert len(pth.alternative_allergie) >= 1
+        # 3 alternatives : Clindamycine (1), Vancomycine (2), Teicoplanine (3)
+        assert len(pth.alternative_allergie) == 3
+        assert pth.alternative_allergie[0].molecule == Molecule.CLINDAMYCINE
+        assert pth.alternative_allergie[0].intention == 1
+        assert pth.alternative_allergie[1].molecule == Molecule.VANCOMYCINE
+        assert pth.alternative_allergie[1].intention == 2
+        assert pth.alternative_allergie[2].molecule == Molecule.TEICOPLANINE
+        assert pth.alternative_allergie[2].intention == 3
 
     def test_arthroscopie_sans_materiel_pas_de_protocole(self, rfe_data: RFEData):
         """L'arthroscopie diagnostique sans matériel n'a pas de protocole."""
