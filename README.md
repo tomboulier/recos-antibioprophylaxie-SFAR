@@ -29,6 +29,47 @@ uv sync --extra dev
 uv run pytest
 ```
 
+## Lancer le serveur
+
+```bash
+uv run uvicorn app.main:app --reload
+```
+
+Le serveur démarre sur http://localhost:8000. Les données de `data/rfe.json` (47 interventions, 2 spécialités) sont chargées en mémoire au démarrage.
+
+### Endpoints disponibles
+
+| Endpoint | Description |
+|----------|-------------|
+| `GET /api/v1/health` | Health check avec statistiques (nb spécialités, nb interventions) |
+| `GET /docs` | Documentation Swagger UI (générée automatiquement par FastAPI) |
+| `GET /redoc` | Documentation ReDoc |
+
+### Exemple : health check
+
+```bash
+curl http://localhost:8000/api/v1/health
+```
+
+```json
+{
+  "status": "ok",
+  "version": "0.1.0",
+  "data_version": "RFE SFAR 2024",
+  "specialites": 2,
+  "interventions": 47
+}
+```
+
+### Configuration
+
+Variables d'environnement (optionnelles) :
+
+| Variable | Défaut | Description |
+|----------|--------|-------------|
+| `DEBUG` | `false` | Mode debug |
+| `DATA_PATH` | `data/rfe.json` | Chemin vers le fichier de données |
+
 ## Documentation
 
 | Document | Description |
