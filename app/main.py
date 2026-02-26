@@ -6,9 +6,11 @@ from contextlib import asynccontextmanager
 from typing import TYPE_CHECKING
 
 from fastapi import FastAPI
+from fastapi.staticfiles import StaticFiles
 
-from app.config import Settings
+from app.config import _PROJECT_ROOT, Settings
 from app.data.loader import load_rfe_data
+from app.web.routes import router as web_router
 
 if TYPE_CHECKING:
     from collections.abc import AsyncGenerator
@@ -35,6 +37,9 @@ app = FastAPI(
     version=settings.app_version,
     lifespan=lifespan,
 )
+
+app.mount("/static", StaticFiles(directory=str(_PROJECT_ROOT / "app" / "static")), name="static")
+app.include_router(web_router)
 
 
 def get_rfe_data() -> RFEData:
