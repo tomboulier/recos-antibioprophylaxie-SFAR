@@ -30,8 +30,7 @@ async def lifespan(app: FastAPI) -> AsyncGenerator[None]:
 app = FastAPI(
     title=settings.app_name,
     description=(
-        "API de consultation des recommandations d'antibioprophylaxie chirurgicale"
-        " (RFE SFAR 2024)"
+        "API de consultation des recommandations d'antibioprophylaxie chirurgicale (RFE SFAR 2024)"
     ),
     version=settings.app_version,
     lifespan=lifespan,
