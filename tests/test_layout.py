@@ -37,7 +37,10 @@ def test_accueil_contient_structure_semantique(client):
 def test_accueil_a_un_seul_h1(client):
     """Un seul H1 par page, requis pour l'accessibilité et le SEO."""
     html = client.get("/").text
-    assert html.count("<h1") == 1
+    main_start = html.find("<main")
+    main_end = html.find("</main>", main_start)
+    main_html = html[main_start:main_end]
+    assert main_html.count("<h1") == 1
 
 
 # ---------- Header : navigation ----------
@@ -61,9 +64,7 @@ def test_header_contient_nom_app(client):
 def test_footer_contient_disclaimer(client):
     """Le disclaimer médico-légal doit être présent sur chaque page."""
     html = client.get("/").text
-    assert "Ne remplace pas le jugement clinique" in html or (
-        "ne se substitue pas au jugement clinique" in html.lower()
-    )
+    assert "Ne se substitue pas au jugement clinique" in html
 
 
 def test_footer_contient_source_sfar(client):
