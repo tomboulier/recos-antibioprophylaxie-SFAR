@@ -3,7 +3,6 @@
 from __future__ import annotations
 
 from fastapi import APIRouter, Request
-from fastapi.responses import HTMLResponse
 from fastapi.templating import Jinja2Templates
 
 from app.config import _PROJECT_ROOT
@@ -55,7 +54,7 @@ async def protocole(request: Request, intervention_id: str):
 
     Returns
     -------
-    TemplateResponse | HTMLResponse
+    TemplateResponse
         Page HTML du protocole, ou 404 si l'intervention n'existe pas.
     """
     rfe = request.app.state.rfe_data
@@ -70,7 +69,8 @@ async def protocole(request: Request, intervention_id: str):
                         "specialite": specialite,
                     },
                 )
-    return HTMLResponse(
-        content=templates.get_template("404.html").render({"request": request}),
+    return templates.TemplateResponse(
+        request,
+        "404.html",
         status_code=404,
     )

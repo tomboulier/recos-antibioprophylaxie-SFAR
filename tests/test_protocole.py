@@ -67,8 +67,8 @@ def test_protocole_contient_dose(html):
 
 def test_protocole_contient_reinjection(html):
     """Les consignes de réinjection doivent apparaître."""
-    assert "réinjection" in html.lower() or "reinjection" in html.lower()
-    assert "4h" in html
+    lower_html = html.lower()
+    assert ("réinjection" in lower_html or "reinjection" in lower_html) and "4h" in lower_html
 
 
 def test_protocole_contient_duree(html):
@@ -106,7 +106,7 @@ def test_protocole_contient_source(html):
 
 def test_protocole_contient_force_recommandation(html):
     """La force de la recommandation doit être mentionnée."""
-    assert "Avis d" in html  # "Avis d'experts"
+    assert "Avis d" in html and "experts" in html
 
 
 # ---------- Notes ----------
@@ -123,7 +123,7 @@ def test_protocole_contient_notes(html):
 def test_protocole_contient_breadcrumb(html):
     """Le breadcrumb doit contenir la spécialité et l'intervention."""
     assert "Chirurgie orthopédique programmée" in html
-    assert "breadcrumb" in html.lower() or "fil d" in html.lower()
+    assert 'class="breadcrumb"' in html
 
 
 def test_breadcrumb_contient_lien_specialite(html):
@@ -143,7 +143,7 @@ def test_pas_abp_retourne_200(client):
 def test_pas_abp_affiche_message_clair(html_sans_abp):
     """Quand pas d'ABP, afficher un message clair (pas un protocole vide)."""
     text = html_sans_abp.lower()
-    assert "pas d" in text and "antibioprophylaxie" in text
+    assert "pas d'antibioprophylaxie" in text
 
 
 # ---------- CSS ----------

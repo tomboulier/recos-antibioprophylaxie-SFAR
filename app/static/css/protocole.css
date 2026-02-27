@@ -57,7 +57,7 @@
 
 .protocol-card--allergie {
   border-left-color: var(--color-warning);
-  background: #fef3f0;
+  background: var(--color-bg-warning);
 }
 
 .protocol-card--none {
@@ -112,7 +112,7 @@
 .protocol-card__alt--separator {
   margin-top: var(--space-4);
   padding-top: var(--space-4);
-  border-top: 1px solid rgba(241, 92, 64, 0.2);
+  border-top: 1px solid color-mix(in srgb, var(--color-warning) 20%, transparent);
 }
 
 .protocol-card__no-abp {
