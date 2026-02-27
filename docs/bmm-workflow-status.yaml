@@ -64,6 +64,6 @@ workflow_status:
 
   # Phase 4: Implementation (Required)
   # Tracked in sprint-status.yaml
-  # Completed: S-001 (init), S-002 (JSON pilote), S-007 (backend FastAPI), S-010 (layout base), S-011 (accueil)
-  # Progress: 5/19 stories, 19/78 points
-  # Next: S-008 (API REST endpoints), S-012 (protocole), S-013 (spécialité)
+  # Completed: S-001 (init), S-002 (JSON pilote), S-007 (backend FastAPI), S-010 (layout base), S-011 (accueil), S-012 (protocole)
+  # Progress: 6/19 stories, 22/78 points
+  # Next: S-008 (API REST endpoints), S-013 (spécialité)
