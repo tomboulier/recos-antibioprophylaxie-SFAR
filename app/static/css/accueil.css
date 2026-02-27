@@ -1,12 +1,17 @@
 /* Accueil — héros, recherche, grille spécialités */
 
 /* --- Section héros --- */
+/* Le héros doit s'étendre bord à bord malgré le max-width du <main>. */
 .hero {
   background: var(--color-primary);
   color: #fff;
   text-align: center;
   padding: var(--space-8) var(--space-4) var(--space-12);
-  margin: calc(-1 * var(--space-6)) calc(-1 * var(--space-4)) 0;
+  width: 100vw;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  margin-top: calc(-1 * var(--space-6));
 }
 
 .hero h1 {
@@ -121,7 +126,7 @@
 @media (min-width: 768px) {
   .hero {
     padding: var(--space-12) var(--space-6) calc(var(--space-12) + var(--space-4));
-    margin: calc(-1 * var(--space-8)) calc(-1 * var(--space-6)) 0;
+    margin-top: calc(-1 * var(--space-8));
   }
 
   .search-bar__input {
@@ -150,7 +155,7 @@
 /* --- Desktop : grille 4 colonnes --- */
 @media (min-width: 1024px) {
   .hero {
-    margin: calc(-1 * var(--space-12)) calc(-1 * var(--space-8)) 0;
+    margin-top: calc(-1 * var(--space-12));
   }
 
   .specialites__grid {
