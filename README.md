@@ -41,6 +41,7 @@ Le serveur démarre sur http://localhost:8000. Les données de `data/rfe.json` (
 
 | Endpoint | Description |
 |----------|-------------|
+| `GET /` | Page d'accueil (Jinja2 + HTMX) |
 | `GET /api/v1/health` | Health check avec statistiques (nb spécialités, nb interventions) |
 | `GET /docs` | Documentation Swagger UI (générée automatiquement par FastAPI) |
 | `GET /redoc` | Documentation ReDoc |

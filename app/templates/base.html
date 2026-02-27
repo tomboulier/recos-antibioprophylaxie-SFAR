@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{% block title %}Antibioprophylaxie SFAR{% endblock %}</title>
+  <link rel="stylesheet" href="/static/css/tokens.css">
+  <link rel="stylesheet" href="/static/css/layout.css">
+  {% block head %}{% endblock %}
+</head>
+<body>
+  <a href="#main" class="skip-link">Aller au contenu</a>
+
+  <header class="site-header">
+    <div class="site-header__inner">
+      <a href="/" class="site-header__brand">
+        <img src="/static/img/logo_sfar.png" alt="SFAR" class="site-header__logo">
+        <span class="site-header__title">Antibioprophylaxie</span>
+      </a>
+      <nav class="site-nav" aria-label="Navigation principale">
+        <a href="/" class="site-nav__link">Rechercher</a>
+        <a href="/specialites" class="site-nav__link">Parcourir</a>
+        <a href="/chat" class="site-nav__link">Chat</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main" class="site-main">
+    {% block content %}{% endblock %}
+  </main>
+
+  <footer class="site-footer">
+    <p>Outil de consultation · Ne se substitue pas au jugement clinique · Source : <a href="https://sfar.org/antibioprophylaxie-en-chirurgie-et-medecine-interventionnelle/" target="_blank" rel="noopener">RFE SFAR 2024</a></p>
+  </footer>
+
+  <script src="/static/js/htmx.min.js" defer></script>
+  {% block scripts %}{% endblock %}
+</body>
+</html>
