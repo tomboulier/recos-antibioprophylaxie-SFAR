@@ -8,9 +8,7 @@
   text-align: center;
   padding: var(--space-8) var(--space-4) var(--space-12);
   width: 100vw;
-  position: relative;
-  left: 50%;
-  transform: translateX(-50%);
+  margin-left: calc(50% - 50vw);
   margin-top: calc(-1 * var(--space-6));
 }
 

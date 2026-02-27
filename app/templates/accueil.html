@@ -31,7 +31,7 @@
     {% for s in specialites %}
     <a href="/specialites/{{ s.id }}" class="specialty-card">
       <span class="specialty-card__name">{{ s.nom }}</span>
-      <span class="specialty-card__count">{{ s.nb_interventions }} intervention{{ "s" if s.nb_interventions > 1 }}</span>
+      <span class="specialty-card__count">{{ s.nb_interventions }} intervention{{ "s" if s.nb_interventions != 1 else "" }}</span>
     </a>
     {% endfor %}
   </div>
