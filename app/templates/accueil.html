@@ -2,11 +2,38 @@
 
 {% block title %}Accueil — Antibioprophylaxie SFAR{% endblock %}
 
+{% block head %}
+<link rel="stylesheet" href="/static/css/accueil.css">
+{% endblock %}
+
 {% block content %}
-<h1>Antibioprophylaxie en chirurgie et médecine interventionnelle</h1>
-<p>Recommandations formalisées d'experts 
-    de la Société Française d'Anesthésie et Réanimation (SFAR)
-    et de la Société de Pathologie Infectieuse de Langue Française (SPILF)
-</p>
-<p>Recherchez une intervention ou parcourez par spécialité.</p>
+<section class="hero">
+  <h1>Antibioprophylaxie en chirurgie et médecine interventionnelle</h1>
+  <p class="hero__subtitle">Recommandations formalisées d'experts — SFAR / SPILF 2024</p>
+
+  <div class="search-container">
+    <div class="search-bar">
+      <span class="search-bar__icon" aria-hidden="true">🔍</span>
+      <input
+        type="search"
+        class="search-bar__input"
+        placeholder="Rechercher une intervention… ex : prothèse de hanche"
+        autofocus
+        aria-label="Rechercher une intervention"
+      >
+    </div>
+  </div>
+</section>
+
+<section class="specialites" aria-label="Spécialités chirurgicales">
+  <h2 class="specialites__title">Parcourir par spécialité</h2>
+  <div class="specialites__grid">
+    {% for s in specialites %}
+    <a href="/specialites/{{ s.id }}" class="specialty-card">
+      <span class="specialty-card__name">{{ s.nom }}</span>
+      <span class="specialty-card__count">{{ s.nb_interventions }} intervention{{ "s" if s.nb_interventions > 1 }}</span>
+    </a>
+    {% endfor %}
+  </div>
+</section>
 {% endblock %}

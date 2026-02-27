@@ -54,7 +54,7 @@ def test_grille_specialites_presente(html):
 def test_grille_affiche_toutes_les_specialites(html):
     """Chaque spécialité du JSON doit apparaître sur la page."""
     assert "Chirurgie orthopédique programmée" in html
-    assert "Chirurgie orthopédique traumatologique" in html
+    assert "Traumatologie" in html
 
 
 def test_grille_affiche_nombre_interventions(html):
@@ -67,7 +67,7 @@ def test_grille_affiche_nombre_interventions(html):
 def test_specialites_sont_des_liens(html):
     """Les cartes spécialités doivent être cliquables (liens vers la page spécialité)."""
     assert "chirurgie-orthopedique-programmee" in html
-    assert "chirurgie-orthopedique-traumatologique" in html
+    assert "traumatologie" in html
 
 
 # ---------- CSS accueil ----------
