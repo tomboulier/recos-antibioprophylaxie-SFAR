@@ -1,0 +1,162 @@
+/* Accueil — héros, recherche, grille spécialités */
+
+/* --- Section héros --- */
+/* Le héros doit s'étendre bord à bord malgré le max-width du <main>. */
+.hero {
+  background: var(--color-primary);
+  color: #fff;
+  text-align: center;
+  padding: var(--space-8) var(--space-4) var(--space-12);
+  width: 100vw;
+  margin-left: calc(50% - 50vw);
+  margin-top: calc(-1 * var(--space-6));
+}
+
+.hero h1 {
+  font-size: var(--font-xl);
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: var(--space-2);
+}
+
+.hero__subtitle {
+  font-size: var(--font-sm);
+  opacity: 0.85;
+  margin-bottom: var(--space-6);
+}
+
+/* --- Barre de recherche --- */
+.search-container {
+  max-width: 640px;
+  margin: 0 auto;
+}
+
+.search-bar {
+  position: relative;
+}
+
+.search-bar__icon {
+  position: absolute;
+  left: 14px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 18px;
+  pointer-events: none;
+}
+
+.search-bar__input {
+  width: 100%;
+  height: 48px;
+  padding: 0 var(--space-4) 0 44px;
+  border: 2px solid transparent;
+  border-radius: var(--radius-full);
+  font-size: var(--font-base);
+  font-family: var(--font-family);
+  background: #fff;
+  box-shadow: var(--shadow-md);
+  color: var(--color-text);
+}
+
+.search-bar__input::placeholder {
+  color: var(--color-text-secondary);
+}
+
+.search-bar__input:focus {
+  outline: none;
+  border-color: var(--color-accent);
+  box-shadow: var(--shadow-lg);
+}
+
+/* --- Section spécialités --- */
+.specialites {
+  padding-top: var(--space-8);
+}
+
+.specialites__title {
+  font-size: var(--font-lg);
+  font-weight: 600;
+  color: var(--color-primary);
+  margin-bottom: var(--space-4);
+}
+
+/* Mobile : liste verticale */
+.specialites__grid {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.specialty-card {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+  padding: var(--space-4) var(--space-6);
+  background: #fff;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  text-decoration: none;
+  color: var(--color-text);
+  transition: border-color 0.15s, box-shadow 0.15s, transform 0.15s;
+}
+
+.specialty-card:hover {
+  border-color: var(--color-accent);
+  box-shadow: var(--shadow-md);
+  transform: translateY(-2px);
+}
+
+.specialty-card:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 2px;
+}
+
+.specialty-card__name {
+  font-size: var(--font-base);
+  font-weight: 600;
+}
+
+.specialty-card__count {
+  font-size: var(--font-sm);
+  color: var(--color-text-secondary);
+}
+
+/* --- Tablet : grille 2 colonnes --- */
+@media (min-width: 768px) {
+  .hero {
+    padding: var(--space-12) var(--space-6) calc(var(--space-12) + var(--space-4));
+    margin-top: calc(-1 * var(--space-8));
+  }
+
+  .search-bar__input {
+    height: 56px;
+    font-size: var(--font-lg);
+    padding-left: 52px;
+  }
+
+  .search-bar__icon {
+    left: 18px;
+    font-size: 20px;
+  }
+
+  .specialites__grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-4);
+  }
+
+  .specialty-card {
+    text-align: center;
+    padding: var(--space-6);
+  }
+}
+
+/* --- Desktop : grille 4 colonnes --- */
+@media (min-width: 1024px) {
+  .hero {
+    margin-top: calc(-1 * var(--space-12));
+  }
+
+  .specialites__grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}

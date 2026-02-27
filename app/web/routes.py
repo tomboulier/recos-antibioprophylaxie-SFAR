@@ -23,6 +23,19 @@ async def accueil(request: Request):
     Returns
     -------
     TemplateResponse
-        Page HTML rendue depuis le template ``accueil.html``.
+        Page HTML avec héros, barre de recherche et grille des spécialités.
     """
-    return templates.TemplateResponse(request, "accueil.html")
+    rfe = request.app.state.rfe_data
+    specialites = [
+        {
+            "id": s.id,
+            "nom": s.nom,
+            "nb_interventions": len(s.interventions),
+        }
+        for s in rfe.specialites
+    ]
+    return templates.TemplateResponse(
+        request,
+        "accueil.html",
+        {"specialites": specialites},
+    )
