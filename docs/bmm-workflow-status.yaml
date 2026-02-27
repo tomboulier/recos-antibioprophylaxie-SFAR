@@ -7,7 +7,7 @@ project_type: "web-app"
 project_level: 2
 communication_language: "French"
 output_language: "French"
-last_updated: "2026-02-26T00:00:00Z"
+last_updated: "2026-02-27T00:00:00Z"
 
 # Workflow Status Tracking
 # Status values:
@@ -64,6 +64,6 @@ workflow_status:
 
   # Phase 4: Implementation (Required)
   # Tracked in sprint-status.yaml
-  # Completed: S-001 (init), S-002 (JSON pilote), S-007 (backend FastAPI), S-010 (layout base)
-  # Progress: 4/19 stories, 14/78 points
-  # Next: S-008 (API REST endpoints), puis S-011 (Accueil)
+  # Completed: S-001 (init), S-002 (JSON pilote), S-007 (backend FastAPI), S-010 (layout base), S-011 (accueil)
+  # Progress: 5/19 stories, 19/78 points
+  # Next: S-008 (API REST endpoints), S-012 (protocole), S-013 (spécialité)
