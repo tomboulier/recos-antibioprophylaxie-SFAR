@@ -39,3 +39,38 @@ async def accueil(request: Request):
         "accueil.html",
         {"specialites": specialites},
     )
+
+
+@router.get("/protocole/{intervention_id}")
+async def protocole(request: Request, intervention_id: str):
+    """Page protocole — détail d'une intervention avec protocole ABP.
+
+    Parameters
+    ----------
+    request : Request
+        Requête HTTP entrante.
+    intervention_id : str
+        Identifiant slug de l'intervention (ex: ortho-prog-mi-prothese-hanche-genou).
+
+    Returns
+    -------
+    TemplateResponse
+        Page HTML du protocole, ou 404 si l'intervention n'existe pas.
+    """
+    rfe = request.app.state.rfe_data
+    for specialite in rfe.specialites:
+        for intervention in specialite.interventions:
+            if intervention.id == intervention_id:
+                return templates.TemplateResponse(
+                    request,
+                    "protocole.html",
+                    {
+                        "intervention": intervention,
+                        "specialite": specialite,
+                    },
+                )
+    return templates.TemplateResponse(
+        request,
+        "404.html",
+        status_code=404,
+    )

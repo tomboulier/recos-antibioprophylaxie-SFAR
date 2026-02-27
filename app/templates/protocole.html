@@ -1,0 +1,92 @@
+{% extends "base.html" %}
+
+{% block title %}{{ intervention.nom }} — Antibioprophylaxie SFAR{% endblock %}
+
+{% block head %}
+<link rel="stylesheet" href="/static/css/protocole.css">
+{% endblock %}
+
+{% block content %}
+{# --- Breadcrumb --- #}
+<nav class="breadcrumb" aria-label="Fil d'Ariane">
+  <a href="/">Accueil</a>
+  <span aria-hidden="true">›</span>
+  <a href="/specialites/{{ specialite.id }}">{{ specialite.nom }}</a>
+  <span aria-hidden="true">›</span>
+  <span aria-current="page">{{ intervention.nom }}</span>
+</nav>
+
+<h1 class="protocole__title">{{ intervention.nom }}</h1>
+
+<p class="protocole__meta">
+  {{ intervention.force_recommandation }}
+</p>
+
+{% if intervention.protocole %}
+{# --- Protocole standard + allergie côte à côte (desktop) --- #}
+<div class="protocol-cards">
+  {# Carte protocole standard #}
+  <div class="protocol-card protocol-card--standard">
+    <h2 class="protocol-card__molecule">{{ intervention.protocole.molecule }}</h2>
+    <dl class="protocol-card__details">
+      <dt>Posologie</dt>
+      <dd>{{ intervention.protocole.dose_initiale }}</dd>
+      {% if intervention.protocole.reinjection %}
+      <dt>Réinjection</dt>
+      <dd>{{ intervention.protocole.reinjection }}</dd>
+      {% endif %}
+      {% if intervention.protocole.duree %}
+      <dt>Durée</dt>
+      <dd>{{ intervention.protocole.duree }}</dd>
+      {% endif %}
+    </dl>
+  </div>
+
+  {# Carte(s) allergie #}
+  {% if intervention.alternative_allergie %}
+  <div class="protocol-card protocol-card--allergie">
+    <div class="protocol-card__badge">Allergie</div>
+    {% for alt in intervention.alternative_allergie %}
+    <div class="protocol-card__alt{% if not loop.first %} protocol-card__alt--separator{% endif %}">
+      <h3 class="protocol-card__molecule protocol-card__molecule--alt">
+        {{ alt.molecule }}
+        {% if alt.intention %}<span class="protocol-card__intention">({{ alt.intention }}{{ "ère" if alt.intention == 1 else "ème" }} intention)</span>{% endif %}
+      </h3>
+      <dl class="protocol-card__details">
+        <dt>Posologie</dt>
+        <dd>{{ alt.dose_initiale }}</dd>
+        {% if alt.reinjection %}
+        <dt>Réinjection</dt>
+        <dd>{{ alt.reinjection }}</dd>
+        {% endif %}
+        {% if alt.duree %}
+        <dt>Durée</dt>
+        <dd>{{ alt.duree }}</dd>
+        {% endif %}
+      </dl>
+    </div>
+    {% endfor %}
+  </div>
+  {% endif %}
+</div>
+
+{% else %}
+{# --- Pas d'antibioprophylaxie --- #}
+<div class="protocol-card protocol-card--none">
+  <p class="protocol-card__no-abp">Pas d'antibioprophylaxie recommandée</p>
+</div>
+{% endif %}
+
+{# --- Notes cliniques --- #}
+{% if intervention.notes %}
+<div class="protocole__notes">
+  <h2 class="protocole__notes-title">Notes</h2>
+  <p>{{ intervention.notes }}</p>
+</div>
+{% endif %}
+
+{# --- Source --- #}
+<div class="protocole__source">
+  Source : {{ intervention.source_tableau }}, page {{ intervention.source_page }}
+</div>
+{% endblock %}
