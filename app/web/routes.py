@@ -13,5 +13,16 @@ templates = Jinja2Templates(directory=str(_PROJECT_ROOT / "app" / "templates"))
 
 @router.get("/")
 async def accueil(request: Request):
-    """Page d'accueil — recherche + navigation par spécialité."""
+    """Page d'accueil — recherche + navigation par spécialité.
+
+    Parameters
+    ----------
+    request : Request
+        Requête HTTP entrante.
+
+    Returns
+    -------
+    TemplateResponse
+        Page HTML rendue depuis le template ``accueil.html``.
+    """
     return templates.TemplateResponse(request, "accueil.html")

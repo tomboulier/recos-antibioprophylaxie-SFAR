@@ -108,7 +108,7 @@ def test_css_layout_accessible(client):
 
 def test_htmx_inclus(client):
     html = client.get("/").text
-    assert "htmx" in html.lower()
+    assert "/static/js/htmx.min.js" in html
 
 
 # ---------- Meta viewport (mobile-first) ----------

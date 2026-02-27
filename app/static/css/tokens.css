@@ -17,7 +17,7 @@
   --color-border: #e5e7eb;
 
   /* --- Typographie --- */
-  --font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --font-family: -apple-system, "BlinkMacSystemFont", "Segoe UI", "Roboto", sans-serif;
   --font-xs: 0.75rem;
   --font-sm: 0.875rem;
   --font-base: 1rem;
