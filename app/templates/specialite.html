@@ -44,6 +44,9 @@
       <span class="intervention-item__chevron" aria-hidden="true">›</span>
     </button>
 
+    {# Lien toujours visible (fallback sans JS) #}
+    <a href="/protocole/{{ interv.id }}" class="intervention-item__link">Voir le protocole complet →</a>
+
     {# --- Protocole inline (caché par défaut) --- #}
     <div class="intervention-item__detail" hidden>
       {% if interv.protocole %}
@@ -78,7 +81,6 @@
       {% else %}
       <p class="intervention-item__no-abp">Pas d'antibioprophylaxie recommandée</p>
       {% endif %}
-      <a href="/protocole/{{ interv.id }}" class="intervention-item__link">Voir le protocole complet →</a>
     </div>
   </div>
   {% endfor %}
@@ -92,10 +94,18 @@ document.addEventListener('DOMContentLoaded', function () {
   var headers = document.querySelectorAll('.intervention-item__header');
   var details = document.querySelectorAll('.intervention-item__detail');
 
+  function syncToggleAllState() {
+    var allExpanded = details.length > 0 && Array.prototype.every.call(details, function (el) {
+      return !el.hasAttribute('hidden');
+    });
+    btnAll.setAttribute('aria-expanded', allExpanded ? 'true' : 'false');
+    btnAll.textContent = allExpanded ? 'Tout replier' : 'Tout déplier';
+  }
+
   // Toggle individuel : clic sur une intervention
   headers.forEach(function (header) {
     header.addEventListener('click', function () {
-      var detail = header.nextElementSibling;
+      var detail = header.closest('.intervention-item').querySelector('.intervention-item__detail');
       var isOpen = !detail.hasAttribute('hidden');
       if (isOpen) {
         detail.setAttribute('hidden', '');
@@ -104,6 +114,7 @@ document.addEventListener('DOMContentLoaded', function () {
         detail.removeAttribute('hidden');
         header.setAttribute('aria-expanded', 'true');
       }
+      syncToggleAllState();
     });
   });
 
@@ -119,8 +130,7 @@ document.addEventListener('DOMContentLoaded', function () {
     headers.forEach(function (h) {
       h.setAttribute('aria-expanded', allExpanded ? 'false' : 'true');
     });
-    btnAll.setAttribute('aria-expanded', !allExpanded);
-    btnAll.textContent = allExpanded ? 'Tout déplier' : 'Tout replier';
+    syncToggleAllState();
   });
 });
 </script>

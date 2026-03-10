@@ -47,7 +47,7 @@ def test_specialite_contient_nom(html):
 
 def test_specialite_affiche_nombre_interventions(html):
     """Le nombre d'interventions doit être affiché."""
-    assert "30" in html  # 30 interventions en ortho programmée
+    assert "30 interventions" in html
 
 
 def test_specialite_liste_interventions(html):
@@ -63,8 +63,7 @@ def test_specialite_apercu_molecule(html):
 
 def test_specialite_apercu_pas_abp(html):
     """Les interventions sans ABP doivent afficher un aperçu distinct."""
-    lower = html.lower()
-    assert "pas d" in lower and "abp" in lower.replace("antibioprophylaxie", "abp")
+    assert "Pas d'ABP recommandée" in html
 
 
 def test_interventions_ont_lien_protocole(html):
@@ -103,6 +102,7 @@ def test_specialite_contient_bouton_deplier(html):
 
 def test_specialite_contient_details_protocole_inline(html):
     """Les protocoles inline doivent être présents (cachés par défaut)."""
+    assert 'class="intervention-item__detail" hidden' in html
     assert "protocol-card" in html
 
 
@@ -119,4 +119,4 @@ def test_css_specialite_accessible(client):
 def test_css_contient_intervention_item(client):
     """Le CSS doit définir le composant intervention-item."""
     css = client.get("/static/css/specialite.css").text
-    assert ".intervention" in css.lower()
+    assert ".intervention-item" in css
