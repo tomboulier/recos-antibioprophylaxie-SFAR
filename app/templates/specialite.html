@@ -1,0 +1,137 @@
+{% extends "base.html" %}
+
+{% block title %}{{ specialite.nom }} — Antibioprophylaxie SFAR{% endblock %}
+
+{% block head %}
+<link rel="stylesheet" href="/static/css/protocole.css">
+<link rel="stylesheet" href="/static/css/specialite.css">
+{% endblock %}
+
+{% block content %}
+{# --- Breadcrumb --- #}
+<nav class="breadcrumb" aria-label="Fil d'Ariane">
+  <a href="/">Accueil</a>
+  <span aria-hidden="true">›</span>
+  <span aria-current="page">{{ specialite.nom }}</span>
+</nav>
+
+<div class="specialite-header">
+  <h1 class="specialite-header__title">{{ specialite.nom }}</h1>
+  <p class="specialite-header__count">{{ specialite.interventions | length }} intervention{{ "s" if specialite.interventions | length != 1 else "" }}</p>
+</div>
+
+<div class="specialite-toolbar">
+  <button type="button" class="btn-toggle" id="toggle-all" aria-expanded="false">
+    Tout déplier
+  </button>
+</div>
+
+{# --- Liste des interventions --- #}
+<div class="intervention-list">
+  {% for interv in specialite.interventions %}
+  <div class="intervention-item">
+    <button type="button" class="intervention-item__header" aria-expanded="false">
+      <div class="intervention-item__info">
+        <span class="intervention-item__name">{{ interv.nom }}</span>
+        <span class="intervention-item__apercu">
+          {% if interv.protocole %}
+            {{ interv.protocole.molecule }} · {{ interv.protocole.dose_initiale }}
+          {% else %}
+            Pas d'ABP recommandée
+          {% endif %}
+        </span>
+      </div>
+      <span class="intervention-item__chevron" aria-hidden="true">›</span>
+    </button>
+
+    {# Lien toujours visible (fallback sans JS) #}
+    <a href="/protocole/{{ interv.id }}" class="intervention-item__link">Voir le protocole complet →</a>
+
+    {# --- Protocole inline (caché par défaut) --- #}
+    <div class="intervention-item__detail" hidden>
+      {% if interv.protocole %}
+      <div class="protocol-card protocol-card--standard protocol-card--compact">
+        <h3 class="protocol-card__molecule">{{ interv.protocole.molecule }}</h3>
+        <dl class="protocol-card__details">
+          <dt>Posologie</dt>
+          <dd>{{ interv.protocole.dose_initiale }}</dd>
+          {% if interv.protocole.reinjection %}
+          <dt>Réinjection</dt>
+          <dd>{{ interv.protocole.reinjection }}</dd>
+          {% endif %}
+        </dl>
+      </div>
+      {% if interv.alternative_allergie %}
+      <div class="protocol-card protocol-card--allergie protocol-card--compact">
+        <div class="protocol-card__badge">Allergie</div>
+        {% for alt in interv.alternative_allergie %}
+        <div class="protocol-card__alt{% if not loop.first %} protocol-card__alt--separator{% endif %}">
+          <h4 class="protocol-card__molecule protocol-card__molecule--alt">
+            {{ alt.molecule }}
+            {% if alt.intention %}<span class="protocol-card__intention">({{ alt.intention }}{{ "ère" if alt.intention == 1 else "ème" }} intention)</span>{% endif %}
+          </h4>
+          <dl class="protocol-card__details">
+            <dt>Posologie</dt>
+            <dd>{{ alt.dose_initiale }}</dd>
+          </dl>
+        </div>
+        {% endfor %}
+      </div>
+      {% endif %}
+      {% else %}
+      <p class="intervention-item__no-abp">Pas d'antibioprophylaxie recommandée</p>
+      {% endif %}
+    </div>
+  </div>
+  {% endfor %}
+</div>
+{% endblock %}
+
+{% block scripts %}
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  var btnAll = document.getElementById('toggle-all');
+  var headers = document.querySelectorAll('.intervention-item__header');
+  var details = document.querySelectorAll('.intervention-item__detail');
+
+  function syncToggleAllState() {
+    var allExpanded = details.length > 0 && Array.prototype.every.call(details, function (el) {
+      return !el.hasAttribute('hidden');
+    });
+    btnAll.setAttribute('aria-expanded', allExpanded ? 'true' : 'false');
+    btnAll.textContent = allExpanded ? 'Tout replier' : 'Tout déplier';
+  }
+
+  // Toggle individuel : clic sur une intervention
+  headers.forEach(function (header) {
+    header.addEventListener('click', function () {
+      var detail = header.closest('.intervention-item').querySelector('.intervention-item__detail');
+      var isOpen = !detail.hasAttribute('hidden');
+      if (isOpen) {
+        detail.setAttribute('hidden', '');
+        header.setAttribute('aria-expanded', 'false');
+      } else {
+        detail.removeAttribute('hidden');
+        header.setAttribute('aria-expanded', 'true');
+      }
+      syncToggleAllState();
+    });
+  });
+
+  // Toggle global : tout déplier / tout replier
+  btnAll.addEventListener('click', function () {
+    var allExpanded = Array.prototype.every.call(details, function (el) {
+      return !el.hasAttribute('hidden');
+    });
+    details.forEach(function (el) {
+      if (allExpanded) { el.setAttribute('hidden', ''); }
+      else { el.removeAttribute('hidden'); }
+    });
+    headers.forEach(function (h) {
+      h.setAttribute('aria-expanded', allExpanded ? 'false' : 'true');
+    });
+    syncToggleAllState();
+  });
+});
+</script>
+{% endblock %}

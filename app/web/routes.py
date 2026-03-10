@@ -74,3 +74,34 @@ async def protocole(request: Request, intervention_id: str):
         "404.html",
         status_code=404,
     )
+
+
+@router.get("/specialites/{specialite_id}")
+async def specialite(request: Request, specialite_id: str):
+    """Page spécialité — liste des interventions avec aperçu protocole.
+
+    Parameters
+    ----------
+    request : Request
+        Requête HTTP entrante.
+    specialite_id : str
+        Identifiant slug de la spécialité (ex: chirurgie-orthopedique-programmee).
+
+    Returns
+    -------
+    TemplateResponse
+        Page HTML de la spécialité, ou 404 si elle n'existe pas.
+    """
+    rfe = request.app.state.rfe_data
+    for s in rfe.specialites:
+        if s.id == specialite_id:
+            return templates.TemplateResponse(
+                request,
+                "specialite.html",
+                {"specialite": s},
+            )
+    return templates.TemplateResponse(
+        request,
+        "404.html",
+        status_code=404,
+    )

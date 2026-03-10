@@ -1,0 +1,173 @@
+/* Spécialité — liste interventions, aperçu, toggle déplier */
+
+/* --- En-tête spécialité --- */
+.specialite-header {
+  margin-bottom: var(--space-2);
+}
+
+.specialite-header__title {
+  font-size: var(--font-xl);
+  font-weight: 700;
+  color: var(--color-text);
+  line-height: 1.3;
+  margin-bottom: var(--space-1);
+}
+
+.specialite-header__count {
+  font-size: var(--font-sm);
+  color: var(--color-text-secondary);
+}
+
+/* --- Toolbar (bouton tout déplier) --- */
+.specialite-toolbar {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: var(--space-4);
+}
+
+.btn-toggle {
+  font-family: var(--font-family);
+  font-size: var(--font-sm);
+  font-weight: 600;
+  color: var(--color-primary);
+  background: var(--color-bg-subtle);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: var(--space-2) var(--space-4);
+  cursor: pointer;
+  transition: background 0.15s, border-color 0.15s;
+}
+
+.btn-toggle:hover {
+  background: var(--color-border);
+}
+
+.btn-toggle:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 2px;
+}
+
+/* --- Liste des interventions --- */
+.intervention-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.intervention-item {
+  border-bottom: 1px solid var(--color-border);
+}
+
+.intervention-item:first-child {
+  border-top: 1px solid var(--color-border);
+}
+
+/* --- Header de chaque intervention (bouton accordéon) --- */
+.intervention-item__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-3);
+  width: 100%;
+  padding: var(--space-4) var(--space-2);
+  font-family: var(--font-family);
+  text-align: left;
+  text-decoration: none;
+  color: var(--color-text);
+  background: none;
+  border: none;
+  cursor: pointer;
+  transition: background 0.15s;
+}
+
+.intervention-item__header:hover {
+  background: var(--color-bg-subtle);
+}
+
+.intervention-item__info {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+  min-width: 0;
+}
+
+.intervention-item__name {
+  font-size: var(--font-base);
+  font-weight: 600;
+  line-height: 1.3;
+}
+
+.intervention-item__apercu {
+  font-size: var(--font-sm);
+  color: var(--color-text-secondary);
+}
+
+.intervention-item__chevron {
+  font-size: var(--font-lg);
+  color: var(--color-text-secondary);
+  flex-shrink: 0;
+  transition: transform 0.2s;
+}
+
+.intervention-item__header[aria-expanded="true"] .intervention-item__chevron {
+  transform: rotate(90deg);
+}
+
+/* --- Détail protocole inline --- */
+.intervention-item__detail {
+  padding: 0 var(--space-2) var(--space-4);
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.intervention-item__detail:not([hidden]) {
+  display: flex;
+}
+
+.intervention-item__no-abp {
+  font-size: var(--font-sm);
+  color: var(--color-text-secondary);
+  font-style: italic;
+  padding: var(--space-2) 0;
+}
+
+/* --- Lien vers protocole complet --- */
+.intervention-item__link {
+  font-size: var(--font-sm);
+  font-weight: 600;
+  color: var(--color-primary);
+  text-decoration: none;
+}
+
+.intervention-item__link:hover {
+  text-decoration: underline;
+}
+
+/* Cartes protocole compactes (inline dans la liste) */
+.protocol-card--compact {
+  padding: var(--space-4);
+}
+
+.protocol-card--compact .protocol-card__molecule {
+  font-size: var(--font-lg);
+}
+
+/* --- Tablet --- */
+@media (min-width: 768px) {
+  .specialite-header__title {
+    font-size: var(--font-2xl);
+  }
+
+  .intervention-item__header {
+    padding: var(--space-4) var(--space-4);
+  }
+
+  .intervention-item__detail {
+    padding: 0 var(--space-4) var(--space-6);
+    flex-direction: row;
+  }
+
+  .intervention-item__detail .protocol-card {
+    flex: 1;
+  }
+}
