@@ -30,7 +30,7 @@
 <div class="intervention-list">
   {% for interv in specialite.interventions %}
   <div class="intervention-item">
-    <a href="/protocole/{{ interv.id }}" class="intervention-item__header">
+    <button type="button" class="intervention-item__header" aria-expanded="false">
       <div class="intervention-item__info">
         <span class="intervention-item__name">{{ interv.nom }}</span>
         <span class="intervention-item__apercu">
@@ -42,7 +42,7 @@
         </span>
       </div>
       <span class="intervention-item__chevron" aria-hidden="true">›</span>
-    </a>
+    </button>
 
     {# --- Protocole inline (caché par défaut) --- #}
     <div class="intervention-item__detail" hidden>
@@ -78,6 +78,7 @@
       {% else %}
       <p class="intervention-item__no-abp">Pas d'antibioprophylaxie recommandée</p>
       {% endif %}
+      <a href="/protocole/{{ interv.id }}" class="intervention-item__link">Voir le protocole complet →</a>
     </div>
   </div>
   {% endfor %}
@@ -87,18 +88,39 @@
 {% block scripts %}
 <script>
 document.addEventListener('DOMContentLoaded', function () {
-  var btn = document.getElementById('toggle-all');
+  var btnAll = document.getElementById('toggle-all');
+  var headers = document.querySelectorAll('.intervention-item__header');
   var details = document.querySelectorAll('.intervention-item__detail');
-  var expanded = false;
 
-  btn.addEventListener('click', function () {
-    expanded = !expanded;
-    btn.setAttribute('aria-expanded', expanded);
-    btn.textContent = expanded ? 'Tout replier' : 'Tout déplier';
-    details.forEach(function (el) {
-      if (expanded) { el.removeAttribute('hidden'); }
-      else { el.setAttribute('hidden', ''); }
+  // Toggle individuel : clic sur une intervention
+  headers.forEach(function (header) {
+    header.addEventListener('click', function () {
+      var detail = header.nextElementSibling;
+      var isOpen = !detail.hasAttribute('hidden');
+      if (isOpen) {
+        detail.setAttribute('hidden', '');
+        header.setAttribute('aria-expanded', 'false');
+      } else {
+        detail.removeAttribute('hidden');
+        header.setAttribute('aria-expanded', 'true');
+      }
     });
+  });
+
+  // Toggle global : tout déplier / tout replier
+  btnAll.addEventListener('click', function () {
+    var allExpanded = Array.prototype.every.call(details, function (el) {
+      return !el.hasAttribute('hidden');
+    });
+    details.forEach(function (el) {
+      if (allExpanded) { el.setAttribute('hidden', ''); }
+      else { el.removeAttribute('hidden'); }
+    });
+    headers.forEach(function (h) {
+      h.setAttribute('aria-expanded', allExpanded ? 'false' : 'true');
+    });
+    btnAll.setAttribute('aria-expanded', !allExpanded);
+    btnAll.textContent = allExpanded ? 'Tout déplier' : 'Tout replier';
   });
 });
 </script>

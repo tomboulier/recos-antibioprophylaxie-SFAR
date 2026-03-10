@@ -67,10 +67,17 @@ def test_specialite_apercu_pas_abp(html):
     assert "pas d" in lower and "abp" in lower.replace("antibioprophylaxie", "abp")
 
 
-def test_interventions_sont_des_liens(html):
-    """Chaque intervention doit être un lien vers /protocole/{id}."""
+def test_interventions_ont_lien_protocole(html):
+    """Chaque intervention doit avoir un lien vers /protocole/{id}."""
     assert "/protocole/ortho-prog-mi-prothese-hanche-genou" in html
     assert "/protocole/ortho-prog-mi-arthroscopie-sans-materiel" in html
+    assert "Voir le protocole complet" in html
+
+
+def test_interventions_header_est_bouton(html):
+    """Le header de chaque intervention est un bouton (accordéon), pas un lien."""
+    assert 'class="intervention-item__header"' in html
+    assert "aria-expanded" in html
 
 
 # ---------- Breadcrumb ----------
