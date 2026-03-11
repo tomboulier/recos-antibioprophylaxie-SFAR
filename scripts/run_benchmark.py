@@ -55,15 +55,14 @@ SYSTEM_PROMPT = """\
 Tu es un assistant médical spécialisé en antibioprophylaxie chirurgicale.
 Tu réponds UNIQUEMENT sur la base des recommandations RFE SFAR 2024.
 
-Pour les questions ouvertes, réponds au format :
-Molecule | Dose initiale | Réinjection
-
-Si pas d'antibioprophylaxie : réponds exactement "Pas d'ABP recommandée"
-Si la question est hors du périmètre orthopédie/traumatologie : réponds exactement "Hors périmètre"
+Pour les questions ouvertes, réponds par :
+- Le nom de la molécule (ex: "Céfazoline"), ou plusieurs séparées par " + " si association
+- "Non" si pas d'antibioprophylaxie recommandée
+- "Hors périmètre" si la question ne porte pas sur l'orthopédie/traumatologie
 
 Pour les QCM, réponds UNIQUEMENT par la lettre (A, B, C ou D), rien d'autre.
 
-Sois concis. Pas d'explication sauf si demandé."""
+Un seul mot ou une seule lettre. Pas d'explication."""
 
 
 def query_anthropic(model_id: str, question: str) -> str:
@@ -154,35 +153,24 @@ def normalize(text: str) -> str:
 
 
 def score_open(expected: str, actual: str) -> dict:
-    """Évalue une réponse ouverte avec scoring partiel."""
+    """Évalue une réponse ouverte (nom de molécule, Non, ou Hors périmètre)."""
     norm_expected = normalize(expected)
     norm_actual = normalize(actual)
 
-    # Cas spéciaux : réponses exactes
-    if norm_expected in ("pas d'abp recommandée", "hors périmètre"):
-        # Vérifier si la réponse contient l'idée clé
-        correct = norm_expected in norm_actual or (
-            "pas d'abp" in norm_actual and "pas d'abp" in norm_expected
-        ) or (
-            "hors" in norm_actual and "périmètre" in norm_actual and "hors" in norm_expected
-        )
-        return {"correct": correct, "score": 1.0 if correct else 0.0}
+    # "Non" → chercher "non" ou "pas d'antibioprophylaxie" dans la réponse
+    if norm_expected == "non":
+        correct = "non" in norm_actual or "pas d'" in norm_actual
+        return {"correct": correct}
 
-    # Réponse structurée : Molecule | Dose | Réinjection
-    parts = [p.strip().lower() for p in expected.split("|")]
-    total = len(parts)
-    matched = 0
+    # "Hors périmètre"
+    if norm_expected == "hors périmètre":
+        correct = "hors" in norm_actual and "périmètre" in norm_actual
+        return {"correct": correct}
 
-    for part in parts:
-        # Chercher les éléments clés dans la réponse
-        keywords = re.findall(r"[a-zéèêàùîôç/]+(?:\s+[a-zéèêàùîôç/]+)*", part)
-        # Vérifier les mots significatifs (> 3 chars)
-        significant = [kw for kw in keywords if len(kw) > 3]
-        if significant and any(kw in norm_actual for kw in significant) or part in norm_actual:
-            matched += 1
-
-    score = matched / total if total > 0 else 0.0
-    return {"correct": score >= 0.8, "score": round(score, 2)}
+    # Nom de molécule(s) : vérifier que chaque molécule attendue est présente
+    molecules = [m.strip() for m in expected.split("+")]
+    found = all(normalize(m) in norm_actual for m in molecules)
+    return {"correct": found}
 
 
 def run_model(model_name: str, questions: list[dict]) -> dict:
@@ -192,7 +180,6 @@ def run_model(model_name: str, questions: list[dict]) -> dict:
 
     results = []
     correct_count = 0
-    total_score = 0.0
     errors = 0
 
     print(f"\n{'='*60}")
@@ -214,12 +201,11 @@ def run_model(model_name: str, questions: list[dict]) -> dict:
 
             if qtype == "qcm":
                 evaluation = score_qcm(q["réponse"], answer)
-                score = 1.0 if evaluation["correct"] else 0.0
             else:
                 evaluation = score_open(q["réponse"], answer)
-                score = evaluation.get("score", 1.0 if evaluation["correct"] else 0.0)
 
-            if evaluation["correct"]:
+            correct = evaluation["correct"]
+            if correct:
                 correct_count += 1
                 print(f"OK ({elapsed:.1f}s)")
             else:
@@ -227,18 +213,14 @@ def run_model(model_name: str, questions: list[dict]) -> dict:
                 print(f"         attendu : {q['réponse']}")
                 print(f"         reçu    : {answer[:100]}")
 
-            total_score += score
-
             results.append({
                 "id": qid,
                 "type": qtype,
                 "question": q["question"],
                 "expected": q["réponse"],
                 "actual": answer,
-                "correct": evaluation["correct"],
-                "score": score,
+                "correct": correct,
                 "time_s": round(elapsed, 2),
-                "evaluation": evaluation,
             })
 
         except Exception as e:
@@ -251,16 +233,13 @@ def run_model(model_name: str, questions: list[dict]) -> dict:
                 "expected": q["réponse"],
                 "actual": None,
                 "correct": False,
-                "score": 0.0,
                 "error": str(e),
             })
 
     n = len(questions)
     accuracy = correct_count / n if n > 0 else 0
-    avg_score = total_score / n if n > 0 else 0
 
-    print(f"\n  Résultats : {correct_count}/{n} correct ({accuracy:.0%})")
-    print(f"  Score moyen : {avg_score:.2f}")
+    print(f"\n  Résultats : {correct_count}/{n} ({accuracy:.0%})")
     if errors:
         print(f"  Erreurs : {errors}")
 
@@ -273,11 +252,8 @@ def run_model(model_name: str, questions: list[dict]) -> dict:
             "total": n,
             "correct": correct_count,
             "accuracy": round(accuracy, 4),
-            "avg_score": round(avg_score, 4),
             "errors": errors,
             "by_type": _group_stats(results, "type"),
-            "by_difficulty": _group_stats_from_questions(results, questions, "difficulté"),
-            "by_category": _group_stats_from_questions(results, questions, "catégorie"),
         },
         "results": results,
     }
@@ -298,25 +274,6 @@ def _group_stats(results: list[dict], key: str) -> dict:
         groups[g]["accuracy"] = round(groups[g]["correct"] / n, 4) if n else 0
     return groups
 
-
-def _group_stats_from_questions(
-    results: list[dict], questions: list[dict], field: str
-) -> dict:
-    """Statistiques groupées par un champ des questions originales."""
-    q_map = {q["id"]: q for q in questions}
-    groups: dict[str, dict] = {}
-    for r in results:
-        q = q_map.get(r["id"], {})
-        g = q.get(field, "?")
-        if g not in groups:
-            groups[g] = {"total": 0, "correct": 0}
-        groups[g]["total"] += 1
-        if r["correct"]:
-            groups[g]["correct"] += 1
-    for g in groups:
-        n = groups[g]["total"]
-        groups[g]["accuracy"] = round(groups[g]["correct"] / n, 4) if n else 0
-    return groups
 
 
 def save_results(run_data: dict) -> Path:
@@ -343,16 +300,13 @@ def print_comparison(all_runs: list[dict]) -> None:
     print(f"{'='*60}\n")
 
     # Header
-    header = f"  {'Modèle':<20} {'Correct':>8} {'Accuracy':>10} {'Score':>8}"
+    header = f"  {'Modèle':<20} {'Correct':>8} {'Accuracy':>10}"
     print(header)
-    print(f"  {'-'*48}")
+    print(f"  {'-'*40}")
 
     for run in sorted(all_runs, key=lambda r: r["summary"]["accuracy"], reverse=True):
         s = run["summary"]
-        print(
-            f"  {run['model_name']:<20} {s['correct']:>4}/{s['total']:<3}"
-            f" {s['accuracy']:>9.0%} {s['avg_score']:>8.2f}"
-        )
+        print(f"  {run['model_name']:<20} {s['correct']:>4}/{s['total']:<3} {s['accuracy']:>9.0%}")
 
     # Par type
     print("\n  Par type :")
