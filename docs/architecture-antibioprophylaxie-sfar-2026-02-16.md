@@ -167,7 +167,8 @@ Chaque niveau sera testé avec Mistral, Claude et GPT-4 pour une matrice complè
 |--------|------|-------------|-------------|----------------|
 | **Fly.io** | 0-5€/mois | Oui (gratuit) | Faible | Bon compromis |
 | **Railway** | 0-5€/mois | Non (hobby) | Très faible | DX excellent |
-| **Render** | 0-7€/mois | Oui (gratuit) | Faible | Simple |
+| **Render** | 0-7€/mois | Oui (gratuit) | Faible | **Choix retenu** |
+| **Hugging Face Spaces** | Gratuit | Non | Faible | Sans CB, Docker, port 7860 |
 | **Hetzner VPS** | ~4€/mois | Non | Moyenne | Meilleur perf/prix |
 
 **Stratégie de déploiement en 2 phases :**
