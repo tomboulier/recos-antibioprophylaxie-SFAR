@@ -15,7 +15,7 @@ Webapp de consultation des recommandations d'antibioprophylaxie chirurgicale, ba
 
 Python 3.12 · FastAPI · Jinja2 · HTMX · CSS vanilla · Mistral AI · MCP
 
-## Demo en ligne
+## Démo en ligne
 
 **https://recos-antibioprophylaxie-sfar.onrender.com**
 
