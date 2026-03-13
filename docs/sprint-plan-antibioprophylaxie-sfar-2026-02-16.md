@@ -389,6 +389,34 @@ afin de la tester et la montrer à mes collègues sans coût d'hébergement.
 
 ---
 
+#### S-020 : Déploiement public sur Render
+
+**Epic :** EPIC-002
+**Priorité :** Should Have
+**Points :** 2
+
+**User Story :**
+En tant que porteur de projet,
+je veux déployer l'app sur Render (hébergement cloud gratuit),
+afin de pouvoir la tester et la montrer à l'extérieur sans infrastructure propre.
+
+**Critères d'acceptation :**
+- [x] `render.yaml` à la racine du projet (Infrastructure as Code)
+- [x] L'app démarre sur Render avec le health check `/api/v1/health`
+- [x] Instructions de déploiement dans le README (section "Déploiement Render")
+- [ ] URL publique fonctionnelle et partageable
+
+**Notes techniques :**
+- Render Free tier : 512 Mo RAM, mise en veille après 15 min d'inactivité (acceptable pour démos)
+- Build : `pip install uv && uv sync`
+- Start : `uvicorn app.main:app --host 0.0.0.0 --port $PORT` (Render injecte `$PORT`)
+- Région : Frankfurt (latence EU)
+- Pas de variables d'env sensibles requises pour le MVP (pas de LLM)
+
+**Dépendances :** S-007 + au moins un écran fonctionnel (déjà rempli)
+
+---
+
 ### Milestone 3 : Module IA + MCP (EPIC-003)
 
 > **Objectif :** Chatbot IA intégré avec sourçage, serveur MCP, et infrastructure pour l'étude comparative.
@@ -537,9 +565,9 @@ afin de mesurer l'impact de la structuration sur la fiabilité des réponses.
 | Epic | Nom | Stories | Points |
 |------|-----|---------|--------|
 | EPIC-001 | Structuration des données | S-001 à S-006 | 20 |
-| EPIC-002 | Webapp + API REST | S-007 à S-014 | 30 |
+| EPIC-002 | Webapp + API REST | S-007 à S-014, S-020 | 32 |
 | EPIC-003 | Module IA + MCP | S-015 à S-019 | 28 |
-| **Total** | | **19 stories** | **78 points** |
+| **Total** | | **20 stories** | **80 points** |
 
 ### FRs → Stories
 

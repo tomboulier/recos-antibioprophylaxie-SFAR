@@ -71,6 +71,28 @@ Variables d'environnement (optionnelles) :
 | `DEBUG` | `false` | Mode debug |
 | `DATA_PATH` | `data/rfe.json` | Chemin vers le fichier de données |
 
+## Déploiement Render
+
+L'app peut être déployée gratuitement sur [Render](https://render.com) en quelques clics.
+
+### Déploiement automatique (via render.yaml)
+
+1. Forker ou connecter ce repo sur [dashboard.render.com](https://dashboard.render.com)
+2. Cliquer **"New → Blueprint"** et sélectionner ce repo
+3. Render détecte automatiquement `render.yaml` et configure le service
+
+### Déploiement manuel
+
+1. **New → Web Service** sur Render
+2. Connecter le repo GitHub
+3. Renseigner :
+   - **Runtime :** Python 3
+   - **Build command :** `pip install uv && uv sync`
+   - **Start command :** `uvicorn app.main:app --host 0.0.0.0 --port $PORT`
+4. Laisser les autres options par défaut (Free plan)
+
+> **Note :** Le free tier se met en veille après 15 min d'inactivité (premier chargement ~30s). Suffisant pour les démos.
+
 ## Documentation
 
 | Document | Description |

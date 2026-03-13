@@ -88,6 +88,10 @@ milestones:
         title: "Dockerfile + déploiement NAS"
         points: 3
         status: "not_started"
+      - story_id: "S-020"
+        title: "Déploiement public sur Render"
+        points: 2
+        status: "in_progress"
 
   - id: 3
     name: "Module IA + MCP"
@@ -116,7 +120,7 @@ milestones:
         status: "not_started"
 
 totals:
-  stories: 19
-  points: 78
+  stories: 20
+  points: 80
   completed_stories: 6
   completed_points: 22
