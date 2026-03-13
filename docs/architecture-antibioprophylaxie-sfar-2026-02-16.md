@@ -785,7 +785,7 @@ jobs:
 
 ## 13. Questions ouvertes
 
-1. **Choix final de l'hébergeur** : à trancher au moment du premier déploiement (Railway vs Fly.io vs VPS)
+1. ~~**Choix final de l'hébergeur**~~ : **Résolu** — Render (free tier), voir `render.yaml` et le README
 2. **Modèle LLM pour l'étude comparative** : tester aussi GPT-4 et Mistral en plus de Claude ?
 3. **Streaming des réponses chatbot** : SSE natif HTMX ou polling ? (SSE recommandé)
 4. **PWA** : ajouter un manifest + service worker pour l'installation sur écran d'accueil ? (V2 possible)
