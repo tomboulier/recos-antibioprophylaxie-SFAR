@@ -97,7 +97,11 @@ Pour déployer votre propre instance sur [Render](https://render.com) :
    - **Runtime :** Python 3
    - **Build command :** `pip install uv && uv sync`
    - **Start command :** `uvicorn app.main:app --host 0.0.0.0 --port $PORT`
-4. Laisser les autres options par défaut (Free plan)
+   - **Health Check Path :** `/api/v1/health`
+4. Ajouter les variables d'environnement :
+   - `PYTHON_VERSION` = `3.12.0`
+   - `DEBUG` = `false`
+5. Laisser les autres options par défaut (Free plan)
 
 > **Note :** Le free tier se met en veille après 15 min d'inactivité (premier chargement ~30s). Suffisant pour les démos.
 
