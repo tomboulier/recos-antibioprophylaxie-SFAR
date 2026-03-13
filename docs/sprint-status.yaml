@@ -91,7 +91,7 @@ milestones:
       - story_id: "S-020"
         title: "Déploiement public sur Render"
         points: 2
-        status: "in_progress"
+        status: "completed"
 
   - id: 3
     name: "Module IA + MCP"
@@ -122,5 +122,5 @@ milestones:
 totals:
   stories: 20
   points: 80
-  completed_stories: 6
-  completed_points: 22
+  completed_stories: 7
+  completed_points: 24
