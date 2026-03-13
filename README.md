@@ -15,6 +15,12 @@ Webapp de consultation des recommandations d'antibioprophylaxie chirurgicale, ba
 
 Python 3.12 · FastAPI · Jinja2 · HTMX · CSS vanilla · Mistral AI · MCP
 
+## Demo en ligne
+
+**https://recos-antibioprophylaxie-sfar.onrender.com**
+
+> Hébergé sur Render (free tier). Premier chargement ~30s si l'app était en veille.
+
 ## Statut
 
 En cours de développement. Voir la [documentation projet](docs/) pour les détails.
@@ -73,7 +79,9 @@ Variables d'environnement (optionnelles) :
 
 ## Déploiement Render
 
-L'app peut être déployée gratuitement sur [Render](https://render.com) en quelques clics.
+L'app est déployée sur **[https://recos-antibioprophylaxie-sfar.onrender.com](https://recos-antibioprophylaxie-sfar.onrender.com)**.
+
+Pour déployer votre propre instance sur [Render](https://render.com) :
 
 ### Déploiement automatique (via render.yaml)
 

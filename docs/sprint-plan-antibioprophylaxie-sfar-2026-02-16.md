@@ -404,7 +404,7 @@ afin de pouvoir la tester et la montrer à l'extérieur sans infrastructure prop
 - [x] `render.yaml` à la racine du projet (Infrastructure as Code)
 - [x] L'app démarre sur Render avec le health check `/api/v1/health`
 - [x] Instructions de déploiement dans le README (section "Déploiement Render")
-- [ ] URL publique fonctionnelle et partageable
+- [x] URL publique fonctionnelle et partageable : https://recos-antibioprophylaxie-sfar.onrender.com
 
 **Notes techniques :**
 - Render Free tier : 512 Mo RAM, mise en veille après 15 min d'inactivité (acceptable pour démos)

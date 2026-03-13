@@ -156,7 +156,7 @@ Chaque niveau sera testé avec Mistral, Claude et GPT-4 pour une matrice complè
 
 | Choix | Technologie | Justification |
 |-------|-------------|---------------|
-| **Hébergement** | À choisir : Fly.io, Railway, Render, ou Hetzner VPS | Détail ci-dessous |
+| **Hébergement** | **Render** (choisi) — https://recos-antibioprophylaxie-sfar.onrender.com | Free tier, déploiement depuis GitHub, zéro config |
 | **Conteneur** | Docker | Déploiement reproductible, standard |
 | **CI/CD** | GitHub Actions | Gratuit pour les repos publics, intégré à GitHub |
 | **Domaine** | Optionnel (sous-domaine gratuit du provider) | Domaine custom en V2 si besoin |
