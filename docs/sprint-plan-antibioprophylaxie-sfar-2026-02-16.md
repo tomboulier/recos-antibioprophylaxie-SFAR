@@ -15,8 +15,8 @@
 
 | Métrique | Valeur |
 |----------|--------|
-| Stories | 19 |
-| Points totaux | 78 |
+| Stories | 20 |
+| Points totaux | 80 |
 | Milestones | 3 |
 | Rythme | Pas de sprints chronométrés — story par story, au rythme du porteur de projet |
 
