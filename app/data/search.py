@@ -105,7 +105,7 @@ def search_interventions(
     matches = process.extract(
         query,
         textes,
-        scorer=fuzz.WRatio,
+        scorer=fuzz.partial_ratio,
         limit=limit,
         score_cutoff=_SCORE_MIN,
     )
