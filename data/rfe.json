@@ -13,30 +13,26 @@
           "protocole": {
             "molecule": "Céfazoline",
             "dose_initiale": "2g IVL",
-            "reinjection": "1g si durée > 4h, puis toutes les 4h jusqu'à fin de chirurgie",
-            "duree": "Durée de l'intervention"
+            "reinjection": "1g si durée > 4h, puis toutes les 4h jusqu'à fin de chirurgie"
           },
           "alternative_allergie": [
             {
               "molecule": "Clindamycine",
               "dose_initiale": "900mg IVL",
               "intention": 1,
-              "reinjection": null,
-              "duree": null
+              "reinjection": null
             },
             {
               "molecule": "Vancomycine",
               "dose_initiale": "20 mg/kg IVL",
               "intention": 2,
-              "reinjection": null,
-              "duree": null
+              "reinjection": null
             },
             {
               "molecule": "Teicoplanine",
               "dose_initiale": "12 mg/kg IVL",
               "intention": 3,
-              "reinjection": null,
-              "duree": null
+              "reinjection": null
             }
           ],
           "force_recommandation": "Avis d'experts",
@@ -51,30 +47,26 @@
           "protocole": {
             "molecule": "Céfazoline",
             "dose_initiale": "2g IVL",
-            "reinjection": "1g si durée > 4h, puis toutes les 4h jusqu'à fin de chirurgie",
-            "duree": "Durée de l'intervention"
+            "reinjection": "1g si durée > 4h, puis toutes les 4h jusqu'à fin de chirurgie"
           },
           "alternative_allergie": [
             {
               "molecule": "Clindamycine",
               "dose_initiale": "900mg IVL",
               "intention": 1,
-              "reinjection": null,
-              "duree": null
+              "reinjection": null
             },
             {
               "molecule": "Vancomycine",
               "dose_initiale": "20 mg/kg IVL",
               "intention": 2,
-              "reinjection": null,
-              "duree": null
+              "reinjection": null
             },
             {
               "molecule": "Teicoplanine",
               "dose_initiale": "12 mg/kg IVL",
               "intention": 3,
-              "reinjection": null,
-              "duree": null
+              "reinjection": null
             }
           ],
           "force_recommandation": "Avis d'experts",
@@ -89,30 +81,26 @@
           "protocole": {
             "molecule": "Céfazoline",
             "dose_initiale": "2g IVL",
-            "reinjection": "1g si durée > 4h, puis toutes les 4h jusqu'à fin de chirurgie",
-            "duree": "Durée de l'intervention"
+            "reinjection": "1g si durée > 4h, puis toutes les 4h jusqu'à fin de chirurgie"
           },
           "alternative_allergie": [
             {
               "molecule": "Clindamycine",
               "dose_initiale": "900mg IVL",
               "intention": 1,
-              "reinjection": null,
-              "duree": null
+              "reinjection": null
             },
             {
               "molecule": "Vancomycine",
               "dose_initiale": "20 mg/kg IVL",
               "intention": 2,
-              "reinjection": null,
-              "duree": null
+              "reinjection": null
             },
             {
               "molecule": "Teicoplanine",
               "dose_initiale": "12 mg/kg IVL",
               "intention": 3,
-              "reinjection": null,
-              "duree": null
+              "reinjection": null
             }
           ],
           "force_recommandation": "Avis d'experts",
@@ -127,30 +115,26 @@
           "protocole": {
             "molecule": "Céfazoline",
             "dose_initiale": "2g IVL",
-            "reinjection": "1g si durée > 4h, puis toutes les 4h jusqu'à fin de chirurgie",
-            "duree": "Durée de l'intervention"
+            "reinjection": "1g si durée > 4h, puis toutes les 4h jusqu'à fin de chirurgie"
           },
           "alternative_allergie": [
             {
               "molecule": "Clindamycine",
               "dose_initiale": "900mg IVL",
               "intention": 1,
-              "reinjection": null,
-              "duree": null
+              "reinjection": null
             },
             {
               "molecule": "Vancomycine",
               "dose_initiale": "20 mg/kg IVL",
               "intention": 2,
-              "reinjection": null,
-              "duree": null
+              "reinjection": null
             },
             {
               "molecule": "Teicoplanine",
               "dose_initiale": "12 mg/kg IVL",
               "intention": 3,
-              "reinjection": null,
-              "duree": null
+              "reinjection": null
             }
           ],
           "force_recommandation": "Avis d'experts",
@@ -220,30 +204,26 @@
           "protocole": {
             "molecule": "Céfazoline",
             "dose_initiale": "2g IVL",
-            "reinjection": "1g si durée > 4h, puis toutes les 4h jusqu'à fin de chirurgie",
-            "duree": "Durée de l'intervention"
+            "reinjection": "1g si durée > 4h, puis toutes les 4h jusqu'à fin de chirurgie"
           },
           "alternative_allergie": [
             {
               "molecule": "Clindamycine",
               "dose_initiale": "900mg IVL",
               "intention": 1,
-              "reinjection": null,
-              "duree": null
+              "reinjection": null
             },
             {
               "molecule": "Vancomycine",
               "dose_initiale": "20 mg/kg IVL",
               "intention": 2,
-              "reinjection": null,
-              "duree": null
+              "reinjection": null
             },
             {
               "molecule": "Teicoplanine",
               "dose_initiale": "12 mg/kg IVL",
               "intention": 3,
-              "reinjection": null,
-              "duree": null
+              "reinjection": null
             }
           ],
           "force_recommandation": "Avis d'experts",
@@ -258,30 +238,26 @@
           "protocole": {
             "molecule": "Céfazoline",
             "dose_initiale": "2g IVL",
-            "reinjection": "1g si durée > 4h, puis toutes les 4h jusqu'à fin de chirurgie",
-            "duree": "Durée de l'intervention"
+            "reinjection": "1g si durée > 4h, puis toutes les 4h jusqu'à fin de chirurgie"
           },
           "alternative_allergie": [
             {
               "molecule": "Clindamycine",
               "dose_initiale": "900mg IVL",
               "intention": 1,
-              "reinjection": null,
-              "duree": null
+              "reinjection": null
             },
             {
               "molecule": "Vancomycine",
               "dose_initiale": "20 mg/kg IVL",
               "intention": 2,
-              "reinjection": null,
-              "duree": null
+              "reinjection": null
             },
             {
               "molecule": "Teicoplanine",
               "dose_initiale": "12 mg/kg IVL",
               "intention": 3,
-              "reinjection": null,
-              "duree": null
+              "reinjection": null
             }
           ],
           "force_recommandation": "Avis d'experts",
@@ -296,30 +272,26 @@
           "protocole": {
             "molecule": "Céfazoline",
             "dose_initiale": "2g IVL",
-            "reinjection": "1g si durée > 4h, puis toutes les 4h jusqu'à fin de chirurgie",
-            "duree": "Durée de l'intervention"
+            "reinjection": "1g si durée > 4h, puis toutes les 4h jusqu'à fin de chirurgie"
           },
           "alternative_allergie": [
             {
               "molecule": "Clindamycine",
               "dose_initiale": "900mg IVL",
               "intention": 1,
-              "reinjection": null,
-              "duree": null
+              "reinjection": null
             },
             {
               "molecule": "Vancomycine",
               "dose_initiale": "20 mg/kg IVL",
               "intention": 2,
-              "reinjection": null,
-              "duree": null
+              "reinjection": null
             },
             {
               "molecule": "Teicoplanine",
               "dose_initiale": "12 mg/kg IVL",
               "intention": 3,
-              "reinjection": null,
-              "duree": null
+              "reinjection": null
             }
           ],
           "force_recommandation": "Avis d'experts",
@@ -334,30 +306,26 @@
           "protocole": {
             "molecule": "Céfazoline",
             "dose_initiale": "2g IVL",
-            "reinjection": "1g si durée > 4h, puis toutes les 4h jusqu'à fin de chirurgie",
-            "duree": "Durée de l'intervention"
+            "reinjection": "1g si durée > 4h, puis toutes les 4h jusqu'à fin de chirurgie"
           },
           "alternative_allergie": [
             {
               "molecule": "Clindamycine",
               "dose_initiale": "900mg IVL",
               "intention": 1,
-              "reinjection": null,
-              "duree": null
+              "reinjection": null
             },
             {
               "molecule": "Vancomycine",
               "dose_initiale": "20 mg/kg IVL",
               "intention": 2,
-              "reinjection": null,
-              "duree": null
+              "reinjection": null
             },
             {
               "molecule": "Teicoplanine",
               "dose_initiale": "12 mg/kg IVL",
               "intention": 3,
-              "reinjection": null,
-              "duree": null
+              "reinjection": null
             }
           ],
           "force_recommandation": "Avis d'experts",
@@ -372,30 +340,26 @@
           "protocole": {
             "molecule": "Céfazoline",
             "dose_initiale": "2g IVL",
-            "reinjection": "1g si durée > 4h, puis toutes les 4h jusqu'à fin de chirurgie",
-            "duree": "Durée de l'intervention"
+            "reinjection": "1g si durée > 4h, puis toutes les 4h jusqu'à fin de chirurgie"
           },
           "alternative_allergie": [
             {
               "molecule": "Clindamycine",
               "dose_initiale": "900mg IVL",
               "intention": 1,
-              "reinjection": null,
-              "duree": null
+              "reinjection": null
             },
             {
               "molecule": "Vancomycine",
               "dose_initiale": "20 mg/kg IVL",
               "intention": 2,
-              "reinjection": null,
-              "duree": null
+              "reinjection": null
             },
             {
               "molecule": "Teicoplanine",
               "dose_initiale": "12 mg/kg IVL",
               "intention": 3,
-              "reinjection": null,
-              "duree": null
+              "reinjection": null
             }
           ],
           "force_recommandation": "Avis d'experts",
@@ -410,30 +374,26 @@
           "protocole": {
             "molecule": "Céfazoline",
             "dose_initiale": "2g IVL",
-            "reinjection": "1g si durée > 4h, puis toutes les 4h jusqu'à fin de chirurgie",
-            "duree": "Durée de l'intervention"
+            "reinjection": "1g si durée > 4h, puis toutes les 4h jusqu'à fin de chirurgie"
           },
           "alternative_allergie": [
             {
               "molecule": "Clindamycine",
               "dose_initiale": "900mg IVL",
               "intention": 1,
-              "reinjection": null,
-              "duree": null
+              "reinjection": null
             },
             {
               "molecule": "Vancomycine",
               "dose_initiale": "20 mg/kg IVL",
               "intention": 2,
-              "reinjection": null,
-              "duree": null
+              "reinjection": null
             },
             {
               "molecule": "Teicoplanine",
               "dose_initiale": "12 mg/kg IVL",
               "intention": 3,
-              "reinjection": null,
-              "duree": null
+              "reinjection": null
             }
           ],
           "force_recommandation": "Avis d'experts",
@@ -492,30 +452,26 @@
           "protocole": {
             "molecule": "Céfazoline",
             "dose_initiale": "2g IVL",
-            "reinjection": "1g si durée > 4h, puis toutes les 4h jusqu'à fin de chirurgie",
-            "duree": "Durée de l'intervention"
+            "reinjection": "1g si durée > 4h, puis toutes les 4h jusqu'à fin de chirurgie"
           },
           "alternative_allergie": [
             {
               "molecule": "Clindamycine",
               "dose_initiale": "900mg IVL",
               "intention": 1,
-              "reinjection": null,
-              "duree": null
+              "reinjection": null
             },
             {
               "molecule": "Vancomycine",
               "dose_initiale": "20 mg/kg IVL",
               "intention": 2,
-              "reinjection": null,
-              "duree": null
+              "reinjection": null
             },
             {
               "molecule": "Teicoplanine",
               "dose_initiale": "12 mg/kg IVL",
               "intention": 3,
-              "reinjection": null,
-              "duree": null
+              "reinjection": null
             }
           ],
           "force_recommandation": "Avis d'experts",
@@ -574,30 +530,26 @@
           "protocole": {
             "molecule": "Céfazoline",
             "dose_initiale": "2g IVL",
-            "reinjection": "1g si durée > 4h, puis toutes les 4h jusqu'à fin de chirurgie",
-            "duree": "Durée de l'intervention"
+            "reinjection": "1g si durée > 4h, puis toutes les 4h jusqu'à fin de chirurgie"
           },
           "alternative_allergie": [
             {
               "molecule": "Clindamycine",
               "dose_initiale": "900mg IVL",
               "intention": 1,
-              "reinjection": null,
-              "duree": null
+              "reinjection": null
             },
             {
               "molecule": "Vancomycine",
               "dose_initiale": "20 mg/kg IVL",
               "intention": 2,
-              "reinjection": null,
-              "duree": null
+              "reinjection": null
             },
             {
               "molecule": "Teicoplanine",
               "dose_initiale": "12 mg/kg IVL",
               "intention": 3,
-              "reinjection": null,
-              "duree": null
+              "reinjection": null
             }
           ],
           "force_recommandation": "GRADE 2",
@@ -612,30 +564,26 @@
           "protocole": {
             "molecule": "Céfazoline",
             "dose_initiale": "2g IVL",
-            "reinjection": "1g si durée > 4h, puis toutes les 4h jusqu'à fin de chirurgie",
-            "duree": "Durée de l'intervention"
+            "reinjection": "1g si durée > 4h, puis toutes les 4h jusqu'à fin de chirurgie"
           },
           "alternative_allergie": [
             {
               "molecule": "Clindamycine",
               "dose_initiale": "900mg IVL",
               "intention": 1,
-              "reinjection": null,
-              "duree": null
+              "reinjection": null
             },
             {
               "molecule": "Vancomycine",
               "dose_initiale": "20 mg/kg IVL",
               "intention": 2,
-              "reinjection": null,
-              "duree": null
+              "reinjection": null
             },
             {
               "molecule": "Teicoplanine",
               "dose_initiale": "12 mg/kg IVL",
               "intention": 3,
-              "reinjection": null,
-              "duree": null
+              "reinjection": null
             }
           ],
           "force_recommandation": "Avis d'experts",
@@ -650,30 +598,26 @@
           "protocole": {
             "molecule": "Céfazoline",
             "dose_initiale": "2g IVL",
-            "reinjection": "1g si durée > 4h, puis toutes les 4h jusqu'à fin de chirurgie",
-            "duree": "Durée de l'intervention"
+            "reinjection": "1g si durée > 4h, puis toutes les 4h jusqu'à fin de chirurgie"
           },
           "alternative_allergie": [
             {
               "molecule": "Clindamycine",
               "dose_initiale": "900mg IVL",
               "intention": 1,
-              "reinjection": null,
-              "duree": null
+              "reinjection": null
             },
             {
               "molecule": "Vancomycine",
               "dose_initiale": "20 mg/kg IVL",
               "intention": 2,
-              "reinjection": null,
-              "duree": null
+              "reinjection": null
             },
             {
               "molecule": "Teicoplanine",
               "dose_initiale": "12 mg/kg IVL",
               "intention": 3,
-              "reinjection": null,
-              "duree": null
+              "reinjection": null
             }
           ],
           "force_recommandation": "Avis d'experts",
@@ -688,30 +632,26 @@
           "protocole": {
             "molecule": "Céfazoline",
             "dose_initiale": "2g IVL",
-            "reinjection": "1g si durée > 4h, puis toutes les 4h jusqu'à fin de chirurgie",
-            "duree": "Durée de l'intervention"
+            "reinjection": "1g si durée > 4h, puis toutes les 4h jusqu'à fin de chirurgie"
           },
           "alternative_allergie": [
             {
               "molecule": "Clindamycine",
               "dose_initiale": "900mg IVL",
               "intention": 1,
-              "reinjection": null,
-              "duree": null
+              "reinjection": null
             },
             {
               "molecule": "Vancomycine",
               "dose_initiale": "20 mg/kg IVL",
               "intention": 2,
-              "reinjection": null,
-              "duree": null
+              "reinjection": null
             },
             {
               "molecule": "Teicoplanine",
               "dose_initiale": "12 mg/kg IVL",
               "intention": 3,
-              "reinjection": null,
-              "duree": null
+              "reinjection": null
             }
           ],
           "force_recommandation": "Avis d'experts",
@@ -776,16 +716,14 @@
           "protocole": {
             "molecule": "Céfazoline",
             "dose_initiale": "2g IVL",
-            "reinjection": "1g si durée > 4h, puis toutes les 4h jusqu'à fin de chirurgie",
-            "duree": "Durée de l'intervention"
+            "reinjection": "1g si durée > 4h, puis toutes les 4h jusqu'à fin de chirurgie"
           },
           "alternative_allergie": [
             {
               "molecule": "Clindamycine",
               "dose_initiale": "900mg IV",
               "intention": 1,
-              "reinjection": null,
-              "duree": null
+              "reinjection": null
             }
           ],
           "force_recommandation": "Avis d'experts",
@@ -800,16 +738,14 @@
           "protocole": {
             "molecule": "Céfazoline",
             "dose_initiale": "2g IVL",
-            "reinjection": "1g si durée > 4h, puis toutes les 4h jusqu'à fin de chirurgie",
-            "duree": "Durée de l'intervention"
+            "reinjection": "1g si durée > 4h, puis toutes les 4h jusqu'à fin de chirurgie"
           },
           "alternative_allergie": [
             {
               "molecule": "Clindamycine",
               "dose_initiale": "900mg IV",
               "intention": 1,
-              "reinjection": null,
-              "duree": null
+              "reinjection": null
             }
           ],
           "force_recommandation": "Avis d'experts",
@@ -824,16 +760,14 @@
           "protocole": {
             "molecule": "Amoxicilline/Clavulanate",
             "dose_initiale": "2g IVL",
-            "reinjection": "1g si durée > 2h, puis toutes les 2h jusqu'à fin de chirurgie",
-            "duree": "Durée de l'intervention"
+            "reinjection": "1g si durée > 2h, puis toutes les 2h jusqu'à fin de chirurgie"
           },
           "alternative_allergie": [
             {
               "molecule": "Clindamycine + Gentamicine",
               "dose_initiale": "900mg IV + 6-7 mg/kg",
               "intention": 1,
-              "reinjection": null,
-              "duree": null
+              "reinjection": null
             }
           ],
           "force_recommandation": "Avis d'experts",
@@ -848,16 +782,14 @@
           "protocole": {
             "molecule": "Amoxicilline/Clavulanate",
             "dose_initiale": "2g IVL",
-            "reinjection": "1g si durée > 2h, puis toutes les 2h jusqu'à fin de chirurgie",
-            "duree": "Durée de l'intervention"
+            "reinjection": "1g si durée > 2h, puis toutes les 2h jusqu'à fin de chirurgie"
           },
           "alternative_allergie": [
             {
               "molecule": "Clindamycine + Gentamicine",
               "dose_initiale": "900mg IV + 6-7 mg/kg",
               "intention": 1,
-              "reinjection": null,
-              "duree": null
+              "reinjection": null
             }
           ],
           "force_recommandation": "GRADE 1",
@@ -883,16 +815,14 @@
           "protocole": {
             "molecule": "Céfazoline",
             "dose_initiale": "2g IVL",
-            "reinjection": "1g si durée > 4h, puis toutes les 4h jusqu'à fin de chirurgie",
-            "duree": "Durée de l'intervention"
+            "reinjection": "1g si durée > 4h, puis toutes les 4h jusqu'à fin de chirurgie"
           },
           "alternative_allergie": [
             {
               "molecule": "Clindamycine",
               "dose_initiale": "900mg IV",
               "intention": 1,
-              "reinjection": null,
-              "duree": null
+              "reinjection": null
             }
           ],
           "force_recommandation": "GRADE 1",
@@ -907,16 +837,14 @@
           "protocole": {
             "molecule": "Amoxicilline/Clavulanate",
             "dose_initiale": "2g IVL",
-            "reinjection": "1g si durée > 2h, puis toutes les 2h jusqu'à fin de chirurgie",
-            "duree": "Durée de l'intervention"
+            "reinjection": "1g si durée > 2h, puis toutes les 2h jusqu'à fin de chirurgie"
           },
           "alternative_allergie": [
             {
               "molecule": "Clindamycine + Gentamicine",
               "dose_initiale": "900mg IV + 6-7 mg/kg",
               "intention": 1,
-              "reinjection": null,
-              "duree": null
+              "reinjection": null
             }
           ],
           "force_recommandation": "Avis d'experts",
@@ -953,16 +881,14 @@
           "protocole": {
             "molecule": "Céfazoline",
             "dose_initiale": "2g IVL",
-            "reinjection": "1g si durée > 4h, puis toutes les 4h jusqu'à fin de chirurgie",
-            "duree": "Durée de l'intervention"
+            "reinjection": "1g si durée > 4h, puis toutes les 4h jusqu'à fin de chirurgie"
           },
           "alternative_allergie": [
             {
               "molecule": "Clindamycine",
               "dose_initiale": "900mg IV",
               "intention": 1,
-              "reinjection": null,
-              "duree": null
+              "reinjection": null
             }
           ],
           "force_recommandation": "Avis d'experts",
@@ -977,16 +903,14 @@
           "protocole": {
             "molecule": "Céfazoline",
             "dose_initiale": "2g IVL",
-            "reinjection": "1g si durée > 4h, puis toutes les 4h jusqu'à fin de chirurgie",
-            "duree": "Durée de l'intervention"
+            "reinjection": "1g si durée > 4h, puis toutes les 4h jusqu'à fin de chirurgie"
           },
           "alternative_allergie": [
             {
               "molecule": "Clindamycine",
               "dose_initiale": "900mg IV",
               "intention": 1,
-              "reinjection": null,
-              "duree": null
+              "reinjection": null
             }
           ],
           "force_recommandation": "Avis d'experts",
@@ -1034,16 +958,14 @@
           "protocole": {
             "molecule": "Amoxicilline/Clavulanate",
             "dose_initiale": "2g IVL",
-            "reinjection": "1g si durée > 2h, puis toutes les 2h jusqu'à fin de chirurgie",
-            "duree": "Durée de l'intervention"
+            "reinjection": "1g si durée > 2h, puis toutes les 2h jusqu'à fin de chirurgie"
           },
           "alternative_allergie": [
             {
               "molecule": "Céfazoline + Gentamicine",
               "dose_initiale": "2g IVL + 6-7 mg/kg",
               "intention": 1,
-              "reinjection": "Céfazoline 1g si durée > 4h, puis toutes les 4h ; Gentamicine dose unique",
-              "duree": null
+              "reinjection": "Céfazoline 1g si durée > 4h, puis toutes les 4h ; Gentamicine dose unique"
             }
           ],
           "force_recommandation": "Avis d'experts",

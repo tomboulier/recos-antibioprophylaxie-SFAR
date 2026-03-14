@@ -11,7 +11,7 @@ from __future__ import annotations
 import datetime  # noqa: TC003 — nécessaire au runtime pour Pydantic
 from enum import StrEnum
 
-from pydantic import BaseModel, ConfigDict
+from pydantic import BaseModel, ConfigDict, model_validator
 
 
 class StrictBaseModel(BaseModel):
@@ -48,7 +48,6 @@ class Protocole(StrictBaseModel):
     dose_initiale: str
     intention: int | None = None
     reinjection: str | None = None
-    duree: str | None = None
 
 
 class Intervention(StrictBaseModel):
@@ -63,6 +62,20 @@ class Intervention(StrictBaseModel):
     source_page: int
     source_tableau: str
     notes: str | None = None
+    sous_categorie: str | None = None
+
+    @model_validator(mode="after")
+    def _compute_sous_categorie(self) -> Intervention:
+        """Extrait la sous-catégorie depuis ``source_tableau`` (après le «\u00a0—\u00a0»).
+
+        Returns
+        -------
+        Intervention
+            L'instance avec ``sous_categorie`` calculée.
+        """
+        if "\u2014" in self.source_tableau:
+            self.sous_categorie = self.source_tableau.split("\u2014", 1)[1].strip()
+        return self
 
 
 class Specialite(StrictBaseModel):
