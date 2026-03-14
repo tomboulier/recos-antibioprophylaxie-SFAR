@@ -169,6 +169,7 @@
 /* --- Lien vers protocole complet --- */
 .intervention-item__link {
   display: block;
+  flex-basis: 100%;
   margin-top: var(--space-sm, 0.75rem);
   font-size: var(--font-sm);
   font-weight: 600;
@@ -202,6 +203,7 @@
   .intervention-item__detail {
     padding: 0 var(--space-4) var(--space-6);
     flex-direction: row;
+    flex-wrap: wrap;
   }
 
   .intervention-item__detail .protocol-card {
