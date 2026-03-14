@@ -2,15 +2,43 @@
 
 from __future__ import annotations
 
+import re
 from typing import Annotated
 
 from fastapi import APIRouter, Query, Request
 from fastapi.templating import Jinja2Templates
+from markupsafe import Markup
 
 from app.config import _PROJECT_ROOT
 
 router = APIRouter()
 templates = Jinja2Templates(directory=str(_PROJECT_ROOT / "app" / "templates"))
+
+
+def _highlight(text: str, query: str) -> Markup:
+    """Surligne les occurrences de query dans text avec <mark>.
+
+    Parameters
+    ----------
+    text : str
+        Texte à traiter.
+    query : str
+        Terme à surligner (insensible à la casse).
+
+    Returns
+    -------
+    Markup
+        HTML sûr avec les occurrences entourées de <mark>.
+    """
+    if not query.strip():
+        return Markup(text)
+    escaped_text = Markup.escape(text)
+    pattern = re.compile(re.escape(query.strip()), re.IGNORECASE)
+    highlighted = pattern.sub(
+        lambda m: Markup(f"<mark>{m.group()}</mark>"),
+        str(escaped_text),
+    )
+    return Markup(highlighted)
 
 
 @router.get("/")
@@ -104,7 +132,7 @@ async def search_partial(
     items = [
         {
             "id": r.intervention.id,
-            "nom": r.intervention.nom,
+            "nom": _highlight(r.intervention.nom, q),
             "specialite": r.intervention.specialite,
         }
         for r in results[:5]
@@ -169,7 +197,7 @@ async def recherche(
     items = [
         {
             "id": r.intervention.id,
-            "nom": r.intervention.nom,
+            "nom": _highlight(r.intervention.nom, q),
             "specialite": r.intervention.specialite,
         }
         for r in results

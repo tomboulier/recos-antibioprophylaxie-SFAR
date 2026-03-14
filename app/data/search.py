@@ -15,7 +15,7 @@ if TYPE_CHECKING:
     from app.data.models import Intervention, RFEData
 
 # Seuil minimal de score pour retenir un résultat (sur 100)
-_SCORE_MIN = 50
+_SCORE_MIN = 75
 
 
 @dataclass
