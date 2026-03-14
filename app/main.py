@@ -10,6 +10,7 @@ from fastapi.responses import HTMLResponse
 from fastapi.staticfiles import StaticFiles
 from fastapi.templating import Jinja2Templates
 
+from app.api.search import router as search_router
 from app.config import _PROJECT_ROOT, Settings
 from app.data.loader import load_rfe_data
 from app.web.routes import router as web_router
@@ -43,6 +44,7 @@ app = FastAPI(
 _templates = Jinja2Templates(directory=str(_PROJECT_ROOT / "app" / "templates"))
 
 app.mount("/static", StaticFiles(directory=str(_PROJECT_ROOT / "app" / "static")), name="static")
+app.include_router(search_router)
 app.include_router(web_router)
 
 
