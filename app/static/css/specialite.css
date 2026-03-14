@@ -47,6 +47,16 @@
   outline-offset: 2px;
 }
 
+/* --- Titre de sous-catégorie --- */
+.sous-categorie-heading {
+  font-size: var(--font-lg);
+  font-weight: 700;
+  color: var(--color-primary);
+  margin: var(--space-8) 0 var(--space-4);
+  padding-bottom: var(--space-2);
+  border-bottom: 2px solid var(--color-accent);
+}
+
 /* --- Liste des interventions --- */
 .intervention-list {
   display: flex;
