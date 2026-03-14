@@ -7,10 +7,12 @@ et les spécialités.
 from __future__ import annotations
 
 from dataclasses import dataclass
+from typing import TYPE_CHECKING
 
 from rapidfuzz import fuzz, process
 
-from app.data.models import Intervention, RFEData
+if TYPE_CHECKING:
+    from app.data.models import Intervention, RFEData
 
 # Seuil minimal de score pour retenir un résultat (sur 100)
 _SCORE_MIN = 50

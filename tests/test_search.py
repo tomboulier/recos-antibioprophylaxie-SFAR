@@ -4,14 +4,17 @@ from __future__ import annotations
 
 import json
 from pathlib import Path
+from typing import TYPE_CHECKING
 
 import pytest
 from fastapi.testclient import TestClient
 
 from app.data.loader import load_rfe_data
-from app.data.models import RFEData
 from app.data.search import SearchResult, search_interventions
 from app.main import app
+
+if TYPE_CHECKING:
+    from app.data.models import RFEData
 
 
 # ---------------------------------------------------------------------------
