@@ -26,9 +26,15 @@
   </button>
 </div>
 
-{# --- Liste des interventions --- #}
+{# --- Liste des interventions groupées par sous-catégorie --- #}
 <div class="intervention-list">
-  {% for interv in specialite.interventions %}
+  {% for sous_cat, interventions in groupes.items() %}
+
+  {% if groupes | length > 1 %}
+  <h2 class="sous-categorie-heading">{{ sous_cat }}</h2>
+  {% endif %}
+
+  {% for interv in interventions %}
   <div class="intervention-item">
     <button type="button" class="intervention-item__header" aria-expanded="false">
       <div class="intervention-item__info">
@@ -83,6 +89,8 @@
       {% endif %}
     </div>
   </div>
+  {% endfor %}
+
   {% endfor %}
 </div>
 {% endblock %}

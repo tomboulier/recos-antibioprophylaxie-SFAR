@@ -120,3 +120,19 @@ def test_css_contient_intervention_item(client):
     """Le CSS doit définir le composant intervention-item."""
     css = client.get("/static/css/specialite.css").text
     assert ".intervention-item" in css
+
+
+# ---------- Sous-catégories (issue #28) ----------
+
+
+def test_specialite_affiche_sous_categories_h2(html):
+    """Les sous-catégories doivent apparaître comme titres h2."""
+    assert '<h2 class="sous-categorie-heading">' in html
+    assert "Membre inférieur" in html
+    assert "Épaule et coude" in html
+
+
+def test_specialite_contient_css_sous_categorie(client):
+    """Le CSS doit définir le composant sous-categorie-heading."""
+    css = client.get("/static/css/specialite.css").text
+    assert ".sous-categorie-heading" in css

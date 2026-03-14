@@ -78,7 +78,7 @@ async def protocole(request: Request, intervention_id: str):
 
 @router.get("/specialites/{specialite_id}")
 async def specialite(request: Request, specialite_id: str):
-    """Page spécialité — liste des interventions avec aperçu protocole.
+    """Page spécialité — liste des interventions groupées par sous-catégorie.
 
     Parameters
     ----------
@@ -90,15 +90,19 @@ async def specialite(request: Request, specialite_id: str):
     Returns
     -------
     TemplateResponse
-        Page HTML de la spécialité, ou 404 si elle n'existe pas.
+        Page HTML de la spécialité avec groupes par sous-catégorie, ou 404.
     """
     rfe = request.app.state.rfe_data
     for s in rfe.specialites:
         if s.id == specialite_id:
+            groupes: dict[str, list] = {}
+            for interv in s.interventions:
+                cle = interv.sous_categorie or "Général"
+                groupes.setdefault(cle, []).append(interv)
             return templates.TemplateResponse(
                 request,
                 "specialite.html",
-                {"specialite": s},
+                {"specialite": s, "groupes": groupes},
             )
     return templates.TemplateResponse(
         request,
