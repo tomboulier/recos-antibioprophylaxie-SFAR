@@ -147,8 +147,8 @@ def test_sous_categorie_heading_a_data_toggle(html):
 
 
 def test_sous_categorie_heading_a_aria_expanded(html):
-    """Les h2 de sous-catégorie doivent avoir aria-expanded (dépliés par défaut)."""
-    assert 'aria-expanded="true"' in html
+    """Les h2 de sous-catégorie doivent avoir aria-expanded (repliés par défaut)."""
+    assert 'aria-expanded="false"' in html
 
 
 def test_sous_categorie_heading_a_chevron(html):

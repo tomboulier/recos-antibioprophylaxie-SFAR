@@ -31,13 +31,13 @@
   {% for sous_cat, interventions in groupes.items() %}
 
   {% if groupes | length > 1 %}
-  <h2 class="sous-categorie-heading" data-toggle="sous-categorie" aria-expanded="true">
+  <h2 class="sous-categorie-heading" data-toggle="sous-categorie" aria-expanded="false">
     <span class="sous-categorie-heading__chevron" aria-hidden="true">▼</span>
     {{ sous_cat }}
   </h2>
   {% endif %}
 
-  <div class="sous-categorie-body" data-sous-categorie-body>
+  <div class="sous-categorie-body" data-sous-categorie-body hidden>
     {% for interv in interventions %}
     <div class="intervention-item">
       <button type="button" class="intervention-item__header" aria-expanded="false">
