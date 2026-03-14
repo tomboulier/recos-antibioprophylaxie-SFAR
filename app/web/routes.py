@@ -30,9 +30,9 @@ def _highlight(text: str, query: str) -> Markup:
     Markup
         HTML sûr avec les occurrences entourées de <mark>.
     """
-    if not query.strip():
-        return Markup(text)
     escaped_text = Markup.escape(text)
+    if not query.strip():
+        return escaped_text
     pattern = re.compile(re.escape(query.strip()), re.IGNORECASE)
     highlighted = pattern.sub(
         lambda m: Markup(f"<mark>{m.group()}</mark>"),
