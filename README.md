@@ -115,6 +115,36 @@ Pour déployer votre propre instance sur [Render](https://render.com) :
 | [Sprint Plan](docs/sprint-plan-antibioprophylaxie-sfar-2026-02-16.md) | Stories, estimations, milestones |
 | [CONTRIBUTING](CONTRIBUTING.md) | Guide de contribution (humains + IAs) |
 
+## Déploiement Docker / NAS
+
+### Lancement rapide
+
+```bash
+# Copier l'exemple de configuration
+cp .env.example .env
+
+# Démarrer l'application en arrière-plan
+docker compose up -d
+```
+
+L'application est accessible sur http://localhost:8000.
+
+### Sur NAS Synology via Portainer
+
+1. Ouvrir Portainer (ex. http://synologyds224p:9000)
+2. **Stacks** → **Add stack**
+3. Coller le contenu de `docker-compose.yml`
+4. Configurer les variables d'environnement depuis l'interface
+5. **Deploy the stack**
+
+### Commandes utiles
+
+```bash
+docker compose logs -f      # Suivi des logs
+docker compose down         # Arrêt et suppression des conteneurs
+docker compose pull && docker compose up -d  # Mise à jour
+```
+
 ## Historique
 
 Ce projet a connu deux prototypes exploratoires, conservés en branches d'archive :
