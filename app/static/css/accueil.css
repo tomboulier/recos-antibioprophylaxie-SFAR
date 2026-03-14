@@ -292,7 +292,8 @@
 }
 
 /* Surlignage des termes recherchés */
-mark {
+.search-results mark,
+.recherche-resultats mark {
   background: #fff176;
   color: inherit;
   border-radius: 2px;
