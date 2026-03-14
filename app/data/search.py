@@ -91,7 +91,7 @@ def search_interventions(
     >>> results[0].score
     90.0
     """
-    query = query.strip()
+    query = query.strip().lower()
     if not query:
         return []
 
@@ -99,7 +99,7 @@ def search_interventions(
     if not index:
         return []
 
-    textes = [texte for texte, _ in index]
+    textes = [texte.lower() for texte, _ in index]
 
     # rapidfuzz.process.extract retourne une liste de (match, score, index)
     matches = process.extract(
