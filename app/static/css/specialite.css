@@ -47,7 +47,7 @@
   outline-offset: 2px;
 }
 
-/* --- Titre de sous-catégorie --- */
+/* --- Titre de sous-catégorie (cliquable, repliable) --- */
 .sous-categorie-heading {
   font-size: var(--font-lg);
   font-weight: 700;
@@ -55,6 +55,31 @@
   margin: var(--space-8) 0 var(--space-4);
   padding-bottom: var(--space-2);
   border-bottom: 2px solid var(--color-accent);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  user-select: none;
+}
+
+.sous-categorie-heading:hover {
+  opacity: 0.8;
+}
+
+.sous-categorie-heading__chevron {
+  font-size: var(--font-base);
+  transition: transform 0.2s ease;
+  display: inline-block;
+  flex-shrink: 0;
+}
+
+.sous-categorie-heading[aria-expanded="false"] .sous-categorie-heading__chevron {
+  transform: rotate(-90deg);
+}
+
+/* Corps de sous-catégorie (liste d'interventions) */
+[data-sous-categorie-body][hidden] {
+  display: none;
 }
 
 /* --- Liste des interventions --- */

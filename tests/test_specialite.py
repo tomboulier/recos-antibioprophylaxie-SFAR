@@ -127,7 +127,7 @@ def test_css_contient_intervention_item(client):
 
 def test_specialite_affiche_sous_categories_h2(html):
     """Les sous-catégories doivent apparaître comme titres h2."""
-    assert '<h2 class="sous-categorie-heading">' in html
+    assert 'class="sous-categorie-heading"' in html
     assert "Membre inférieur" in html
     assert "Épaule et coude" in html
 
@@ -136,3 +136,38 @@ def test_specialite_contient_css_sous_categorie(client):
     """Le CSS doit définir le composant sous-categorie-heading."""
     css = client.get("/static/css/specialite.css").text
     assert ".sous-categorie-heading" in css
+
+
+# ---------- Sous-catégories repliables (feat/toggle-sous-categories) ----------
+
+
+def test_sous_categorie_heading_a_data_toggle(html):
+    """Les h2 de sous-catégorie doivent avoir l'attribut data-toggle='sous-categorie'."""
+    assert 'data-toggle="sous-categorie"' in html
+
+
+def test_sous_categorie_heading_a_aria_expanded(html):
+    """Les h2 de sous-catégorie doivent avoir aria-expanded (dépliés par défaut)."""
+    assert 'aria-expanded="true"' in html
+
+
+def test_sous_categorie_heading_a_chevron(html):
+    """Les h2 de sous-catégorie doivent contenir un chevron."""
+    assert "sous-categorie-heading__chevron" in html
+
+
+def test_sous_categorie_body_wrapper_present(html):
+    """Les interventions doivent être enveloppées dans un data-sous-categorie-body."""
+    assert "data-sous-categorie-body" in html
+
+
+def test_css_sous_categorie_heading_pointer(client):
+    """Le CSS doit définir cursor: pointer sur sous-categorie-heading."""
+    css = client.get("/static/css/specialite.css").text
+    assert "cursor: pointer" in css
+
+
+def test_css_sous_categorie_chevron(client):
+    """Le CSS doit définir le style du chevron sous-categorie."""
+    css = client.get("/static/css/specialite.css").text
+    assert ".sous-categorie-heading__chevron" in css
