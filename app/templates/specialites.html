@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+{% block title %}Spécialités — Antibioprophylaxie SFAR{% endblock %}
+
+{% block head %}
+<link rel="stylesheet" href="/static/css/accueil.css">
+{% endblock %}
+
+{% block content %}
+<section class="specialites" aria-label="Spécialités chirurgicales">
+  <h1 class="specialites__title">Parcourir par spécialité</h1>
+  <div class="specialites__grid">
+    {% for s in specialites %}
+    <a href="/specialites/{{ s.id }}" class="specialty-card">
+      <span class="specialty-card__name">{{ s.nom }}</span>
+      <span class="specialty-card__count">{{ s.nb_interventions }} intervention{{ "s" if s.nb_interventions != 1 else "" }}</span>
+    </a>
+    {% endfor %}
+  </div>
+</section>
+{% endblock %}

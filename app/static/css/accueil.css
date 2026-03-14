@@ -160,3 +160,142 @@
     grid-template-columns: repeat(4, 1fr);
   }
 }
+
+/* Résultats de recherche — dropdown flottant */
+.search-container {
+  position: relative;
+}
+
+.search-results {
+  position: absolute;
+  top: calc(100% + 4px);
+  left: 0;
+  right: 0;
+  z-index: 100;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.search-results__list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  background: white;
+  border-radius: var(--radius-md, 8px);
+  overflow: hidden;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.2);
+}
+
+.search-results__item {
+  border-bottom: 1px solid var(--color-border, #e5e7eb);
+}
+
+.search-results__item:last-child {
+  border-bottom: none;
+}
+
+.search-results__link {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.75rem 1rem;
+  text-decoration: none;
+  color: inherit;
+  transition: background 0.15s;
+}
+
+.search-results__link:hover {
+  background: var(--color-bg-subtle, #f3f4f6);
+}
+
+.search-results__nom {
+  font-weight: 500;
+  color: var(--color-text, #111);
+}
+
+.search-results__specialite {
+  font-size: 0.8rem;
+  color: var(--color-text-muted, #6b7280);
+}
+
+.search-results__empty {
+  color: var(--color-text-muted, #6b7280);
+  text-align: center;
+  padding: 0.75rem;
+  background: white;
+  border-radius: var(--radius-md, 8px);
+}
+
+/* Item "Voir tous les résultats" */
+.search-results__item--more .search-results__link--more {
+  justify-content: center;
+  font-size: 0.875rem;
+  color: var(--color-primary, #1a56db);
+  font-weight: 500;
+  background: var(--color-bg-subtle, #f3f4f6);
+}
+
+.search-results__item--more .search-results__link--more:hover {
+  background: var(--color-primary-light, #e0eaff);
+}
+
+/* Page résultats de recherche */
+.recherche-resultats {
+  max-width: 700px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+
+.recherche-resultats__meta {
+  color: var(--color-text-muted, #6b7280);
+  margin-bottom: 1rem;
+}
+
+.recherche-resultats__list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.recherche-resultats__item {
+  border-bottom: 1px solid var(--color-border, #e5e7eb);
+}
+
+.recherche-resultats__item:last-child {
+  border-bottom: none;
+}
+
+.recherche-resultats__link {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.875rem 0.5rem;
+  text-decoration: none;
+  color: inherit;
+  transition: background 0.15s;
+  border-radius: 6px;
+}
+
+.recherche-resultats__link:hover {
+  background: var(--color-bg-subtle, #f3f4f6);
+}
+
+.recherche-resultats__nom {
+  font-weight: 500;
+  color: var(--color-text, #111);
+}
+
+.recherche-resultats__specialite {
+  font-size: 0.8rem;
+  color: var(--color-text-muted, #6b7280);
+}
+
+/* Surlignage des termes recherchés */
+.search-results mark,
+.recherche-resultats mark {
+  background: #fff176;
+  color: inherit;
+  border-radius: 2px;
+  padding: 0 1px;
+}

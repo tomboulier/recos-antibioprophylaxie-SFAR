@@ -70,7 +70,7 @@ def test_interventions_ont_lien_protocole(html):
     """Chaque intervention doit avoir un lien vers /protocole/{id}."""
     assert "/protocole/ortho-prog-mi-prothese-hanche-genou" in html
     assert "/protocole/ortho-prog-mi-arthroscopie-sans-materiel" in html
-    assert "Voir le protocole complet" in html
+    assert "Aller sur la page du protocole" in html
 
 
 def test_interventions_header_est_bouton(html):
@@ -120,3 +120,54 @@ def test_css_contient_intervention_item(client):
     """Le CSS doit définir le composant intervention-item."""
     css = client.get("/static/css/specialite.css").text
     assert ".intervention-item" in css
+
+
+# ---------- Sous-catégories (issue #28) ----------
+
+
+def test_specialite_affiche_sous_categories_h2(html):
+    """Les sous-catégories doivent apparaître comme titres h2."""
+    assert 'class="sous-categorie-heading"' in html
+    assert "Membre inférieur" in html
+    assert "Épaule et coude" in html
+
+
+def test_specialite_contient_css_sous_categorie(client):
+    """Le CSS doit définir le composant sous-categorie-heading."""
+    css = client.get("/static/css/specialite.css").text
+    assert ".sous-categorie-heading" in css
+
+
+# ---------- Sous-catégories repliables (feat/toggle-sous-categories) ----------
+
+
+def test_sous_categorie_heading_a_data_toggle(html):
+    """Les h2 de sous-catégorie doivent avoir l'attribut data-toggle='sous-categorie'."""
+    assert 'data-toggle="sous-categorie"' in html
+
+
+def test_sous_categorie_heading_a_aria_expanded(html):
+    """Les h2 de sous-catégorie doivent avoir aria-expanded (repliés par défaut)."""
+    assert 'aria-expanded="false"' in html
+
+
+def test_sous_categorie_heading_a_chevron(html):
+    """Les h2 de sous-catégorie doivent contenir un chevron."""
+    assert "sous-categorie-heading__chevron" in html
+
+
+def test_sous_categorie_body_wrapper_present(html):
+    """Les interventions doivent être enveloppées dans un data-sous-categorie-body."""
+    assert "data-sous-categorie-body" in html
+
+
+def test_css_sous_categorie_heading_pointer(client):
+    """Le CSS doit définir cursor: pointer sur sous-categorie-heading."""
+    css = client.get("/static/css/specialite.css").text
+    assert "cursor: pointer" in css
+
+
+def test_css_sous_categorie_chevron(client):
+    """Le CSS doit définir le style du chevron sous-categorie."""
+    css = client.get("/static/css/specialite.css").text
+    assert ".sous-categorie-heading__chevron" in css

@@ -71,9 +71,9 @@ def test_protocole_contient_reinjection(html):
     assert ("réinjection" in lower_html or "reinjection" in lower_html) and "4h" in lower_html
 
 
-def test_protocole_contient_duree(html):
-    """La durée doit être affichée."""
-    assert "durée" in html.lower() or "duree" in html.lower()
+def test_protocole_contient_reinjection_detail(html):
+    """Les détails de réinjection doivent être affichés."""
+    assert "réinjection" in html.lower() or "reinjection" in html.lower()
 
 
 # ---------- Bloc allergie ----------

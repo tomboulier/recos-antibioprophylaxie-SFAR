@@ -48,6 +48,11 @@ packages = ["app"]
 requires = ["hatchling"]
 build-backend = "hatchling.build"
 
+[dependency-groups]
+dev = [
+    "python-semantic-release>=10.5.3",
+]
+
 [tool.ruff]
 target-version = "py312"
 line-length = 99
@@ -81,3 +86,18 @@ exclude_lines = [
     "pragma: no cover",
     "if TYPE_CHECKING:",
 ]
+
+[tool.semantic_release]
+version_toml = ["pyproject.toml:project.version"]
+branch = "main"
+changelog_file = "CHANGELOG.md"
+build_command = false
+upload_to_pypi = false
+upload_to_release = true
+commit_message = "chore(release): v{version} [skip ci]"
+tag_format = "v{version}"
+
+[tool.semantic_release.commit_parser_options]
+allowed_tags = ["feat", "fix", "perf", "refactor", "docs", "style", "test", "chore", "ci", "build", "revert"]
+minor_tags = ["feat"]
+patch_tags = ["fix", "perf", "refactor"]

@@ -20,10 +20,26 @@
         placeholder="Rechercher une intervention… ex : prothèse de hanche"
         autofocus
         aria-label="Rechercher une intervention"
+        name="q"
+        hx-get="/search"
+        hx-trigger="keyup changed delay:100ms, input changed delay:100ms"
+        hx-target="#search-results"
+        hx-indicator=".search-bar"
       >
     </div>
+    <div id="search-results" class="search-results"></div>
   </div>
 </section>
+
+{% block scripts %}
+<script>
+document.querySelector('.search-bar__input').addEventListener('keydown', function(e) {
+  if (e.key === 'Enter' && this.value.trim()) {
+    window.location.href = '/recherche?q=' + encodeURIComponent(this.value.trim());
+  }
+});
+</script>
+{% endblock %}
 
 <section class="specialites" aria-label="Spécialités chirurgicales">
   <h2 class="specialites__title">Parcourir par spécialité</h2>

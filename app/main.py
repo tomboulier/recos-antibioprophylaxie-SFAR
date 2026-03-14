@@ -10,6 +10,8 @@ from fastapi.responses import HTMLResponse
 from fastapi.staticfiles import StaticFiles
 from fastapi.templating import Jinja2Templates
 
+from app.api import interventions_router, specialites_router
+from app.api.search import router as search_router
 from app.config import _PROJECT_ROOT, Settings
 from app.data.loader import load_rfe_data
 from app.web.routes import router as web_router
@@ -43,12 +45,20 @@ app = FastAPI(
 _templates = Jinja2Templates(directory=str(_PROJECT_ROOT / "app" / "templates"))
 
 app.mount("/static", StaticFiles(directory=str(_PROJECT_ROOT / "app" / "static")), name="static")
+app.include_router(interventions_router)
+app.include_router(specialites_router)
+app.include_router(search_router)
 app.include_router(web_router)
 
 
 @app.exception_handler(404)
-async def not_found_handler(request: Request, _exc: Exception) -> HTMLResponse:
-    """Page 404 personnalisée avec le layout du site."""
+async def not_found_handler(request: Request, exc: Exception) -> HTMLResponse:
+    """Page 404 personnalisée : JSON pour les routes API, HTML sinon."""
+    from fastapi.responses import JSONResponse
+
+    if request.url.path.startswith("/api/"):
+        detail = getattr(exc, "detail", "Ressource non trouvée.")
+        return JSONResponse(status_code=404, content={"detail": detail})
     return HTMLResponse(
         content=_templates.get_template("404.html").render({"request": request}),
         status_code=404,

@@ -1,0 +1,19 @@
+{% if results %}
+<ul class="search-results__list">
+  {% for r in results %}
+  <li class="search-results__item">
+    <a href="/protocole/{{ r.id }}" class="search-results__link">
+      <span class="search-results__nom">{{ r.nom }}</span>
+      <span class="search-results__specialite">{{ r.specialite }}</span>
+    </a>
+  </li>
+  {% endfor %}
+  {% if has_more %}
+  <li class="search-results__item search-results__item--more">
+    <a href="/recherche?q={{ query | urlencode }}" class="search-results__link search-results__link--more">
+      Voir tous les résultats pour « {{ query }} »
+    </a>
+  </li>
+  {% endif %}
+</ul>
+{% endif %}
