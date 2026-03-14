@@ -31,6 +31,16 @@
   </div>
 </section>
 
+{% block scripts %}
+<script>
+document.querySelector('.search-bar__input').addEventListener('keydown', function(e) {
+  if (e.key === 'Enter' && this.value.trim()) {
+    window.location.href = '/recherche?q=' + encodeURIComponent(this.value.trim());
+  }
+});
+</script>
+{% endblock %}
+
 <section class="specialites" aria-label="Spécialités chirurgicales">
   <h2 class="specialites__title">Parcourir par spécialité</h2>
   <div class="specialites__grid">

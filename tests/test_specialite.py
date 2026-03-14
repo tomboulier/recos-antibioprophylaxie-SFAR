@@ -70,7 +70,7 @@ def test_interventions_ont_lien_protocole(html):
     """Chaque intervention doit avoir un lien vers /protocole/{id}."""
     assert "/protocole/ortho-prog-mi-prothese-hanche-genou" in html
     assert "/protocole/ortho-prog-mi-arthroscopie-sans-materiel" in html
-    assert "Voir le protocole complet" in html
+    assert "Aller sur la page du protocole" in html
 
 
 def test_interventions_header_est_bouton(html):

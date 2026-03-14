@@ -117,6 +117,32 @@ async def search_partial(
     )
 
 
+@router.get("/specialites")
+async def liste_specialites(request: Request):
+    """Page liste de toutes les spécialités (lien 'Parcourir').
+
+    Parameters
+    ----------
+    request : Request
+        Requête HTTP entrante.
+
+    Returns
+    -------
+    TemplateResponse
+        Page HTML avec la grille des spécialités.
+    """
+    rfe = request.app.state.rfe_data
+    specialites = [
+        {"id": s.id, "nom": s.nom, "nb_interventions": len(s.interventions)}
+        for s in rfe.specialites
+    ]
+    return templates.TemplateResponse(
+        request,
+        "specialites.html",
+        {"specialites": specialites},
+    )
+
+
 @router.get("/recherche")
 async def recherche(
     request: Request,
