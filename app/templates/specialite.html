@@ -37,7 +37,7 @@
   </h2>
   {% endif %}
 
-  <div class="sous-categorie-body" data-sous-categorie-body hidden>
+  <div class="sous-categorie-body" data-sous-categorie-body {% if groupes|length > 1 %}hidden{% endif %}>
     {% for interv in interventions %}
     <div class="intervention-item">
       <button type="button" class="intervention-item__header" aria-expanded="false">
