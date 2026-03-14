@@ -50,8 +50,12 @@ def _build_search_index(data: RFEData) -> list[tuple[str, Intervention]]:
     index = []
     for specialite in data.specialites:
         for intervention in specialite.interventions:
-            # Indexer sur nom + spécialité pour enrichir le matching
+            # Indexer sur nom + spécialité + molécules pour enrichir le matching
             texte = f"{intervention.nom} {intervention.specialite}"
+            if intervention.protocole:
+                texte += f" {intervention.protocole.molecule}"
+            for alt in intervention.alternative_allergie or []:
+                texte += f" {alt.molecule}"
             index.append((texte, intervention))
     return index
 
