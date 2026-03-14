@@ -20,8 +20,14 @@
         placeholder="Rechercher une intervention… ex : prothèse de hanche"
         autofocus
         aria-label="Rechercher une intervention"
+        name="q"
+        hx-get="/search"
+        hx-trigger="keyup changed delay:100ms"
+        hx-target="#search-results"
+        hx-indicator=".search-bar"
       >
     </div>
+    <div id="search-results" class="search-results"></div>
   </div>
 </section>
 

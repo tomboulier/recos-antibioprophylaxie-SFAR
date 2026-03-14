@@ -1,0 +1,14 @@
+{% if results %}
+<ul class="search-results__list">
+  {% for r in results %}
+  <li class="search-results__item">
+    <a href="/protocoles/{{ r.id }}" class="search-results__link">
+      <span class="search-results__nom">{{ r.nom }}</span>
+      <span class="search-results__specialite">{{ r.specialite }}</span>
+    </a>
+  </li>
+  {% endfor %}
+</ul>
+{% else %}
+<p class="search-results__empty">Aucun résultat.</p>
+{% endif %}

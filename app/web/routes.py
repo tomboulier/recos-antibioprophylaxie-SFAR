@@ -2,7 +2,9 @@
 
 from __future__ import annotations
 
-from fastapi import APIRouter, Request
+from typing import Annotated
+
+from fastapi import APIRouter, Query, Request
 from fastapi.templating import Jinja2Templates
 
 from app.config import _PROJECT_ROOT
@@ -73,6 +75,44 @@ async def protocole(request: Request, intervention_id: str):
         request,
         "404.html",
         status_code=404,
+    )
+
+
+@router.get("/search")
+async def search_partial(
+    request: Request,
+    q: Annotated[str, Query(description="Texte de recherche")] = "",
+):
+    """Partial HTML pour la recherche fuzzy (HTMX).
+
+    Parameters
+    ----------
+    request : Request
+        Requête HTTP entrante.
+    q : str, optional
+        Texte de recherche.
+
+    Returns
+    -------
+    TemplateResponse
+        Fragment HTML avec les résultats de recherche.
+    """
+    from app.data.search import search_interventions
+
+    rfe = request.app.state.rfe_data
+    results = search_interventions(q, rfe) if q.strip() else []
+    items = [
+        {
+            "id": r.intervention.id,
+            "nom": r.intervention.nom,
+            "specialite": r.intervention.specialite,
+        }
+        for r in results
+    ]
+    return templates.TemplateResponse(
+        request,
+        "partials/search_results.html",
+        {"results": items},
     )
 
 
