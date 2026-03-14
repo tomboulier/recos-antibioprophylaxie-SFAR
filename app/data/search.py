@@ -99,9 +99,16 @@ def search_interventions(
     if not index:
         return []
 
-    textes = [texte.lower() for texte, _ in index]
+    # Pour les requêtes courtes (< 4 chars) : sous-chaîne exacte
+    if len(query) < 4:
+        results = []
+        for texte, intervention in index:
+            if query in texte.lower():
+                results.append(SearchResult(intervention=intervention, score=100.0))
+        return results[:limit]
 
-    # rapidfuzz.process.extract retourne une liste de (match, score, index)
+    # Pour les requêtes plus longues : fuzzy matching
+    textes = [texte.lower() for texte, _ in index]
     matches = process.extract(
         query,
         textes,
@@ -115,8 +122,6 @@ def search_interventions(
         _, intervention = index[idx]
         results.append(SearchResult(intervention=intervention, score=score))
 
-    # Tri décroissant par score (process.extract retourne déjà trié,
-    # mais on garantit l'ordre explicitement)
     results.sort(key=lambda r: r.score, reverse=True)
 
     return results
