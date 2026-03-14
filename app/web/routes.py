@@ -100,7 +100,46 @@ async def search_partial(
     from app.data.search import search_interventions
 
     rfe = request.app.state.rfe_data
-    results = search_interventions(q, rfe) if q.strip() else []
+    results = search_interventions(q, rfe, limit=6) if q.strip() else []
+    items = [
+        {
+            "id": r.intervention.id,
+            "nom": r.intervention.nom,
+            "specialite": r.intervention.specialite,
+        }
+        for r in results[:5]
+    ]
+    has_more = len(results) > 5
+    return templates.TemplateResponse(
+        request,
+        "partials/search_results.html",
+        {"results": items, "has_more": has_more, "query": q},
+    )
+
+
+@router.get("/recherche")
+async def recherche(
+    request: Request,
+    q: Annotated[str, Query(description="Texte de recherche")] = "",
+):
+    """Page de résultats de recherche complète.
+
+    Parameters
+    ----------
+    request : Request
+        Requête HTTP entrante.
+    q : str, optional
+        Texte de recherche.
+
+    Returns
+    -------
+    TemplateResponse
+        Page HTML avec tous les résultats de recherche.
+    """
+    from app.data.search import search_interventions
+
+    rfe = request.app.state.rfe_data
+    results = search_interventions(q, rfe, limit=50) if q.strip() else []
     items = [
         {
             "id": r.intervention.id,
@@ -111,8 +150,8 @@ async def search_partial(
     ]
     return templates.TemplateResponse(
         request,
-        "partials/search_results.html",
-        {"results": items},
+        "recherche.html",
+        {"query": q, "results": items},
     )
 
 

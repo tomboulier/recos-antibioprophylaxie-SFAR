@@ -1,0 +1,57 @@
+{% extends "base.html" %}
+
+{% block title %}Résultats pour « {{ query }} » — Antibioprophylaxie SFAR{% endblock %}
+
+{% block head %}
+<link rel="stylesheet" href="/static/css/accueil.css">
+{% endblock %}
+
+{% block content %}
+<section class="hero">
+  <h1>Résultats de recherche</h1>
+
+  <div class="search-container">
+    <div class="search-bar">
+      <span class="search-bar__icon" aria-hidden="true">🔍</span>
+      <input
+        type="search"
+        class="search-bar__input"
+        placeholder="Rechercher une intervention…"
+        value="{{ query }}"
+        aria-label="Rechercher une intervention"
+        name="q"
+        hx-get="/search"
+        hx-trigger="keyup changed delay:100ms"
+        hx-target="#search-results"
+      >
+    </div>
+    <div id="search-results" class="search-results"></div>
+  </div>
+</section>
+
+<section class="recherche-resultats">
+  {% if query %}
+    <p class="recherche-resultats__meta">
+      {% if results %}
+        {{ results | length }} résultat{{ "s" if results | length != 1 else "" }} pour <strong>« {{ query }} »</strong>
+      {% else %}
+        Aucun résultat pour <strong>« {{ query }} »</strong>.
+      {% endif %}
+    </p>
+    {% if results %}
+    <ul class="recherche-resultats__list">
+      {% for r in results %}
+      <li class="recherche-resultats__item">
+        <a href="/protocole/{{ r.id }}" class="recherche-resultats__link">
+          <span class="recherche-resultats__nom">{{ r.nom }}</span>
+          <span class="recherche-resultats__specialite">{{ r.specialite }}</span>
+        </a>
+      </li>
+      {% endfor %}
+    </ul>
+    {% endif %}
+  {% else %}
+    <p class="recherche-resultats__meta">Entrez un terme de recherche ci-dessus.</p>
+  {% endif %}
+</section>
+{% endblock %}

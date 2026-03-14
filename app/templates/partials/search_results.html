@@ -8,7 +8,12 @@
     </a>
   </li>
   {% endfor %}
+  {% if has_more %}
+  <li class="search-results__item search-results__item--more">
+    <a href="/recherche?q={{ query | urlencode }}" class="search-results__link search-results__link--more">
+      Voir tous les résultats pour « {{ query }} »
+    </a>
+  </li>
+  {% endif %}
 </ul>
-{% else %}
-<p class="search-results__empty">Aucun résultat.</p>
 {% endif %}
