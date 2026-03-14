@@ -35,10 +35,6 @@
       <dt>Réinjection</dt>
       <dd>{{ intervention.protocole.reinjection }}</dd>
       {% endif %}
-      {% if intervention.protocole.duree %}
-      <dt>Durée</dt>
-      <dd>{{ intervention.protocole.duree }}</dd>
-      {% endif %}
     </dl>
   </div>
 
@@ -58,10 +54,6 @@
         {% if alt.reinjection %}
         <dt>Réinjection</dt>
         <dd>{{ alt.reinjection }}</dd>
-        {% endif %}
-        {% if alt.duree %}
-        <dt>Durée</dt>
-        <dd>{{ alt.duree }}</dd>
         {% endif %}
       </dl>
     </div>

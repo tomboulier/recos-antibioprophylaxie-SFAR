@@ -51,18 +51,16 @@ class TestProtocole:
             molecule="Céfazoline",
             dose_initiale="2g IVL",
             reinjection="1g toutes les 4h",
-            duree="Durée de l'intervention",
         )
         assert p.molecule == Molecule.CEFAZOLINE
         assert p.reinjection == "1g toutes les 4h"
 
-    def test_reinjection_et_duree_optionnelles(self):
+    def test_reinjection_optionnelle(self):
         p = Protocole(
             molecule="Gentamicine",
             dose_initiale="6-7 mg/kg",
         )
         assert p.reinjection is None
-        assert p.duree is None
 
     def test_intention_optionnelle(self):
         p = Protocole(
@@ -99,7 +97,6 @@ class TestIntervention:
             protocole=Protocole(
                 molecule="Céfazoline",
                 dose_initiale="2g IVL",
-                duree="Durée de l'intervention",
             ),
             force_recommandation=ForceRecommandation.AVIS_EXPERTS,
             source_page=73,
