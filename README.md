@@ -15,6 +15,12 @@ Webapp de consultation des recommandations d'antibioprophylaxie chirurgicale, ba
 
 Python 3.12 · FastAPI · Jinja2 · HTMX · CSS vanilla · Mistral AI · MCP
 
+## Démo en ligne
+
+**https://recos-antibioprophylaxie-sfar.onrender.com**
+
+> Hébergé sur Render (free tier). Premier chargement ~30s si l'app était en veille.
+
 ## Statut
 
 En cours de développement. Voir la [documentation projet](docs/) pour les détails.
@@ -70,6 +76,34 @@ Variables d'environnement (optionnelles) :
 |----------|--------|-------------|
 | `DEBUG` | `false` | Mode debug |
 | `DATA_PATH` | `data/rfe.json` | Chemin vers le fichier de données |
+
+## Déploiement Render
+
+L'app est déployée sur **[https://recos-antibioprophylaxie-sfar.onrender.com](https://recos-antibioprophylaxie-sfar.onrender.com)**.
+
+Pour déployer votre propre instance sur [Render](https://render.com) :
+
+### Déploiement automatique (via render.yaml)
+
+1. Forker ou connecter ce repo sur [dashboard.render.com](https://dashboard.render.com)
+2. Cliquer **"New → Blueprint"** et sélectionner ce repo
+3. Render détecte automatiquement `render.yaml` et configure le service
+
+### Déploiement manuel
+
+1. **New → Web Service** sur Render
+2. Connecter le repo GitHub
+3. Renseigner :
+   - **Runtime :** Python 3
+   - **Build command :** `pip install uv && uv sync`
+   - **Start command :** `uvicorn app.main:app --host 0.0.0.0 --port $PORT`
+   - **Health Check Path :** `/api/v1/health`
+4. Ajouter les variables d'environnement :
+   - `PYTHON_VERSION` = `3.12.0`
+   - `DEBUG` = `false`
+5. Laisser les autres options par défaut (Free plan)
+
+> **Note :** Le free tier se met en veille après 15 min d'inactivité (premier chargement ~30s). Suffisant pour les démos.
 
 ## Documentation
 

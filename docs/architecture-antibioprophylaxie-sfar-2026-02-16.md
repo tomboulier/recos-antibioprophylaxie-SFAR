@@ -156,7 +156,7 @@ Chaque niveau sera testé avec Mistral, Claude et GPT-4 pour une matrice complè
 
 | Choix | Technologie | Justification |
 |-------|-------------|---------------|
-| **Hébergement** | À choisir : Fly.io, Railway, Render, ou Hetzner VPS | Détail ci-dessous |
+| **Hébergement** | **Render** (choisi) — https://recos-antibioprophylaxie-sfar.onrender.com | Free tier, déploiement depuis GitHub, zéro config |
 | **Conteneur** | Docker | Déploiement reproductible, standard |
 | **CI/CD** | GitHub Actions | Gratuit pour les repos publics, intégré à GitHub |
 | **Domaine** | Optionnel (sous-domaine gratuit du provider) | Domaine custom en V2 si besoin |
@@ -167,7 +167,8 @@ Chaque niveau sera testé avec Mistral, Claude et GPT-4 pour une matrice complè
 |--------|------|-------------|-------------|----------------|
 | **Fly.io** | 0-5€/mois | Oui (gratuit) | Faible | Bon compromis |
 | **Railway** | 0-5€/mois | Non (hobby) | Très faible | DX excellent |
-| **Render** | 0-7€/mois | Oui (gratuit) | Faible | Simple |
+| **Render** | 0-7€/mois | Oui (gratuit) | Faible | **Choix retenu** |
+| **Hugging Face Spaces** | Gratuit | Non | Faible | Sans CB, Docker, port 7860 |
 | **Hetzner VPS** | ~4€/mois | Non | Moyenne | Meilleur perf/prix |
 
 **Stratégie de déploiement en 2 phases :**
@@ -784,7 +785,7 @@ jobs:
 
 ## 13. Questions ouvertes
 
-1. **Choix final de l'hébergeur** : à trancher au moment du premier déploiement (Railway vs Fly.io vs VPS)
+1. ~~**Choix final de l'hébergeur**~~ : **Résolu** — Render (free tier), voir `render.yaml` et le README
 2. **Modèle LLM pour l'étude comparative** : tester aussi GPT-4 et Mistral en plus de Claude ?
 3. **Streaming des réponses chatbot** : SSE natif HTMX ou polling ? (SSE recommandé)
 4. **PWA** : ajouter un manifest + service worker pour l'installation sur écran d'accueil ? (V2 possible)

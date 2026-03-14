@@ -1,0 +1,14 @@
+services:
+  - type: web
+    name: recos-antibioprophylaxie-sfar
+    runtime: python
+    region: frankfurt
+    plan: free
+    buildCommand: pip install "uv==0.4.20" && uv sync --frozen
+    startCommand: uvicorn app.main:app --host 0.0.0.0 --port $PORT
+    healthCheckPath: /api/v1/health
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.12.0
+      - key: DEBUG
+        value: false
