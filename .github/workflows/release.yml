@@ -27,10 +27,5 @@ jobs:
       - name: Python Semantic Release
         env:
           GH_TOKEN: ${{ secrets.GH_TOKEN || github.token }}
-        run: uv run semantic-release version --no-vcs-release
-        # Crée le tag + met à jour pyproject.toml + génère CHANGELOG.md
-
-      - name: Publish GitHub Release
-        env:
-          GH_TOKEN: ${{ secrets.GH_TOKEN || github.token }}
-        run: uv run semantic-release publish
+        run: uv run semantic-release version
+        # Crée le tag + GitHub Release + met à jour pyproject.toml + génère CHANGELOG.md
