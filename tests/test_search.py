@@ -125,6 +125,20 @@ class TestSearchInterventions:
         assert len(results) > 0
         assert results[0].intervention.id == "orthopedie-01"
 
+    def test_recherche_sans_accent_trouve_avec_accent(self, rfe_data_minimal):
+        """Taper sans accent trouve les interventions avec accent."""
+        results = search_interventions("prothese", rfe_data_minimal)
+
+        noms = [r.intervention.nom for r in results]
+        assert any("Prothèse" in nom for nom in noms)
+
+    def test_recherche_avec_accent_trouve_avec_accent(self, rfe_data_minimal):
+        """Taper avec accent fonctionne aussi."""
+        results = search_interventions("Prothèse", rfe_data_minimal)
+
+        assert len(results) > 0
+        assert results[0].intervention.id == "orthopedie-01"
+
     def test_recherche_vide_retourne_liste_vide(self, rfe_data_minimal):
         """Une requête vide retourne une liste vide."""
         results = search_interventions("", rfe_data_minimal)
@@ -251,3 +265,74 @@ class TestSearchEndpoint:
         response = client.get("/api/v1/search", params={"q": "a", "limit": 3})
         data = response.json()
         assert len(data) <= 3
+
+
+# ---------------------------------------------------------------------------
+# Tests strip_accents (app.utils.text)
+# ---------------------------------------------------------------------------
+
+
+class TestStripAccents:
+    """Tests pour la normalisation unicode."""
+
+    def test_supprime_accent_aigu(self):
+        from app.utils.text import strip_accents
+
+        assert strip_accents("cérasion") == "cerasion"
+
+    def test_supprime_accent_grave(self):
+        from app.utils.text import strip_accents
+
+        assert strip_accents("prothèse") == "prothese"
+
+    def test_majuscules_normalisees(self):
+        from app.utils.text import strip_accents
+
+        assert strip_accents("HÉPATIQUE") == "hepatique"
+
+    def test_sans_accent_inchange(self):
+        from app.utils.text import strip_accents
+
+        assert strip_accents("hanche") == "hanche"
+
+    def test_ligature_oe_minuscule(self):
+        from app.utils.text import strip_accents
+
+        assert strip_accents("œsophage") == "oesophage"
+
+    def test_ligature_oe_majuscule(self):
+        from app.utils.text import strip_accents
+
+        assert strip_accents("Œsophage") == "oesophage"
+
+    def test_ligature_ae_minuscule(self):
+        from app.utils.text import strip_accents
+
+        assert strip_accents("æther") == "aether"
+
+
+# ---------------------------------------------------------------------------
+# Tests _highlight sans accent
+# ---------------------------------------------------------------------------
+
+
+class TestHighlightSansAccent:
+    """Tests pour le surlignage insensible aux accents."""
+
+    def test_query_sans_accent_surligne_texte_avec_accent(self):
+        from app.web.routes import _highlight
+
+        result = str(_highlight("Prothèse de hanche", "prothese"))
+        assert result == "<mark>Prothèse</mark> de hanche"
+
+    def test_query_avec_accent_surligne_aussi(self):
+        from app.web.routes import _highlight
+
+        result = str(_highlight("Prothèse de hanche", "Prothèse"))
+        assert result == "<mark>Prothèse</mark> de hanche"
+
+    def test_query_vide_retourne_texte_brut(self):
+        from app.web.routes import _highlight
+
+        result = str(_highlight("Prothèse de hanche", ""))
+        assert result == "Prothèse de hanche"

@@ -11,11 +11,17 @@ from typing import TYPE_CHECKING
 
 from rapidfuzz import fuzz, process
 
+from app.utils.text import strip_accents
+
 if TYPE_CHECKING:
     from app.data.models import Intervention, RFEData
 
 # Seuil minimal de score pour retenir un résultat (sur 100)
 _SCORE_MIN = 75
+
+
+# Alias privé pour la compatibilité interne (usage direct dans ce module)
+_strip_accents = strip_accents
 
 
 @dataclass
@@ -50,8 +56,8 @@ def _build_search_index(data: RFEData) -> list[tuple[str, Intervention]]:
     index = []
     for specialite in data.specialites:
         for intervention in specialite.interventions:
-            # Indexer sur nom + spécialité
-            texte = f"{intervention.nom} {intervention.specialite}"
+            # Indexer sur nom + spécialité, normalisé sans accents pour le matching
+            texte = _strip_accents(f"{intervention.nom} {intervention.specialite}")
             index.append((texte, intervention))
     return index
 
@@ -91,7 +97,7 @@ def search_interventions(
     >>> results[0].score
     90.0
     """
-    query = query.strip().lower()
+    query = _strip_accents(query.strip())
     if not query:
         return []
 
@@ -103,12 +109,12 @@ def search_interventions(
     if len(query) < 4:
         results = []
         for texte, intervention in index:
-            if query in texte.lower():
+            if query in texte:
                 results.append(SearchResult(intervention=intervention, score=100.0))
         return results[:limit]
 
     # Pour les requêtes plus longues : fuzzy matching
-    textes = [texte.lower() for texte, _ in index]
+    textes = [texte for texte, _ in index]
     matches = process.extract(
         query,
         textes,

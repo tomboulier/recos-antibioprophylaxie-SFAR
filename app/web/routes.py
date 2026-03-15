@@ -18,27 +18,39 @@ templates = Jinja2Templates(directory=str(_PROJECT_ROOT / "app" / "templates"))
 def _highlight(text: str, query: str) -> Markup:
     """Surligne les occurrences de query dans text avec <mark>.
 
+    La comparaison est insensible à la casse et aux accents : taper
+    "cesari" surligne "Césarienne". Le texte affiché conserve ses accents.
+
     Parameters
     ----------
     text : str
-        Texte à traiter.
+        Texte brut à traiter (non échappé).
     query : str
-        Terme à surligner (insensible à la casse).
+        Terme à surligner (insensible à la casse et aux accents).
 
     Returns
     -------
     Markup
         HTML sûr avec les occurrences entourées de <mark>.
     """
-    escaped_text = Markup.escape(text)
-    if not query.strip():
-        return escaped_text
-    pattern = re.compile(re.escape(query.strip()), re.IGNORECASE)
-    highlighted = pattern.sub(
-        lambda m: Markup(f"<mark>{m.group()}</mark>"),
-        str(escaped_text),
-    )
-    return Markup(highlighted)
+    from app.utils.text import strip_accents
+
+    query_norm = strip_accents(query.strip())
+    if not query_norm:
+        return Markup.escape(text)
+
+    # Matching sur le texte brut normalisé (pas le HTML-escaped)
+    # pour éviter de chercher dans des entités HTML comme &amp;
+    text_norm = strip_accents(text)
+    pattern = re.compile(re.escape(query_norm))
+    result = []
+    last = 0
+    for m in pattern.finditer(text_norm):
+        result.append(str(Markup.escape(text[last : m.start()])))
+        result.append(f"<mark>{Markup.escape(text[m.start() : m.end()])}</mark>")
+        last = m.end()
+    result.append(str(Markup.escape(text[last:])))
+    return Markup("".join(result))
 
 
 @router.get("/")
