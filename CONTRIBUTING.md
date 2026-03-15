@@ -30,27 +30,37 @@ uv run uvicorn app.main:app --reload
 
 ## Git flow
 
-- **Branche principale :** `main` (toujours déployable)
+- **Branche principale :** `main` (toujours déployable, déploiement auto sur Render prod)
+- **Branche d'intégration :** `dev` (staging, déploiement auto sur Render staging)
 - **Branches de travail :** `feat/xxx`, `fix/xxx`, `docs/xxx`, `refactor/xxx`, `test/xxx`, `chore/xxx`
-- Pas de branche `develop` (projet solo)
+
+### Environnements Render
+
+| Branche | URL | Usage |
+|---------|-----|-------|
+| `main` | https://recos-antibioprophylaxie-sfar.onrender.com | Production |
+| `dev` | https://recos-antibioprophylaxie-sfar-dev.onrender.com | Staging / test |
 
 ### Workflow
 
 ```bash
-# 1. Créer une branche depuis main
-git checkout main && git pull
+# 1. Créer une branche depuis dev
+git checkout dev && git pull
 git checkout -b feat/ma-feature
 
 # 2. Développer + commiter (conventional commits, voir ci-dessous)
 git add <fichiers>
 git commit -m "feat(scope): description courte"
 
-# 3. Pousser et créer une PR
+# 3. Pousser et créer une PR vers dev
 git push -u origin feat/ma-feature
-gh pr create --title "feat(scope): description" --body "Description détaillée"
+gh pr create --base dev --title "feat(scope): description" --body "Description détaillée"
 
-# 4. Vérifier que la CI passe, puis merger
+# 4. Vérifier que la CI passe, puis merger dans dev (squash)
 gh pr merge --squash
+
+# 5. Quand dev est stable, ouvrir une PR dev → main pour la mise en production
+gh pr create --base main --head dev --title "release: ..."
 ```
 
 ## Conventional commits
