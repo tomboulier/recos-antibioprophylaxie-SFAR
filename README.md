@@ -17,7 +17,10 @@ Python 3.12 · FastAPI · Jinja2 · HTMX · CSS vanilla · Mistral AI · MCP
 
 ## Démo en ligne
 
-**https://recos-antibioprophylaxie-sfar.onrender.com**
+| Environnement | URL | Branche |
+|---------------|-----|---------|
+| **Production** | https://recos-antibioprophylaxie-sfar.onrender.com | `main` |
+| **Staging** | https://recos-antibioprophylaxie-sfar-dev.onrender.com | `dev` |
 
 > Hébergé sur Render (free tier). Premier chargement ~30s si l'app était en veille.
 
@@ -41,7 +44,7 @@ uv run pytest
 uv run uvicorn app.main:app --reload
 ```
 
-Le serveur démarre sur http://localhost:8000. Les données de `data/rfe.json` (47 interventions, 2 spécialités) sont chargées en mémoire au démarrage.
+Le serveur démarre sur http://localhost:8000. Les données de `data/rfe.json` (240 interventions, 21 spécialités) sont chargées en mémoire au démarrage.
 
 ### Endpoints disponibles
 
@@ -63,8 +66,8 @@ curl http://localhost:8000/api/v1/health
   "status": "ok",
   "version": "0.1.0",
   "data_version": "RFE SFAR 2024",
-  "specialites": 2,
-  "interventions": 47
+  "specialites": 21,
+  "interventions": 240
 }
 ```
 
