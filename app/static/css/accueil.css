@@ -209,6 +209,14 @@
   background: var(--color-bg-subtle, #f3f4f6);
 }
 
+/* Focus clavier : même fond que hover + accent gauche pour indiquer la sélection */
+.search-results__link:focus,
+.search-results__link:focus-visible {
+  outline: none;
+  background: var(--color-bg-subtle, #f3f4f6);
+  box-shadow: inset 3px 0 0 var(--color-primary, #1a56db);
+}
+
 .search-results__nom {
   font-weight: 500;
   color: var(--color-text, #111);
