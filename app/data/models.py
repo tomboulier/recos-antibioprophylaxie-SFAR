@@ -31,6 +31,24 @@ class Molecule(StrEnum):
     GENTAMICINE = "Gentamicine"
     CLINDAMYCINE_GENTAMICINE = "Clindamycine + Gentamicine"
     CEFAZOLINE_GENTAMICINE = "Céfazoline + Gentamicine"
+    # Nouvelles molécules — spécialités hors ortho/trauma
+    CEFUROXIME = "Céfuroxime"
+    CEFOXITINE = "Céfoxitine"
+    AMOXICILLINE = "Amoxicilline"
+    METRONIDAZOLE = "Métronidazole"
+    ERTAPENEM = "Ertapénème"
+    PIPERACILLINE_TAZOBACTAM = "Pipéracilline + Tazobactam"
+    FOSFOMYCINE_TROMETAMOL = "Fosfomycine-trométamol"
+    CIPROFLOXACINE = "Ciprofloxacine"
+    CEFTRIAXONE = "Ceftriaxone"
+    MOXIFLOXACINE = "Moxifloxacine"
+    CEFTAZIDIME = "Ceftazidime"
+    AMIKACINE = "Amikacine"
+    TOBRAMYCINE = "Tobramycine"
+    PRISTINAMYCINE = "Pristinamycine"
+    CEFAZOLINE_METRONIDAZOLE = "Céfazoline + Métronidazole"
+    VANCOMYCINE_CEFTAZIDIME = "Vancomycine + Ceftazidime"
+    GENTAMICINE_METRONIDAZOLE = "Gentamicine + Métronidazole"
 
 
 class ForceRecommandation(StrEnum):
