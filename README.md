@@ -17,7 +17,10 @@ Python 3.12 · FastAPI · Jinja2 · HTMX · CSS vanilla · Mistral AI · MCP
 
 ## Démo en ligne
 
-**https://recos-antibioprophylaxie-sfar.onrender.com**
+| Environnement | URL | Branche |
+|---------------|-----|---------|
+| **Production** | https://recos-antibioprophylaxie-sfar.onrender.com | `main` |
+| **Staging** | https://recos-antibioprophylaxie-sfar-dev.onrender.com | `dev` |
 
 > Hébergé sur Render (free tier). Premier chargement ~30s si l'app était en veille.
 
