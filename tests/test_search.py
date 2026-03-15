@@ -336,3 +336,17 @@ class TestHighlightSansAccent:
 
         result = str(_highlight("Prothèse de hanche", ""))
         assert result == "Prothèse de hanche"
+
+    def test_ligature_oe_surlignee_avec_query_sans_ligature(self):
+        # "oeso" (4 chars normalisés) = Œ(→oe) + s + o → "Œso" dans l'original
+        from app.web.routes import _highlight
+
+        result = str(_highlight("Œsophagectomie", "oeso"))
+        assert result == "<mark>Œso</mark>phagectomie"
+
+    def test_ligature_milieu_mot(self):
+        # "coelio" (6 chars normalisés) = c + œ(→oe) + l + i + o → "cœlio" dans l'original
+        from app.web.routes import _highlight
+
+        result = str(_highlight("cœlioscopie", "coelio"))
+        assert result == "<mark>cœlio</mark>scopie"

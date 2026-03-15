@@ -20,10 +20,6 @@ if TYPE_CHECKING:
 _SCORE_MIN = 75
 
 
-# Alias privé pour la compatibilité interne (usage direct dans ce module)
-_strip_accents = strip_accents
-
-
 @dataclass
 class SearchResult:
     """Résultat d'une recherche d'intervention.
@@ -57,7 +53,7 @@ def _build_search_index(data: RFEData) -> list[tuple[str, Intervention]]:
     for specialite in data.specialites:
         for intervention in specialite.interventions:
             # Indexer sur nom + spécialité, normalisé sans accents pour le matching
-            texte = _strip_accents(f"{intervention.nom} {intervention.specialite}")
+            texte = strip_accents(f"{intervention.nom} {intervention.specialite}")
             index.append((texte, intervention))
     return index
 
@@ -97,7 +93,7 @@ def search_interventions(
     >>> results[0].score
     90.0
     """
-    query = _strip_accents(query.strip())
+    query = strip_accents(query.strip())
     if not query:
         return []
 
