@@ -268,7 +268,7 @@ class TestSearchEndpoint:
 
 
 # ---------------------------------------------------------------------------
-# Tests _strip_accents
+# Tests strip_accents (app.utils.text)
 # ---------------------------------------------------------------------------
 
 
@@ -276,24 +276,39 @@ class TestStripAccents:
     """Tests pour la normalisation unicode."""
 
     def test_supprime_accent_aigu(self):
-        from app.data.search import _strip_accents
+        from app.utils.text import strip_accents
 
-        assert _strip_accents("cérasion") == "cerasion"
+        assert strip_accents("cérasion") == "cerasion"
 
     def test_supprime_accent_grave(self):
-        from app.data.search import _strip_accents
+        from app.utils.text import strip_accents
 
-        assert _strip_accents("prothèse") == "prothese"
+        assert strip_accents("prothèse") == "prothese"
 
     def test_majuscules_normalisees(self):
-        from app.data.search import _strip_accents
+        from app.utils.text import strip_accents
 
-        assert _strip_accents("HÉPATIQUE") == "hepatique"
+        assert strip_accents("HÉPATIQUE") == "hepatique"
 
     def test_sans_accent_inchange(self):
-        from app.data.search import _strip_accents
+        from app.utils.text import strip_accents
 
-        assert _strip_accents("hanche") == "hanche"
+        assert strip_accents("hanche") == "hanche"
+
+    def test_ligature_oe_minuscule(self):
+        from app.utils.text import strip_accents
+
+        assert strip_accents("œsophage") == "oesophage"
+
+    def test_ligature_oe_majuscule(self):
+        from app.utils.text import strip_accents
+
+        assert strip_accents("Œsophage") == "oesophage"
+
+    def test_ligature_ae_minuscule(self):
+        from app.utils.text import strip_accents
+
+        assert strip_accents("æther") == "aether"
 
 
 # ---------------------------------------------------------------------------
@@ -308,18 +323,16 @@ class TestHighlightSansAccent:
         from app.web.routes import _highlight
 
         result = str(_highlight("Prothèse de hanche", "prothese"))
-        assert "<mark>Proth" in result
-        assert "Proth" in result  # accents préservés dans le texte affiché
+        assert result == "<mark>Prothèse</mark> de hanche"
 
     def test_query_avec_accent_surligne_aussi(self):
         from app.web.routes import _highlight
 
         result = str(_highlight("Prothèse de hanche", "Prothèse"))
-        assert "<mark>" in result
+        assert result == "<mark>Prothèse</mark> de hanche"
 
     def test_query_vide_retourne_texte_brut(self):
         from app.web.routes import _highlight
 
         result = str(_highlight("Prothèse de hanche", ""))
-        assert "<mark>" not in result
-        assert "Prothèse de hanche" in result
+        assert result == "Prothèse de hanche"

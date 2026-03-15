@@ -6,11 +6,12 @@ et les spécialités.
 
 from __future__ import annotations
 
-import unicodedata
 from dataclasses import dataclass
 from typing import TYPE_CHECKING
 
 from rapidfuzz import fuzz, process
+
+from app.utils.text import strip_accents
 
 if TYPE_CHECKING:
     from app.data.models import Intervention, RFEData
@@ -19,29 +20,8 @@ if TYPE_CHECKING:
 _SCORE_MIN = 75
 
 
-def _strip_accents(text: str) -> str:
-    """Supprime les accents d'une chaîne (NFD + filtre catégorie Mn).
-
-    Parameters
-    ----------
-    text : str
-        Texte à normaliser.
-
-    Returns
-    -------
-    str
-        Texte sans accents, en minuscules.
-
-    Examples
-    --------
-    >>> _strip_accents("Césarienne")
-    'cesarienne'
-    >>> _strip_accents("HÉPATIQUE")
-    'hepatique'
-    """
-    return "".join(
-        c for c in unicodedata.normalize("NFD", text.lower()) if unicodedata.category(c) != "Mn"
-    )
+# Alias privé pour la compatibilité interne (usage direct dans ce module)
+_strip_accents = strip_accents
 
 
 @dataclass

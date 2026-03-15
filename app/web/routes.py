@@ -24,7 +24,7 @@ def _highlight(text: str, query: str) -> Markup:
     Parameters
     ----------
     text : str
-        Texte à traiter.
+        Texte brut à traiter (non échappé).
     query : str
         Terme à surligner (insensible à la casse et aux accents).
 
@@ -33,24 +33,23 @@ def _highlight(text: str, query: str) -> Markup:
     Markup
         HTML sûr avec les occurrences entourées de <mark>.
     """
-    from app.data.search import _strip_accents
+    from app.utils.text import strip_accents
 
-    escaped_text = Markup.escape(text)
-    query_norm = _strip_accents(query.strip())
+    query_norm = strip_accents(query.strip())
     if not query_norm:
-        return escaped_text
+        return Markup.escape(text)
 
-    # On reconstruit le texte original en insérant les balises <mark>
-    # en cherchant sur la version normalisée mais en gardant les chars originaux.
-    text_norm = _strip_accents(str(escaped_text))
+    # Matching sur le texte brut normalisé (pas le HTML-escaped)
+    # pour éviter de chercher dans des entités HTML comme &amp;
+    text_norm = strip_accents(text)
     pattern = re.compile(re.escape(query_norm))
     result = []
     last = 0
     for m in pattern.finditer(text_norm):
-        result.append(str(escaped_text)[last : m.start()])
-        result.append(f"<mark>{str(escaped_text)[m.start() : m.end()]}</mark>")
+        result.append(str(Markup.escape(text[last : m.start()])))
+        result.append(f"<mark>{Markup.escape(text[m.start() : m.end()])}</mark>")
         last = m.end()
-    result.append(str(escaped_text)[last:])
+    result.append(str(Markup.escape(text[last:])))
     return Markup("".join(result))
 
 
