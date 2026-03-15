@@ -151,16 +151,17 @@ async def search_partial(
     from app.data.search import search_interventions
 
     rfe = request.app.state.rfe_data
-    results = search_interventions(q, rfe, limit=3) if q.strip() else []
+    # On demande 4 pour détecter s'il y en a plus de 3 (has_more), mais on n'affiche que 3
+    results = search_interventions(q, rfe, limit=4) if q.strip() else []
+    has_more = len(results) > 3
     items = [
         {
             "id": r.intervention.id,
             "nom": _highlight(r.intervention.nom, q),
             "specialite": r.intervention.specialite,
         }
-        for r in results[:5]
+        for r in results[:3]
     ]
-    has_more = len(results) > 5
     return templates.TemplateResponse(
         request,
         "partials/search_results.html",

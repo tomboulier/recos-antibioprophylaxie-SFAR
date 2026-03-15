@@ -46,7 +46,12 @@
     const items = getItems();
     if (e.key === 'ArrowDown') {
       e.preventDefault();
+      // Champ → 1er item (ou dernier si on remonte circulairement)
       if (items.length > 0) items[0].focus();
+    } else if (e.key === 'ArrowUp') {
+      e.preventDefault();
+      // Champ + ↑ → dernier item (ex: "Voir tous les résultats")
+      if (items.length > 0) items[items.length - 1].focus();
     } else if (e.key === 'Enter' && this.value.trim()) {
       window.location.href = '/recherche?q=' + encodeURIComponent(this.value.trim());
     }
