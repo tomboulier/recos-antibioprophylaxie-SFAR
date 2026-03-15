@@ -37,11 +37,11 @@ class TestSearchEndpoint:
 
     def test_lien_voir_tous_present_si_has_more(self, client):
         """Le lien 'Voir tous les résultats' apparaît si plus de 3 résultats existent."""
-        resp = client.get("/search", params={"q": "a"})
+        # "proth" matche Prothèse de hanche/genou, vasculaire, etc. → garantiement > 3
+        resp = client.get("/search", params={"q": "proth"})
         assert resp.status_code == 200
-        # "a" est dans beaucoup d'interventions → has_more attendu
-        if resp.text.count("/protocole/") == 3:
-            assert "/recherche?q=" in resp.text
+        assert resp.text.count("/protocole/") == 3  # exactement 3 affichés
+        assert "/recherche?q=" in resp.text  # lien "Voir tous" présent
 
     def test_pas_de_lien_voir_tous_si_peu_de_resultats(self, client):
         """Pas de lien 'Voir tous' si moins de 3 résultats."""
