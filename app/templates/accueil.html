@@ -33,11 +33,51 @@
 
 {% block scripts %}
 <script>
-document.querySelector('.search-bar__input').addEventListener('keydown', function(e) {
-  if (e.key === 'Enter' && this.value.trim()) {
-    window.location.href = '/recherche?q=' + encodeURIComponent(this.value.trim());
+(function () {
+  const input = document.querySelector('.search-bar__input');
+  const resultsContainer = document.getElementById('search-results');
+
+  function getItems() {
+    return Array.from(resultsContainer.querySelectorAll('.search-results__link'));
   }
-});
+
+  // Navigation depuis le champ de saisie
+  input.addEventListener('keydown', function (e) {
+    const items = getItems();
+    if (e.key === 'ArrowDown') {
+      e.preventDefault();
+      // Champ → 1er item (ou dernier si on remonte circulairement)
+      if (items.length > 0) items[0].focus();
+    } else if (e.key === 'ArrowUp') {
+      e.preventDefault();
+      // Champ + ↑ → dernier item (ex: "Voir tous les résultats")
+      if (items.length > 0) items[items.length - 1].focus();
+    } else if (e.key === 'Enter' && this.value.trim()) {
+      window.location.href = '/recherche?q=' + encodeURIComponent(this.value.trim());
+    }
+  });
+
+  // Navigation dans la liste de suggestions (circulaire)
+  resultsContainer.addEventListener('keydown', function (e) {
+    const items = getItems();
+    const idx = items.indexOf(document.activeElement);
+
+    if (e.key === 'ArrowDown') {
+      e.preventDefault();
+      // Dernier élément → retour au premier (circulaire)
+      items[(idx + 1) % items.length]?.focus();
+    } else if (e.key === 'ArrowUp') {
+      e.preventDefault();
+      if (idx <= 0) {
+        // Premier élément → retour au champ de saisie
+        input.focus();
+      } else {
+        items[idx - 1].focus();
+      }
+    }
+    // Enter sur un lien → comportement natif (navigation)
+  });
+})();
 </script>
 {% endblock %}
 

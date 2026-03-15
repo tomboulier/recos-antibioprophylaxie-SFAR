@@ -54,7 +54,9 @@ def _highlight(text: str, query: str) -> Markup:
     for m in pattern.finditer(text_norm):
         # Convertit les positions normalisées en positions originales
         orig_start = norm_to_orig[m.start()] if m.start() < len(norm_to_orig) else len(text)
-        orig_end = (norm_to_orig[m.end() - 1] + 1) if m.end() > 0 and m.end() - 1 < len(norm_to_orig) else len(text)
+        last_norm_idx = m.end() - 1
+        in_bounds = m.end() > 0 and last_norm_idx < len(norm_to_orig)
+        orig_end = (norm_to_orig[last_norm_idx] + 1) if in_bounds else len(text)
         result.append(str(Markup.escape(text[last_orig:orig_start])))
         result.append(f"<mark>{Markup.escape(text[orig_start:orig_end])}</mark>")
         last_orig = orig_end
@@ -149,16 +151,17 @@ async def search_partial(
     from app.data.search import search_interventions
 
     rfe = request.app.state.rfe_data
-    results = search_interventions(q, rfe, limit=6) if q.strip() else []
+    # On demande 4 pour détecter s'il y en a plus de 3 (has_more), mais on n'affiche que 3
+    results = search_interventions(q, rfe, limit=4) if q.strip() else []
+    has_more = len(results) > 3
     items = [
         {
             "id": r.intervention.id,
             "nom": _highlight(r.intervention.nom, q),
             "specialite": r.intervention.specialite,
         }
-        for r in results[:5]
+        for r in results[:3]
     ]
-    has_more = len(results) > 5
     return templates.TemplateResponse(
         request,
         "partials/search_results.html",
