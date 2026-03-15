@@ -19,7 +19,8 @@ def _highlight(text: str, query: str) -> Markup:
     """Surligne les occurrences de query dans text avec <mark>.
 
     La comparaison est insensible à la casse et aux accents : taper
-    "cesari" surligne "Césarienne". Le texte affiché conserve ses accents.
+    "cesari" surligne "Césarienne", "oeso" surligne "Œsophagectomie".
+    Le texte affiché conserve ses accents et ligatures d'origine.
 
     Parameters
     ----------
@@ -39,17 +40,25 @@ def _highlight(text: str, query: str) -> Markup:
     if not query_norm:
         return Markup.escape(text)
 
-    # Matching sur le texte brut normalisé (pas le HTML-escaped)
-    # pour éviter de chercher dans des entités HTML comme &amp;
+    # Construction d'une table de correspondance : position dans text_norm → position dans text.
+    # strip_accents peut changer la longueur (ex: œ → oe), donc les offsets divergent.
+    norm_to_orig: list[int] = []
+    for i, char in enumerate(text):
+        norm_char = strip_accents(char)
+        norm_to_orig.extend([i] * len(norm_char))
+
     text_norm = strip_accents(text)
     pattern = re.compile(re.escape(query_norm))
     result = []
-    last = 0
+    last_orig = 0
     for m in pattern.finditer(text_norm):
-        result.append(str(Markup.escape(text[last : m.start()])))
-        result.append(f"<mark>{Markup.escape(text[m.start() : m.end()])}</mark>")
-        last = m.end()
-    result.append(str(Markup.escape(text[last:])))
+        # Convertit les positions normalisées en positions originales
+        orig_start = norm_to_orig[m.start()] if m.start() < len(norm_to_orig) else len(text)
+        orig_end = (norm_to_orig[m.end() - 1] + 1) if m.end() > 0 and m.end() - 1 < len(norm_to_orig) else len(text)
+        result.append(str(Markup.escape(text[last_orig:orig_start])))
+        result.append(f"<mark>{Markup.escape(text[orig_start:orig_end])}</mark>")
+        last_orig = orig_end
+    result.append(str(Markup.escape(text[last_orig:])))
     return Markup("".join(result))
 
 

@@ -974,6 +974,3738 @@
           "notes": null
         }
       ]
+    },
+    {
+      "id": "neurochirurgie",
+      "nom": "Neurochirurgie et neuroradiologie interventionnelle",
+      "interventions": [
+        {
+          "id": "neuro-craniotomie",
+          "nom": "Craniotomie",
+          "specialite": "Neurochirurgie et neuroradiologie interventionnelle",
+          "force_recommandation": "GRADE 2",
+          "source_page": 38,
+          "source_tableau": "Tableau Neurochirurgie et neuroradiologie interventionnelle — Craniotomie",
+          "protocole": {
+            "molecule": "Céfazoline",
+            "dose_initiale": "2g IVL",
+            "reinjection": "1g si durée > 4h, puis toutes les 4h jusqu'à fin de chirurgie"
+          },
+          "alternative_allergie": null,
+          "notes": null
+        },
+        {
+          "id": "neuro-ventriculoscopie",
+          "nom": "Ventriculoscopie, visiochirurgie intracrânienne",
+          "specialite": "Neurochirurgie et neuroradiologie interventionnelle",
+          "force_recommandation": "Avis d'experts",
+          "source_page": 38,
+          "source_tableau": "Tableau Neurochirurgie et neuroradiologie interventionnelle — Craniotomie",
+          "protocole": {
+            "molecule": "Céfazoline",
+            "dose_initiale": "2g IVL",
+            "reinjection": "1g si durée > 4h, puis toutes les 4h jusqu'à fin de chirurgie"
+          },
+          "alternative_allergie": null,
+          "notes": null
+        },
+        {
+          "id": "neuro-biopsie-cerebrale",
+          "nom": "Biopsie cérébrale",
+          "specialite": "Neurochirurgie et neuroradiologie interventionnelle",
+          "force_recommandation": "Avis d'experts",
+          "source_page": 38,
+          "source_tableau": "Tableau Neurochirurgie et neuroradiologie interventionnelle — Craniotomie",
+          "protocole": null,
+          "alternative_allergie": null,
+          "notes": null
+        },
+        {
+          "id": "neuro-trans-sphenoidale",
+          "nom": "Neurochirurgie par voie trans-sphénoïdale ou trans-labyrinthique",
+          "specialite": "Neurochirurgie et neuroradiologie interventionnelle",
+          "force_recommandation": "Avis d'experts",
+          "source_page": 38,
+          "source_tableau": "Tableau Neurochirurgie et neuroradiologie interventionnelle — Chirurgie intracrânienne par voie trans-sphénoïdale ou trans-labyrinthique",
+          "protocole": {
+            "molecule": "Céfazoline",
+            "dose_initiale": "2g IVL",
+            "reinjection": "1g si durée > 4h, puis toutes les 4h jusqu'à fin de chirurgie"
+          },
+          "alternative_allergie": null,
+          "notes": null
+        },
+        {
+          "id": "neuro-derivation-externe",
+          "nom": "Dérivation ventriculaire externe (DVE) / Dérivation lombaire externe (DLE)",
+          "specialite": "Neurochirurgie et neuroradiologie interventionnelle",
+          "force_recommandation": "Avis d'experts",
+          "source_page": 38,
+          "source_tableau": "Tableau Neurochirurgie et neuroradiologie interventionnelle — Dérivation ventriculaire externe",
+          "protocole": null,
+          "alternative_allergie": null,
+          "notes": null
+        },
+        {
+          "id": "neuro-derivation-interne",
+          "nom": "Dérivation ventriculo-péritonéale (DVP) / Dérivation ventriculo-atriale (DVA)",
+          "specialite": "Neurochirurgie et neuroradiologie interventionnelle",
+          "force_recommandation": "Avis d'experts",
+          "source_page": 38,
+          "source_tableau": "Tableau Neurochirurgie et neuroradiologie interventionnelle — Dérivation ventriculaire interne",
+          "protocole": {
+            "molecule": "Céfazoline",
+            "dose_initiale": "2g IVL",
+            "reinjection": "1g si durée > 4h, puis toutes les 4h jusqu'à fin de chirurgie"
+          },
+          "alternative_allergie": null,
+          "notes": null
+        },
+        {
+          "id": "neuro-plaies-cranio-cerebrales",
+          "nom": "Plaies cranio-cérébrales pénétrantes ou non",
+          "specialite": "Neurochirurgie et neuroradiologie interventionnelle",
+          "force_recommandation": "Avis d'experts",
+          "source_page": 38,
+          "source_tableau": "Tableau Neurochirurgie et neuroradiologie interventionnelle — Plaies cranio-cérébrales et fracture de la base du crâne",
+          "protocole": {
+            "molecule": "Amoxicilline/Clavulanate",
+            "dose_initiale": "2g IVL",
+            "reinjection": "1g si durée > 2h, puis toutes les 2h jusqu'à fin de chirurgie"
+          },
+          "alternative_allergie": null,
+          "notes": "Possibilité d'étendre l'antibioprophylaxie pour 24h à 48h postopératoires maximum en cas de constatation opératoire d'une plaie souillée (Avis d'experts)."
+        },
+        {
+          "id": "neuro-fracture-base-crane",
+          "nom": "Fracture de la base du crâne avec ou sans otorrhée",
+          "specialite": "Neurochirurgie et neuroradiologie interventionnelle",
+          "force_recommandation": "Avis d'experts",
+          "source_page": 38,
+          "source_tableau": "Tableau Neurochirurgie et neuroradiologie interventionnelle — Plaies cranio-cérébrales et fracture de la base du crâne",
+          "protocole": null,
+          "alternative_allergie": null,
+          "notes": null
+        },
+        {
+          "id": "neuro-rachis-instrumente-1-temps",
+          "nom": "Chirurgie instrumentée du rachis avec mise en place de matériel en 1 temps (chirurgie ouverte ou mini-invasive, arthrodèse, ostéosynthèse, etc.)",
+          "specialite": "Neurochirurgie et neuroradiologie interventionnelle",
+          "force_recommandation": "GRADE 2",
+          "source_page": 38,
+          "source_tableau": "Tableau Neurochirurgie et neuroradiologie interventionnelle — Chirurgie du rachis",
+          "protocole": {
+            "molecule": "Céfazoline",
+            "dose_initiale": "2g IVL",
+            "reinjection": "1g si durée > 4h, puis toutes les 4h jusqu'à fin de chirurgie"
+          },
+          "alternative_allergie": null,
+          "notes": null
+        },
+        {
+          "id": "neuro-rachis-instrumente-2-temps",
+          "nom": "Chirurgie instrumentée du rachis avec pose de matériel en 2 temps (au cours de la même hospitalisation ou non)",
+          "specialite": "Neurochirurgie et neuroradiologie interventionnelle",
+          "force_recommandation": "Avis d'experts",
+          "source_page": 38,
+          "source_tableau": "Tableau Neurochirurgie et neuroradiologie interventionnelle — Chirurgie du rachis",
+          "protocole": {
+            "molecule": "Céfazoline",
+            "dose_initiale": "2g IVL",
+            "reinjection": "1g si durée > 4h, puis toutes les 4h jusqu'à fin de chirurgie"
+          },
+          "alternative_allergie": null,
+          "notes": "Une épidémiologie locale particulière peut justifier le recours à une molécule alternative, dans le cadre d'un protocole validé localement d'antibioprophylaxie."
+        },
+        {
+          "id": "neuro-rachis-reprise-materiel",
+          "nom": "Reprise du matériel quel que soit le délai",
+          "specialite": "Neurochirurgie et neuroradiologie interventionnelle",
+          "force_recommandation": "Avis d'experts",
+          "source_page": 39,
+          "source_tableau": "Tableau Neurochirurgie et neuroradiologie interventionnelle — Chirurgie du rachis",
+          "protocole": {
+            "molecule": "Céfazoline",
+            "dose_initiale": "2g IVL",
+            "reinjection": "1g si durée > 4h, puis toutes les 4h jusqu'à fin de chirurgie"
+          },
+          "alternative_allergie": null,
+          "notes": null
+        },
+        {
+          "id": "neuro-rachis-percutane",
+          "nom": "Chirurgie du rachis percutanée avec pose de matériel (expansion avec implant, cimentoplastie)",
+          "specialite": "Neurochirurgie et neuroradiologie interventionnelle",
+          "force_recommandation": "Avis d'experts",
+          "source_page": 39,
+          "source_tableau": "Tableau Neurochirurgie et neuroradiologie interventionnelle — Chirurgie du rachis",
+          "protocole": {
+            "molecule": "Céfazoline",
+            "dose_initiale": "2g IVL",
+            "reinjection": "1g si durée > 4h, puis toutes les 4h jusqu'à fin de chirurgie"
+          },
+          "alternative_allergie": null,
+          "notes": null
+        },
+        {
+          "id": "neuro-rachis-sans-materiel",
+          "nom": "Chirurgie du rachis sans mise en place de matériel (canal lombaire étroit, laminectomie, voie endoscopique, etc.) / Ablation de matériel du rachis",
+          "specialite": "Neurochirurgie et neuroradiologie interventionnelle",
+          "force_recommandation": "Avis d'experts",
+          "source_page": 39,
+          "source_tableau": "Tableau Neurochirurgie et neuroradiologie interventionnelle — Chirurgie du rachis",
+          "protocole": null,
+          "alternative_allergie": null,
+          "notes": "En cas d'ablation de matériel d'ostéosynthèse ou de chirurgie sans pose de matériel exposant à une ouverture de la dure-mère, ou de geste prévu comme difficile/avec temps opératoire long, une antibioprophylaxie par céfazoline peut être discutée au cas par cas (Avis d'experts)."
+        },
+        {
+          "id": "neuro-stimulateur-electrode",
+          "nom": "Pose de pompe à destination médullaire / Pose d'électrode de stimulation cérébrale ou médullaire / Pose de stimulateur",
+          "specialite": "Neurochirurgie et neuroradiologie interventionnelle",
+          "force_recommandation": "Avis d'experts",
+          "source_page": 39,
+          "source_tableau": "Tableau Neurochirurgie et neuroradiologie interventionnelle — Électrode de stimulation cérébrale ou médullaire et pose de stimulateur",
+          "protocole": {
+            "molecule": "Céfazoline",
+            "dose_initiale": "2g IVL",
+            "reinjection": "1g si durée > 4h, puis toutes les 4h jusqu'à fin de chirurgie"
+          },
+          "alternative_allergie": null,
+          "notes": null
+        },
+        {
+          "id": "neuro-angiographie-embolisation",
+          "nom": "Angiographie, endoprothèse, stent, angioplastie des artères cervicales et cérébrales / Embolisation d'anévrysme ou de malformation artério-veineuse cérébrale et spinale",
+          "specialite": "Neurochirurgie et neuroradiologie interventionnelle",
+          "force_recommandation": "Avis d'experts",
+          "source_page": 39,
+          "source_tableau": "Tableau Neurochirurgie et neuroradiologie interventionnelle — Neuroradiologie interventionnelle",
+          "protocole": null,
+          "alternative_allergie": null,
+          "notes": null
+        },
+        {
+          "id": "neuro-thermo-coagulation-trijumeau",
+          "nom": "Thermo-coagulation percutanée du nerf trijumeau",
+          "specialite": "Neurochirurgie et neuroradiologie interventionnelle",
+          "force_recommandation": "Avis d'experts",
+          "source_page": 39,
+          "source_tableau": "Tableau Neurochirurgie et neuroradiologie interventionnelle — Neuroradiologie interventionnelle",
+          "protocole": null,
+          "alternative_allergie": null,
+          "notes": null
+        }
+      ]
+    },
+    {
+      "id": "chirurgie-orl",
+      "nom": "Chirurgie ORL",
+      "interventions": [
+        {
+          "id": "orl-sinusite-polypose",
+          "nom": "Chirurgie sinusienne de polypose ou sinusite chronique (méatotomie, éthmoidectomie, sphénoidectomie, polypectomie) / Chirurgie rhinologique sans mise en place de greffon",
+          "specialite": "Chirurgie ORL",
+          "force_recommandation": "Avis d'experts",
+          "source_page": 40,
+          "source_tableau": "Tableau Chirurgie ORL — Chirurgie rhino-sinusienne",
+          "protocole": null,
+          "alternative_allergie": null,
+          "notes": "Chirurgie sinusienne de polypose : Avis d'experts. Chirurgie rhinologique sans greffon : GRADE 2."
+        },
+        {
+          "id": "orl-rhinologique-avec-greffon",
+          "nom": "Chirurgie rhinologique avec mise en place d'un greffon ou reprise chirurgicale / Chirurgie sinusienne tumorale",
+          "specialite": "Chirurgie ORL",
+          "force_recommandation": "GRADE 2",
+          "source_page": 41,
+          "source_tableau": "Tableau Chirurgie ORL — Chirurgie rhino-sinusienne",
+          "protocole": {
+            "molecule": "Céfazoline",
+            "dose_initiale": "2g IVL",
+            "reinjection": "1g si durée > 4h, puis toutes les 4h jusqu'à fin de chirurgie"
+          },
+          "alternative_allergie": [
+            {
+              "molecule": "Clindamycine",
+              "dose_initiale": "900 mg IVL",
+              "intention": 1,
+              "reinjection": null
+            }
+          ],
+          "notes": "Alternative pharmacologique : Amoxicilline/Clavulanate 2g IVL (réinjection 1g si durée > 2h, puis toutes les 2h). Chirurgie sinusienne tumorale : Avis d'experts."
+        },
+        {
+          "id": "orl-carcino-lambeau-cervico-facial",
+          "nom": "Chirurgie carcinologique avec lambeau libre ou pédiculé cervico-facial",
+          "specialite": "Chirurgie ORL",
+          "force_recommandation": "Avis d'experts",
+          "source_page": 41,
+          "source_tableau": "Tableau Chirurgie ORL — Chirurgie carcinologique cervico-faciale",
+          "protocole": {
+            "molecule": "Amoxicilline/Clavulanate",
+            "dose_initiale": "2g IVL",
+            "reinjection": "1g si durée > 2h, puis toutes les 2h jusqu'à fin de chirurgie, puis 1g/6h postop pendant 48h max"
+          },
+          "alternative_allergie": [
+            {
+              "molecule": "Clindamycine + Gentamicine",
+              "dose_initiale": "900 mg IVL + 6-7 mg/kg IVL",
+              "intention": 1,
+              "reinjection": null
+            },
+            {
+              "molecule": "Ertapénème",
+              "dose_initiale": "2g IVL (dose unique)",
+              "intention": 2,
+              "reinjection": null
+            }
+          ],
+          "notes": null
+        },
+        {
+          "id": "orl-carcino-sans-reconstruction",
+          "nom": "Chirurgie carcinologique sans reconstruction : laryngectomie, pharyngo-laryngectomie, etc.",
+          "specialite": "Chirurgie ORL",
+          "force_recommandation": "Avis d'experts",
+          "source_page": 41,
+          "source_tableau": "Tableau Chirurgie ORL — Chirurgie carcinologique cervico-faciale",
+          "protocole": {
+            "molecule": "Amoxicilline/Clavulanate",
+            "dose_initiale": "2g IVL",
+            "reinjection": "1g si durée > 2h, puis toutes les 2h jusqu'à fin de chirurgie"
+          },
+          "alternative_allergie": [
+            {
+              "molecule": "Clindamycine + Gentamicine",
+              "dose_initiale": "900 mg IVL + 6-7 mg/kg IVL",
+              "intention": 1,
+              "reinjection": null
+            },
+            {
+              "molecule": "Ertapénème",
+              "dose_initiale": "2g IVL (dose unique)",
+              "intention": 2,
+              "reinjection": null
+            }
+          ],
+          "notes": null
+        },
+        {
+          "id": "orl-amygdalectomie-adenoidectomie",
+          "nom": "Amygdalectomie / Adénoïdectomie",
+          "specialite": "Chirurgie ORL",
+          "force_recommandation": "GRADE 1",
+          "source_page": 41,
+          "source_tableau": "Tableau Chirurgie ORL — Chirurgie amygdalienne et adénoïdectomie",
+          "protocole": null,
+          "alternative_allergie": null,
+          "notes": null
+        },
+        {
+          "id": "orl-cervicotomie-pas-abp",
+          "nom": "Curage cervical / Thyroïdectomie totale / Thyroïdectomie partielle / Parathyroïdectomie / Trachéotomie percutanée",
+          "specialite": "Chirurgie ORL",
+          "force_recommandation": "Avis d'experts",
+          "source_page": 41,
+          "source_tableau": "Tableau Chirurgie ORL — Cervicotomie",
+          "protocole": null,
+          "alternative_allergie": null,
+          "notes": null
+        },
+        {
+          "id": "orl-tracheotomie-chirurgicale",
+          "nom": "Trachéotomie chirurgicale",
+          "specialite": "Chirurgie ORL",
+          "force_recommandation": "Avis d'experts",
+          "source_page": 41,
+          "source_tableau": "Tableau Chirurgie ORL — Cervicotomie",
+          "protocole": {
+            "molecule": "Céfazoline",
+            "dose_initiale": "2g IVL",
+            "reinjection": "1g si durée > 4h, puis toutes les 4h jusqu'à fin de chirurgie"
+          },
+          "alternative_allergie": [
+            {
+              "molecule": "Clindamycine",
+              "dose_initiale": "900 mg IVL",
+              "intention": 1,
+              "reinjection": null
+            }
+          ],
+          "notes": null
+        },
+        {
+          "id": "orl-glandes-salivaires-sans-bucco",
+          "nom": "Chirurgie des glandes salivaires sans accès par la cavité bucco-pharyngée",
+          "specialite": "Chirurgie ORL",
+          "force_recommandation": "Avis d'experts",
+          "source_page": 41,
+          "source_tableau": "Tableau Chirurgie ORL — Chirurgie des glandes salivaires",
+          "protocole": null,
+          "alternative_allergie": null,
+          "notes": null
+        },
+        {
+          "id": "orl-glandes-salivaires-avec-bucco",
+          "nom": "Chirurgie des glandes salivaires avec accès par la cavité bucco-pharyngée",
+          "specialite": "Chirurgie ORL",
+          "force_recommandation": "Avis d'experts",
+          "source_page": 42,
+          "source_tableau": "Tableau Chirurgie ORL — Chirurgie des glandes salivaires",
+          "protocole": {
+            "molecule": "Amoxicilline/Clavulanate",
+            "dose_initiale": "2g IVL",
+            "reinjection": "1g si durée > 2h, puis toutes les 2h jusqu'à fin de chirurgie"
+          },
+          "alternative_allergie": [
+            {
+              "molecule": "Clindamycine + Gentamicine",
+              "dose_initiale": "900 mg IVL + 6-7 mg/kg IVL",
+              "intention": 1,
+              "reinjection": null
+            },
+            {
+              "molecule": "Ertapénème",
+              "dose_initiale": "2g IVL (dose unique)",
+              "intention": 2,
+              "reinjection": null
+            }
+          ],
+          "notes": null
+        },
+        {
+          "id": "orl-laryngoscopie-suspension",
+          "nom": "Laryngoscopie en suspension diagnostique sans ou avec biopsies / Laryngoscopie en suspension avec geste thérapeutique (laser, cordectomie, etc.)",
+          "specialite": "Chirurgie ORL",
+          "force_recommandation": "Avis d'experts",
+          "source_page": 42,
+          "source_tableau": "Tableau Chirurgie ORL — Laryngoscopie en suspension",
+          "protocole": null,
+          "alternative_allergie": null,
+          "notes": null
+        },
+        {
+          "id": "orl-tympan-ossiculaire-cholesteatome",
+          "nom": "Chirurgie des tympans (tympanoplastie, myringoplastie, tympanotomie exploratrice, perforation tympanique) / Chirurgie de la chaîne ossiculaire, stapédectomie, ossiculoplastie, otospongiose / Chirurgie de cholestéatome (non infecté)",
+          "specialite": "Chirurgie ORL",
+          "force_recommandation": "GRADE 2",
+          "source_page": 42,
+          "source_tableau": "Tableau Chirurgie ORL — Chirurgie otologique",
+          "protocole": null,
+          "alternative_allergie": null,
+          "notes": null
+        },
+        {
+          "id": "orl-implants-cochleaires",
+          "nom": "Implants cochléaires",
+          "specialite": "Chirurgie ORL",
+          "force_recommandation": "Avis d'experts",
+          "source_page": 42,
+          "source_tableau": "Tableau Chirurgie ORL — Chirurgie otologique",
+          "protocole": {
+            "molecule": "Céfazoline",
+            "dose_initiale": "2g IVL",
+            "reinjection": "1g si durée > 4h, puis toutes les 4h jusqu'à fin de chirurgie"
+          },
+          "alternative_allergie": [
+            {
+              "molecule": "Clindamycine + Gentamicine",
+              "dose_initiale": "900 mg IVL + 6-7 mg/kg IVL",
+              "intention": 1,
+              "reinjection": null
+            },
+            {
+              "molecule": "Ertapénème",
+              "dose_initiale": "2g IVL (dose unique)",
+              "intention": 2,
+              "reinjection": null
+            }
+          ],
+          "notes": "Alternative pharmacologique : Amoxicilline/Clavulanate 2g IVL (réinjection 1g si durée > 2h, puis toutes les 2h)."
+        }
+      ]
+    },
+    {
+      "id": "chirurgie-stomato-maxillo-faciale",
+      "nom": "Chirurgie stomatologique et maxillo-faciale",
+      "interventions": [
+        {
+          "id": "stomato-ortho-orthognatique",
+          "nom": "Chirurgie orthognatique",
+          "specialite": "Chirurgie stomatologique et maxillo-faciale",
+          "force_recommandation": "GRADE 2",
+          "source_page": 43,
+          "source_tableau": "Tableau Chirurgie stomatologique et maxillo-faciale — Chirurgie orthognatique",
+          "protocole": {
+            "molecule": "Céfazoline",
+            "dose_initiale": "2g IVL",
+            "reinjection": "1g si durée > 4h, puis toutes les 4h jusqu'à la fin de la chirurgie, puis 1g/6h postop pendant 48h max"
+          },
+          "alternative_allergie": [
+            {
+              "molecule": "Clindamycine",
+              "dose_initiale": "900 mg IVL",
+              "intention": 1,
+              "reinjection": null
+            }
+          ],
+          "notes": "Alternative pharmacologique : Amoxicilline/Clavulanate 2g IVL (réinjection 1g si durée > 2h, puis toutes les 2h, puis 1g/6h postop pendant 48h max)."
+        },
+        {
+          "id": "stomato-ablation-materiel",
+          "nom": "Ablation de matériel",
+          "specialite": "Chirurgie stomatologique et maxillo-faciale",
+          "force_recommandation": "Avis d'experts",
+          "source_page": 43,
+          "source_tableau": "Tableau Chirurgie stomatologique et maxillo-faciale — Chirurgie orthognatique",
+          "protocole": null,
+          "alternative_allergie": null,
+          "notes": null
+        },
+        {
+          "id": "stomato-extractions-dents-incluses",
+          "nom": "Extractions de dents incluses, ectopiques ou en désinclusion",
+          "specialite": "Chirurgie stomatologique et maxillo-faciale",
+          "force_recommandation": "GRADE 1",
+          "source_page": 43,
+          "source_tableau": "Tableau Chirurgie stomatologique et maxillo-faciale — Chirurgie alvéolo-dentaire",
+          "protocole": {
+            "molecule": "Amoxicilline",
+            "dose_initiale": "2g IVL",
+            "reinjection": "1g si durée > 2h, puis toutes les 2h jusqu'à fin de chirurgie"
+          },
+          "alternative_allergie": [
+            {
+              "molecule": "Clindamycine",
+              "dose_initiale": "900 mg IVL",
+              "intention": 1,
+              "reinjection": null
+            }
+          ],
+          "notes": null
+        },
+        {
+          "id": "stomato-pas-abp-dentaire",
+          "nom": "Autres extractions dentaires (dents sur arcade, etc.) / Pose de matériel d'ancrage orthodontique / Chirurgie apicale / Chirurgie alvéolaire (greffe osseuse d'apposition, régénération osseuse alvéolaire, ostéoplastie segmentaire, sinus lift, etc.)",
+          "specialite": "Chirurgie stomatologique et maxillo-faciale",
+          "force_recommandation": "GRADE 1",
+          "source_page": 44,
+          "source_tableau": "Tableau Chirurgie stomatologique et maxillo-faciale — Chirurgie alvéolo-dentaire",
+          "protocole": null,
+          "alternative_allergie": null,
+          "notes": "Autres extractions : GRADE 1. Matériel orthodontique, chirurgie apicale, alvéolaire : Avis d'experts."
+        },
+        {
+          "id": "stomato-traumato-maxillo-faciale",
+          "nom": "Traumatologie maxillo-faciale : fractures simples, multiples ou complexes du massif facial (fracture ouverte de mandibule, fracture de Lefort, fracture du zygoma, etc.)",
+          "specialite": "Chirurgie stomatologique et maxillo-faciale",
+          "force_recommandation": "GRADE 2",
+          "source_page": 44,
+          "source_tableau": "Tableau Chirurgie stomatologique et maxillo-faciale — Traumatologie maxillo-faciale",
+          "protocole": {
+            "molecule": "Amoxicilline/Clavulanate",
+            "dose_initiale": "2g IVL",
+            "reinjection": "1g si durée > 2h, puis toutes les 2h jusqu'à la fin de la chirurgie, puis 1g/6h postop pendant 24h max"
+          },
+          "alternative_allergie": [
+            {
+              "molecule": "Clindamycine",
+              "dose_initiale": "900 mg IVL",
+              "intention": 1,
+              "reinjection": null
+            }
+          ],
+          "notes": "Alternative pharmacologique : Céfazoline 2g IVL (réinjection 1g si durée > 4h, puis toutes les 4h, puis 1g/6h postop pendant 24h max)."
+        }
+      ]
+    },
+    {
+      "id": "chirurgie-ophtalmologique",
+      "nom": "Chirurgie ophtalmologique",
+      "interventions": [
+        {
+          "id": "ophtalmo-cataracte",
+          "nom": "Chirurgie de la cataracte (simple ou combinée avec chirurgies de la cornée, du glaucome, de la rétine et du vitré)",
+          "specialite": "Chirurgie ophtalmologique",
+          "force_recommandation": "GRADE 1",
+          "source_page": 45,
+          "source_tableau": "Tableau Chirurgie ophtalmologique — Chirurgie du globe oculaire",
+          "protocole": {
+            "molecule": "Céfuroxime",
+            "dose_initiale": "1 mg/0,1 mL en injection intra-camérulaire en fin d'intervention",
+            "reinjection": "Dose unique"
+          },
+          "alternative_allergie": [
+            {
+              "molecule": "Moxifloxacine",
+              "dose_initiale": "0,480 mg/0,3 mL en injection intra-camérulaire en fin d'intervention",
+              "intention": 1,
+              "reinjection": "Dose unique"
+            }
+          ],
+          "notes": null
+        },
+        {
+          "id": "ophtalmo-cornee-glaucome-retine",
+          "nom": "Chirurgies de la cornée, du glaucome, de la rétine et du vitré (hors combinaison avec cataracte)",
+          "specialite": "Chirurgie ophtalmologique",
+          "force_recommandation": "Avis d'experts",
+          "source_page": 45,
+          "source_tableau": "Tableau Chirurgie ophtalmologique — Chirurgie du globe oculaire",
+          "protocole": null,
+          "alternative_allergie": null,
+          "notes": null
+        },
+        {
+          "id": "ophtalmo-globe-ouvert",
+          "nom": "Traumatismes à globe ouvert",
+          "specialite": "Chirurgie ophtalmologique",
+          "force_recommandation": "Avis d'experts",
+          "source_page": 45,
+          "source_tableau": "Tableau Chirurgie ophtalmologique — Chirurgie du globe oculaire",
+          "protocole": {
+            "molecule": "Vancomycine + Ceftazidime",
+            "dose_initiale": "Vancomycine 1 mg/0,1 mL + Ceftazidime 2,25 mg/0,1 mL en injection intra-vitréenne en fin d'intervention",
+            "reinjection": "Dose unique"
+          },
+          "alternative_allergie": [
+            {
+              "molecule": "Amikacine",
+              "dose_initiale": "0,2 mg/0,1 mL en injection intra-vitréenne (remplace Ceftazidime)",
+              "intention": 1,
+              "reinjection": "Dose unique"
+            }
+          ],
+          "notes": "Pas d'indication à associer une antibiothérapie par voie systémique."
+        },
+        {
+          "id": "ophtalmo-peri-oculaire",
+          "nom": "Chirurgies des paupières, des voies lacrymales, du strabisme ou de l'orbite",
+          "specialite": "Chirurgie ophtalmologique",
+          "force_recommandation": "GRADE 1",
+          "source_page": 45,
+          "source_tableau": "Tableau Chirurgie ophtalmologique — Chirurgie péri-oculaire",
+          "protocole": null,
+          "alternative_allergie": null,
+          "notes": null
+        }
+      ]
+    },
+    {
+      "id": "chirurgie-cardiaque",
+      "nom": "Chirurgie cardiaque",
+      "interventions": [
+        {
+          "id": "cardio-actes-coeur-aorte-cec",
+          "nom": "Actes thérapeutiques des parois, des cavités et des valves du cœur, de l'aorte ascendante et de la crosse aortique avec ou sans CEC",
+          "specialite": "Chirurgie cardiaque",
+          "force_recommandation": "GRADE 1",
+          "source_page": 47,
+          "source_tableau": "Tableau Chirurgie cardiaque — Chirurgie cardiaque",
+          "protocole": {
+            "molecule": "Céfazoline",
+            "dose_initiale": "2g IVL",
+            "reinjection": "1g si durée > 4h, puis toutes les 4h jusqu'à fin de chirurgie (+ 1g lors du priming si CEC)"
+          },
+          "alternative_allergie": [
+            {
+              "molecule": "Vancomycine",
+              "dose_initiale": "20 mg/kg IVL",
+              "intention": 1,
+              "reinjection": null
+            },
+            {
+              "molecule": "Teicoplanine",
+              "dose_initiale": "12 mg/kg IVL",
+              "intention": 2,
+              "reinjection": null
+            }
+          ],
+          "notes": "Alternative pharmacologique : Céfuroxime 1,5g IVL (0,75g si durée > 2h, puis toutes les 2h + 0,75g lors du priming si CEC)."
+        },
+        {
+          "id": "cardio-drainage-pericardique",
+          "nom": "Drainage péricardique par thoracotomie ou sternotomie / Fenêtre pleuropéricardique ou péritonéopéricardique / Hémostase postopératoire de chirurgie cardiaque par sternotomie ou thoracotomie",
+          "specialite": "Chirurgie cardiaque",
+          "force_recommandation": "Avis d'experts",
+          "source_page": 47,
+          "source_tableau": "Tableau Chirurgie cardiaque — Chirurgie cardiaque",
+          "protocole": {
+            "molecule": "Céfazoline",
+            "dose_initiale": "2g IVL",
+            "reinjection": "1g si durée > 4h, puis toutes les 4h jusqu'à fin de chirurgie"
+          },
+          "alternative_allergie": [
+            {
+              "molecule": "Vancomycine",
+              "dose_initiale": "20 mg/kg IVL",
+              "intention": 1,
+              "reinjection": null
+            },
+            {
+              "molecule": "Teicoplanine",
+              "dose_initiale": "12 mg/kg IVL",
+              "intention": 2,
+              "reinjection": null
+            }
+          ],
+          "notes": "Alternative pharmacologique : Céfuroxime 1,5g IVL (0,75g si durée > 2h, puis toutes les 2h)."
+        },
+        {
+          "id": "cardio-transplantation-sans-assistance",
+          "nom": "Transplantation cardiaque chez un patient arrivant de son domicile, sans assistance mécanique de longue durée / Assistance circulatoire gauche (LVAD) ou cœur artificiel, sans contexte de réanimation préopératoire",
+          "specialite": "Chirurgie cardiaque",
+          "force_recommandation": "Avis d'experts",
+          "source_page": 47,
+          "source_tableau": "Tableau Chirurgie cardiaque — Transplantation cardiaque et assistance circulatoire de longue durée",
+          "protocole": {
+            "molecule": "Céfazoline",
+            "dose_initiale": "2g IVL",
+            "reinjection": "1g si durée > 4h, puis toutes les 4h jusqu'à fin de chirurgie"
+          },
+          "alternative_allergie": [
+            {
+              "molecule": "Vancomycine",
+              "dose_initiale": "20 mg/kg IVL",
+              "intention": 1,
+              "reinjection": null
+            },
+            {
+              "molecule": "Teicoplanine",
+              "dose_initiale": "12 mg/kg IVL",
+              "intention": 2,
+              "reinjection": null
+            }
+          ],
+          "notes": "Alternative pharmacologique : Céfuroxime 1,5g IVL (0,75g si durée > 2h, puis toutes les 2h)."
+        },
+        {
+          "id": "cardio-transplantation-avec-assistance",
+          "nom": "Transplantation cardiaque chez un patient porteur d'une assistance mécanique de longue durée (cœur artificiel ou LVAD), ou de courte durée (ECMO), sans ou avec antécédent d'infection / Assistance circulatoire gauche (LVAD) ou cœur artificiel avec contexte de réanimation préopératoire",
+          "specialite": "Chirurgie cardiaque",
+          "force_recommandation": "Avis d'experts",
+          "source_page": 47,
+          "source_tableau": "Tableau Chirurgie cardiaque — Transplantation cardiaque et assistance circulatoire de longue durée",
+          "protocole": null,
+          "alternative_allergie": null,
+          "notes": "Modalités de l'antibioprophylaxie (molécule(s) et durée) à discuter individuellement après avis infectiologique spécialisé, tenant compte des antécédents infectieux et de la colonisation à SARM ou E-BLSE."
+        },
+        {
+          "id": "cardio-assistance-courte-duree-percutanee",
+          "nom": "Assistance de courte durée avec mise en place per-cutanée sans abord chirurgical (ECMO, Impella, CPIA, etc.)",
+          "specialite": "Chirurgie cardiaque",
+          "force_recommandation": "Avis d'experts",
+          "source_page": 47,
+          "source_tableau": "Tableau Chirurgie cardiaque — Assistance circulatoire de courte durée",
+          "protocole": null,
+          "alternative_allergie": null,
+          "notes": null
+        },
+        {
+          "id": "cardio-assistance-courte-duree-chirurgicale",
+          "nom": "Assistance de courte durée avec abord chirurgical (ECMO, Impella, etc.)",
+          "specialite": "Chirurgie cardiaque",
+          "force_recommandation": "Avis d'experts",
+          "source_page": 48,
+          "source_tableau": "Tableau Chirurgie cardiaque — Assistance circulatoire de courte durée",
+          "protocole": {
+            "molecule": "Céfazoline",
+            "dose_initiale": "2g IVL",
+            "reinjection": "1g si durée > 4h, puis toutes les 4h jusqu'à fin de chirurgie"
+          },
+          "alternative_allergie": [
+            {
+              "molecule": "Vancomycine",
+              "dose_initiale": "20 mg/kg IVL",
+              "intention": 1,
+              "reinjection": null
+            },
+            {
+              "molecule": "Teicoplanine",
+              "dose_initiale": "12 mg/kg IVL",
+              "intention": 2,
+              "reinjection": null
+            }
+          ],
+          "notes": "Alternative pharmacologique : Céfuroxime 1,5g IVL (0,75g si durée > 2h, puis toutes les 2h)."
+        }
+      ]
+    },
+    {
+      "id": "cardiologie-structurelle",
+      "nom": "Cardiologie structurelle",
+      "interventions": [
+        {
+          "id": "struct-tavi-fermeture-mitraclip",
+          "nom": "Bioprothèse de la valve aortique par voie artérielle transcutanée (TAVI) ou autre bioprothèse valvulaire par voie transcutanée / Fermeture d'auricule par voie percutanée avec implantation de matériel / Rétrécissement de l'orifice atrioventriculaire gauche (MitraClip) / Fermeture de communication interatriale ou de foramen ovale perméable",
+          "specialite": "Cardiologie structurelle",
+          "force_recommandation": "Avis d'experts",
+          "source_page": 48,
+          "source_tableau": "Tableau Cardiologie structurelle — Cardiologie structurelle",
+          "protocole": {
+            "molecule": "Amoxicilline/Clavulanate",
+            "dose_initiale": "2g IVL",
+            "reinjection": "1g si durée > 2h, puis toutes les 2h jusqu'à fin de chirurgie"
+          },
+          "alternative_allergie": [
+            {
+              "molecule": "Vancomycine",
+              "dose_initiale": "20 mg/kg IVL",
+              "intention": 1,
+              "reinjection": null
+            },
+            {
+              "molecule": "Teicoplanine",
+              "dose_initiale": "12 mg/kg IVL",
+              "intention": 2,
+              "reinjection": null
+            }
+          ],
+          "notes": "Alternative pharmacologique : Céfazoline 2g IVL (réinjection 1g si durée > 4h, puis toutes les 4h) + Amoxicilline 2g IVL (réinjection 1g si durée > 2h, puis toutes les 2h)."
+        }
+      ]
+    },
+    {
+      "id": "rythmologie-interventionnelle",
+      "nom": "Rythmologie interventionnelle",
+      "interventions": [
+        {
+          "id": "rythmo-implantation-prothese",
+          "nom": "Implantation, explantation ou changement de stimulateur ou défibrillateur / Implantation, explantation ou changement de sonde de stimulation ou de défibrillation",
+          "specialite": "Rythmologie interventionnelle",
+          "force_recommandation": "GRADE 1",
+          "source_page": 49,
+          "source_tableau": "Tableau Rythmologie interventionnelle — Implantation ou changement de prothèse rythmique",
+          "protocole": {
+            "molecule": "Céfazoline",
+            "dose_initiale": "2g IVL",
+            "reinjection": "1g si durée > 4h, puis toutes les 4h jusqu'à fin de chirurgie"
+          },
+          "alternative_allergie": [
+            {
+              "molecule": "Vancomycine",
+              "dose_initiale": "20 mg/kg IVL",
+              "intention": 1,
+              "reinjection": null
+            },
+            {
+              "molecule": "Teicoplanine",
+              "dose_initiale": "12 mg/kg IVL",
+              "intention": 2,
+              "reinjection": null
+            }
+          ],
+          "notes": null
+        },
+        {
+          "id": "rythmo-exploration-ablation",
+          "nom": "Exploration électrophysiologique endocavitaire atriale et/ou ventriculaire / Ablation de trouble du rythme cardiaque par cathéter (radiofréquence, cryothérapie, etc.) dans les cavités cardiaques droites ou gauches",
+          "specialite": "Rythmologie interventionnelle",
+          "force_recommandation": "Avis d'experts",
+          "source_page": 49,
+          "source_tableau": "Tableau Rythmologie interventionnelle — Explorations endocavitaires et ablations",
+          "protocole": null,
+          "alternative_allergie": null,
+          "notes": "Si procédure chez un patient avec prothèse intracardiaque (rythmique ou non) déjà implantée : Céfazoline 2g IVL (Avis d'experts)."
+        }
+      ]
+    },
+    {
+      "id": "chirurgie-vasculaire",
+      "nom": "Chirurgie vasculaire",
+      "interventions": [
+        {
+          "id": "vascu-arterielle-avec-materiel",
+          "nom": "Chirurgie artérielle périphérique ou chirurgie aortique, avec ou sans mise en place de matériel / Chirurgie carotidienne avec mise en place de matériel",
+          "specialite": "Chirurgie vasculaire",
+          "force_recommandation": "GRADE 1",
+          "source_page": 50,
+          "source_tableau": "Tableau Chirurgie vasculaire — Chirurgie artérielle ouverte",
+          "protocole": {
+            "molecule": "Céfazoline",
+            "dose_initiale": "2g IVL",
+            "reinjection": "1g si durée > 4h, puis toutes les 4h jusqu'à fin de chirurgie"
+          },
+          "alternative_allergie": [
+            {
+              "molecule": "Vancomycine",
+              "dose_initiale": "20 mg/kg IVL",
+              "intention": 1,
+              "reinjection": null
+            },
+            {
+              "molecule": "Teicoplanine",
+              "dose_initiale": "12 mg/kg IVL",
+              "intention": 2,
+              "reinjection": null
+            }
+          ],
+          "notes": "Artérielle périphérique/aortique : GRADE 1. Carotidienne avec matériel : GRADE 2. Alternative pharmacologique : Céfuroxime 1,5g IVL (0,75g si durée > 2h, puis toutes les 2h)."
+        },
+        {
+          "id": "vascu-carotidienne-sans-materiel",
+          "nom": "Chirurgie carotidienne sans mise en place de matériel",
+          "specialite": "Chirurgie vasculaire",
+          "force_recommandation": "GRADE 1",
+          "source_page": 50,
+          "source_tableau": "Tableau Chirurgie vasculaire — Chirurgie artérielle ouverte",
+          "protocole": null,
+          "alternative_allergie": null,
+          "notes": null
+        },
+        {
+          "id": "vascu-varices-sans-scarpa",
+          "nom": "Chirurgie des varices sans abord chirurgical du scarpa",
+          "specialite": "Chirurgie vasculaire",
+          "force_recommandation": "Avis d'experts",
+          "source_page": 50,
+          "source_tableau": "Tableau Chirurgie vasculaire — Chirurgie veineuse",
+          "protocole": null,
+          "alternative_allergie": null,
+          "notes": null
+        },
+        {
+          "id": "vascu-varices-avec-scarpa",
+          "nom": "Chirurgie des varices avec abord chirurgical du scarpa",
+          "specialite": "Chirurgie vasculaire",
+          "force_recommandation": "GRADE 2",
+          "source_page": 50,
+          "source_tableau": "Tableau Chirurgie vasculaire — Chirurgie veineuse",
+          "protocole": {
+            "molecule": "Céfazoline",
+            "dose_initiale": "2g IVL",
+            "reinjection": "1g si durée > 4h, puis toutes les 4h jusqu'à fin de chirurgie"
+          },
+          "alternative_allergie": [
+            {
+              "molecule": "Vancomycine",
+              "dose_initiale": "20 mg/kg IVL",
+              "intention": 1,
+              "reinjection": null
+            },
+            {
+              "molecule": "Teicoplanine",
+              "dose_initiale": "12 mg/kg IVL",
+              "intention": 2,
+              "reinjection": null
+            }
+          ],
+          "notes": "Alternative pharmacologique : Céfuroxime 1,5g IVL (0,75g si durée > 2h, puis toutes les 2h)."
+        },
+        {
+          "id": "vascu-veineuse-profonde",
+          "nom": "Chirurgie veineuse profonde ouverte",
+          "specialite": "Chirurgie vasculaire",
+          "force_recommandation": "Avis d'experts",
+          "source_page": 51,
+          "source_tableau": "Tableau Chirurgie vasculaire — Chirurgie veineuse",
+          "protocole": {
+            "molecule": "Céfazoline",
+            "dose_initiale": "2g IVL",
+            "reinjection": "1g si durée > 4h, puis toutes les 4h jusqu'à fin de chirurgie"
+          },
+          "alternative_allergie": [
+            {
+              "molecule": "Vancomycine",
+              "dose_initiale": "20 mg/kg IVL",
+              "intention": 1,
+              "reinjection": null
+            },
+            {
+              "molecule": "Teicoplanine",
+              "dose_initiale": "12 mg/kg IVL",
+              "intention": 2,
+              "reinjection": null
+            }
+          ],
+          "notes": "Alternative pharmacologique : Céfuroxime 1,5g IVL (0,75g si durée > 2h, puis toutes les 2h)."
+        },
+        {
+          "id": "vascu-fav-sans-materiel",
+          "nom": "Création ou reprise de fistule artério-veineuse sans mise en place de matériel",
+          "specialite": "Chirurgie vasculaire",
+          "force_recommandation": "GRADE 2",
+          "source_page": 51,
+          "source_tableau": "Tableau Chirurgie vasculaire — Fistule artério-veineuse",
+          "protocole": null,
+          "alternative_allergie": null,
+          "notes": null
+        },
+        {
+          "id": "vascu-fav-avec-materiel",
+          "nom": "Création ou reprise de fistule artério-veineuse avec mise en place de matériel",
+          "specialite": "Chirurgie vasculaire",
+          "force_recommandation": "GRADE 2",
+          "source_page": 51,
+          "source_tableau": "Tableau Chirurgie vasculaire — Fistule artério-veineuse",
+          "protocole": {
+            "molecule": "Céfazoline",
+            "dose_initiale": "2g IVL",
+            "reinjection": "1g si durée > 4h, puis toutes les 4h jusqu'à fin de chirurgie"
+          },
+          "alternative_allergie": [
+            {
+              "molecule": "Vancomycine",
+              "dose_initiale": "20 mg/kg IVL",
+              "intention": 1,
+              "reinjection": null
+            },
+            {
+              "molecule": "Teicoplanine",
+              "dose_initiale": "12 mg/kg IVL",
+              "intention": 2,
+              "reinjection": null
+            }
+          ],
+          "notes": "Alternative pharmacologique : Céfuroxime 1,5g IVL (0,75g si durée > 2h, puis toutes les 2h)."
+        },
+        {
+          "id": "vascu-interventionnelle-stent-couvert",
+          "nom": "Stent couvert ou endoprothèse / Stent nu ou absence de mise en place de matériel chez un patient avec facteurs de risque",
+          "specialite": "Chirurgie vasculaire",
+          "force_recommandation": "GRADE 2",
+          "source_page": 51,
+          "source_tableau": "Tableau Chirurgie vasculaire — Procédure interventionnelle vasculaire",
+          "protocole": {
+            "molecule": "Céfazoline",
+            "dose_initiale": "2g IVL",
+            "reinjection": "1g si durée > 4h, puis toutes les 4h jusqu'à fin de chirurgie"
+          },
+          "alternative_allergie": [
+            {
+              "molecule": "Vancomycine",
+              "dose_initiale": "20 mg/kg IVL",
+              "intention": 1,
+              "reinjection": null
+            },
+            {
+              "molecule": "Teicoplanine",
+              "dose_initiale": "12 mg/kg IVL",
+              "intention": 2,
+              "reinjection": null
+            }
+          ],
+          "notes": "Alternative pharmacologique : Céfuroxime 1,5g IVL (0,75g si durée > 2h, puis toutes les 2h)."
+        },
+        {
+          "id": "vascu-interventionnelle-stent-nu-sans-risque",
+          "nom": "Stent nu ou absence de mise en place de matériel chez un patient sans facteur de risque",
+          "specialite": "Chirurgie vasculaire",
+          "force_recommandation": "GRADE 2",
+          "source_page": 51,
+          "source_tableau": "Tableau Chirurgie vasculaire — Procédure interventionnelle vasculaire",
+          "protocole": null,
+          "alternative_allergie": null,
+          "notes": null
+        },
+        {
+          "id": "vascu-amputation",
+          "nom": "Amputation de membre (hors contexte septique)",
+          "specialite": "Chirurgie vasculaire",
+          "force_recommandation": "GRADE 2",
+          "source_page": 51,
+          "source_tableau": "Tableau Chirurgie vasculaire — Amputation de membre",
+          "protocole": {
+            "molecule": "Amoxicilline/Clavulanate",
+            "dose_initiale": "2g IVL",
+            "reinjection": "1g si durée > 2h, puis toutes les 2h jusqu'à fin de chirurgie, puis 50 mg/kg/j en 3 ou 4 injections IVL pendant 48h"
+          },
+          "alternative_allergie": [
+            {
+              "molecule": "Clindamycine",
+              "dose_initiale": "900 mg IVL puis 600 mg IVL toutes les 6h pendant 48h",
+              "intention": 1,
+              "reinjection": null
+            }
+          ],
+          "notes": null
+        }
+      ]
+    },
+    {
+      "id": "chirurgie-thoracique",
+      "nom": "Chirurgie thoracique, endoscopie thoracique et radiologie interventionnelle",
+      "interventions": [
+        {
+          "id": "thorax-exerese-pulmonaire",
+          "nom": "Pneumonectomies ou lobectomies pulmonaires / Pleuro-pneumonectomies / Exérèses partielles non anatomiques simples ou multiples du poumon, par thoracotomie / Segmentectomie pulmonaire, par thoracotomie / Réduction uni- ou bilatérale de volume pulmonaire / Résection de bulle d'emphysème pulmonaire / Exérèse de kyste hydatique du poumon, par thoracotomie",
+          "specialite": "Chirurgie thoracique, endoscopie thoracique et radiologie interventionnelle",
+          "force_recommandation": "GRADE 1",
+          "source_page": 53,
+          "source_tableau": "Tableau Chirurgie thoracique, endoscopie thoracique et radiologie interventionnelle — Chirurgie d'exérèse pulmonaire",
+          "protocole": {
+            "molecule": "Céfazoline",
+            "dose_initiale": "2g IVL",
+            "reinjection": "1g si durée > 4h, puis toutes les 4h jusqu'à fin de chirurgie"
+          },
+          "alternative_allergie": [
+            {
+              "molecule": "Clindamycine + Gentamicine",
+              "dose_initiale": "900 mg IVL + 6-7 mg/kg IVL",
+              "intention": 1,
+              "reinjection": null
+            }
+          ],
+          "notes": "Au choix : Amoxicilline/Clavulanate 2g IVL (1g si durée > 2h, puis toutes les 2h) ou Céfazoline 2g IVL ou Céfuroxime 1,5g IVL (0,75g si durée > 2h, puis toutes les 2h). Pour la prévention des pneumonies post-opératoires chez les patients atteints de BPCO et/ou dans les centres à incidence élevée : privilégier Amoxicilline/Clavulanate (GRADE 2), durée jusqu'à 48h postopératoires max (Avis d'experts)."
+        },
+        {
+          "id": "thorax-mediastin-plevre-paroi",
+          "nom": "Chirurgie du médiastin / Chirurgie du pneumothorax / Chirurgie de la plèvre (patient non infecté) / Chirurgie de paroi thoracique (avec ou sans pose de matériel)",
+          "specialite": "Chirurgie thoracique, endoscopie thoracique et radiologie interventionnelle",
+          "force_recommandation": "Avis d'experts",
+          "source_page": 53,
+          "source_tableau": "Tableau Chirurgie thoracique, endoscopie thoracique et radiologie interventionnelle — Chirurgies médiastinales, pleurales, pariétales",
+          "protocole": {
+            "molecule": "Céfazoline",
+            "dose_initiale": "2g IVL",
+            "reinjection": "1g si durée > 4h, puis toutes les 4h jusqu'à fin de chirurgie"
+          },
+          "alternative_allergie": [
+            {
+              "molecule": "Clindamycine + Gentamicine",
+              "dose_initiale": "900 mg IVL + 6-7 mg/kg IVL",
+              "intention": 1,
+              "reinjection": null
+            }
+          ],
+          "notes": "Alternative pharmacologique : Céfuroxime 1,5g IVL (0,75g si durée > 2h, puis toutes les 2h jusqu'à fin de chirurgie)."
+        },
+        {
+          "id": "thorax-mediastinoscopie-thoracoscopie",
+          "nom": "Médiastinoscopie avec ou sans biopsie / Thoracoscopie/pleuroscopie avec ou sans biopsie, avec ou sans abrasion ou talcage / Drainage thoracique tunellisé ou non",
+          "specialite": "Chirurgie thoracique, endoscopie thoracique et radiologie interventionnelle",
+          "force_recommandation": "Avis d'experts",
+          "source_page": 54,
+          "source_tableau": "Tableau Chirurgie thoracique, endoscopie thoracique et radiologie interventionnelle — Chirurgies médiastinales, pleurales, pariétales",
+          "protocole": null,
+          "alternative_allergie": null,
+          "notes": null
+        },
+        {
+          "id": "thorax-voies-aeriennes-sous-glottiques",
+          "nom": "Trachéotomie chirurgicale / Suture ou résection-anastomose de bronche / Plastie ou fermeture d'orifice de trachéostomie ou de trachéotomie / Tuteur trachéal / Fermeture de plaie ou fistule bronchique / Plastie et remplacement de trachée / Résection-anastomose trachéale",
+          "specialite": "Chirurgie thoracique, endoscopie thoracique et radiologie interventionnelle",
+          "force_recommandation": "Avis d'experts",
+          "source_page": 54,
+          "source_tableau": "Tableau Chirurgie thoracique, endoscopie thoracique et radiologie interventionnelle — Chirurgie des voies aériennes sous-glottiques",
+          "protocole": {
+            "molecule": "Céfazoline",
+            "dose_initiale": "2g IVL",
+            "reinjection": "1g si durée > 4h, puis toutes les 4h jusqu'à fin de chirurgie"
+          },
+          "alternative_allergie": [
+            {
+              "molecule": "Clindamycine + Gentamicine",
+              "dose_initiale": "900 mg IVL + 6-7 mg/kg IVL",
+              "intention": 1,
+              "reinjection": null
+            }
+          ],
+          "notes": "Alternatives pharmacologiques : Amoxicilline/Clavulanate 2g IVL (1g si durée > 2h, puis toutes les 2h) ou Céfuroxime 1,5g IVL (0,75g si durée > 2h, puis toutes les 2h)."
+        },
+        {
+          "id": "thorax-tracheotomie-percutanee",
+          "nom": "Trachéotomie percutanée",
+          "specialite": "Chirurgie thoracique, endoscopie thoracique et radiologie interventionnelle",
+          "force_recommandation": "Avis d'experts",
+          "source_page": 54,
+          "source_tableau": "Tableau Chirurgie thoracique, endoscopie thoracique et radiologie interventionnelle — Chirurgie des voies aériennes sous-glottiques",
+          "protocole": null,
+          "alternative_allergie": null,
+          "notes": null
+        },
+        {
+          "id": "thorax-oesophagectomie",
+          "nom": "Œsophagectomie / Excision de tumeur de l'œsophage / Traitement d'un diverticule de l'œsophage",
+          "specialite": "Chirurgie thoracique, endoscopie thoracique et radiologie interventionnelle",
+          "force_recommandation": "Avis d'experts",
+          "source_page": 54,
+          "source_tableau": "Tableau Chirurgie thoracique, endoscopie thoracique et radiologie interventionnelle — Chirurgie œsophagienne",
+          "protocole": {
+            "molecule": "Céfazoline",
+            "dose_initiale": "2g IVL",
+            "reinjection": "1g si durée > 4h, puis toutes les 4h jusqu'à fin de chirurgie"
+          },
+          "alternative_allergie": [
+            {
+              "molecule": "Vancomycine",
+              "dose_initiale": "20 mg/kg IVL",
+              "intention": 1,
+              "reinjection": null
+            },
+            {
+              "molecule": "Teicoplanine",
+              "dose_initiale": "12 mg/kg IVL",
+              "intention": 2,
+              "reinjection": null
+            }
+          ],
+          "notes": "Alternative pharmacologique : Céfuroxime 1,5g IVL (0,75g si durée > 2h, puis toutes les 2h). En cas d'allergie vraie aux bêtalactamines : vancomycine 20 mg/kg IVL ou teicoplanine 12 mg/kg IVL."
+        },
+        {
+          "id": "thorax-radio-interventionnelle-broncho-pulm",
+          "nom": "Destruction de tumeurs bronchopulmonaires par radiofréquence / Ponctions, cytoponctions ou biopsies pulmonaires par voie transcutanée / Évacuation ou drainages de collections broncho-pulmonaires / Injection d'agent pharmacologique intrapulmonaire",
+          "specialite": "Chirurgie thoracique, endoscopie thoracique et radiologie interventionnelle",
+          "force_recommandation": "Avis d'experts",
+          "source_page": 55,
+          "source_tableau": "Tableau Chirurgie thoracique, endoscopie thoracique et radiologie interventionnelle — Radiologie interventionnelle des voies respiratoires",
+          "protocole": null,
+          "alternative_allergie": null,
+          "notes": null
+        },
+        {
+          "id": "thorax-fibroscopie-bronchique",
+          "nom": "Fibroscopie bronchique simple ou avec lavage broncho-alvéolaire / Fibroscopie + biopsies / Écho-endoscopie bronchique avec ponction trans-bronchique (EBUS)",
+          "specialite": "Chirurgie thoracique, endoscopie thoracique et radiologie interventionnelle",
+          "force_recommandation": "Avis d'experts",
+          "source_page": 55,
+          "source_tableau": "Tableau Chirurgie thoracique, endoscopie thoracique et radiologie interventionnelle — Fibroscopie ou écho-endoscopie diagnostique",
+          "protocole": null,
+          "alternative_allergie": null,
+          "notes": null
+        },
+        {
+          "id": "thorax-valves-zephyr",
+          "nom": "Valves Zéphyr pour emphysème pulmonaire sévère",
+          "specialite": "Chirurgie thoracique, endoscopie thoracique et radiologie interventionnelle",
+          "force_recommandation": "Avis d'experts",
+          "source_page": 55,
+          "source_tableau": "Tableau Chirurgie thoracique, endoscopie thoracique et radiologie interventionnelle — Pose de prothèse endo-bronchique ou valves",
+          "protocole": {
+            "molecule": "Amoxicilline/Clavulanate",
+            "dose_initiale": "1g IVL",
+            "reinjection": "Puis 1g x4/j per os pendant 48h"
+          },
+          "alternative_allergie": [
+            {
+              "molecule": "Pristinamycine",
+              "dose_initiale": "1g per os 1h avant, puis 1g x2/j per os pendant 48h",
+              "intention": 1,
+              "reinjection": null
+            }
+          ],
+          "notes": null
+        },
+        {
+          "id": "thorax-prothese-tracheo-bronchique",
+          "nom": "Prothèse trachéo-bronchique / Bronchoscopie rigide, désobstruction / Destruction de lésion par laser, cryothérapie / Dilatation ou résection de sténose",
+          "specialite": "Chirurgie thoracique, endoscopie thoracique et radiologie interventionnelle",
+          "force_recommandation": "Avis d'experts",
+          "source_page": 55,
+          "source_tableau": "Tableau Chirurgie thoracique, endoscopie thoracique et radiologie interventionnelle — Pose de prothèse endo-bronchique ou valves",
+          "protocole": null,
+          "alternative_allergie": null,
+          "notes": null
+        },
+        {
+          "id": "thorax-transplantation-pulmonaire",
+          "nom": "Transplantation mono ou bipulmonaire avec ou sans circulation extra-corporelle",
+          "specialite": "Chirurgie thoracique, endoscopie thoracique et radiologie interventionnelle",
+          "force_recommandation": "Avis d'experts",
+          "source_page": 55,
+          "source_tableau": "Tableau Chirurgie thoracique, endoscopie thoracique et radiologie interventionnelle — Transplantation pulmonaire",
+          "protocole": null,
+          "alternative_allergie": null,
+          "notes": "Compte tenu de l'absence de littérature sur ce sujet, de la diversité des situations cliniques et des pratiques des différents centres, il n'est pas possible de recommander une antibioprophylaxie consensuelle unique. Chaque centre doit établir un protocole local."
+        }
+      ]
+    },
+    {
+      "id": "chirurgie-plastique-reconstructrice",
+      "nom": "Chirurgie plastique et reconstructrice",
+      "interventions": [
+        {
+          "id": "plast-mamm-augmentation-sans-implant-petit",
+          "nom": "Chirurgie d'augmentation mammaire sans pose d'implant (lipofilling) : volume < 200 mL ET durée ≤ 2h",
+          "specialite": "Chirurgie plastique et reconstructrice",
+          "force_recommandation": "Avis d'experts",
+          "source_page": 57,
+          "source_tableau": "Tableau Chirurgie plastique et reconstructrice — Chirurgie mammaire plastique ou carcinologique",
+          "protocole": null,
+          "alternative_allergie": null,
+          "notes": null
+        },
+        {
+          "id": "plast-mamm-augmentation-sans-implant-grand",
+          "nom": "Chirurgie d'augmentation mammaire sans pose d'implant (lipofilling) : volume > 200 mL ou durée > 2h",
+          "specialite": "Chirurgie plastique et reconstructrice",
+          "force_recommandation": "Avis d'experts",
+          "source_page": 57,
+          "source_tableau": "Tableau Chirurgie plastique et reconstructrice — Chirurgie mammaire plastique ou carcinologique",
+          "protocole": {
+            "molecule": "Céfazoline",
+            "dose_initiale": "2g IVL",
+            "reinjection": "1g si durée > 4h, puis toutes les 4h jusqu'à fin de chirurgie"
+          },
+          "alternative_allergie": [
+            {
+              "molecule": "Clindamycine",
+              "dose_initiale": "900 mg IVL",
+              "intention": 1,
+              "reinjection": null
+            },
+            {
+              "molecule": "Vancomycine",
+              "dose_initiale": "20 mg/kg IVL",
+              "intention": 2,
+              "reinjection": null
+            },
+            {
+              "molecule": "Teicoplanine",
+              "dose_initiale": "12 mg/kg IVL",
+              "intention": 3,
+              "reinjection": null
+            }
+          ],
+          "notes": null
+        },
+        {
+          "id": "plast-mamm-augmentation-avec-implant",
+          "nom": "Chirurgie d'augmentation mammaire avec pose d'implant (implants siliconés, prothèse d'expansion)",
+          "specialite": "Chirurgie plastique et reconstructrice",
+          "force_recommandation": "Avis d'experts",
+          "source_page": 57,
+          "source_tableau": "Tableau Chirurgie plastique et reconstructrice — Chirurgie mammaire plastique ou carcinologique",
+          "protocole": {
+            "molecule": "Céfazoline",
+            "dose_initiale": "2g IVL",
+            "reinjection": "1g si durée > 4h, puis toutes les 4h jusqu'à fin de chirurgie"
+          },
+          "alternative_allergie": [
+            {
+              "molecule": "Clindamycine",
+              "dose_initiale": "900 mg IVL",
+              "intention": 1,
+              "reinjection": null
+            },
+            {
+              "molecule": "Vancomycine",
+              "dose_initiale": "20 mg/kg IVL",
+              "intention": 2,
+              "reinjection": null
+            },
+            {
+              "molecule": "Teicoplanine",
+              "dose_initiale": "12 mg/kg IVL",
+              "intention": 3,
+              "reinjection": null
+            }
+          ],
+          "notes": "Pas d'indication à prolonger l'antibioprophylaxie au-delà de la fin de chirurgie (GRADE 2)."
+        },
+        {
+          "id": "plast-mamm-reduction-mastopexie-tumorectomie",
+          "nom": "Chirurgie de réduction mammaire / Exérèse de gynécomastie / Mastopexie pour ptose simple / Tumorectomie mammaire sans curage / Tumorectomie mammaire avec ganglion sentinelle / Gonflage d'expandeur",
+          "specialite": "Chirurgie plastique et reconstructrice",
+          "force_recommandation": "Avis d'experts",
+          "source_page": 57,
+          "source_tableau": "Tableau Chirurgie plastique et reconstructrice — Chirurgie mammaire plastique ou carcinologique",
+          "protocole": null,
+          "alternative_allergie": null,
+          "notes": null
+        },
+        {
+          "id": "plast-mamm-tumorectomie-curage-mastectomie",
+          "nom": "Tumorectomie mammaire avec curage / Mastectomie sans ou avec curage : sans reconstruction ou avec reconstruction immédiate (prothèse d'expansion, lambeau) ou reconstruction différée",
+          "specialite": "Chirurgie plastique et reconstructrice",
+          "force_recommandation": "GRADE 2",
+          "source_page": 57,
+          "source_tableau": "Tableau Chirurgie plastique et reconstructrice — Chirurgie mammaire plastique ou carcinologique",
+          "protocole": {
+            "molecule": "Céfazoline",
+            "dose_initiale": "2g IVL",
+            "reinjection": "1g si durée > 4h, puis toutes les 4h jusqu'à fin de chirurgie"
+          },
+          "alternative_allergie": [
+            {
+              "molecule": "Clindamycine",
+              "dose_initiale": "900 mg IVL",
+              "intention": 1,
+              "reinjection": null
+            },
+            {
+              "molecule": "Vancomycine",
+              "dose_initiale": "20 mg/kg IVL",
+              "intention": 2,
+              "reinjection": null
+            },
+            {
+              "molecule": "Teicoplanine",
+              "dose_initiale": "12 mg/kg IVL",
+              "intention": 3,
+              "reinjection": null
+            }
+          ],
+          "notes": "Tumorectomie avec curage et mastectomie sans reconstruction : GRADE 2. Mastectomie avec reconstruction : Avis d'experts. Pas d'indication à prolonger l'antibioprophylaxie au-delà de la fin de chirurgie (GRADE 2)."
+        },
+        {
+          "id": "plast-silhouette-brachioplastie",
+          "nom": "Brachioplastie",
+          "specialite": "Chirurgie plastique et reconstructrice",
+          "force_recommandation": "Avis d'experts",
+          "source_page": 57,
+          "source_tableau": "Tableau Chirurgie plastique et reconstructrice — Chirurgie de silhouette",
+          "protocole": null,
+          "alternative_allergie": null,
+          "notes": null
+        },
+        {
+          "id": "plast-silhouette-cruroplastie",
+          "nom": "Cruroplastie",
+          "specialite": "Chirurgie plastique et reconstructrice",
+          "force_recommandation": "Avis d'experts",
+          "source_page": 57,
+          "source_tableau": "Tableau Chirurgie plastique et reconstructrice — Chirurgie de silhouette",
+          "protocole": {
+            "molecule": "Céfazoline",
+            "dose_initiale": "2g IVL",
+            "reinjection": "1g si durée > 4h, puis toutes les 4h jusqu'à fin de chirurgie"
+          },
+          "alternative_allergie": [
+            {
+              "molecule": "Clindamycine",
+              "dose_initiale": "900 mg IVL",
+              "intention": 1,
+              "reinjection": null
+            },
+            {
+              "molecule": "Vancomycine",
+              "dose_initiale": "20 mg/kg IVL",
+              "intention": 2,
+              "reinjection": null
+            },
+            {
+              "molecule": "Teicoplanine",
+              "dose_initiale": "12 mg/kg IVL",
+              "intention": 3,
+              "reinjection": null
+            }
+          ],
+          "notes": null
+        },
+        {
+          "id": "plast-silhouette-abdominoplastie-courte",
+          "nom": "Abdominoplastie de durée ≤ 2h",
+          "specialite": "Chirurgie plastique et reconstructrice",
+          "force_recommandation": "Avis d'experts",
+          "source_page": 58,
+          "source_tableau": "Tableau Chirurgie plastique et reconstructrice — Chirurgie de silhouette",
+          "protocole": null,
+          "alternative_allergie": null,
+          "notes": null
+        },
+        {
+          "id": "plast-silhouette-abdominoplastie-longue",
+          "nom": "Abdominoplastie de durée > 2h",
+          "specialite": "Chirurgie plastique et reconstructrice",
+          "force_recommandation": "Avis d'experts",
+          "source_page": 58,
+          "source_tableau": "Tableau Chirurgie plastique et reconstructrice — Chirurgie de silhouette",
+          "protocole": {
+            "molecule": "Céfazoline",
+            "dose_initiale": "2g IVL",
+            "reinjection": "1g si durée > 4h, puis toutes les 4h jusqu'à fin de chirurgie"
+          },
+          "alternative_allergie": [
+            {
+              "molecule": "Clindamycine",
+              "dose_initiale": "900 mg IVL",
+              "intention": 1,
+              "reinjection": null
+            },
+            {
+              "molecule": "Vancomycine",
+              "dose_initiale": "20 mg/kg IVL",
+              "intention": 2,
+              "reinjection": null
+            },
+            {
+              "molecule": "Teicoplanine",
+              "dose_initiale": "12 mg/kg IVL",
+              "intention": 3,
+              "reinjection": null
+            }
+          ],
+          "notes": null
+        },
+        {
+          "id": "plast-silhouette-body-lift",
+          "nom": "Body-lift",
+          "specialite": "Chirurgie plastique et reconstructrice",
+          "force_recommandation": "GRADE 2",
+          "source_page": 58,
+          "source_tableau": "Tableau Chirurgie plastique et reconstructrice — Chirurgie de silhouette",
+          "protocole": {
+            "molecule": "Céfazoline",
+            "dose_initiale": "2g IVL",
+            "reinjection": "1g si durée > 4h, puis toutes les 4h jusqu'à fin de chirurgie"
+          },
+          "alternative_allergie": [
+            {
+              "molecule": "Clindamycine",
+              "dose_initiale": "900 mg IVL",
+              "intention": 1,
+              "reinjection": null
+            },
+            {
+              "molecule": "Vancomycine",
+              "dose_initiale": "20 mg/kg IVL",
+              "intention": 2,
+              "reinjection": null
+            },
+            {
+              "molecule": "Teicoplanine",
+              "dose_initiale": "12 mg/kg IVL",
+              "intention": 3,
+              "reinjection": null
+            }
+          ],
+          "notes": null
+        },
+        {
+          "id": "plast-silhouette-lipoaspiration",
+          "nom": "Lipoaspiration sous anesthésie générale ou locale",
+          "specialite": "Chirurgie plastique et reconstructrice",
+          "force_recommandation": "Avis d'experts",
+          "source_page": 58,
+          "source_tableau": "Tableau Chirurgie plastique et reconstructrice — Chirurgie de silhouette",
+          "protocole": null,
+          "alternative_allergie": null,
+          "notes": null
+        },
+        {
+          "id": "plast-tete-otoplastie-blepharoplastie",
+          "nom": "Otoplastie / Blépharoplastie",
+          "specialite": "Chirurgie plastique et reconstructrice",
+          "force_recommandation": "Avis d'experts",
+          "source_page": 58,
+          "source_tableau": "Tableau Chirurgie plastique et reconstructrice — Chirurgie de la tête et du cou",
+          "protocole": null,
+          "alternative_allergie": null,
+          "notes": null
+        },
+        {
+          "id": "plast-tete-lifting-court",
+          "nom": "Lifting cervico-facial ou mask-lift de durée ≤ 2h",
+          "specialite": "Chirurgie plastique et reconstructrice",
+          "force_recommandation": "Avis d'experts",
+          "source_page": 58,
+          "source_tableau": "Tableau Chirurgie plastique et reconstructrice — Chirurgie de la tête et du cou",
+          "protocole": null,
+          "alternative_allergie": null,
+          "notes": null
+        },
+        {
+          "id": "plast-tete-lifting-long-osseux",
+          "nom": "Lifting cervico-facial ou mask-lift de durée > 2h / Avec greffon ou remodelage osseux",
+          "specialite": "Chirurgie plastique et reconstructrice",
+          "force_recommandation": "Avis d'experts",
+          "source_page": 58,
+          "source_tableau": "Tableau Chirurgie plastique et reconstructrice — Chirurgie de la tête et du cou",
+          "protocole": {
+            "molecule": "Céfazoline",
+            "dose_initiale": "2g IVL",
+            "reinjection": "1g si durée > 4h, puis toutes les 4h jusqu'à fin de chirurgie"
+          },
+          "alternative_allergie": [
+            {
+              "molecule": "Clindamycine",
+              "dose_initiale": "900 mg IVL",
+              "intention": 1,
+              "reinjection": null
+            },
+            {
+              "molecule": "Vancomycine",
+              "dose_initiale": "20 mg/kg IVL",
+              "intention": 2,
+              "reinjection": null
+            },
+            {
+              "molecule": "Teicoplanine",
+              "dose_initiale": "12 mg/kg IVL",
+              "intention": 3,
+              "reinjection": null
+            }
+          ],
+          "notes": null
+        },
+        {
+          "id": "plast-tete-rhinoplastie-sans-greffe",
+          "nom": "Septo-rhinoplastie sans greffe de cartilage",
+          "specialite": "Chirurgie plastique et reconstructrice",
+          "force_recommandation": "GRADE 2",
+          "source_page": 58,
+          "source_tableau": "Tableau Chirurgie plastique et reconstructrice — Chirurgie de la tête et du cou",
+          "protocole": null,
+          "alternative_allergie": null,
+          "notes": null
+        },
+        {
+          "id": "plast-tete-rhinoplastie-avec-greffe",
+          "nom": "Septo-rhinoplastie avec greffe de cartilage / Implants ou appositions modelantes à la face (malaire)",
+          "specialite": "Chirurgie plastique et reconstructrice",
+          "force_recommandation": "GRADE 2",
+          "source_page": 58,
+          "source_tableau": "Tableau Chirurgie plastique et reconstructrice — Chirurgie de la tête et du cou",
+          "protocole": {
+            "molecule": "Céfazoline",
+            "dose_initiale": "2g IVL",
+            "reinjection": "1g si durée > 4h, puis toutes les 4h jusqu'à fin de chirurgie"
+          },
+          "alternative_allergie": [
+            {
+              "molecule": "Clindamycine",
+              "dose_initiale": "900 mg IVL",
+              "intention": 1,
+              "reinjection": null
+            },
+            {
+              "molecule": "Vancomycine",
+              "dose_initiale": "20 mg/kg IVL",
+              "intention": 2,
+              "reinjection": null
+            },
+            {
+              "molecule": "Teicoplanine",
+              "dose_initiale": "12 mg/kg IVL",
+              "intention": 3,
+              "reinjection": null
+            }
+          ],
+          "notes": null
+        },
+        {
+          "id": "plast-tete-frontoplastie",
+          "nom": "Frontoplastie",
+          "specialite": "Chirurgie plastique et reconstructrice",
+          "force_recommandation": "Avis d'experts",
+          "source_page": 58,
+          "source_tableau": "Tableau Chirurgie plastique et reconstructrice — Chirurgie de la tête et du cou",
+          "protocole": {
+            "molecule": "Céfazoline",
+            "dose_initiale": "2g IVL",
+            "reinjection": "1g si durée > 4h, puis toutes les 4h jusqu'à fin de chirurgie"
+          },
+          "alternative_allergie": [
+            {
+              "molecule": "Clindamycine",
+              "dose_initiale": "900 mg IVL",
+              "intention": 1,
+              "reinjection": null
+            },
+            {
+              "molecule": "Vancomycine",
+              "dose_initiale": "20 mg/kg IVL",
+              "intention": 2,
+              "reinjection": null
+            },
+            {
+              "molecule": "Teicoplanine",
+              "dose_initiale": "12 mg/kg IVL",
+              "intention": 3,
+              "reinjection": null
+            }
+          ],
+          "notes": null
+        },
+        {
+          "id": "plast-tete-genioplastie",
+          "nom": "Génioplastie (avec ou sans implant)",
+          "specialite": "Chirurgie plastique et reconstructrice",
+          "force_recommandation": "Avis d'experts",
+          "source_page": 58,
+          "source_tableau": "Tableau Chirurgie plastique et reconstructrice — Chirurgie de la tête et du cou",
+          "protocole": {
+            "molecule": "Amoxicilline/Clavulanate",
+            "dose_initiale": "2g IVL",
+            "reinjection": "1g si durée > 2h, puis toutes les 2h jusqu'à fin de chirurgie"
+          },
+          "alternative_allergie": [
+            {
+              "molecule": "Clindamycine + Gentamicine",
+              "dose_initiale": "900 mg IVL + 6-7 mg/kg IVL",
+              "intention": 1,
+              "reinjection": null
+            }
+          ],
+          "notes": null
+        },
+        {
+          "id": "plast-tete-orthognatique",
+          "nom": "Chirurgie orthognatique",
+          "specialite": "Chirurgie plastique et reconstructrice",
+          "force_recommandation": "Avis d'experts",
+          "source_page": 58,
+          "source_tableau": "Tableau Chirurgie plastique et reconstructrice — Chirurgie de la tête et du cou",
+          "protocole": {
+            "molecule": "Amoxicilline/Clavulanate",
+            "dose_initiale": "2g IVL",
+            "reinjection": "1g si durée > 2h, puis toutes les 2h jusqu'à fin de chirurgie, puis 1g/6h postop pendant 48h max"
+          },
+          "alternative_allergie": [
+            {
+              "molecule": "Clindamycine + Gentamicine",
+              "dose_initiale": "900 mg IVL + 6-7 mg/kg IVL",
+              "intention": 1,
+              "reinjection": null
+            }
+          ],
+          "notes": null
+        },
+        {
+          "id": "plast-tete-autogreffes-capillaires",
+          "nom": "Autogreffes capillaires de réimplantation",
+          "specialite": "Chirurgie plastique et reconstructrice",
+          "force_recommandation": "Avis d'experts",
+          "source_page": 58,
+          "source_tableau": "Tableau Chirurgie plastique et reconstructrice — Chirurgie de la tête et du cou",
+          "protocole": null,
+          "alternative_allergie": null,
+          "notes": null
+        },
+        {
+          "id": "plast-tete-lambeau-endo-oral",
+          "nom": "Chirurgie de la face avec reconstruction par lambeau — abord endo-oral",
+          "specialite": "Chirurgie plastique et reconstructrice",
+          "force_recommandation": "Avis d'experts",
+          "source_page": 58,
+          "source_tableau": "Tableau Chirurgie plastique et reconstructrice — Chirurgie de la tête et du cou",
+          "protocole": {
+            "molecule": "Amoxicilline/Clavulanate",
+            "dose_initiale": "2g IVL",
+            "reinjection": "1g si durée > 2h, puis toutes les 2h jusqu'à fin de chirurgie"
+          },
+          "alternative_allergie": [
+            {
+              "molecule": "Clindamycine + Gentamicine",
+              "dose_initiale": "900 mg IVL + 6-7 mg/kg IVL",
+              "intention": 1,
+              "reinjection": null
+            }
+          ],
+          "notes": null
+        },
+        {
+          "id": "plast-tete-lambeau-extra-oral-court",
+          "nom": "Chirurgie de la face avec reconstruction par lambeau — abord extra-oral sans contamination locale, durée ≤ 2h",
+          "specialite": "Chirurgie plastique et reconstructrice",
+          "force_recommandation": "Avis d'experts",
+          "source_page": 59,
+          "source_tableau": "Tableau Chirurgie plastique et reconstructrice — Chirurgie de la tête et du cou",
+          "protocole": null,
+          "alternative_allergie": null,
+          "notes": null
+        },
+        {
+          "id": "plast-tete-lambeau-extra-oral-long",
+          "nom": "Chirurgie de la face avec reconstruction par lambeau — abord extra-oral sans contamination locale, durée > 2h",
+          "specialite": "Chirurgie plastique et reconstructrice",
+          "force_recommandation": "Avis d'experts",
+          "source_page": 59,
+          "source_tableau": "Tableau Chirurgie plastique et reconstructrice — Chirurgie de la tête et du cou",
+          "protocole": {
+            "molecule": "Céfazoline",
+            "dose_initiale": "2g IVL",
+            "reinjection": "1g si durée > 4h, puis toutes les 4h jusqu'à fin de chirurgie"
+          },
+          "alternative_allergie": [
+            {
+              "molecule": "Clindamycine",
+              "dose_initiale": "900 mg IVL",
+              "intention": 1,
+              "reinjection": null
+            },
+            {
+              "molecule": "Vancomycine",
+              "dose_initiale": "20 mg/kg IVL",
+              "intention": 2,
+              "reinjection": null
+            },
+            {
+              "molecule": "Teicoplanine",
+              "dose_initiale": "12 mg/kg IVL",
+              "intention": 3,
+              "reinjection": null
+            }
+          ],
+          "notes": null
+        },
+        {
+          "id": "plast-gen-transfert-adipocytaire-petit",
+          "nom": "Transfert adipocytaire libre : volume < 200 mL ET durée ≤ 2h",
+          "specialite": "Chirurgie plastique et reconstructrice",
+          "force_recommandation": "Avis d'experts",
+          "source_page": 59,
+          "source_tableau": "Tableau Chirurgie plastique et reconstructrice — Chirurgie générale et carcinologique",
+          "protocole": null,
+          "alternative_allergie": null,
+          "notes": null
+        },
+        {
+          "id": "plast-gen-transfert-adipocytaire-grand",
+          "nom": "Transfert adipocytaire libre : volume > 200 mL ou durée > 2h",
+          "specialite": "Chirurgie plastique et reconstructrice",
+          "force_recommandation": "Avis d'experts",
+          "source_page": 59,
+          "source_tableau": "Tableau Chirurgie plastique et reconstructrice — Chirurgie générale et carcinologique",
+          "protocole": {
+            "molecule": "Céfazoline",
+            "dose_initiale": "2g IVL",
+            "reinjection": "1g si durée > 4h, puis toutes les 4h jusqu'à fin de chirurgie"
+          },
+          "alternative_allergie": [
+            {
+              "molecule": "Clindamycine",
+              "dose_initiale": "900 mg IVL",
+              "intention": 1,
+              "reinjection": null
+            },
+            {
+              "molecule": "Vancomycine",
+              "dose_initiale": "20 mg/kg IVL",
+              "intention": 2,
+              "reinjection": null
+            },
+            {
+              "molecule": "Teicoplanine",
+              "dose_initiale": "12 mg/kg IVL",
+              "intention": 3,
+              "reinjection": null
+            }
+          ],
+          "notes": null
+        },
+        {
+          "id": "plast-gen-greffes-cutanees",
+          "nom": "Greffes cutanées (hors brûlure) / Plastie(s) cutanée(s) / Tumorectomie cutanée / Chirurgie de ganglion sentinelle / Curage ganglionnaire axillaire ou inguinal seul",
+          "specialite": "Chirurgie plastique et reconstructrice",
+          "force_recommandation": "GRADE 2",
+          "source_page": 59,
+          "source_tableau": "Tableau Chirurgie plastique et reconstructrice — Chirurgie générale et carcinologique",
+          "protocole": null,
+          "alternative_allergie": null,
+          "notes": "Greffes cutanées, plastie(s) cutanée(s) : GRADE 2. Tumorectomie cutanée, ganglion sentinelle, curage : Avis d'experts."
+        },
+        {
+          "id": "plast-gen-substitut-dermique",
+          "nom": "Pose de substitut dermique",
+          "specialite": "Chirurgie plastique et reconstructrice",
+          "force_recommandation": "Avis d'experts",
+          "source_page": 59,
+          "source_tableau": "Tableau Chirurgie plastique et reconstructrice — Chirurgie générale et carcinologique",
+          "protocole": {
+            "molecule": "Céfazoline",
+            "dose_initiale": "2g IVL",
+            "reinjection": "1g si durée > 4h, puis toutes les 4h jusqu'à fin de chirurgie"
+          },
+          "alternative_allergie": [
+            {
+              "molecule": "Clindamycine",
+              "dose_initiale": "900 mg IVL",
+              "intention": 1,
+              "reinjection": null
+            },
+            {
+              "molecule": "Vancomycine",
+              "dose_initiale": "20 mg/kg IVL",
+              "intention": 2,
+              "reinjection": null
+            },
+            {
+              "molecule": "Teicoplanine",
+              "dose_initiale": "12 mg/kg IVL",
+              "intention": 3,
+              "reinjection": null
+            }
+          ],
+          "notes": null
+        },
+        {
+          "id": "plast-gen-expansion-pose-prothese",
+          "nom": "Expansion cutanée avec prothèse — pose de prothèse(s) d'expansion",
+          "specialite": "Chirurgie plastique et reconstructrice",
+          "force_recommandation": "Avis d'experts",
+          "source_page": 59,
+          "source_tableau": "Tableau Chirurgie plastique et reconstructrice — Chirurgie générale et carcinologique",
+          "protocole": {
+            "molecule": "Céfazoline",
+            "dose_initiale": "2g IVL",
+            "reinjection": "1g si durée > 4h, puis toutes les 4h jusqu'à fin de chirurgie"
+          },
+          "alternative_allergie": [
+            {
+              "molecule": "Clindamycine",
+              "dose_initiale": "900 mg IVL",
+              "intention": 1,
+              "reinjection": null
+            },
+            {
+              "molecule": "Vancomycine",
+              "dose_initiale": "20 mg/kg IVL",
+              "intention": 2,
+              "reinjection": null
+            },
+            {
+              "molecule": "Teicoplanine",
+              "dose_initiale": "12 mg/kg IVL",
+              "intention": 3,
+              "reinjection": null
+            }
+          ],
+          "notes": null
+        },
+        {
+          "id": "plast-gen-expansion-gonflage",
+          "nom": "Expansion cutanée avec prothèse — gonflage de prothèse",
+          "specialite": "Chirurgie plastique et reconstructrice",
+          "force_recommandation": "Avis d'experts",
+          "source_page": 59,
+          "source_tableau": "Tableau Chirurgie plastique et reconstructrice — Chirurgie générale et carcinologique",
+          "protocole": null,
+          "alternative_allergie": null,
+          "notes": null
+        },
+        {
+          "id": "plast-gen-lambeaux",
+          "nom": "Lambeaux libres microchirurgicaux ou pédiculés",
+          "specialite": "Chirurgie plastique et reconstructrice",
+          "force_recommandation": "Avis d'experts",
+          "source_page": 59,
+          "source_tableau": "Tableau Chirurgie plastique et reconstructrice — Chirurgie générale et carcinologique",
+          "protocole": {
+            "molecule": "Céfazoline",
+            "dose_initiale": "2g IVL",
+            "reinjection": "1g si durée > 4h, puis toutes les 4h jusqu'à fin de chirurgie"
+          },
+          "alternative_allergie": [
+            {
+              "molecule": "Clindamycine",
+              "dose_initiale": "900 mg IVL",
+              "intention": 1,
+              "reinjection": null
+            },
+            {
+              "molecule": "Vancomycine",
+              "dose_initiale": "20 mg/kg IVL",
+              "intention": 2,
+              "reinjection": null
+            },
+            {
+              "molecule": "Teicoplanine",
+              "dose_initiale": "12 mg/kg IVL",
+              "intention": 3,
+              "reinjection": null
+            }
+          ],
+          "notes": null
+        }
+      ]
+    },
+    {
+      "id": "chirurgie-affirmation-de-genre",
+      "nom": "Chirurgie d'affirmation de genre",
+      "interventions": [
+        {
+          "id": "genre-protheses-peniennes-testiculaires",
+          "nom": "Pose de prothèse testiculaire / Pose de prothèse pénienne / Armature d'un néo-pénis / Pose de prothèses gonflables (hydrauliques) avec composants extra-caverneux / Pose de prothèses semi-rigide",
+          "specialite": "Chirurgie d'affirmation de genre",
+          "force_recommandation": "Avis d'experts",
+          "source_page": 60,
+          "source_tableau": "Tableau Chirurgie d'affirmation de genre — Prothèses pénienne et testiculaire",
+          "protocole": {
+            "molecule": "Céfazoline",
+            "dose_initiale": "2g IVL",
+            "reinjection": "1g si durée > 4h, puis toutes les 4h jusqu'à fin de chirurgie"
+          },
+          "alternative_allergie": [
+            {
+              "molecule": "Clindamycine",
+              "dose_initiale": "900 mg IVL",
+              "intention": 1,
+              "reinjection": null
+            },
+            {
+              "molecule": "Vancomycine",
+              "dose_initiale": "20 mg/kg IVL",
+              "intention": 2,
+              "reinjection": null
+            }
+          ],
+          "notes": null
+        },
+        {
+          "id": "genre-vaginoplastie",
+          "nom": "Urétroplastie, vaginoplastie et vestibuloplastie avec enfouissement ou réduction du clitoris pour féminisation / Création d'un néo-vagin et d'une néo-vulve +/- greffe de peau / Plastie des organes génitaux externes pour transsexualisme masculin",
+          "specialite": "Chirurgie d'affirmation de genre",
+          "force_recommandation": "Avis d'experts",
+          "source_page": 60,
+          "source_tableau": "Tableau Chirurgie d'affirmation de genre — Vaginoplastie",
+          "protocole": {
+            "molecule": "Amoxicilline/Clavulanate",
+            "dose_initiale": "2g IVL",
+            "reinjection": "1g si durée > 2h, puis toutes les 2h jusqu'à fin de chirurgie"
+          },
+          "alternative_allergie": [
+            {
+              "molecule": "Gentamicine + Métronidazole",
+              "dose_initiale": "6-7 mg/kg IVL + 1g IVL",
+              "intention": 1,
+              "reinjection": null
+            }
+          ],
+          "notes": "En cas de création de néo-vagin, poursuite de l'Amoxicilline/Clavulanate 1g/6h (si allergie : Métronidazole 500mg/8h) jusqu'à ablation du conformateur vaginal (Avis d'experts)."
+        },
+        {
+          "id": "genre-neo-vagin-intestinal",
+          "nom": "Création d'un néo-vagin avec un segment intestinal",
+          "specialite": "Chirurgie d'affirmation de genre",
+          "force_recommandation": "GRADE 1",
+          "source_page": 61,
+          "source_tableau": "Tableau Chirurgie d'affirmation de genre — Vaginoplastie",
+          "protocole": {
+            "molecule": "Céfoxitine",
+            "dose_initiale": "2g IVL",
+            "reinjection": "1g si durée > 2h, puis toutes les 2h jusqu'à fin de chirurgie"
+          },
+          "alternative_allergie": [
+            {
+              "molecule": "Gentamicine + Métronidazole",
+              "dose_initiale": "6-7 mg/kg IVL + 1g IVL",
+              "intention": 1,
+              "reinjection": null
+            }
+          ],
+          "notes": "La veille soir : Tobramycine 200mg per os (dose unique, GRADE 1) + Métronidazole 1g per os (dose unique, Avis d'experts). Lors de la chirurgie : Céfoxitine 2g IVL."
+        },
+        {
+          "id": "genre-phalloplastie",
+          "nom": "Phalloplastie par lambeau inguinal pédiculé, ou lambeau cutané libre, ou lambeau cutané tubulé pénien",
+          "specialite": "Chirurgie d'affirmation de genre",
+          "force_recommandation": "Avis d'experts",
+          "source_page": 61,
+          "source_tableau": "Tableau Chirurgie d'affirmation de genre — Phalloplastie",
+          "protocole": {
+            "molecule": "Céfazoline",
+            "dose_initiale": "2g IVL",
+            "reinjection": "1g si durée > 4h, puis toutes les 4h jusqu'à fin de chirurgie"
+          },
+          "alternative_allergie": [
+            {
+              "molecule": "Clindamycine",
+              "dose_initiale": "900 mg IVL",
+              "intention": 1,
+              "reinjection": null
+            },
+            {
+              "molecule": "Vancomycine",
+              "dose_initiale": "20 mg/kg IVL",
+              "intention": 2,
+              "reinjection": null
+            }
+          ],
+          "notes": null
+        },
+        {
+          "id": "genre-metoidioplastie",
+          "nom": "Métoïdioplastie",
+          "specialite": "Chirurgie d'affirmation de genre",
+          "force_recommandation": "Avis d'experts",
+          "source_page": 61,
+          "source_tableau": "Tableau Chirurgie d'affirmation de genre — Métoïdioplastie",
+          "protocole": {
+            "molecule": "Céfazoline",
+            "dose_initiale": "2g IVL",
+            "reinjection": "1g si durée > 4h, puis toutes les 4h jusqu'à fin de chirurgie"
+          },
+          "alternative_allergie": [
+            {
+              "molecule": "Clindamycine",
+              "dose_initiale": "900 mg IVL",
+              "intention": 1,
+              "reinjection": null
+            },
+            {
+              "molecule": "Vancomycine",
+              "dose_initiale": "20 mg/kg IVL",
+              "intention": 2,
+              "reinjection": null
+            }
+          ],
+          "notes": null
+        },
+        {
+          "id": "genre-laryngoplastie",
+          "nom": "Laryngoplastie par cervicotomie (chondro-laryngoplastie)",
+          "specialite": "Chirurgie d'affirmation de genre",
+          "force_recommandation": "Avis d'experts",
+          "source_page": 61,
+          "source_tableau": "Tableau Chirurgie d'affirmation de genre — Chondro-laryngoplastie",
+          "protocole": null,
+          "alternative_allergie": null,
+          "notes": null
+        }
+      ]
+    },
+    {
+      "id": "chirurgie-patient-brule",
+      "nom": "Chirurgie du patient brûlé",
+      "interventions": [
+        {
+          "id": "brule-pansement-lavage",
+          "nom": "Pansement de brûlure initial (mise à plat de phlyctènes, lavage) et secondaire sans geste chirurgical",
+          "specialite": "Chirurgie du patient brûlé",
+          "force_recommandation": "Avis d'experts",
+          "source_page": 63,
+          "source_tableau": "Tableau Chirurgie du patient brûlé",
+          "protocole": null,
+          "alternative_allergie": null,
+          "notes": null
+        },
+        {
+          "id": "brule-incision-decharge",
+          "nom": "Incision de décharge : escarrotomie / Aponévrotomie (en l'absence de fracture ouverte associée)",
+          "specialite": "Chirurgie du patient brûlé",
+          "force_recommandation": "Avis d'experts",
+          "source_page": 63,
+          "source_tableau": "Tableau Chirurgie du patient brûlé",
+          "protocole": null,
+          "alternative_allergie": null,
+          "notes": null
+        },
+        {
+          "id": "brule-excision-sans-couverture",
+          "nom": "Excision de brûlure sans couverture ou avec couverture temporaire (allo ou xénogreffe)",
+          "specialite": "Chirurgie du patient brûlé",
+          "force_recommandation": "Avis d'experts",
+          "source_page": 63,
+          "source_tableau": "Tableau Chirurgie du patient brûlé",
+          "protocole": null,
+          "alternative_allergie": null,
+          "notes": null
+        },
+        {
+          "id": "brule-autogreffe",
+          "nom": "Autogreffe cutanée",
+          "specialite": "Chirurgie du patient brûlé",
+          "force_recommandation": "Avis d'experts",
+          "source_page": 63,
+          "source_tableau": "Tableau Chirurgie du patient brûlé",
+          "protocole": null,
+          "alternative_allergie": null,
+          "notes": "Considérer une antibioprophylaxie individuelle adaptée à la flore du site opératoire et au risque du patient en cas de parcours de soins prolongé, colonisation cutanée à germes multi-résistants, ou immunodépression sous-jacente (Avis d'experts)."
+        },
+        {
+          "id": "brule-greffe-matrice-artificielle",
+          "nom": "Greffe de matrice cutanée artificielle",
+          "specialite": "Chirurgie du patient brûlé",
+          "force_recommandation": "Avis d'experts",
+          "source_page": 63,
+          "source_tableau": "Tableau Chirurgie du patient brûlé",
+          "protocole": {
+            "molecule": "Céfazoline",
+            "dose_initiale": "2g IVL",
+            "reinjection": "1g si durée > 4h, puis toutes les 4h jusqu'à fin de chirurgie"
+          },
+          "alternative_allergie": [
+            {
+              "molecule": "Clindamycine",
+              "dose_initiale": "900 mg IVL",
+              "intention": 1,
+              "reinjection": null
+            },
+            {
+              "molecule": "Vancomycine",
+              "dose_initiale": "20 mg/kg IVL",
+              "intention": 2,
+              "reinjection": null
+            },
+            {
+              "molecule": "Teicoplanine",
+              "dose_initiale": "12 mg/kg IVL",
+              "intention": 3,
+              "reinjection": null
+            }
+          ],
+          "notes": "Considérer une antibioprophylaxie individuelle adaptée à la flore du site opératoire et au risque du patient en cas de parcours de soins prolongé, colonisation cutanée à germes multi-résistants, ou immunodépression sous-jacente (Avis d'experts)."
+        },
+        {
+          "id": "brule-amputation",
+          "nom": "Amputation",
+          "specialite": "Chirurgie du patient brûlé",
+          "force_recommandation": "Avis d'experts",
+          "source_page": 63,
+          "source_tableau": "Tableau Chirurgie du patient brûlé",
+          "protocole": {
+            "molecule": "Amoxicilline/Clavulanate",
+            "dose_initiale": "2g IVL",
+            "reinjection": "1g si durée > 2h, puis toutes les 2h jusqu'à fin de chirurgie"
+          },
+          "alternative_allergie": [
+            {
+              "molecule": "Clindamycine",
+              "dose_initiale": "900 mg IVL",
+              "intention": 1,
+              "reinjection": null
+            },
+            {
+              "molecule": "Vancomycine",
+              "dose_initiale": "20 mg/kg IVL",
+              "intention": 2,
+              "reinjection": null
+            },
+            {
+              "molecule": "Teicoplanine",
+              "dose_initiale": "12 mg/kg IVL",
+              "intention": 3,
+              "reinjection": null
+            }
+          ],
+          "notes": "Considérer une antibioprophylaxie individuelle adaptée à la flore du site opératoire et au risque du patient en cas de parcours de soins prolongé, colonisation cutanée à germes multi-résistants, ou immunodépression sous-jacente (Avis d'experts)."
+        },
+        {
+          "id": "brule-arthrodese-enfouissement-lambeau",
+          "nom": "Arthrodèse avec articulation fermée / Enfouissement de cartilage pour reconstruction auriculaire / Lambeau à distance à pédicule ou vascularisation transitoire",
+          "specialite": "Chirurgie du patient brûlé",
+          "force_recommandation": "Avis d'experts",
+          "source_page": 63,
+          "source_tableau": "Tableau Chirurgie du patient brûlé",
+          "protocole": null,
+          "alternative_allergie": null,
+          "notes": "Antibioprophylaxie adaptée à la flore du site opératoire et au risque du patient. Considérer une antibioprophylaxie individuelle adaptée à la flore du site opératoire et au risque du patient en cas de parcours de soins prolongé, colonisation cutanée à germes multi-résistants, ou immunodépression sous-jacente (Avis d'experts)."
+        }
+      ]
+    },
+    {
+      "id": "chirurgie-gynecologique-sein",
+      "nom": "Chirurgie gynécologique — Sein",
+      "interventions": [
+        {
+          "id": "gyno-sein-tumorectomie-sans-curage",
+          "nom": "Tumorectomie mammaire sans curage / Tumorectomie mammaire avec ganglion sentinelle",
+          "specialite": "Chirurgie gynécologique — Sein",
+          "force_recommandation": "Avis d'experts",
+          "source_page": 64,
+          "source_tableau": "Tableau Chirurgie gynécologique — Sein — Chirurgie sénologique carcinologique",
+          "protocole": null,
+          "alternative_allergie": null,
+          "notes": null
+        },
+        {
+          "id": "gyno-sein-tumorectomie-curage-mastectomie",
+          "nom": "Tumorectomie mammaire avec curage axillaire / Mastectomie sans ou avec curage, sans ou avec reconstruction immédiate",
+          "specialite": "Chirurgie gynécologique — Sein",
+          "force_recommandation": "GRADE 2",
+          "source_page": 64,
+          "source_tableau": "Tableau Chirurgie gynécologique — Sein — Chirurgie sénologique carcinologique",
+          "protocole": {
+            "molecule": "Céfazoline",
+            "dose_initiale": "2g IVL",
+            "reinjection": "1g si durée > 4h, puis toutes les 4h jusqu'à fin de chirurgie"
+          },
+          "alternative_allergie": [
+            {
+              "molecule": "Clindamycine",
+              "dose_initiale": "900 mg IVL",
+              "intention": 1,
+              "reinjection": null
+            }
+          ],
+          "notes": "Alternative pharmacologique : Céfuroxime 1,5g IVL (0,75g si durée > 2h, puis toutes les 2h)."
+        },
+        {
+          "id": "gyno-sein-reduction-ablation-implant",
+          "nom": "Mastoplastie unilatérale ou bilatérale de réduction / Mastopexie pour ptose simple / Ablation uni- ou bilatérale d'implant prothétique mammaire sans ou avec capsulectomie",
+          "specialite": "Chirurgie gynécologique — Sein",
+          "force_recommandation": "Avis d'experts",
+          "source_page": 65,
+          "source_tableau": "Tableau Chirurgie gynécologique — Sein — Chirurgie sénologique esthétique/reconstruction",
+          "protocole": null,
+          "alternative_allergie": null,
+          "notes": null
+        },
+        {
+          "id": "gyno-sein-reconstruction-implant-lambeau",
+          "nom": "Mastoplastie ou reconstruction avec pose d'implant prothétique ou lambeau / Changement d'implant prothétique mammaire",
+          "specialite": "Chirurgie gynécologique — Sein",
+          "force_recommandation": "Avis d'experts",
+          "source_page": 65,
+          "source_tableau": "Tableau Chirurgie gynécologique — Sein — Chirurgie sénologique esthétique/reconstruction",
+          "protocole": {
+            "molecule": "Céfazoline",
+            "dose_initiale": "2g IVL",
+            "reinjection": "1g si durée > 4h, puis toutes les 4h jusqu'à fin de chirurgie"
+          },
+          "alternative_allergie": [
+            {
+              "molecule": "Clindamycine",
+              "dose_initiale": "900 mg IVL",
+              "intention": 1,
+              "reinjection": null
+            }
+          ],
+          "notes": "Alternative pharmacologique : Céfuroxime 1,5g IVL (0,75g si durée > 2h, puis toutes les 2h)."
+        },
+        {
+          "id": "gyno-sein-mamelon-lipofilling-petit",
+          "nom": "Chirurgie du mamelon ou de la plaque aréolo-mamelonnaire / Autogreffe de tissu adipeux < 200 cm³ au niveau du sein ET chirurgie < 2h",
+          "specialite": "Chirurgie gynécologique — Sein",
+          "force_recommandation": "Avis d'experts",
+          "source_page": 65,
+          "source_tableau": "Tableau Chirurgie gynécologique — Sein — Chirurgie sénologique esthétique/reconstruction",
+          "protocole": null,
+          "alternative_allergie": null,
+          "notes": null
+        },
+        {
+          "id": "gyno-sein-lipofilling-grand",
+          "nom": "Autogreffe de tissus adipeux ≥ 200 cm³ au niveau du sein et/ou chirurgie > 2h",
+          "specialite": "Chirurgie gynécologique — Sein",
+          "force_recommandation": "Avis d'experts",
+          "source_page": 65,
+          "source_tableau": "Tableau Chirurgie gynécologique — Sein — Chirurgie sénologique esthétique/reconstruction",
+          "protocole": {
+            "molecule": "Céfazoline",
+            "dose_initiale": "2g IVL",
+            "reinjection": "1g si durée > 4h, puis toutes les 4h jusqu'à fin de chirurgie"
+          },
+          "alternative_allergie": [
+            {
+              "molecule": "Clindamycine",
+              "dose_initiale": "900 mg IVL",
+              "intention": 1,
+              "reinjection": null
+            }
+          ],
+          "notes": "Alternative pharmacologique : Céfuroxime 1,5g IVL (0,75g si durée > 2h, puis toutes les 2h)."
+        }
+      ]
+    },
+    {
+      "id": "chirurgie-gynecologique-uterus-annexes",
+      "nom": "Chirurgie gynécologique — Utérus, annexes et vulve",
+      "interventions": [
+        {
+          "id": "gyno-annexes-coelio-pas-abp",
+          "nom": "Coelioscopie diagnostique / Ligature ou déligature de trompe, détorsion d'annexe / Plastie tubaire, fimbrioplastie, salpingectomie / Drilling ovarien, kystectomie ovarienne, transposition ovarienne / Ponction de kyste / Ablation de dispositif intra-utérin (par coelioscopie)",
+          "specialite": "Chirurgie gynécologique — Utérus, annexes et vulve",
+          "force_recommandation": "Avis d'experts",
+          "source_page": 66,
+          "source_tableau": "Tableau Chirurgie gynécologique — Utérus, annexes et vulve — Chirurgie des annexes par voie coelioscopique ou robotique",
+          "protocole": null,
+          "alternative_allergie": null,
+          "notes": "Pour la cœlio-chirurgie des trompes, considérer une antibioprophylaxie par céfazoline limitée à la période opératoire en cas d'endométriose, d'antécédent de chirurgie pelviennes ou d'infection génitale haute (Avis d'experts)."
+        },
+        {
+          "id": "gyno-annexes-coelio-avec-abp",
+          "nom": "Annexectomie / Ovariectomie / Débulking ovarien / Curage pelvien et/ou lombo-aortique / Omentectomie (par voie coelioscopique ou robotique)",
+          "specialite": "Chirurgie gynécologique — Utérus, annexes et vulve",
+          "force_recommandation": "GRADE 2",
+          "source_page": 66,
+          "source_tableau": "Tableau Chirurgie gynécologique — Utérus, annexes et vulve — Chirurgie des annexes par voie coelioscopique ou robotique",
+          "protocole": {
+            "molecule": "Céfazoline",
+            "dose_initiale": "2g IVL",
+            "reinjection": "1g si durée > 4h, puis toutes les 4h jusqu'à fin de chirurgie"
+          },
+          "alternative_allergie": [
+            {
+              "molecule": "Clindamycine",
+              "dose_initiale": "900 mg IVL",
+              "intention": 1,
+              "reinjection": null
+            }
+          ],
+          "notes": "Alternative pharmacologique : Céfuroxime 1,5g IVL (0,75g si durée > 2h, puis toutes les 2h)."
+        },
+        {
+          "id": "gyno-annexes-coelio-endometriose-rectale",
+          "nom": "Résection de lésions endométriosiques avec atteinte rectale (par voie coelioscopique ou robotique)",
+          "specialite": "Chirurgie gynécologique — Utérus, annexes et vulve",
+          "force_recommandation": "Avis d'experts",
+          "source_page": 66,
+          "source_tableau": "Tableau Chirurgie gynécologique — Utérus, annexes et vulve — Chirurgie des annexes par voie coelioscopique ou robotique",
+          "protocole": {
+            "molecule": "Céfazoline + Métronidazole",
+            "dose_initiale": "2g IVL + 1g IVL",
+            "reinjection": "Céfazoline : 1g si durée > 4h, puis toutes les 4h. Métronidazole : dose unique."
+          },
+          "alternative_allergie": [
+            {
+              "molecule": "Clindamycine + Gentamicine",
+              "dose_initiale": "900 mg IVL + 6-7 mg/kg IVL",
+              "intention": 1,
+              "reinjection": null
+            }
+          ],
+          "notes": null
+        },
+        {
+          "id": "gyno-annexes-laparo",
+          "nom": "Chirurgie tubaire / Annexectomie, ovariectomie / Curage pelvien et/ou lombo-aortique / Omentectomie (par voie laparotomique)",
+          "specialite": "Chirurgie gynécologique — Utérus, annexes et vulve",
+          "force_recommandation": "GRADE 2",
+          "source_page": 67,
+          "source_tableau": "Tableau Chirurgie gynécologique — Utérus, annexes et vulve — Chirurgie des annexes par voie laparotomique",
+          "protocole": {
+            "molecule": "Céfazoline",
+            "dose_initiale": "2g IVL",
+            "reinjection": "1g si durée > 4h, puis toutes les 4h jusqu'à fin de chirurgie"
+          },
+          "alternative_allergie": [
+            {
+              "molecule": "Clindamycine",
+              "dose_initiale": "900 mg IVL",
+              "intention": 1,
+              "reinjection": null
+            }
+          ],
+          "notes": "Alternative pharmacologique : Céfuroxime 1,5g IVL (0,75g si durée > 2h, puis toutes les 2h)."
+        },
+        {
+          "id": "gyno-annexes-laparo-endometriose-rectovaginale",
+          "nom": "Exérèse de lésions endométriosiques de la cloison rectovaginale (par voie laparotomique)",
+          "specialite": "Chirurgie gynécologique — Utérus, annexes et vulve",
+          "force_recommandation": "Avis d'experts",
+          "source_page": 67,
+          "source_tableau": "Tableau Chirurgie gynécologique — Utérus, annexes et vulve — Chirurgie des annexes par voie laparotomique",
+          "protocole": {
+            "molecule": "Céfazoline + Métronidazole",
+            "dose_initiale": "2g IVL + 1g IVL",
+            "reinjection": "Céfazoline : 1g si durée > 4h, puis toutes les 4h. Métronidazole : dose unique."
+          },
+          "alternative_allergie": [
+            {
+              "molecule": "Clindamycine + Gentamicine",
+              "dose_initiale": "900 mg IVL + 6-7 mg/kg IVL",
+              "intention": 1,
+              "reinjection": null
+            }
+          ],
+          "notes": null
+        },
+        {
+          "id": "gyno-uterus-hysterectomie-totale",
+          "nom": "Hystérectomie totale sans ou avec annexectomie / Colpo-hystérectomie élargie / Colpo-trachélectomie élargie (par voie laparotomique, coelioscopique ou robotique)",
+          "specialite": "Chirurgie gynécologique — Utérus, annexes et vulve",
+          "force_recommandation": "Avis d'experts",
+          "source_page": 67,
+          "source_tableau": "Tableau Chirurgie gynécologique — Utérus, annexes et vulve — Chirurgie de l'utérus par voie laparotomique, coelioscopique ou robotique",
+          "protocole": {
+            "molecule": "Céfoxitine",
+            "dose_initiale": "2g IVL",
+            "reinjection": "1g si durée > 2h, puis toutes les 2h jusqu'à fin de chirurgie"
+          },
+          "alternative_allergie": [
+            {
+              "molecule": "Clindamycine + Gentamicine",
+              "dose_initiale": "900 mg IVL + 6-7 mg/kg IVL",
+              "intention": 1,
+              "reinjection": null
+            }
+          ],
+          "notes": null
+        },
+        {
+          "id": "gyno-uterus-hysterectomie-subtotale",
+          "nom": "Hystérectomie subtotale sans ou avec annexectomie (sans temps vaginal) / Myomectomie / Cerclage de l'isthme utérin en dehors de la grossesse / Hystérorraphie, hystéroplastie",
+          "specialite": "Chirurgie gynécologique — Utérus, annexes et vulve",
+          "force_recommandation": "GRADE 2",
+          "source_page": 67,
+          "source_tableau": "Tableau Chirurgie gynécologique — Utérus, annexes et vulve — Chirurgie de l'utérus par voie laparotomique, coelioscopique ou robotique",
+          "protocole": {
+            "molecule": "Céfazoline",
+            "dose_initiale": "2g IVL",
+            "reinjection": "1g si durée > 4h, puis toutes les 4h jusqu'à fin de chirurgie"
+          },
+          "alternative_allergie": [
+            {
+              "molecule": "Clindamycine",
+              "dose_initiale": "900 mg IVL",
+              "intention": 1,
+              "reinjection": null
+            }
+          ],
+          "notes": "Alternative pharmacologique : Céfuroxime 1,5g IVL (0,75g si durée > 2h, puis toutes les 2h)."
+        },
+        {
+          "id": "gyno-uterus-voie-vaginale-pas-abp",
+          "nom": "Conisation, curetage du corps de l'utérus, destruction de la muqueuse utérine par thermocontact / Cerclage de l'isthme utérin par abord vaginal / Destruction de lésions du col / Élargissement de l'orifice externe du col / Section de cloisons ou synéchies utérines / Résection de myome / Hystéroscopie diagnostique / Pose de dispositif intra-utérin",
+          "specialite": "Chirurgie gynécologique — Utérus, annexes et vulve",
+          "force_recommandation": "Avis d'experts",
+          "source_page": 67,
+          "source_tableau": "Tableau Chirurgie gynécologique — Utérus, annexes et vulve — Chirurgie de l'utérus par voie vaginale",
+          "protocole": null,
+          "alternative_allergie": null,
+          "notes": null
+        },
+        {
+          "id": "gyno-uterus-hysterectomie-vaginale",
+          "nom": "Hystérectomie avec et sans annexectomie / Colpectomie subtotale ou totale (par voie vaginale)",
+          "specialite": "Chirurgie gynécologique — Utérus, annexes et vulve",
+          "force_recommandation": "Avis d'experts",
+          "source_page": 68,
+          "source_tableau": "Tableau Chirurgie gynécologique — Utérus, annexes et vulve — Chirurgie de l'utérus par voie vaginale",
+          "protocole": {
+            "molecule": "Céfoxitine",
+            "dose_initiale": "2g IVL",
+            "reinjection": "1g si durée > 2h, puis toutes les 2h jusqu'à fin de chirurgie"
+          },
+          "alternative_allergie": [
+            {
+              "molecule": "Clindamycine + Gentamicine",
+              "dose_initiale": "900 mg IVL + 6-7 mg/kg IVL",
+              "intention": 1,
+              "reinjection": null
+            }
+          ],
+          "notes": null
+        },
+        {
+          "id": "gyno-prolapsus",
+          "nom": "Chirurgie du prolapsus toutes voies d'abord (hystéropexie, promontofixation, colpo-périnéorraphie)",
+          "specialite": "Chirurgie gynécologique — Utérus, annexes et vulve",
+          "force_recommandation": "Avis d'experts",
+          "source_page": 68,
+          "source_tableau": "Tableau Chirurgie gynécologique — Utérus, annexes et vulve — Chirurgie du prolapsus toutes voies d'abord",
+          "protocole": {
+            "molecule": "Céfazoline",
+            "dose_initiale": "2g IVL",
+            "reinjection": "1g si durée > 4h, puis toutes les 4h jusqu'à fin de chirurgie"
+          },
+          "alternative_allergie": [
+            {
+              "molecule": "Clindamycine",
+              "dose_initiale": "900 mg IVL",
+              "intention": 1,
+              "reinjection": null
+            }
+          ],
+          "notes": "Alternative pharmacologique : Céfuroxime 1,5g IVL (0,75g si durée > 2h, puis toutes les 2h). En cas d'incision vaginale large peropératoire créant une continuité entre l'espace péritonéal et le vagin, la céfoxitine limitée à la période opératoire peut être considérée (Avis d'experts)."
+        },
+        {
+          "id": "gyno-hysteroscopie-pas-abp",
+          "nom": "Hystéroscopie : destruction de la muqueuse utérine, abrasion de la muqueuse, curetage à visée thérapeutique, exérèse de polype, biopsie de l'endomètre, résection de myome, ablation de DIU ou de corps étranger",
+          "specialite": "Chirurgie gynécologique — Utérus, annexes et vulve",
+          "force_recommandation": "GRADE 1",
+          "source_page": 68,
+          "source_tableau": "Tableau Chirurgie gynécologique — Utérus, annexes et vulve — Hystéroscopie",
+          "protocole": null,
+          "alternative_allergie": null,
+          "notes": "Considérer une antibioprophylaxie par céfazoline limitée à la période opératoire en cas d'endométriose, d'antécédent de chirurgies pelviennes ou d'infection génitale haute (Avis d'experts)."
+        },
+        {
+          "id": "gyno-vulvaire-superficielle",
+          "nom": "Chirurgie vulvaire superficielle (exérèse de la glande de Bartholin, exérèse d'adhérences ou de lésions vulvopérinéales, vulvectomie partielle sans curage, vulvo-périnéoplastie, nymphoplastie de réduction, périnéotomie médiane sans lambeau, destruction de lésions périnéales, amputation du clitoris)",
+          "specialite": "Chirurgie gynécologique — Utérus, annexes et vulve",
+          "force_recommandation": "GRADE 2",
+          "source_page": 68,
+          "source_tableau": "Tableau Chirurgie gynécologique — Utérus, annexes et vulve — Chirurgie vulvaire superficielle",
+          "protocole": null,
+          "alternative_allergie": null,
+          "notes": null
+        },
+        {
+          "id": "gyno-vulvaire-profonde-carcino",
+          "nom": "Vulvectomie partielle avec curage lymphonodal inguinal unilatéral / Vulvectomie totale sans ou avec curage inguinal et/ou iliaque, uni- ou bilatéral / Périnéotomie médiane avec lambeau cutané périnéal",
+          "specialite": "Chirurgie gynécologique — Utérus, annexes et vulve",
+          "force_recommandation": "Avis d'experts",
+          "source_page": 69,
+          "source_tableau": "Tableau Chirurgie gynécologique — Utérus, annexes et vulve — Chirurgie vulvaire profonde et/ou carcinologique",
+          "protocole": {
+            "molecule": "Céfazoline",
+            "dose_initiale": "2g IVL",
+            "reinjection": "1g si durée > 4h, puis toutes les 4h jusqu'à fin de chirurgie"
+          },
+          "alternative_allergie": [
+            {
+              "molecule": "Clindamycine",
+              "dose_initiale": "900 mg IVL",
+              "intention": 1,
+              "reinjection": null
+            }
+          ],
+          "notes": "Alternative pharmacologique : Céfuroxime 1,5g IVL (0,75g si durée > 2h, puis toutes les 2h)."
+        },
+        {
+          "id": "gyno-vaginale-pas-abp",
+          "nom": "Chirurgie de l'hymen / Résection de cloison du vagin / Destruction de lésions vaginales avec ou sans laser",
+          "specialite": "Chirurgie gynécologique — Utérus, annexes et vulve",
+          "force_recommandation": "Avis d'experts",
+          "source_page": 69,
+          "source_tableau": "Tableau Chirurgie gynécologique — Utérus, annexes et vulve — Chirurgie vaginale",
+          "protocole": null,
+          "alternative_allergie": null,
+          "notes": null
+        },
+        {
+          "id": "gyno-avortement",
+          "nom": "Révision de la cavité de l'utérus après avortement / Évacuation d'un utérus gravide par aspiration et/ou curetage au 1er trimestre / Évacuation d'un utérus gravide au 2e trimestre avant la 22e SA",
+          "specialite": "Chirurgie gynécologique — Utérus, annexes et vulve",
+          "force_recommandation": "GRADE 2",
+          "source_page": 69,
+          "source_tableau": "Tableau Chirurgie gynécologique — Utérus, annexes et vulve — Avortement, grossesse arrêtée",
+          "protocole": null,
+          "alternative_allergie": null,
+          "notes": null
+        },
+        {
+          "id": "gyno-pma",
+          "nom": "Prélèvement d'ovocytes par voie transvaginale avec échoguidage / Prélèvement d'ovocytes par cœlioscopie / Transfert intra-utérin d'embryon par voie vaginale",
+          "specialite": "Chirurgie gynécologique — Utérus, annexes et vulve",
+          "force_recommandation": "GRADE 1",
+          "source_page": 69,
+          "source_tableau": "Tableau Chirurgie gynécologique — Utérus, annexes et vulve — Procréation médicalement assistée",
+          "protocole": null,
+          "alternative_allergie": null,
+          "notes": "Considérer une antibioprophylaxie par céfazoline limitée à la période opératoire pour la ponction ovocytaire et le transfert embryonnaire en cas d'endométriose, d'antécédent de chirurgies pelviennes ou d'infection génitale haute (Avis d'experts)."
+        },
+        {
+          "id": "gyno-embolisation",
+          "nom": "Embolisation de fibromes utérins / Embolisation de varices pelviennes sans abord chirurgical du scarpa",
+          "specialite": "Chirurgie gynécologique — Utérus, annexes et vulve",
+          "force_recommandation": "Avis d'experts",
+          "source_page": 69,
+          "source_tableau": "Tableau Chirurgie gynécologique — Utérus, annexes et vulve — Embolisation",
+          "protocole": null,
+          "alternative_allergie": null,
+          "notes": null
+        }
+      ]
+    },
+    {
+      "id": "chirurgie-obstetricale",
+      "nom": "Chirurgie obstétricale",
+      "interventions": [
+        {
+          "id": "obs-cesarienne",
+          "nom": "Accouchement par césarienne programmée ou en urgence, en dehors ou en cours de travail / Suture du corps de l'utérus pour rupture obstétricale",
+          "specialite": "Chirurgie obstétricale",
+          "force_recommandation": "GRADE 2",
+          "source_page": 70,
+          "source_tableau": "Tableau Chirurgie obstétricale — Césarienne",
+          "protocole": {
+            "molecule": "Céfazoline",
+            "dose_initiale": "2g IVL",
+            "reinjection": "1g si durée > 4h, puis toutes les 4h jusqu'à fin de chirurgie"
+          },
+          "alternative_allergie": null,
+          "notes": "Injection de l'antibioprophylaxie autant que possible avant l'incision (GRADE 2). Pas d'alternative proposée à la céfazoline du fait de données rapportées quasi-exclusivement pour cette molécule."
+        },
+        {
+          "id": "obs-cerclage",
+          "nom": "Cerclage du col de l'utérus au cours de la grossesse, par voie transvaginale / Ablation de cerclage du col de l'utérus",
+          "specialite": "Chirurgie obstétricale",
+          "force_recommandation": "Avis d'experts",
+          "source_page": 70,
+          "source_tableau": "Tableau Chirurgie obstétricale — Cerclage du col utérin",
+          "protocole": null,
+          "alternative_allergie": null,
+          "notes": null
+        },
+        {
+          "id": "obs-embolisation",
+          "nom": "Embolisation des artères iliaques internes et/ou de ses branches pour hémorragie du post-partum, par voie artérielle transcutanée",
+          "specialite": "Chirurgie obstétricale",
+          "force_recommandation": "Avis d'experts",
+          "source_page": 70,
+          "source_tableau": "Tableau Chirurgie obstétricale — Embolisation",
+          "protocole": null,
+          "alternative_allergie": null,
+          "notes": null
+        },
+        {
+          "id": "obs-tamponnement-uterin",
+          "nom": "Tamponnement intra-utérin pour hémorragie obstétricale",
+          "specialite": "Chirurgie obstétricale",
+          "force_recommandation": "Avis d'experts",
+          "source_page": 70,
+          "source_tableau": "Tableau Chirurgie obstétricale — Tamponnement utérin",
+          "protocole": {
+            "molecule": "Céfazoline",
+            "dose_initiale": "2g IVL",
+            "reinjection": "Dose unique lors de la pose du ballon intra-utérin"
+          },
+          "alternative_allergie": [
+            {
+              "molecule": "Clindamycine",
+              "dose_initiale": "900 mg IVL",
+              "intention": 1,
+              "reinjection": null
+            }
+          ],
+          "notes": "Alternative pharmacologique : Céfuroxime 1,5g IVL."
+        },
+        {
+          "id": "obs-delivrance-revision-uterine",
+          "nom": "Révision de la cavité de l'utérus après délivrance naturelle / Extraction manuelle du placenta complet",
+          "specialite": "Chirurgie obstétricale",
+          "force_recommandation": "Avis d'experts",
+          "source_page": 70,
+          "source_tableau": "Tableau Chirurgie obstétricale — Délivrance artificielle / révision utérine",
+          "protocole": {
+            "molecule": "Céfazoline",
+            "dose_initiale": "2g IVL",
+            "reinjection": "Dose unique lors de la révision ou de la délivrance manuelle"
+          },
+          "alternative_allergie": [
+            {
+              "molecule": "Clindamycine",
+              "dose_initiale": "900 mg IVL",
+              "intention": 1,
+              "reinjection": null
+            }
+          ],
+          "notes": "Alternative pharmacologique : Céfuroxime 1,5g IVL."
+        },
+        {
+          "id": "obs-curetage-post-partum",
+          "nom": "Curetage de la cavité de l'utérus à visée thérapeutique (post-partum)",
+          "specialite": "Chirurgie obstétricale",
+          "force_recommandation": "Avis d'experts",
+          "source_page": 71,
+          "source_tableau": "Tableau Chirurgie obstétricale — Curetage post-partum",
+          "protocole": null,
+          "alternative_allergie": null,
+          "notes": null
+        },
+        {
+          "id": "obs-hysterectomie-hemostase",
+          "nom": "Hystérectomie pour complications obstétricales, par laparotomie",
+          "specialite": "Chirurgie obstétricale",
+          "force_recommandation": "Avis d'experts",
+          "source_page": 71,
+          "source_tableau": "Tableau Chirurgie obstétricale — Hystérectomie d'hémostase",
+          "protocole": {
+            "molecule": "Céfoxitine",
+            "dose_initiale": "2g IVL",
+            "reinjection": "1g si durée > 2h, puis toutes les 2h jusqu'à fin de chirurgie"
+          },
+          "alternative_allergie": [
+            {
+              "molecule": "Clindamycine + Gentamicine",
+              "dose_initiale": "900 mg IVL + 6-7 mg/kg IVL",
+              "intention": 1,
+              "reinjection": null
+            }
+          ],
+          "notes": null
+        },
+        {
+          "id": "obs-ligatures-vasculaires",
+          "nom": "Ligature des artères iliaques internes pour hémorragie du post-partum / Ligature des pédicules vasculaires de l'utérus pour hémorragie du post-partum (par laparotomie)",
+          "specialite": "Chirurgie obstétricale",
+          "force_recommandation": "Avis d'experts",
+          "source_page": 71,
+          "source_tableau": "Tableau Chirurgie obstétricale — Ligatures vasculaires",
+          "protocole": {
+            "molecule": "Céfazoline",
+            "dose_initiale": "2g IVL",
+            "reinjection": "1g si durée > 4h, puis toutes les 4h jusqu'à fin de chirurgie"
+          },
+          "alternative_allergie": [
+            {
+              "molecule": "Clindamycine",
+              "dose_initiale": "900 mg IVL",
+              "intention": 1,
+              "reinjection": null
+            }
+          ],
+          "notes": "Alternative pharmacologique : Céfuroxime 1,5g IVL (0,75g si durée > 2h, puis toutes les 2h)."
+        }
+      ]
+    },
+    {
+      "id": "chirurgie-digestive",
+      "nom": "Chirurgie digestive",
+      "interventions": [
+        {
+          "id": "digest-oesophagectomie",
+          "nom": "Œsophagectomie / Excision de tumeur de l'œsophage / Traitement d'un diverticule de l'œsophage",
+          "specialite": "Chirurgie digestive",
+          "force_recommandation": "Avis d'experts",
+          "source_page": 79,
+          "source_tableau": "Tableau Chirurgie digestive — Chirurgie œsophagienne",
+          "protocole": {
+            "molecule": "Céfazoline",
+            "dose_initiale": "2g IVL",
+            "reinjection": "1g si durée > 4h, puis toutes les 4h jusqu'à fin de chirurgie"
+          },
+          "alternative_allergie": [
+            {
+              "molecule": "Vancomycine",
+              "dose_initiale": "20 mg/kg IVL",
+              "intention": 1,
+              "reinjection": null
+            },
+            {
+              "molecule": "Teicoplanine",
+              "dose_initiale": "12 mg/kg IVL",
+              "intention": 2,
+              "reinjection": null
+            }
+          ],
+          "notes": "Alternative pharmacologique : Céfuroxime 1,5g IVL (0,75g si durée > 2h, puis toutes les 2h)."
+        },
+        {
+          "id": "digest-gastrectomie",
+          "nom": "Gastrectomie totale, totalisation de gastrectomie / Gastrectomie partielle",
+          "specialite": "Chirurgie digestive",
+          "force_recommandation": "Avis d'experts",
+          "source_page": 79,
+          "source_tableau": "Tableau Chirurgie digestive — Chirurgie gastrique non bariatrique",
+          "protocole": {
+            "molecule": "Céfazoline",
+            "dose_initiale": "2g IVL",
+            "reinjection": "1g si durée > 4h, puis toutes les 4h jusqu'à fin de chirurgie"
+          },
+          "alternative_allergie": [
+            {
+              "molecule": "Vancomycine",
+              "dose_initiale": "20 mg/kg IVL",
+              "intention": 1,
+              "reinjection": null
+            },
+            {
+              "molecule": "Teicoplanine",
+              "dose_initiale": "12 mg/kg IVL",
+              "intention": 2,
+              "reinjection": null
+            }
+          ],
+          "notes": "Alternative pharmacologique : Céfuroxime 1,5g IVL (0,75g si durée > 2h, puis toutes les 2h)."
+        },
+        {
+          "id": "digest-bariatrique-anneau",
+          "nom": "Mise en place d'un anneau gastrique",
+          "specialite": "Chirurgie digestive",
+          "force_recommandation": "Avis d'experts",
+          "source_page": 79,
+          "source_tableau": "Tableau Chirurgie digestive — Chirurgie bariatrique",
+          "protocole": {
+            "molecule": "Céfazoline",
+            "dose_initiale": "2g IVL",
+            "reinjection": "1g si durée > 4h, puis toutes les 4h jusqu'à fin de chirurgie"
+          },
+          "alternative_allergie": [
+            {
+              "molecule": "Vancomycine",
+              "dose_initiale": "20 mg/kg IVL",
+              "intention": 1,
+              "reinjection": null
+            },
+            {
+              "molecule": "Teicoplanine",
+              "dose_initiale": "12 mg/kg IVL",
+              "intention": 2,
+              "reinjection": null
+            }
+          ],
+          "notes": null
+        },
+        {
+          "id": "digest-bariatrique-bypass-sleeve",
+          "nom": "Réalisation d'un court-circuit gastrique ou d'une sleeve gastrectomie",
+          "specialite": "Chirurgie digestive",
+          "force_recommandation": "Avis d'experts",
+          "source_page": 79,
+          "source_tableau": "Tableau Chirurgie digestive — Chirurgie bariatrique",
+          "protocole": {
+            "molecule": "Céfoxitine",
+            "dose_initiale": "2g IVL",
+            "reinjection": "1g si durée > 2h, puis toutes les 2h jusqu'à fin de chirurgie"
+          },
+          "alternative_allergie": [
+            {
+              "molecule": "Gentamicine + Métronidazole",
+              "dose_initiale": "6-7 mg/kg IVL + 1g IVL",
+              "intention": 1,
+              "reinjection": null
+            }
+          ],
+          "notes": null
+        },
+        {
+          "id": "digest-intestin-grele",
+          "nom": "Résection de l'intestin grêle / Entérostomie cutanée, par laparotomie",
+          "specialite": "Chirurgie digestive",
+          "force_recommandation": "Avis d'experts",
+          "source_page": 79,
+          "source_tableau": "Tableau Chirurgie digestive — Chirurgie de l'intestin grêle",
+          "protocole": {
+            "molecule": "Céfoxitine",
+            "dose_initiale": "2g IVL",
+            "reinjection": "1g si durée > 2h, puis toutes les 2h jusqu'à fin de chirurgie"
+          },
+          "alternative_allergie": [
+            {
+              "molecule": "Gentamicine + Métronidazole",
+              "dose_initiale": "6-7 mg/kg IVL + 1g IVL",
+              "intention": 1,
+              "reinjection": null
+            }
+          ],
+          "notes": null
+        },
+        {
+          "id": "digest-colorectal",
+          "nom": "Colectomie / Amputation abdomino-périnéale / Proctectomie / Rétablissement de continuité",
+          "specialite": "Chirurgie digestive",
+          "force_recommandation": "GRADE 1",
+          "source_page": 80,
+          "source_tableau": "Tableau Chirurgie digestive — Chirurgie colorectale et appendiculaire",
+          "protocole": {
+            "molecule": "Céfoxitine",
+            "dose_initiale": "2g IVL",
+            "reinjection": "1g si durée > 2h, puis toutes les 2h jusqu'à fin de chirurgie"
+          },
+          "alternative_allergie": [
+            {
+              "molecule": "Gentamicine + Métronidazole",
+              "dose_initiale": "6-7 mg/kg IVL + 1g IVL",
+              "intention": 1,
+              "reinjection": null
+            }
+          ],
+          "notes": "La veille soir : Tobramycine 200mg per os (dose unique, GRADE 1) + Métronidazole 1g per os (dose unique, Avis d'experts). Lors de la chirurgie : Céfoxitine 2g IVL (GRADE 1)."
+        },
+        {
+          "id": "digest-appendicectomie",
+          "nom": "Appendicectomie programmée",
+          "specialite": "Chirurgie digestive",
+          "force_recommandation": "Avis d'experts",
+          "source_page": 80,
+          "source_tableau": "Tableau Chirurgie digestive — Chirurgie colorectale et appendiculaire",
+          "protocole": {
+            "molecule": "Céfoxitine",
+            "dose_initiale": "2g IVL",
+            "reinjection": "1g si durée > 2h, puis toutes les 2h jusqu'à fin de chirurgie"
+          },
+          "alternative_allergie": [
+            {
+              "molecule": "Gentamicine + Métronidazole",
+              "dose_initiale": "6-7 mg/kg IVL + 1g IVL",
+              "intention": 1,
+              "reinjection": null
+            }
+          ],
+          "notes": null
+        },
+        {
+          "id": "digest-proctologique",
+          "nom": "Hémorroïdes / Kyste pilonidal / Fistule anale",
+          "specialite": "Chirurgie digestive",
+          "force_recommandation": "Avis d'experts",
+          "source_page": 80,
+          "source_tableau": "Tableau Chirurgie digestive — Chirurgie proctologique",
+          "protocole": {
+            "molecule": "Métronidazole",
+            "dose_initiale": "1g IVL",
+            "reinjection": "Dose unique"
+          },
+          "alternative_allergie": null,
+          "notes": null
+        }
+      ]
+    },
+    {
+      "id": "chirurgie-hepatobiliaire",
+      "nom": "Chirurgie hépatobiliaire, splénique et pancréatique",
+      "interventions": [
+        {
+          "id": "hbs-cholecystectomie-laparo-haut-risque",
+          "nom": "Cholécystectomie élective par laparoscopie chez patient à haut risque (âge > 80 ans, grossesse, immunosuppression, cholécystite aiguë récente, ictère, calcul de la VBP, mise en place de prothèse, conversion en laparotomie, fuite biliaire)",
+          "specialite": "Chirurgie hépatobiliaire, splénique et pancréatique",
+          "force_recommandation": "Avis d'experts",
+          "source_page": 81,
+          "source_tableau": "Tableau Chirurgie hépatobiliaire, splénique et pancréatique — Chirurgie de la vésicule biliaire et des voies biliaires",
+          "protocole": {
+            "molecule": "Céfazoline",
+            "dose_initiale": "2g IVL",
+            "reinjection": "1g si durée > 4h, puis toutes les 4h jusqu'à fin de chirurgie"
+          },
+          "alternative_allergie": [
+            {
+              "molecule": "Vancomycine",
+              "dose_initiale": "20 mg/kg IVL",
+              "intention": 1,
+              "reinjection": null
+            },
+            {
+              "molecule": "Teicoplanine",
+              "dose_initiale": "12 mg/kg IVL",
+              "intention": 2,
+              "reinjection": null
+            }
+          ],
+          "notes": "Alternative pharmacologique : Céfuroxime 1,5g IVL (0,75g si durée > 2h, puis toutes les 2h)."
+        },
+        {
+          "id": "hbs-cholecystectomie-laparo-bas-risque",
+          "nom": "Cholécystectomie élective par laparoscopie chez patient à faible risque (aucun des critères ci-dessus)",
+          "specialite": "Chirurgie hépatobiliaire, splénique et pancréatique",
+          "force_recommandation": "GRADE 2",
+          "source_page": 81,
+          "source_tableau": "Tableau Chirurgie hépatobiliaire, splénique et pancréatique — Chirurgie de la vésicule biliaire et des voies biliaires",
+          "protocole": null,
+          "alternative_allergie": null,
+          "notes": null
+        },
+        {
+          "id": "hbs-cholecystectomie-laparo-avec-calcul",
+          "nom": "Cholécystectomie par laparotomie / Cholécystectomie avec ablation transcystique ou choledocotomie de calcul de la VBP / Ablation de calcul de la voie biliaire principale, par laparoscopie ou laparotomie",
+          "specialite": "Chirurgie hépatobiliaire, splénique et pancréatique",
+          "force_recommandation": "Avis d'experts",
+          "source_page": 81,
+          "source_tableau": "Tableau Chirurgie hépatobiliaire, splénique et pancréatique — Chirurgie de la vésicule biliaire et des voies biliaires",
+          "protocole": {
+            "molecule": "Céfazoline",
+            "dose_initiale": "2g IVL",
+            "reinjection": "1g si durée > 4h, puis toutes les 4h jusqu'à fin de chirurgie"
+          },
+          "alternative_allergie": [
+            {
+              "molecule": "Vancomycine",
+              "dose_initiale": "20 mg/kg IVL",
+              "intention": 1,
+              "reinjection": null
+            },
+            {
+              "molecule": "Teicoplanine",
+              "dose_initiale": "12 mg/kg IVL",
+              "intention": 2,
+              "reinjection": null
+            }
+          ],
+          "notes": "Alternative pharmacologique : Céfuroxime 1,5g IVL (0,75g si durée > 2h, puis toutes les 2h)."
+        },
+        {
+          "id": "hbs-anastomose-bilio-digestive",
+          "nom": "Cholécystectomie avec choledoco-jéjunostomie / Résection de la voie biliaire principale pédiculaire avec anastomose bilio-digestive, par laparotomie",
+          "specialite": "Chirurgie hépatobiliaire, splénique et pancréatique",
+          "force_recommandation": "Avis d'experts",
+          "source_page": 82,
+          "source_tableau": "Tableau Chirurgie hépatobiliaire, splénique et pancréatique — Anastomose bilio-digestive",
+          "protocole": {
+            "molecule": "Céfoxitine",
+            "dose_initiale": "2g IVL",
+            "reinjection": "1g si durée > 2h, puis toutes les 2h jusqu'à fin de chirurgie"
+          },
+          "alternative_allergie": [
+            {
+              "molecule": "Gentamicine + Métronidazole",
+              "dose_initiale": "6-7 mg/kg IVL + 1g IVL",
+              "intention": 1,
+              "reinjection": null
+            }
+          ],
+          "notes": null
+        },
+        {
+          "id": "hbs-hepatectomie",
+          "nom": "Résection atypique du foie / Uni-, bi-, ou tri-segmentectomie du foie / Lobectomie hépatique gauche ou droite (laparo ou coelioscopique)",
+          "specialite": "Chirurgie hépatobiliaire, splénique et pancréatique",
+          "force_recommandation": "Avis d'experts",
+          "source_page": 82,
+          "source_tableau": "Tableau Chirurgie hépatobiliaire, splénique et pancréatique — Hépatectomie sans chirurgie des voies biliaires",
+          "protocole": {
+            "molecule": "Céfazoline",
+            "dose_initiale": "2g IVL",
+            "reinjection": "1g si durée > 4h, puis toutes les 4h jusqu'à fin de chirurgie"
+          },
+          "alternative_allergie": [
+            {
+              "molecule": "Vancomycine",
+              "dose_initiale": "20 mg/kg IVL",
+              "intention": 1,
+              "reinjection": null
+            },
+            {
+              "molecule": "Teicoplanine",
+              "dose_initiale": "12 mg/kg IVL",
+              "intention": 2,
+              "reinjection": null
+            }
+          ],
+          "notes": "Alternative pharmacologique : Céfuroxime 1,5g IVL (0,75g si durée > 2h, puis toutes les 2h)."
+        },
+        {
+          "id": "hbs-kystes-hepatiques",
+          "nom": "Résection du dôme saillant / Péri-kystectomie / Chirurgie de kystes hydatiques",
+          "specialite": "Chirurgie hépatobiliaire, splénique et pancréatique",
+          "force_recommandation": "Avis d'experts",
+          "source_page": 82,
+          "source_tableau": "Tableau Chirurgie hépatobiliaire, splénique et pancréatique — Chirurgie des kystes hépatiques simples",
+          "protocole": null,
+          "alternative_allergie": null,
+          "notes": null
+        },
+        {
+          "id": "hbs-splenectomie",
+          "nom": "Splénectomie programmée ou en urgence, par laparotomie ou laparoscopie",
+          "specialite": "Chirurgie hépatobiliaire, splénique et pancréatique",
+          "force_recommandation": "Avis d'experts",
+          "source_page": 82,
+          "source_tableau": "Tableau Chirurgie hépatobiliaire, splénique et pancréatique — Splénectomie",
+          "protocole": {
+            "molecule": "Céfazoline",
+            "dose_initiale": "2g IVL",
+            "reinjection": "1g si durée > 4h, puis toutes les 4h jusqu'à fin de chirurgie"
+          },
+          "alternative_allergie": [
+            {
+              "molecule": "Vancomycine",
+              "dose_initiale": "20 mg/kg IVL",
+              "intention": 1,
+              "reinjection": null
+            },
+            {
+              "molecule": "Teicoplanine",
+              "dose_initiale": "12 mg/kg IVL",
+              "intention": 2,
+              "reinjection": null
+            }
+          ],
+          "notes": "Alternative pharmacologique : Céfuroxime 1,5g IVL (0,75g si durée > 2h, puis toutes les 2h)."
+        },
+        {
+          "id": "hbs-pancreatectomie",
+          "nom": "Pancréatectomie gauche avec ou sans conservation de la rate / Pancréatectomie totale ou subtotale avec conservation du duodénum / Gestes d'épargne pancréatique (isthmectomie, exérèse de tumeur)",
+          "specialite": "Chirurgie hépatobiliaire, splénique et pancréatique",
+          "force_recommandation": "GRADE 2",
+          "source_page": 82,
+          "source_tableau": "Tableau Chirurgie hépatobiliaire, splénique et pancréatique — Chirurgie pancréatique",
+          "protocole": {
+            "molecule": "Céfazoline",
+            "dose_initiale": "2g IVL",
+            "reinjection": "1g si durée > 4h, puis toutes les 4h jusqu'à fin de chirurgie"
+          },
+          "alternative_allergie": [
+            {
+              "molecule": "Vancomycine",
+              "dose_initiale": "20 mg/kg IVL",
+              "intention": 1,
+              "reinjection": null
+            },
+            {
+              "molecule": "Teicoplanine",
+              "dose_initiale": "12 mg/kg IVL",
+              "intention": 2,
+              "reinjection": null
+            }
+          ],
+          "notes": "Alternative pharmacologique : Céfuroxime 1,5g IVL (0,75g si durée > 2h, puis toutes les 2h)."
+        },
+        {
+          "id": "hbs-dpc-sans-drainage-preop",
+          "nom": "Duodéno-pancréatectomie céphalique (DPC) sans geste de drainage biliaire préopératoire / Duodéno-pancréatectomie totale (DPT) sans geste de drainage biliaire préopératoire",
+          "specialite": "Chirurgie hépatobiliaire, splénique et pancréatique",
+          "force_recommandation": "GRADE 1",
+          "source_page": 82,
+          "source_tableau": "Tableau Chirurgie hépatobiliaire, splénique et pancréatique — Chirurgie pancréatique",
+          "protocole": {
+            "molecule": "Céfoxitine",
+            "dose_initiale": "2g IVL",
+            "reinjection": "1g si durée > 2h, puis toutes les 2h jusqu'à fin de chirurgie"
+          },
+          "alternative_allergie": [
+            {
+              "molecule": "Gentamicine + Métronidazole",
+              "dose_initiale": "6-7 mg/kg IVL + 1g IVL",
+              "intention": 1,
+              "reinjection": null
+            }
+          ],
+          "notes": null
+        },
+        {
+          "id": "hbs-dpc-avec-drainage-preop",
+          "nom": "DPC ou DPT pour ampullome ou avec antécédent de drainage biliaire ou de sphinctérotomie préopératoires",
+          "specialite": "Chirurgie hépatobiliaire, splénique et pancréatique",
+          "force_recommandation": "GRADE 2",
+          "source_page": 83,
+          "source_tableau": "Tableau Chirurgie hépatobiliaire, splénique et pancréatique — Chirurgie pancréatique",
+          "protocole": {
+            "molecule": "Pipéracilline + Tazobactam",
+            "dose_initiale": "4g IVL",
+            "reinjection": "4g si durée > 4h, puis toutes les 4h jusqu'à fin de chirurgie"
+          },
+          "alternative_allergie": null,
+          "notes": null
+        },
+        {
+          "id": "hbs-transplantation-foie-pancreas",
+          "nom": "Transplantation de foie total / Transplantation de foie réduit / Transplantation du pancréas / Transplantation du pancréas et du rein",
+          "specialite": "Chirurgie hépatobiliaire, splénique et pancréatique",
+          "force_recommandation": "Avis d'experts",
+          "source_page": 83,
+          "source_tableau": "Tableau Chirurgie hépatobiliaire, splénique et pancréatique — Transplantation hépatique et pancréatique",
+          "protocole": {
+            "molecule": "Céfoxitine",
+            "dose_initiale": "2g IVL",
+            "reinjection": "1g si durée > 2h, puis toutes les 2h jusqu'à fin de chirurgie"
+          },
+          "alternative_allergie": [
+            {
+              "molecule": "Gentamicine + Métronidazole",
+              "dose_initiale": "6-7 mg/kg IVL + 1g IVL",
+              "intention": 1,
+              "reinjection": null
+            }
+          ],
+          "notes": "Spectre à élargir et/ou à adapter à l'écologie locale si facteurs de risque de BMR et/ou antécédent d'infection fongique (Avis d'experts)."
+        },
+        {
+          "id": "hbs-hernie-avec-prothese",
+          "nom": "Cure de hernie inguinale et crurale avec prothèse (voie ouverte ou laparoscopique)",
+          "specialite": "Chirurgie hépatobiliaire, splénique et pancréatique",
+          "force_recommandation": "GRADE 2",
+          "source_page": 83,
+          "source_tableau": "Tableau Chirurgie hépatobiliaire, splénique et pancréatique — Chirurgie de paroi",
+          "protocole": {
+            "molecule": "Céfazoline",
+            "dose_initiale": "2g IVL",
+            "reinjection": "1g si durée > 4h, puis toutes les 4h jusqu'à fin de chirurgie"
+          },
+          "alternative_allergie": [
+            {
+              "molecule": "Vancomycine",
+              "dose_initiale": "20 mg/kg IVL",
+              "intention": 1,
+              "reinjection": null
+            },
+            {
+              "molecule": "Teicoplanine",
+              "dose_initiale": "12 mg/kg IVL",
+              "intention": 2,
+              "reinjection": null
+            }
+          ],
+          "notes": "Alternative pharmacologique : Céfuroxime 1,5g IVL (0,75g si durée > 2h, puis toutes les 2h)."
+        },
+        {
+          "id": "hbs-hernie-sans-prothese",
+          "nom": "Cure de hernie de l'aine sans prothèse",
+          "specialite": "Chirurgie hépatobiliaire, splénique et pancréatique",
+          "force_recommandation": "GRADE 2",
+          "source_page": 83,
+          "source_tableau": "Tableau Chirurgie hépatobiliaire, splénique et pancréatique — Chirurgie de paroi",
+          "protocole": null,
+          "alternative_allergie": null,
+          "notes": null
+        }
+      ]
+    },
+    {
+      "id": "endoscopie-digestive",
+      "nom": "Endoscopie digestive et radiologie interventionnelle digestive",
+      "interventions": [
+        {
+          "id": "endo-cpre-drainage-complet",
+          "nom": "CPRE avec drainage complet satisfaisant : cholangiographie, pancréatographie, dilatation et pose de prothèses biliaires ou pancréatiques, extraction de calculs biliaires ou pancréatiques",
+          "specialite": "Endoscopie digestive et radiologie interventionnelle digestive",
+          "force_recommandation": "GRADE 1",
+          "source_page": 84,
+          "source_tableau": "Tableau Endoscopie digestive et radiologie interventionnelle digestive — Cholangio-pancréatographie rétrograde endoscopique (CPRE)",
+          "protocole": null,
+          "alternative_allergie": null,
+          "notes": null
+        },
+        {
+          "id": "endo-cpre-drainage-incomplet",
+          "nom": "Cholangioscopie ou pancréatoscopie avec ou sans lithotritie / Dilatation et pose de prothèses biliaires ou pancréatiques avec drainage biliaire incomplet / Extraction de calculs avec drainage biliaire incomplet",
+          "specialite": "Endoscopie digestive et radiologie interventionnelle digestive",
+          "force_recommandation": "Avis d'experts",
+          "source_page": 84,
+          "source_tableau": "Tableau Endoscopie digestive et radiologie interventionnelle digestive — Cholangio-pancréatographie rétrograde endoscopique (CPRE)",
+          "protocole": {
+            "molecule": "Céfoxitine",
+            "dose_initiale": "2g IVL",
+            "reinjection": "Dose unique"
+          },
+          "alternative_allergie": [
+            {
+              "molecule": "Gentamicine + Métronidazole",
+              "dose_initiale": "6-7 mg/kg IVL + 1g IVL",
+              "intention": 1,
+              "reinjection": null
+            }
+          ],
+          "notes": null
+        },
+        {
+          "id": "endo-echo-ponction-tissulaire",
+          "nom": "Ponction sous écho-endoscopie de lésion tissulaire pancréatique ou extra-pancréatique",
+          "specialite": "Endoscopie digestive et radiologie interventionnelle digestive",
+          "force_recommandation": "GRADE 2",
+          "source_page": 84,
+          "source_tableau": "Tableau Endoscopie digestive et radiologie interventionnelle digestive — Ponction sous écho-endoscopie",
+          "protocole": null,
+          "alternative_allergie": null,
+          "notes": null
+        },
+        {
+          "id": "endo-echo-ponction-kystique-sans-risque",
+          "nom": "Ponction de lésion kystique pancréatique sans facteur de risque d'infection",
+          "specialite": "Endoscopie digestive et radiologie interventionnelle digestive",
+          "force_recommandation": "Avis d'experts",
+          "source_page": 84,
+          "source_tableau": "Tableau Endoscopie digestive et radiologie interventionnelle digestive — Ponction sous écho-endoscopie",
+          "protocole": null,
+          "alternative_allergie": null,
+          "notes": null
+        },
+        {
+          "id": "endo-echo-ponction-kystique-avec-risque",
+          "nom": "Ponction de lésion kystique pancréatique avec facteur(s) de risque d'infection / Kysto-gastrostomie / Ponction de liquide d'ascite / Ponction liquide pleural per endoscopique / Constitution d'une anastomose gastro-jéjunale sous écho-endoscopie",
+          "specialite": "Endoscopie digestive et radiologie interventionnelle digestive",
+          "force_recommandation": "Avis d'experts",
+          "source_page": 84,
+          "source_tableau": "Tableau Endoscopie digestive et radiologie interventionnelle digestive — Ponction sous écho-endoscopie",
+          "protocole": {
+            "molecule": "Céfoxitine",
+            "dose_initiale": "2g IVL",
+            "reinjection": "Dose unique"
+          },
+          "alternative_allergie": [
+            {
+              "molecule": "Gentamicine + Métronidazole",
+              "dose_initiale": "6-7 mg/kg IVL + 1g IVL",
+              "intention": 1,
+              "reinjection": null
+            }
+          ],
+          "notes": null
+        },
+        {
+          "id": "endo-fibroscopie-haute",
+          "nom": "Fibroscopie œso-gastro-duodénale diagnostique avec ou sans biopsie / Fibroscopie thérapeutique avec dilatation, ou pose de prothèse, ou mucosectomie ou dissection sous-muqueuse",
+          "specialite": "Endoscopie digestive et radiologie interventionnelle digestive",
+          "force_recommandation": "Avis d'experts",
+          "source_page": 85,
+          "source_tableau": "Tableau Endoscopie digestive et radiologie interventionnelle digestive — Endoscopie digestive haute",
+          "protocole": null,
+          "alternative_allergie": null,
+          "notes": null
+        },
+        {
+          "id": "endo-gastrostomie",
+          "nom": "Pose de gastrostomie par voie transcutanée avec guidage endoscopique",
+          "specialite": "Endoscopie digestive et radiologie interventionnelle digestive",
+          "force_recommandation": "GRADE 1",
+          "source_page": 85,
+          "source_tableau": "Tableau Endoscopie digestive et radiologie interventionnelle digestive — Endoscopie digestive haute",
+          "protocole": {
+            "molecule": "Céfazoline",
+            "dose_initiale": "2g IVL",
+            "reinjection": "Dose unique"
+          },
+          "alternative_allergie": [
+            {
+              "molecule": "Vancomycine",
+              "dose_initiale": "20 mg/kg IVL",
+              "intention": 1,
+              "reinjection": null
+            },
+            {
+              "molecule": "Teicoplanine",
+              "dose_initiale": "12 mg/kg IVL",
+              "intention": 2,
+              "reinjection": null
+            }
+          ],
+          "notes": null
+        },
+        {
+          "id": "endo-varices-hors-hemorragie",
+          "nom": "Sclérose et/ou ligature de varices œso-gastriques en dehors de la période hémorragique",
+          "specialite": "Endoscopie digestive et radiologie interventionnelle digestive",
+          "force_recommandation": "Avis d'experts",
+          "source_page": 85,
+          "source_tableau": "Tableau Endoscopie digestive et radiologie interventionnelle digestive — Endoscopie digestive haute",
+          "protocole": null,
+          "alternative_allergie": null,
+          "notes": null
+        },
+        {
+          "id": "endo-varices-hemorragie",
+          "nom": "Sclérose et/ou ligature de varices œso-gastriques en période hémorragique",
+          "specialite": "Endoscopie digestive et radiologie interventionnelle digestive",
+          "force_recommandation": "GRADE 1",
+          "source_page": 85,
+          "source_tableau": "Tableau Endoscopie digestive et radiologie interventionnelle digestive — Endoscopie digestive haute",
+          "protocole": {
+            "molecule": "Ciprofloxacine",
+            "dose_initiale": "400 mg/IVL x2/j",
+            "reinjection": "Pendant 7 jours, relais per os après 48h si possible. Si cirrhose avancée (Child B ou C) et/ou patient hospitalisé > 48h et/ou quinolones au long cours : Ceftriaxone 1g/24h IV pendant 7 jours"
+          },
+          "alternative_allergie": null,
+          "notes": null
+        },
+        {
+          "id": "endo-coloscopie",
+          "nom": "Coloscopie diagnostique avec ou sans biopsie / Coloscopie thérapeutique avec dilatation, pose de prothèse, mucosectomie ou dissection sous-muqueuse",
+          "specialite": "Endoscopie digestive et radiologie interventionnelle digestive",
+          "force_recommandation": "Avis d'experts",
+          "source_page": 85,
+          "source_tableau": "Tableau Endoscopie digestive et radiologie interventionnelle digestive — Endoscopie digestive basse",
+          "protocole": null,
+          "alternative_allergie": null,
+          "notes": null
+        },
+        {
+          "id": "endo-radio-embolisation-hepatique",
+          "nom": "Chimio-embolisation / Embolisation hépatique / Shunt porto-systémique intra-hépatique transjugulaire",
+          "specialite": "Endoscopie digestive et radiologie interventionnelle digestive",
+          "force_recommandation": "Avis d'experts",
+          "source_page": 86,
+          "source_tableau": "Tableau Endoscopie digestive et radiologie interventionnelle digestive — Radiologie interventionnelle digestive — Embolisation hépatique",
+          "protocole": null,
+          "alternative_allergie": null,
+          "notes": null
+        },
+        {
+          "id": "endo-radio-drainage-biliaire",
+          "nom": "Drainage biliaire (radiologie interventionnelle)",
+          "specialite": "Endoscopie digestive et radiologie interventionnelle digestive",
+          "force_recommandation": "Avis d'experts",
+          "source_page": 86,
+          "source_tableau": "Tableau Endoscopie digestive et radiologie interventionnelle digestive — Radiologie interventionnelle digestive — Intervention sur les voies biliaires",
+          "protocole": null,
+          "alternative_allergie": null,
+          "notes": null
+        }
+      ]
+    },
+    {
+      "id": "chirurgie-urologique",
+      "nom": "Chirurgie urologique",
+      "interventions": [
+        {
+          "id": "uro-rtup",
+          "nom": "Résection trans-urétrale de prostate (RTUP)",
+          "specialite": "Chirurgie urologique",
+          "force_recommandation": "GRADE 1",
+          "source_page": 88,
+          "source_tableau": "Tableau Chirurgie urologique — Chirurgie de la prostate",
+          "protocole": {
+            "molecule": "Céfazoline",
+            "dose_initiale": "2g IVL",
+            "reinjection": "1g si durée > 4h, puis toutes les 4h jusqu'à fin de chirurgie"
+          },
+          "alternative_allergie": [
+            {
+              "molecule": "Gentamicine",
+              "dose_initiale": "6-7 mg/kg IVL",
+              "intention": 1,
+              "reinjection": null
+            }
+          ],
+          "notes": "Alternative pharmacologique : Céfuroxime 1,5g IVL (0,75g si durée > 2h, puis toutes les 2h)."
+        },
+        {
+          "id": "uro-adenomectomie-holep",
+          "nom": "Adénomectomie chirurgicale / Traitement de l'HBP par d'autres techniques (HoLEP, ThuLEP, GreenLEP, BIPOLEP, UROLIFT, REZUM)",
+          "specialite": "Chirurgie urologique",
+          "force_recommandation": "Avis d'experts",
+          "source_page": 88,
+          "source_tableau": "Tableau Chirurgie urologique — Chirurgie de la prostate",
+          "protocole": {
+            "molecule": "Céfazoline",
+            "dose_initiale": "2g IVL",
+            "reinjection": "1g si durée > 4h, puis toutes les 4h jusqu'à fin de chirurgie"
+          },
+          "alternative_allergie": [
+            {
+              "molecule": "Gentamicine",
+              "dose_initiale": "6-7 mg/kg IVL",
+              "intention": 1,
+              "reinjection": null
+            }
+          ],
+          "notes": "Alternative pharmacologique : Céfuroxime 1,5g IVL (0,75g si durée > 2h, puis toutes les 2h)."
+        },
+        {
+          "id": "uro-hifu-embolisation-prostate",
+          "nom": "Traitement de l'HBP sans abord direct de la prostate : ultrasons focalisés (HIFU), embolisation des artères prostatiques",
+          "specialite": "Chirurgie urologique",
+          "force_recommandation": "Avis d'experts",
+          "source_page": 88,
+          "source_tableau": "Tableau Chirurgie urologique — Chirurgie de la prostate",
+          "protocole": null,
+          "alternative_allergie": null,
+          "notes": null
+        },
+        {
+          "id": "uro-prostatectomie-totale",
+          "nom": "Prostatectomie totale",
+          "specialite": "Chirurgie urologique",
+          "force_recommandation": "Avis d'experts",
+          "source_page": 88,
+          "source_tableau": "Tableau Chirurgie urologique — Chirurgie de la prostate",
+          "protocole": null,
+          "alternative_allergie": null,
+          "notes": null
+        },
+        {
+          "id": "uro-curietherapie-biopsies-trans-perineale",
+          "nom": "Curiethérapie / Biopsies de prostate par voie trans-périnéale",
+          "specialite": "Chirurgie urologique",
+          "force_recommandation": "Avis d'experts",
+          "source_page": 88,
+          "source_tableau": "Tableau Chirurgie urologique — Chirurgie de la prostate",
+          "protocole": null,
+          "alternative_allergie": null,
+          "notes": null
+        },
+        {
+          "id": "uro-biopsies-transrectales",
+          "nom": "Biopsies de prostate par voie transrectale",
+          "specialite": "Chirurgie urologique",
+          "force_recommandation": "GRADE 1",
+          "source_page": 88,
+          "source_tableau": "Tableau Chirurgie urologique — Chirurgie de la prostate",
+          "protocole": {
+            "molecule": "Fosfomycine-trométamol",
+            "dose_initiale": "3g per os",
+            "reinjection": "Dose unique, au moins 2h avant le geste"
+          },
+          "alternative_allergie": [
+            {
+              "molecule": "Ciprofloxacine",
+              "dose_initiale": "500 mg per os (dose unique, au moins 2h avant le geste)",
+              "intention": 1,
+              "reinjection": "Dose unique"
+            }
+          ],
+          "notes": null
+        },
+        {
+          "id": "uro-cystoscopie-rtuv",
+          "nom": "Cystoscopie diagnostique / Résection trans-urétrale de vessie (RTUV)",
+          "specialite": "Chirurgie urologique",
+          "force_recommandation": "GRADE 1",
+          "source_page": 88,
+          "source_tableau": "Tableau Chirurgie urologique — Chirurgie de la vessie",
+          "protocole": null,
+          "alternative_allergie": null,
+          "notes": null
+        },
+        {
+          "id": "uro-incontinence-urinaire",
+          "nom": "Cure d'incontinence urinaire",
+          "specialite": "Chirurgie urologique",
+          "force_recommandation": "GRADE 2",
+          "source_page": 88,
+          "source_tableau": "Tableau Chirurgie urologique — Chirurgie de la vessie",
+          "protocole": null,
+          "alternative_allergie": null,
+          "notes": null
+        },
+        {
+          "id": "uro-toxine-botulique",
+          "nom": "Injection intra-détrusorienne de toxine botulique",
+          "specialite": "Chirurgie urologique",
+          "force_recommandation": "Avis d'experts",
+          "source_page": 88,
+          "source_tableau": "Tableau Chirurgie urologique — Chirurgie de la vessie",
+          "protocole": null,
+          "alternative_allergie": null,
+          "notes": null
+        },
+        {
+          "id": "uro-prolapsus-macroplastique",
+          "nom": "Cure de prolapsus quelle que soit la voie d'abord avec ou sans matériel / Injection de macroplastique",
+          "specialite": "Chirurgie urologique",
+          "force_recommandation": "Avis d'experts",
+          "source_page": 88,
+          "source_tableau": "Tableau Chirurgie urologique — Chirurgie de la vessie",
+          "protocole": {
+            "molecule": "Céfazoline",
+            "dose_initiale": "2g IVL",
+            "reinjection": "1g si durée > 4h, puis toutes les 4h jusqu'à fin de chirurgie"
+          },
+          "alternative_allergie": [
+            {
+              "molecule": "Gentamicine",
+              "dose_initiale": "6-7 mg/kg IVL",
+              "intention": 1,
+              "reinjection": null
+            }
+          ],
+          "notes": "Alternative pharmacologique : Céfuroxime 1,5g IVL (0,75g si durée > 2h, puis toutes les 2h)."
+        },
+        {
+          "id": "uro-cystectomie",
+          "nom": "Cystectomie sustrigonale partielle ou totale, quel que soit le mode de dérivation",
+          "specialite": "Chirurgie urologique",
+          "force_recommandation": "Avis d'experts",
+          "source_page": 89,
+          "source_tableau": "Tableau Chirurgie urologique — Chirurgie de la vessie",
+          "protocole": {
+            "molecule": "Céfoxitine",
+            "dose_initiale": "2g IVL",
+            "reinjection": "1g si durée > 2h, puis toutes les 2h jusqu'à fin de chirurgie"
+          },
+          "alternative_allergie": [
+            {
+              "molecule": "Gentamicine + Métronidazole",
+              "dose_initiale": "6-7 mg/kg IVL + 1g IVL",
+              "intention": 1,
+              "reinjection": null
+            }
+          ],
+          "notes": null
+        },
+        {
+          "id": "uro-prothese-penienne-testiculaire",
+          "nom": "Pose de prothèse pénienne / Pose de prothèse testiculaire",
+          "specialite": "Chirurgie urologique",
+          "force_recommandation": "Avis d'experts",
+          "source_page": 89,
+          "source_tableau": "Tableau Chirurgie urologique — Chirurgie des organes génitaux de l'homme",
+          "protocole": {
+            "molecule": "Céfazoline",
+            "dose_initiale": "2g IVL",
+            "reinjection": "1g si durée > 4h, puis toutes les 4h jusqu'à fin de chirurgie"
+          },
+          "alternative_allergie": [
+            {
+              "molecule": "Gentamicine",
+              "dose_initiale": "6-7 mg/kg IVL",
+              "intention": 1,
+              "reinjection": null
+            },
+            {
+              "molecule": "Clindamycine",
+              "dose_initiale": "900 mg IVL",
+              "intention": 2,
+              "reinjection": null
+            }
+          ],
+          "notes": "Alternative pharmacologique : Céfuroxime 1,5g IVL (0,75g si durée > 2h, puis toutes les 2h). En cas d'allergie aux bêtalactamines pour chirurgie prothétique : ajouter Clindamycine 900mg IVL à la Gentamicine."
+        },
+        {
+          "id": "uro-scrotal-verge-sans-prothese",
+          "nom": "Chirurgie scrotale ou de la verge sans prothèse",
+          "specialite": "Chirurgie urologique",
+          "force_recommandation": "Avis d'experts",
+          "source_page": 89,
+          "source_tableau": "Tableau Chirurgie urologique — Chirurgie des organes génitaux de l'homme",
+          "protocole": null,
+          "alternative_allergie": null,
+          "notes": null
+        },
+        {
+          "id": "uro-ureteroscopie",
+          "nom": "Urétéroscopie diagnostique et/ou thérapeutique",
+          "specialite": "Chirurgie urologique",
+          "force_recommandation": "GRADE 1",
+          "source_page": 89,
+          "source_tableau": "Tableau Chirurgie urologique — Chirurgie des voies excrétrices",
+          "protocole": {
+            "molecule": "Céfazoline",
+            "dose_initiale": "2g IVL",
+            "reinjection": "1g si durée > 4h, puis toutes les 4h jusqu'à fin de chirurgie"
+          },
+          "alternative_allergie": [
+            {
+              "molecule": "Gentamicine",
+              "dose_initiale": "6-7 mg/kg IVL",
+              "intention": 1,
+              "reinjection": null
+            }
+          ],
+          "notes": "Alternative pharmacologique : Céfuroxime 1,5g IVL (0,75g si durée > 2h, puis toutes les 2h)."
+        },
+        {
+          "id": "uro-uretrotomie-nephrostomie-nlpc",
+          "nom": "Urétrotomie, urétroplastie / Montée de sonde JJ / Pose de sonde de néphrostomie / Néphrolithotomie percutanée",
+          "specialite": "Chirurgie urologique",
+          "force_recommandation": "Avis d'experts",
+          "source_page": 89,
+          "source_tableau": "Tableau Chirurgie urologique — Chirurgie des voies excrétrices",
+          "protocole": {
+            "molecule": "Céfazoline",
+            "dose_initiale": "2g IVL",
+            "reinjection": "1g si durée > 4h, puis toutes les 4h jusqu'à fin de chirurgie"
+          },
+          "alternative_allergie": [
+            {
+              "molecule": "Gentamicine",
+              "dose_initiale": "6-7 mg/kg IVL",
+              "intention": 1,
+              "reinjection": null
+            }
+          ],
+          "notes": "Alternative pharmacologique : Céfuroxime 1,5g IVL (0,75g si durée > 2h, puis toutes les 2h)."
+        },
+        {
+          "id": "uro-lithotritie-extracorporelle",
+          "nom": "Lithotritie extra-corporelle",
+          "specialite": "Chirurgie urologique",
+          "force_recommandation": "GRADE 1",
+          "source_page": 89,
+          "source_tableau": "Tableau Chirurgie urologique — Chirurgie des voies excrétrices",
+          "protocole": null,
+          "alternative_allergie": null,
+          "notes": null
+        },
+        {
+          "id": "uro-catheter-dialyse",
+          "nom": "Pose ou changement de cathéter de dialyse intrapéritonéale",
+          "specialite": "Chirurgie urologique",
+          "force_recommandation": "GRADE 2",
+          "source_page": 90,
+          "source_tableau": "Tableau Chirurgie urologique — Cathéter de dialyse intrapéritonéale",
+          "protocole": {
+            "molecule": "Céfazoline",
+            "dose_initiale": "2g IVL",
+            "reinjection": "1g si durée > 4h, puis toutes les 4h jusqu'à fin de chirurgie"
+          },
+          "alternative_allergie": [
+            {
+              "molecule": "Gentamicine",
+              "dose_initiale": "6-7 mg/kg IVL",
+              "intention": 1,
+              "reinjection": null
+            }
+          ],
+          "notes": "Alternative pharmacologique : Céfuroxime 1,5g IVL (0,75g si durée > 2h, puis toutes les 2h)."
+        },
+        {
+          "id": "uro-nephrectomie-surrenalectomie-ablation",
+          "nom": "Néphrectomie totale ou partielle / Surrénalectomie / Embolisation des artères rénales / Thermoablation de tumeur rénale",
+          "specialite": "Chirurgie urologique",
+          "force_recommandation": "Avis d'experts",
+          "source_page": 90,
+          "source_tableau": "Tableau Chirurgie urologique — Chirurgies du rein",
+          "protocole": null,
+          "alternative_allergie": null,
+          "notes": null
+        },
+        {
+          "id": "uro-transplantation-renale",
+          "nom": "Transplantation rénale",
+          "specialite": "Chirurgie urologique",
+          "force_recommandation": "Avis d'experts",
+          "source_page": 90,
+          "source_tableau": "Tableau Chirurgie urologique — Chirurgies du rein",
+          "protocole": {
+            "molecule": "Céfazoline",
+            "dose_initiale": "2g IVL",
+            "reinjection": "1g si durée > 4h, puis toutes les 4h jusqu'à fin de chirurgie"
+          },
+          "alternative_allergie": [
+            {
+              "molecule": "Gentamicine",
+              "dose_initiale": "6-7 mg/kg IVL",
+              "intention": 1,
+              "reinjection": null
+            }
+          ],
+          "notes": "Alternative pharmacologique : Céfuroxime 1,5g IVL (0,75g si durée > 2h, puis toutes les 2h)."
+        }
+      ]
     }
   ],
   "recommandations_generales": []
