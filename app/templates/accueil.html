@@ -33,11 +33,55 @@
 
 {% block scripts %}
 <script>
-document.querySelector('.search-bar__input').addEventListener('keydown', function(e) {
-  if (e.key === 'Enter' && this.value.trim()) {
-    window.location.href = '/recherche?q=' + encodeURIComponent(this.value.trim());
+(function () {
+  const input = document.querySelector('.search-bar__input');
+  const resultsContainer = document.getElementById('search-results');
+
+  function getItems() {
+    return Array.from(resultsContainer.querySelectorAll('.search-results__link'));
   }
-});
+
+  // Un seul handler document-level pour éviter tout double-firing.
+  // On utilise e.target (élément qui a reçu l'événement) plutôt que
+  // document.activeElement (peut déjà avoir changé au moment du handler).
+  document.addEventListener('keydown', function (e) {
+    if (e.key !== 'ArrowDown' && e.key !== 'ArrowUp' && e.key !== 'Enter') return;
+
+    const target = e.target;
+    const items = getItems();
+    const isInput = target === input;
+    const itemIdx = items.indexOf(target);
+    const isItem = itemIdx !== -1;
+
+    if (!isInput && !isItem) return;
+
+    if (e.key === 'Enter') {
+      if (isInput && input.value.trim()) {
+        window.location.href = '/recherche?q=' + encodeURIComponent(input.value.trim());
+      }
+      // Enter sur un lien → comportement natif du navigateur
+      return;
+    }
+
+    e.preventDefault();
+
+    if (e.key === 'ArrowDown') {
+      if (isInput) {
+        if (items.length > 0) items[0].focus();          // champ → 1er item
+      } else {
+        items[(itemIdx + 1) % items.length].focus();     // circulaire
+      }
+    } else if (e.key === 'ArrowUp') {
+      if (isInput) {
+        if (items.length > 0) items[items.length - 1].focus(); // champ → dernier item
+      } else if (itemIdx === 0) {
+        input.focus();                                    // 1er item → champ
+      } else {
+        items[itemIdx - 1].focus();
+      }
+    }
+  });
+})();
 </script>
 {% endblock %}
 
