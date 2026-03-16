@@ -22,10 +22,10 @@ jobs:
           version: ">=0.4.25,<0.5"
 
       - name: Install dependencies
-        run: uv sync --extra dev
+        run: uv sync --group dev
 
       - name: Python Semantic Release
         env:
           GH_TOKEN: ${{ secrets.GH_TOKEN || github.token }}
-        run: uv run semantic-release version
+        run: uv run semantic-release version --vcs-release
         # Crée le tag + GitHub Release + met à jour pyproject.toml + génère CHANGELOG.md
