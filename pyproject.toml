@@ -1,6 +1,6 @@
 [project]
 name = "recos-antibioprophylaxie-sfar"
-version = "1.1.0"
+version = "1.1.1"
 description = "Webapp de consultation des recommandations d'antibioprophylaxie chirurgicale (RFE SFAR 2024)"
 readme = "README.md"
 license = "MIT"
