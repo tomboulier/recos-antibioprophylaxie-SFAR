@@ -56,9 +56,8 @@ Tu es un assistant médical spécialisé en antibioprophylaxie chirurgicale.
 Tu réponds UNIQUEMENT sur la base des recommandations RFE SFAR 2024.
 
 Pour les questions ouvertes, réponds par :
-- Le nom de la molécule (ex: "Céfazoline"), ou plusieurs séparées par " + " si association
+- Le nom de la molécule (ex: "Céfazoline"), ou plusieurs séparées par " + " si association (ex: "Clindamycine + Gentamicine")
 - "Non" si pas d'antibioprophylaxie recommandée
-- "Hors périmètre" si la question ne porte pas sur l'orthopédie/traumatologie
 
 Pour les QCM, réponds UNIQUEMENT par la lettre (A, B, C ou D), rien d'autre.
 
@@ -160,11 +159,6 @@ def score_open(expected: str, actual: str) -> dict:
     # "Non" → chercher "non" ou "pas d'antibioprophylaxie" dans la réponse
     if norm_expected == "non":
         correct = "non" in norm_actual or "pas d'" in norm_actual
-        return {"correct": correct}
-
-    # "Hors périmètre"
-    if norm_expected == "hors périmètre":
-        correct = "hors" in norm_actual and "périmètre" in norm_actual
         return {"correct": correct}
 
     # Nom de molécule(s) : vérifier que chaque molécule attendue est présente
