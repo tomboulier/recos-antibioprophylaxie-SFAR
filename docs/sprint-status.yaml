@@ -5,8 +5,9 @@
 project_name: "Antibioprophylaxie SFAR"
 project_level: 2
 sprint_plan_path: "docs/sprint-plan-antibioprophylaxie-sfar-2026-02-16.md"
-last_updated: "2026-02-27"
+last_updated: "2026-03-17"
 github_repo: "tomboulier/recos-antibioprophylaxie-SFAR"
+note: "EPIC-003 (IA + MCP) restructuré en 2 phases : Phase 2 Research (repo separate) + Phase 3 (v2 future)"
 
 milestones:
   - id: 1
@@ -57,11 +58,15 @@ milestones:
       - story_id: "S-008"
         title: "API REST : endpoints interventions, spécialités"
         points: 5
-        status: "not_started"
+        status: "completed"
+        github_issue: null
+        completed_date: "2026-03-10"
       - story_id: "S-009"
         title: "Recherche fuzzy type-ahead"
         points: 5
-        status: "not_started"
+        status: "completed"
+        github_issue: null
+        completed_date: "2026-03-10"
       - story_id: "S-010"
         title: "Layout : templates Jinja2, header, footer, CSS tokens"
         points: 3
@@ -88,35 +93,49 @@ milestones:
         title: "Dockerfile + déploiement NAS"
         points: 3
         status: "not_started"
+      - story_id: "S-020"
+        title: "Déploiement public sur Render"
+        points: 2
+        status: "completed"
+        github_issue: null
+        completed_date: "2026-03-10"
 
   - id: 3
-    name: "Module IA + MCP"
+    name: "Module IA + MCP (v2 future)"
     epic: "EPIC-003"
-    status: "not_started"
+    status: "research_phase"
+    notes: "Restructuré en 2 phases : Phase 2 Research (repo antibioprophylaxie-LLM-benchmark) + Phase 3 Implémentation (v2 future)"
     stories:
-      - story_id: "S-015"
-        title: "Interface chatbot : écran chat, bulles, HTMX"
-        points: 5
-        status: "not_started"
-      - story_id: "S-016"
-        title: "Intégration LLM niveau 3 (tool use) : réponses sourcées"
-        points: 8
-        status: "not_started"
-      - story_id: "S-017"
-        title: "Serveur MCP"
-        points: 5
-        status: "not_started"
-      - story_id: "S-018"
-        title: "RAG niveau 1 (PDF) + niveau 2 (Excel)"
-        points: 5
-        status: "not_started"
       - story_id: "S-019"
         title: "Jeu de questions + évaluation comparative"
         points: 5
-        status: "not_started"
+        status: "in_progress"
+        phase: "Phase 2 - Research"
+        repo: "antibioprophylaxie-LLM-benchmark"
+        note: "Benchmark framework comparant RAG, MCP, LLM fine-tuning"
+      - story_id: "S-015"
+        title: "Interface chatbot : écran chat, bulles, HTMX"
+        points: 5
+        status: "pending_research"
+        phase: "Phase 3 - Implémentation (après S-019)"
+      - story_id: "S-016"
+        title: "Intégration LLM niveau 3 (tool use) : réponses sourcées"
+        points: 8
+        status: "pending_research"
+        phase: "Phase 3 - Implémentation (après S-019)"
+      - story_id: "S-017"
+        title: "Serveur MCP"
+        points: 5
+        status: "pending_research"
+        phase: "Phase 3 - Implémentation (après S-019)"
+      - story_id: "S-018"
+        title: "RAG niveau 1 (PDF) + niveau 2 (Excel)"
+        points: 5
+        status: "pending_research"
+        phase: "Phase 3 - Implémentation (après S-019)"
 
 totals:
-  stories: 19
-  points: 78
-  completed_stories: 6
-  completed_points: 22
+  stories: 20
+  points: 80
+  completed_stories: 9
+  completed_points: 34
